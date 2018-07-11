@@ -1,0 +1,50 @@
+gallery
+  display: block
+
+.gallery
+  position: relative
+
+  input
+    display: none
+
+  .image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    transition: all $transitionTime ease-in-out
+
+    &.first
+      position: initial
+
+  input:checked + .image
+  .image.show
+    opacity: 1
+
+.gallery-thumbs
+  margin-top: 10px
+
+  label
+    cursor: pointer
+    padding: 0 .5rem
+
+    img
+      padding: .5rem
+      border: 2px solid $hLavender
+
+.last-button
+.next-button
+  transform: scaleY(4)
+  top: 40%
+  position: absolute
+  cursor: pointer
+
+.last-button
+  left: -2rem
+
+.next-button
+  right: -2rem
+
+

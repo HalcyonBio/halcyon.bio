@@ -1,0 +1,592 @@
+textBorder(size, color)
+  shadows = '0 0 ' + color
+  for n in (1..size)
+    shadows += ', ' + (-1 * n) + 'px 0 ' + color
+    shadows += ', ' + n + 'px 0 ' + color
+    shadows += ', 0 ' + (-1 * n) + 'px ' + color
+    shadows += ', 0 ' + n + 'px ' + color
+
+  size2 = size - 1
+  for n in (1..size2)
+    shadows += ', ' + (-1 * n) + 'px ' + (-1 * n) + 'px ' + color
+    shadows += ', ' + (-1 * n) + 'px ' + n + 'px ' + color
+    shadows += ', ' + n + 'px ' + (-1 * n) + 'px ' + color
+    shadows += ', ' + n + 'px ' + n + 'px ' + color
+
+  return unquote(shadows)
+
+#index
+  .hero
+    height: 100vh
+    margin-top: 50px
+
+    .container
+      margin-top: -2rem
+
+    .hb
+      font-family: Palatino
+      font-size: 26px
+
+    .tm
+      font-size: 14px
+      display: inline-block
+      position: absolute
+      margin-top: -6px
+
+    .desc-text
+      font-weight: lighter
+      font-size: 18px
+      letter-spacing: 1px
+
+    .cross
+      font-size: 9px
+      display: inline-block
+      position: absolute
+      margin-top: -3px
+      margin-left: -3px
+
+    video
+      position: absolute
+      top: 0
+      left: 0
+      filter: brightness(50%)
+      max-width: initial
+
+      @media (min-aspect-ratio: 16/9)
+        width: 100vw
+
+      @media (max-aspect-ratio: 16/9)
+        height: 100vh
+
+  #shop
+    background-color: $white
+    color: $hBlue2
+    padding-top: 10vh
+    padding-bottom: 20vh
+    font-size: 16px
+
+    #shop-widget
+      .title
+        .hb
+          font-family: Palatino
+          padding-top: 5px
+          font-size: 34px
+
+      .body
+        max-width: 280px
+
+        .reviews
+          padding: 5px 0
+
+          .star
+            margin-right: .5rem
+            cursor: pointer
+
+        .price
+          padding: 5px 15px
+          font-weight: 600
+          font-size: 24px
+
+        .picker
+          padding: 5px 0
+
+        .subscription-options
+          padding: 5px 0
+          color: $black
+
+          .option
+            & > *
+              margin-right: .5rem
+
+            input:checked + span
+              font-weight: 600
+
+        .add-to-cart
+          padding: 5px 0
+
+          button
+            width: 100%
+            padding: 0 !important
+            line-height: 3em
+            height: 3em
+            color: $hWhite
+            background-color: $hBlue2
+
+        .links
+          .link
+            width: 100%
+            border-bottom: 1px solid $hLavender
+            display: block
+            line-height: 2.5em
+
+            &:last-child
+              border-bottom: 0
+
+        .more
+        .less
+          display: none
+
+          span
+            cursor: pointer
+
+        .links
+          display: none
+
+        #more-links
+          display: none
+
+        #more-links:not(:checked) ~ .more
+          display: initial
+
+        #more-links:checked ~ .less
+          display: initial
+
+        #more-links:checked ~ .links
+          display: initial
+
+    .badges
+      width: 100%
+      padding: 2rem 0
+
+      border-bottom: 2px solid $hBlue2
+
+    .studies
+      margin-top: 2rem
+
+      h3
+        text-align: center
+        font-weight: normal
+
+      .coming-soon
+        text-align: center
+
+        .pre-order-image
+          margin: 1rem 0
+
+          img
+            height: 300px
+
+  #testimonials
+    background-color: $hBlue3
+    overflow: hidden
+    min-height: 100vh
+
+    .bg
+      position: absolute
+
+    .fg
+      z-index: 1
+      padding-top: 5rem
+
+    row
+    p
+      width: 100%
+
+    .glow
+      text-shadow: textBorder(6, $hBlue3)
+
+    .header
+      font-size: 48px
+      font-weight: bold
+      text-transform: uppercase
+      line-height: 1.2
+      text-align: center
+
+    .subheader
+      font-weight: bold
+      text-transform: uppercase
+      line-height: 1.2
+      text-align: center
+
+    .testimonial-cards
+      margin-top: 4rem
+      margin-bottom: 5rem
+
+      & > :first-child
+        margin-top: 3rem
+
+        & > *
+          transform: translateX(-1rem)
+
+      & > :last-child
+        margin-top: 5rem
+
+        & > *
+          transform: translateX(1rem)
+
+      & > * > *
+        margin: 0 1rem
+
+    .testimonial-card
+      background-color: $hWhite
+      border-radius: 16px
+      border: 4px solid $hWhite
+
+      .top
+        color: $black
+        padding: 1rem
+        border-top-right-radius: 16px
+        border-top-left-radius: 16px
+        padding-bottom: 50px
+
+      .bottom
+        background-color: $hBlue2
+        padding: 1rem
+        border-bottom-right-radius: 16px
+        border-bottom-left-radius: 16px
+        text-align: center
+        position: relative
+        padding-top: 50px
+
+        &:before
+          content: ''
+          position: absolute
+          left: 50%
+          top: 0
+          transform: translate(-50%, -50%)
+          width:80px
+          height: 80px
+          background-image: url(/img/portrait-place-holder.png)
+          background-size: contain
+          background-repeat: no-repeat
+
+        .locator
+          position: absolute
+          top: 0
+          left: calc(50% + 50px)
+          font-size: 14px
+          line-height: 2.143
+          font-weight: 200
+
+          & > *
+            display: inline
+            text-align: left
+
+          img
+            margin-right: 2px
+
+  #video
+    background-color: $hBlue4
+
+    .container
+      margin-top: 5rem
+      margin-bottom: 5rem
+
+    .video
+      position: relative
+      width: 100%
+      height: 0
+      padding-bottom: 56.25%
+
+      iframe
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+    h2
+      font-size: 40px
+      color: rgb(242, 102, 33)
+      line-height: 1.2
+      text-align: left
+
+    p
+      font-size: 32px
+      line-height: 1.2
+      text-align: left
+
+    .footer
+      text-align: center
+      width: 100%
+      position: relative
+
+      img
+        width: 80px
+
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 39px
+        height: 2px
+        width: calc(50% - 50px)
+        background-color: $hWhite
+
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        top: 39px
+        height: 2px
+        width: calc(50% - 50px)
+        background-color: $hWhite
+
+  #diff
+    background-image: url(/img/diffbg.png)
+    background-color: $hBlue3
+    padding-top: 5rem
+    padding-bottom: 5rem
+
+    .cta
+      position: absolute
+      text-align: center
+
+      h2
+        font-size: 40px
+        font-weight: bold
+        text-transform: uppercase
+        line-height: 1.2
+
+      button
+        color: $hBlue
+        margin-top: 2rem
+
+  #deadline
+    background-image: url(/img/businesswoman.jpg)
+    background-size: cover
+    background-position: left
+    min-height: 600px
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+    h2
+      font-size: 40px
+      color: $hBlue
+      font-weight: bold
+      line-height: 1.2
+      text-align: center
+
+    p
+      color: $black
+
+  #value
+    background-image: url(/img/valuegradient.jpg)
+    background-size: cover
+    background-position: center
+    min-height: 600px
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+    .container
+      border: 4px solid #272f4e
+      background-color: $hBlue6
+      padding: 1.5rem
+
+    .values
+      .value
+        text-align: center
+
+        h2
+          font-weight: 900
+
+  #tolerance
+    min-height: 500px
+    background-color: $hBlue5
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+    blockquote
+      margin: 1.5em 10px
+      padding: 0.5em 10px
+      quotes: "\201C""\201D""\2018""\2019"
+
+    blockquote:before
+      content: open-quote
+      font-size: 4em
+      line-height: 0.1em
+      position: relative
+      top: 2rem
+      left: -2rem
+
+    strong
+      font-size: 40px
+
+      &.orange
+        color: $hOrange
+
+  #performance
+    background-image: url(/img/performance.jpg)
+    background-size: cover
+    background-position: left
+    min-height: 600px
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+    h2
+      font-size: 40px
+      font-weight: bold
+
+
+  #made-in-usa
+    background-color: $hBlue6
+    text-align: center
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+    p
+      font-size: 40px
+
+    strong
+      font-size: 48px
+
+  #nutrition
+    background-color: $hWhite
+    color: $hBlue2
+    font-size: 24px
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+    h2
+      font-size: 52px
+
+    .orange
+      color: $hOrange
+
+  #try-today
+    background-image: url(/img/trytoday.jpg)
+    background-size: cover
+    background-position: top
+    min-height: 600px
+    padding-top: 20vh
+    padding-bottom: 20vh
+
+    h2
+      font-size: 40px
+      font-weight: 600
+      width: 100%
+      text-align: center
+      margin-bottom: 2rem
+
+    .rush-options
+      border-radius: 16px
+      background-color: $hWhite
+      color: $hBlue2
+      padding: 1rem 0 2rem
+
+      .option
+        padding: .5rem 4vw
+        border-right: 1px solid $hLavender
+        text-align: center
+
+        &:last-child
+          border-right: 0
+
+        h3
+          text-align: center
+          font-size: 22px
+          font-weight: bold
+
+        img
+          height: 200px
+
+        p
+          color: $black
+          padding: 10px 0
+          margin: 0
+          min-height: 3em
+
+        .image
+          padding-bottom: 30px
+
+        .image
+        p
+          border-bottom: 1px solid $hLavender
+
+        .double-line
+          line-height: 3rem
+
+        .price
+          padding: 10px 15px 20px
+          font-weight: 600
+          font-size: 20px
+
+          .orange
+            color: $hOrange
+
+        button
+          width: 100%
+          background-color: $hOrange !important
+
+  #thought-leader
+    background-image: url(/img/thought-leaders-bg.jpg)
+    background-size: cover
+    background-position: left
+    min-height: 600px
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+    h2
+      font-size: 40px
+      font-weight: 600
+      width: 100%
+      text-align: center
+      margin-bottom: 2rem
+
+
+    sub
+      bottom: 1.25em
+
+    a
+      color: #c2c2c2 !important
+
+    .gallery-thumbs
+      margin-top: 0
+
+      label
+        padding: 0 .5rem
+
+        &.selected
+        &:hover
+          img
+            filter: none
+
+          .description
+            background: rgba(0,0,0,.5)
+            pointer-events: none
+
+        img
+          filter: contrast(50%) brightness(50%)
+
+        .body
+          position: relative
+
+        p
+          margin: 0
+
+        img
+          border: 0
+          padding: 0
+
+        .description
+          position: absolute
+          width: 100%
+          bottom: 0
+          font-size: 14px
+          padding: .5rem .5rem .75rem
+
+          strong
+            font-weight: 600
+
+  #difference
+    color: $black
+    text-align: center
+    min-height: 600px
+    padding-top: 2rem
+    padding-bottom: 2rem
+
+    h2
+      color: $hBlue2
+      font-size: 40px
+
+    h2
+    h3
+    .sub.sub.sub
+      text-align: center
+      width: 100%
+
+    img
+      height: 125px
+
+    p
+      text-align: left

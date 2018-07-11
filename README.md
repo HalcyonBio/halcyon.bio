@@ -1,2 +1,1 @@
-# halcyon.bio
-Halcyon Bio website
+# Halcyon Bio Main Page

@@ -1,0 +1,446 @@
+extends _layout.pug
+
+block vars
+  - var pageId = 'index'
+
+block content
+  .hero
+    video(width='auto' height='auto' loop muted autoplay)
+      source(src='/img/hero.mp4' type='video/mp4')
+      source(src='/img/hero.webm' type='video/webm')
+      | Your browser does not support the video tag.
+
+    .container
+      .row
+        .col-md-8.offset-md-4.col-xs-12
+          .row
+            .col-sm-4.col-xs-12.logo
+              img.img-responsive.center-block(src='/img/logo_square.png' style='float:right;')
+            .col-sm-8.col-xs-12.logo-text
+              .hb
+                | H A L C Y O N . B I O
+                span.tm
+                  sup TM
+              h2.desc-text
+                | Psychologist formulated to support
+                br
+                |  memory, focus, and mood.
+                span.cross †
+
+  section#shop.align-flex-start
+    .container
+      .row
+        .col-md-6.col-xs-12
+          .row
+            gallery(total='3').col-md-6.offset-md-3.col-xs-12
+              .gallery.row
+                .image.first(class='{ show: current == 0 }')
+                  img(src='/img/halcyon-bottle-front.jpg')
+                .image(class='{ show: current == 1 }')
+                  img(src='/img/halcyon-bottle-back.jpg')
+                .image(class='{ show: current == 2 }')
+                  img(src='/img/halcyon-bottle-front2.jpg')
+              .row.gallery-thumbs
+                label.col-md-4.col-xs-4.thumb(for='halcyonbottlefront' onclick='{ jump(0) }')
+                  img(src='/img/halcyon-bottle-front.jpg')
+                label.col-md-4.col-xs-4.thumb(for='halcyonbottleback' onclick='{ jump(1) }')
+                  img(src='/img/halcyon-bottle-back.jpg')
+                label.col-md-4.col-xs-4.thumb(for='halcyonbottlefront2' onclick='{ jump(2) }')
+                  img(src='/img/halcyon-bottle-front2.jpg')
+              .last-button(onclick='{ last }') <
+              .next-button(onclick='{ next }') >
+        price#shop-widget.col-md-6.col-xs-12
+          .title
+            .hb
+              | H A L C Y O N . B I O
+              span.hb-sup(style="display: inline-block;position: absolute;margin-top: -6px;font-family: 'Lato', sans-serif;")
+                sup TM
+          .body
+            .reviews.flex-center.justify-flex-start
+              img.star.star-1.star-whole(src='/img/star.svg')
+              img.star.star-2.star-whole(src='/img/star.svg')
+              img.star.star-3.star-whole(src='/img/star.svg')
+              img.star.star-4.star-whole(src='/img/star.svg')
+              img.star.star-5.star-whole(src='/img/star.svg')
+              span 5.0
+              span &nbsp;|&nbsp;
+              a(href='') 127
+            .price
+              span.old-price(class='{ strike: subscribe }') $89.99
+              span &nbsp;&nbsp;
+              span(class='{ hide: !subscribe }') $69.97
+            .picker.input-group
+              select.select(class='custom-select' id='sku')
+                option(selected) 1 Bottle (60ct.)
+            .subscription-options.input-group
+              .option.flex-center(onclick='{ subscription }')
+                input#subscribe(name='subscription-option' type='radio' checked)
+                span Subscribe & Save 23%
+                img(src='/img/question.png')
+              .option.flex-center(onclick='{ onetime }')
+                input#one-time(name='subscription-option' type='radio')
+                span Purchase this time only
+            .add-to-cart
+              button.btn(type='button')
+                span ADD TO CART
+                span(class='{ hide: !subscribe }') AND SUBSCRIBE
+            input#more-links(type='checkbox')
+            .more
+              label(for='more-links')
+                span more...
+            .links
+              .link
+                a(href='') link 1
+              .link
+                a(href='') link 1
+              .link
+                a(href='') link 1
+            .less
+              label(for='more-links')
+                span less...
+
+      .row.badges.flex-center
+        .badge
+          img(src='/img/gmp.png')
+        .badge
+          img(src='/img/fda.png')
+        .badge
+          img(src='/img/usa.png')
+
+      .row.studies
+        .clinical.col-md-6.col-xs-12
+          h3 Clinical Studies
+          img(src='/img/time-release.png')
+          p.
+            Safe and effective nutrients clinically demonstrated to support cognition and long-term brain health at the cellular level. †
+            <a href="">Read the Clinical Studies</a>
+        .coming-soon.col-md-6.col-xs-12
+          h3 Coming Soon
+          .pre-order-image
+            img(src='/img/halcyon-bottle-front.jpg')
+          a(href='') PRE-ORDER NOW
+
+  section#testimonials.flex-center
+    .bg.container
+      img(src='/img/hexmap.png')
+    .fg.container
+      .row
+        .col-md-12.col-xs-12
+          p.glow.header REAL PEOPLE. REAL RESULTS.
+
+      .row
+        .col-md-4.col-xs-12
+          p.glow.header 16B
+          p.glow.subheader Spent on concentration aides/year
+
+        .col-md-4.col-xs-12
+          p.glow.header 1 IN 3
+          p.glow.subheader People in the US take some form of brain supplement
+
+        .col-md-4.col-xs-12
+          p.glow.header 600,000
+          p.glow.subheader Awesome stat
+
+      .row.testimonial-cards
+        .col-md-4.col-xs-12
+          .testimonial-card
+            .top
+              p.
+                I first tried Halcyon because it’s difficult for me to bear down with tasks and focus on days when I am in the office all day. This changed that for me.
+            .bottom
+              strong Ron White
+              .locator
+                img(src='/img/location-marker.png')
+                p Austin, TX
+              p Two-time USA Memory Champion
+
+        .col-md-4.col-xs-12
+          .testimonial-card
+            .top
+              p.
+                I first tried Halcyon because it’s difficult for me to bear down with tasks and focus on days when I am in the office all day. This changed that for me.
+            .bottom
+              strong Andrew Tam
+              .locator
+                img(src='/img/location-marker.png')
+                p San Francisco
+              p Engineer/Founder, XXXXXX
+
+        .col-md-4.col-xs-12
+          .testimonial-card
+            .top
+              p.
+                I first tried Halcyon because it’s difficult for me to bear down with tasks and focus on days when I am in the office all day. This changed that for me.
+            .bottom
+              strong Julien Blin
+              .locator
+                img(src='/img/location-marker.png')
+                p Silicon Valley
+              p ex-Google Strategist
+
+  section#video.flex-center
+    .container
+      .row
+        .col-md-7.col-xs-12
+          .video
+            iframe(src='https://www.youtube-nocookie.com/embed/XcD4YJ2HmeU?rel=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen)
+        .col-md-5.col-xs-12
+          h2 Research suggests
+          p Halcyon’s ingredients may help you improve recall, focus on complex work, and improve your overall mood and resilience to stress.†
+          .footer
+            img(src='/img/logo_square.png')
+
+  section#diff
+    .container.flex-center
+      img(src='/img/pills.jpg')
+      .cta
+        h2.
+          Feel the difference<br>on day one
+        button.btn.btn-light(type='button') ORDER NOW
+
+  section#deadline.flex-center
+    .container
+      .row
+        .col-md-6.offset-md-6.col-xs-12
+          h2 DEADLINE  DOMINATED
+          p.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  seciton#value.flex-center
+    .container
+      .row.values
+        .value.col-md-4.col-xs-12
+          h2 MEMORY
+          img(src='/img/memory.svg')
+        .value.col-md-4.col-xs-12
+          h2 FOCUS
+          img(src='/img/focus.svg')
+        .value.col-md-4.col-xs-12
+          h2 MOTIVATION
+          img(src='/img/motivation.svg')
+
+  section#tolerance.flex-center
+    .container
+      .row
+        .col-md-6.col-xs-12.flex-center.justify-flex-end
+          img(src='/img/drweller.png')
+        .col-md-6.col-xs-12
+          blockquote
+            p.
+              I’ve tried just about everything on the market. It’s how I went
+              from being a cool lameo to an cool awesomeo. I wanted something I
+              could take everyday <strong>without worrying about</strong> <strong
+              class="orange">building a tolerance</strong> or getting that crash like with caffeine. I created Halcyon with Jay for people like myself. Awesome placeholder text Awesome placeholder text Awesome placeholder text Awesome placeholder text Awesome placeholder text Awesome placeholder text.
+            p
+              i - Dr. Marcus Weller, Founder
+
+  section#performance.flex-center
+    .container
+      .row
+        .col-md-6.col-xs-12
+          h2 Safe and Effective Mental Performance
+          p If you had an extra mental gear, what could you accomplish? Our team of scientists and entrepreneurs are driven by one core goal - to help you achieve that which inspires you.
+          p Halcyon is psychologist formulated to support memory, focus, and motivation using only FDA compliant compounds.†
+          p The result is lasting focus, drive and mental acuity to conquer any goal you set your mind to.†
+
+  section#made-in-usa.flex-center
+    .container
+      .row
+        .col-md-8.offset-md-2.col-xs-12
+          p.
+            <strong>MADE IN USA:</strong> All Halcyon products
+            are manufactured in a <strong>FDA registered</strong> facility
+            and pass rigorous testing.
+
+  section#nutrition.flex-center
+    .container
+      .row.flex-center
+        .col-md-6.col-xs-12
+          img(src='/img/nutrition.png')
+        .col-md-6.col-xs-12
+          h2 Nootropic:
+          p.
+            <span class="orange">n, adj:</span> Compounds that support cognitive processes including memory, concentration, and mood.
+
+  section#try-today.flex-center
+    .container
+      .row
+        h2 CARPE DIEM - TRY HALCYON TODAY
+      .rush-options.row
+        .option.col-md-4.col-xs-12
+          h3 ONE DAY
+          .image
+            img(src='/img/1pack.png')
+          p 1 day supply - 3 capsules
+          p Renews for full<br>subscription after 15 days
+          p Cancel Anytime,<br>30 day money back guarantee
+          .price
+            span.orange $5.99&nbsp;
+            span $0.00 + S&H
+          button.btn(type='button') RUSH MY ORDER
+        .option.col-md-4.col-xs-12
+          h3 ONE WEEK
+          .image
+            img(src='/img/3pack.png')
+          p 6 day supply - 12 capsules
+          p Renews for full<br>subscription after 15 days
+          p Cancel Anytime,<br>30 day money back guarantee
+          .price
+            span.orange $23.96&nbsp;
+            span $9.99 + S&H
+          button.btn(type='button') RUSH MY ORDER
+        .option.col-md-4.col-xs-12
+          h3 ONE MONTH
+          .image
+            img(src='/img/halcyon-bottle-front.jpg')
+          p 30 day supply - 60 capsules
+          p.double-line Reviews monthly
+          p Cancel Anytime,<br>30 day money back guarantee
+          .price
+            span.orange $89.95&nbsp;
+            span $69.97 + S&H
+          button.btn(type='button') RUSH MY ORDER
+
+  section#thought-leader.flex-center
+    gallery.container(total='9')
+      .row
+        h2 THOUGHT LEADERS
+      .gallery.row
+        .col-md-5.col-xs-12
+          .row.gallery
+            .image.first(class='{ show: current == 0 }')
+              img(src='/img/thought-leader-marcus.jpg')
+              h3 Dr. Marcus Weller
+              sub FOUNDER, HALCYON BIOTECHNOLOGIES
+              p It’s awesome I love it no caffeine etc no build up try it today you lucky fuck.
+              a(href='') View Marcus Weller's profile >
+            .image(class='{ show: current == 1 }')
+              img(src='/img/thought-leader-marcus.jpg')
+              h3 Dr. Marcus Weller
+              sub FOUNDER, HALCYON BIOTECHNOLOGIES
+              p It’s awesome I love it no caffeine etc no build up try it today you lucky fuck.
+              a(href='') View Marcus Weller's profile >
+            .image(class='{ show: current == 2 }')
+              img(src='/img/thought-leader-marcus.jpg')
+              h3 Dr. Marcus Weller
+              sub FOUNDER, HALCYON BIOTECHNOLOGIES
+              p It’s awesome I love it no caffeine etc no build up try it today you lucky fuck.
+              a(href='') View Marcus Weller's profile >
+            .image(class='{ show: current == 3 }')
+              img(src='/img/thought-leader-marcus.jpg')
+              h3 Dr. Marcus Weller
+              sub FOUNDER, HALCYON BIOTECHNOLOGIES
+              p It’s awesome I love it no caffeine etc no build up try it today you lucky fuck.
+              a(href='') View Marcus Weller's profile >
+            .image(class='{ show: current == 4 }')
+              img(src='/img/thought-leader-marcus.jpg')
+              h3 Dr. Marcus Weller
+              sub FOUNDER, HALCYON BIOTECHNOLOGIES
+              p It’s awesome I love it no caffeine etc no build up try it today you lucky fuck.
+              a(href='') View Marcus Weller's profile >
+            .image(class='{ show: current == 5 }')
+              img(src='/img/thought-leader-marcus.jpg')
+              h3 Dr. Marcus Weller
+              sub FOUNDER, HALCYON BIOTECHNOLOGIES
+              p It’s awesome I love it no caffeine etc no build up try it today you lucky fuck.
+              a(href='') View Marcus Weller's profile >
+            .image(class='{ show: current == 6 }')
+              img(src='/img/thought-leader-marcus.jpg')
+              h3 Dr. Marcus Weller
+              sub FOUNDER, HALCYON BIOTECHNOLOGIES
+              p It’s awesome I love it no caffeine etc no build up try it today you lucky fuck.
+              a(href='') View Marcus Weller's profile >
+            .image(class='{ show: current == 7 }')
+              img(src='/img/thought-leader-marcus.jpg')
+              h3 Dr. Marcus Weller
+              sub FOUNDER, HALCYON BIOTECHNOLOGIES
+              p It’s awesome I love it no caffeine etc no build up try it today you lucky fuck.
+              a(href='') View Marcus Weller's profile >
+            .image(class='{ show: current == 8 }')
+              img(src='/img/thought-leader-marcus.jpg')
+              h3 Dr. Marcus Weller
+              sub FOUNDER, HALCYON BIOTECHNOLOGIES
+              p It’s awesome I love it no caffeine etc no build up try it today you lucky fuck.
+              a(href='') View Marcus Weller's profile >
+
+        .col-md-6.offset-md-1.col-xs-12
+          .gallery-thumbs.row
+            label.col-md-4.col-xs-4.thumb(class='{ selected: current == 0 }')
+              img(src='/img/thought-leader-marcus-thumb.jpg' onclick='{ jump(0) }')
+              .body
+                .description
+                  strong Dr. Marcus Weller
+                  p FOUNDER HALCYON BIOTECHNOLOGIES
+            label.col-md-4.col-xs-4.thumb(class='{ selected: current == 1 }')
+              img(src='/img/thought-leader-marcus-thumb.jpg' onclick='{ jump(1) }')
+              .body
+                .description
+                  strong Dr. Marcus Weller
+                  p FOUNDER HALCYON BIOTECHNOLOGIES
+            label.col-md-4.col-xs-4.thumb(class='{ selected: current == 2 }')
+              img(src='/img/thought-leader-marcus-thumb.jpg' onclick='{ jump(2) }')
+              .body
+                .description
+                  strong Dr. Marcus Weller
+                  p FOUNDER HALCYON BIOTECHNOLOGIES
+
+          .gallery-thumbs.row
+            label.col-md-4.col-xs-4.thumb(class='{ selected: current == 3 }')
+              img(src='/img/thought-leader-marcus-thumb.jpg' onclick='{ jump(3) }')
+              .body
+                .description
+                  strong Dr. Marcus Weller
+                  p FOUNDER HALCYON BIOTECHNOLOGIES
+            label.col-md-4.col-xs-4.thumb(class='{ selected: current == 4 }')
+              img(src='/img/thought-leader-marcus-thumb.jpg' onclick='{ jump(4) }')
+              .body
+                .description
+                  strong Dr. Marcus Weller
+                  p FOUNDER HALCYON BIOTECHNOLOGIES
+            label.col-md-4.col-xs-4.thumb(class='{ selected: current == 5 }')
+              img(src='/img/thought-leader-marcus-thumb.jpg' onclick='{ jump(5) }')
+              .body
+                .description
+                  strong Dr. Marcus Weller
+                  p FOUNDER HALCYON BIOTECHNOLOGIES
+
+          .gallery-thumbs.row
+            label.col-md-4.col-xs-4.thumb(class='{ selected: current == 6 }')
+              img(src='/img/thought-leader-marcus-thumb.jpg' onclick='{ jump(6) }')
+              .body
+                .description
+                  strong Dr. Marcus Weller
+                  p FOUNDER HALCYON BIOTECHNOLOGIES
+            label.col-md-4.col-xs-4.thumb(class='{ selected: current == 7 }')
+              img(src='/img/thought-leader-marcus-thumb.jpg' onclick='{ jump(7) }')
+              .body
+                .description
+                  strong Dr. Marcus Weller
+                  p FOUNDER HALCYON BIOTECHNOLOGIES
+            label.col-md-4.col-xs-4.thumb(class='{ selected: current == 8 }')
+              img(src='/img/thought-leader-marcus-thumb.jpg' onclick='{ jump(8) }')
+              .body
+                .description
+                  strong Dr. Marcus Weller
+                  p FOUNDER HALCYON BIOTECHNOLOGIES
+
+  section#difference.flex-center
+    .container
+      .row
+        h2 How We're Different
+        p.sub Halcyon Biotechnologies is a consumer life sciences company focused on cognitive performance. Halcyon's mission is to leverage science to enhance the quality of people's lives through cognitive health.
+      .row
+        .col-md-4.col-xs-12
+          img(src='/img/advisory-board.png')
+          h3 Scientific Advisory Board
+          p Our board members are leaders in science and technology, passionate about optimal cognition. They guide the research and development of our product pipeline. You can read a detailed explanation of our development approach on our about page.
+        .col-md-4.col-xs-12
+          img(src='/img/supply-chain.png')
+          h3 Our Supply Chain
+          p During the manufacturing and distribution of Halcyon, there are a total of five quality and purity audits before product is shipped. All manufacturing facilities are located in the US and are compliant with cGMP regulations as stipulated by the FDA.
+        .col-md-4.col-xs-12
+          img(src='/img/ip.png')
+          h3 Our Intellectual Property
+          p Our formulas are heavily researched and developed to be both potent and appropriate for daily use without building a tolerance - working in harmony with your neurochemistry. Our rapidly developing suite of IP reflects this unique approach to formulation.
