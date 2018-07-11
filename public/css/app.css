@@ -1409,8 +1409,7 @@ footer *{
   color:#000;
   text-align:center;
   min-height:600px;
-  padding-top:2rem;
-  padding-bottom:2rem;
+  padding:5rem 0 0;
 }
 #index #difference h2{
   color:#304191;
@@ -1427,6 +1426,16 @@ footer *{
 }
 #index #difference p{
   text-align:left;
+}
+#index #difference .sub{
+  font-size:24px;
+}
+#index #difference .bg{
+  width:100%;
+  background-image:url("/img/bottom-pill-table-2.jpg");
+  background-size:cover;
+  background-position:50% 0%;
+  min-height:400px;
 }
 @media only screen and (max-width: 650px){
   .flex-columns,
