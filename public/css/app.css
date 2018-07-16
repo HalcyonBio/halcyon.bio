@@ -858,10 +858,40 @@ body{
   justify-content:center;
 }
 footer{
-  background-color:#424242;
+  background-color:#304191;
+  padding-top:5vh;
+  padding-bottom:10vh;
 }
 footer *{
   color:#fff;
+}
+footer svg g{
+  fill:#fff;
+}
+footer .social-icons-row{
+  justify-content:center;
+  margin-top:18px;
+  margin-bottom:15px;
+}
+footer .footer-cards{
+  float:right;
+}
+footer .footer-cards img{
+  margin:0 2px;
+}
+footer .footer-cards img:last-child{
+  margin:0;
+}
+footer a{
+  margin:0 8px;
+  color:#f26621 !important;
+}
+footer .footer-bottom{
+  padding-top:22px;
+  border-top:1px solid #fff;
+}
+footer .footer-bottom > *{
+  padding:0;
 }
 #index .hero{
   height:100vh;
