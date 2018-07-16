@@ -45,7 +45,11 @@ td
 td
   &:last-child
     text-align right
-    text-align left
+@media screen and (min-width:768px) {
+  td
+    &:last-child 
+      padding-right: 10px
+}
 
 .blank-cell
   width 1rem

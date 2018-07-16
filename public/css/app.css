@@ -877,7 +877,6 @@ td{
 }
 td:last-child{
   text-align:right;
-  text-align:left;
 }
 .blank-cell{
   width:1rem;
