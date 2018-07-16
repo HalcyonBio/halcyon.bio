@@ -765,7 +765,7 @@ select.select.select.select{
 }
 a{
   color:#2e3b8e !important;
-  text-decoration:underline;
+  text-decoration:underline !important;
 }
 a:hover,
 a:focus{
