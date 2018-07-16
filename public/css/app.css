@@ -851,6 +851,7 @@ table{
   font-weight:800;
   font-size:2rem;
   margin:0 0 0.25rem 0;
+  line-height:1em;
 }
 .performance-facts__header{
   border-bottom:10px solid #324099;
