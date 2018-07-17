@@ -1,6 +1,6 @@
-import Shop from 'shop.js/src'
+# import Shop from 'shop.js/src'
 
-settings:
+settings =
   key: ''
 
-Shop.start settings
+# Shop.start settings
