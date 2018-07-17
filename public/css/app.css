@@ -1507,66 +1507,68 @@ footer .footer-bottom > *{
   -webkit-filter:none;
           filter:none;
 }
-#index #thought-leader .gallery-thumbs label.selected .description,
-#index #thought-leader .gallery-thumbs label:hover .description{
+#index #thought-leader .gallery-thumbs .description{
   background:rgba(0,0,0,0.5);
   pointer-events:none;
 }
-#index #thought-leader .gallery-thumbs label img{
+#index #thought-leader img{
   -webkit-filter:contrast(50%) brightness(50%);
           filter:contrast(50%) brightness(50%);
 }
-#index #thought-leader .gallery-thumbs label .body{
+#index #thought-leader .body{
   position:relative;
 }
-#index #thought-leader .gallery-thumbs label p{
+#index #thought-leader p{
   margin:0;
 }
-#index #thought-leader .gallery-thumbs label img{
+#index #thought-leader img{
   border:0;
   padding:0;
 }
-#index #thought-leader .gallery-thumbs label .description{
+#index #thought-leader .description{
   position:absolute;
   width:100%;
   bottom:0;
   font-size:14px;
   padding:0.5rem 0.5rem 0.75rem;
 }
-#index #thought-leader .gallery-thumbs label .description strong{
+#index #thought-leader .description strong{
   font-weight:600;
 }
-#index #difference{
+#difference{
   color:#000;
   text-align:center;
   min-height:600px;
   padding:5rem 0 0;
 }
-#index #difference h2{
+#difference h2{
   color:#304191;
   font-size:40px;
 }
-#index #difference h2,
-#index #difference h3,
-#index #difference .sub.sub.sub{
+#difference h2,
+#difference h3,
+#difference .sub.sub.sub{
   text-align:center;
   width:100%;
 }
-#index #difference img{
+#difference img{
   height:125px;
 }
-#index #difference p{
+#difference p{
   text-align:left;
 }
-#index #difference .sub{
+#difference .sub{
   font-size:24px;
 }
-#index #difference .bg{
+#difference .bg{
   width:100%;
   background-image:url("/img/bottom-pill-table-2.jpg");
   background-size:cover;
   background-position:50% 0%;
   min-height:400px;
+}
+.thought-section-1{
+  margin-bottom:10px;
 }
 @media only screen and (max-width: 650px){
   .flex-columns,
@@ -1672,5 +1674,11 @@ footer .footer-bottom > *{
 @media (max-aspect-ratio: 16/9){
   #index .hero video{
     height:100vh;
+  }
+}
+@media screen and (max-width: 768px){
+  #index #thought-leader .gallery-thumbs label.selected .description,
+  #index #thought-leader .gallery-thumbs label:hover .description{
+    display:none;
   }
 }/*# sourceMappingURL=app.css.map */
