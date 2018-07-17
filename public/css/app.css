@@ -1507,7 +1507,7 @@ footer .footer-bottom > *{
   -webkit-filter:none;
           filter:none;
 }
-#index #thought-leader .gallery-thumbs .description{
+#index #thought-leader .description{
   background:rgba(0,0,0,0.5);
   pointer-events:none;
 }
@@ -1677,8 +1677,7 @@ footer .footer-bottom > *{
   }
 }
 @media screen and (max-width: 768px){
-  #index #thought-leader .gallery-thumbs label.selected .description,
-  #index #thought-leader .gallery-thumbs label:hover .description{
+  #index #thought-leader .gallery-thumbs label .description{
     display:none;
   }
 }/*# sourceMappingURL=app.css.map */
