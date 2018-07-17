@@ -1,4 +1,4 @@
-# import Shop from 'shop.js/src'
+import Shop from 'shop.js/src'
 
 settings =
   key: ''
