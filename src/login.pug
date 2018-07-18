@@ -1,0 +1,21 @@
+extends _layout.pug
+
+block vars
+  - var pageId = 'login'
+
+block content
+  section
+    .container
+      .row
+        .col-md-8.offset-md-2.col-12
+          h2 Login
+          login
+            user-email.input(placeholder='Email')
+            user-password.input(placeholder='Password')
+            .error(if='{ errorMessage }')
+              | { errorMessage }
+
+            button.input(type='submit')
+              | Login
+          a(href='/reset-password') Reset password?
+          a(href='/signup') Create your account?
