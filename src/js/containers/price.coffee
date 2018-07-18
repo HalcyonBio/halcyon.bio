@@ -1,4 +1,4 @@
-import El from 'el.js'
+import El from 'el.js/src'
 
 export class Price extends El.View
   tag: 'price'

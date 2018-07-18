@@ -1,4 +1,4 @@
-import El from 'el.js'
+import El from 'el.js/src'
 
 export class Gallery extends El.View
   tag: 'gallery'
@@ -21,6 +21,8 @@ export class Gallery extends El.View
     @scheduleUpdate()
 
   jump: (n) ->
+    console.log('n:' , n)
+
     return ->
       @current = (@total + n) % @total
       @scheduleUpdate()
