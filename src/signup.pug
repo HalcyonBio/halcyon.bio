@@ -13,6 +13,8 @@ block content
             user-name.input(placeholder='Name')
             user-email.input(placeholder='Email')
             user-password.input(placeholder='Password')
+            user-password-confirm.input(placeholder='Retype Password')
+            recaptcha(sitekey='6Ldp8mQUAAAAAKfBJ8OxNgvvMkNxvQhbnFfYVO-D')
             .error(if='{ errorMessage }')
               | { errorMessage }
 

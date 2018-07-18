@@ -1,4 +1,5 @@
 import Shop from 'shop.js/src'
+import 'el-controls/src/controls/recaptcha'
 
 settings =
   # live key

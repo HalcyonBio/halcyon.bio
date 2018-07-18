@@ -28965,6 +28965,53 @@
 
   var Shop$2 = Shop$1;
 
+  // node_modules/el-controls/src/controls/recaptcha.coffee
+  var ReCaptcha;
+
+  ReCaptcha = (function() {
+    // requires <script src='//www.google.com/recaptcha/api.js?render=explicit'/>
+    class ReCaptcha extends El$1.View {
+      init() {
+        var tryRecaptcha;
+        if (!this.sitekey) {
+          console.error('recaptcha: no sitekey found');
+          return;
+        }
+        tryRecaptcha = () => {
+          return requestAnimationFrame(() => {
+            try {
+              return grecaptcha.render(this.root, {
+                sitekey: this.sitekey,
+                theme: this.theme,
+                callback: (res) => {
+                  return this.data.set('user.g-recaptcha-response', res);
+                }
+              });
+            } catch (error) {
+              return tryRecaptcha();
+            }
+          });
+        };
+        return tryRecaptcha();
+      }
+
+    }
+    ReCaptcha.prototype.tag = 'recaptcha';
+
+    ReCaptcha.prototype.html = '';
+
+    // sitekey from recaptcha
+    // sitekey: null
+
+    // theme ('dark'/'light')
+    ReCaptcha.prototype.theme = 'light';
+
+    return ReCaptcha;
+
+  }).call(undefined);
+
+  ReCaptcha.register();
+
   // src/js/shop.coffee
   var settings$2;
 
