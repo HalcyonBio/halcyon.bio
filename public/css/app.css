@@ -1661,6 +1661,17 @@ footer .footer-bottom > *{
     color:#212121;
   }
 }
+@media screen and (max-width: 768px){
+  .last-button{
+    padding-left:10px;
+  }
+  .next-button{
+    padding-right:10px;
+  }
+  #index #thought-leader .gallery-thumbs label .description{
+    display:none;
+  }
+}
 @media screen and (min-width: 768px){
   td:last-child{
     padding-right:10px;
@@ -1674,10 +1685,5 @@ footer .footer-bottom > *{
 @media (max-aspect-ratio: 16/9){
   #index .hero video{
     height:100vh;
-  }
-}
-@media screen and (max-width: 768px){
-  #index #thought-leader .gallery-thumbs label .description{
-    display:none;
   }
 }/*# sourceMappingURL=app.css.map */

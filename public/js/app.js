@@ -941,7 +941,7 @@
 
   var zepto = Zepto;
 
-  //  commonjs-proxy:/Users/dtai/work/halcyon/mainpage/node_modules/zepto-modules/zepto.js
+  //  commonjs-proxy:/Users/dan/Documents/GitHub/halcyon.bio/node_modules/zepto-modules/zepto.js
 
   (function($){
     var _zid = 1, undefined,
@@ -1254,11 +1254,11 @@
     });
   })(zepto);
 
-  //  commonjs-proxy:/Users/dtai/work/halcyon/mainpage/node_modules/zepto-modules/event.js
+  //  commonjs-proxy:/Users/dan/Documents/GitHub/halcyon.bio/node_modules/zepto-modules/event.js
 
-  //  commonjs-proxy:/Users/dtai/work/halcyon/mainpage/node_modules/zepto-modules/ie.js
+  //  commonjs-proxy:/Users/dan/Documents/GitHub/halcyon.bio/node_modules/zepto-modules/ie.js
 
-  //  commonjs-proxy:/Users/dtai/work/halcyon/mainpage/node_modules/zepto-modules/stack.js
+  //  commonjs-proxy:/Users/dan/Documents/GitHub/halcyon.bio/node_modules/zepto-modules/stack.js
 
   // node_modules/zepto-modules/_min.js
 
@@ -6033,9 +6033,9 @@
 
   })(zepto);
 
-  //  commonjs-proxy:/Users/dtai/work/halcyon/mainpage/node_modules/zepto-modules/ajax.js
+  //  commonjs-proxy:/Users/dan/Documents/GitHub/halcyon.bio/node_modules/zepto-modules/ajax.js
 
-  //  commonjs-proxy:/Users/dtai/work/halcyon/mainpage/node_modules/zepto-modules/form.js
+  //  commonjs-proxy:/Users/dan/Documents/GitHub/halcyon.bio/node_modules/zepto-modules/form.js
 
   // node_modules/zepto-modules/_default.js
 
@@ -27131,7 +27131,7 @@
     default: hooks
   });
 
-  //  commonjs-proxy:/Users/dtai/work/halcyon/mainpage/node_modules/moment/src/moment.js
+  //  commonjs-proxy:/Users/dan/Documents/GitHub/halcyon.bio/node_modules/moment/src/moment.js
    var require$$0 = ( moment && hooks ) || moment;
 
   var momentTimezone = createCommonjsModule(function (module) {
@@ -28360,9 +28360,9 @@
     default: latest
   });
 
-  //  commonjs-proxy:/Users/dtai/work/halcyon/mainpage/node_modules/moment-timezone/moment-timezone.js
+  //  commonjs-proxy:/Users/dan/Documents/GitHub/halcyon.bio/node_modules/moment-timezone/moment-timezone.js
 
-  //  commonjs-proxy:/Users/dtai/work/halcyon/mainpage/node_modules/moment-timezone/data/packed/latest.json
+  //  commonjs-proxy:/Users/dan/Documents/GitHub/halcyon.bio/node_modules/moment-timezone/data/packed/latest.json
    var require$$1 = ( latest$1 && latest ) || latest$1;
 
   var momentTimezone$1 = createCommonjsModule(function (module) {
