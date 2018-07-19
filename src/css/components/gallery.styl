@@ -11,7 +11,8 @@ gallery
     position: absolute
     top: 0
     left: 0
-    width: 100%
+    width: 90%
+    margin: 0 auto
     height: 100%
     opacity: 0
     transition: all $transitionTime ease-in-out
@@ -33,6 +34,7 @@ gallery
     img
       padding: .5rem
       border: 2px solid $hLavender
+      max-width: 
 
 .last-button
 .next-button
@@ -42,8 +44,8 @@ gallery
   cursor: pointer
 
 .last-button
-  left: -2rem
-@media screen and (max-width:768px){
+  left: -1rem
+@media screen and (max-width:768px) {
   .last-button {
     padding-left: 10px }
   .next-button {
@@ -51,4 +53,4 @@ gallery
   }
 
 .next-button
-  right: -2rem
+  right: -1rem
