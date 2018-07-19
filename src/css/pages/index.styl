@@ -183,8 +183,12 @@ textBorder(size, color)
       padding-top: 5rem
 
     row
-    p
+      p
       width: 100%
+      .testimonial-p
+        @media screen and (max-width:993px)
+          font-size: .7rem
+
 
     .glow
       text-shadow: textBorder(6, $hBlue3)
@@ -203,29 +207,35 @@ textBorder(size, color)
       text-align: center
 
     .testimonial-cards
-      margin-top: 4rem
-      margin-bottom: 5rem
+      @media screen and (min-width:993px)
+        margin-top: 4rem
+        margin-bottom: 5rem
+      @media screen and (max-width:992px)
+        margin-bottom: 2rem
 
       & > :first-child
         margin-top: 3rem
-
-        & > *
+      & > *
+        @media screen and (min-width:993px)
           transform: translateX(-1rem)
 
-      & > :last-child
-        margin-top: 5rem
+        & > :last-child
+          @media screen and (min-width:993px)
+            margin-top: 5rem
 
         & > *
-          transform: translateX(1rem)
-
-      & > * > *
-        margin: 0 1rem
+          @media screen and (min-width:993px)
+            transform: translateX(1rem)
+        & > * > *
+          @media screen and (min-width:993px)
+            margin: 0 1rem
 
     .testimonial-card
       background-color: $hWhite
       border-radius: 16px
       border: 4px solid $hWhite
-
+      @media screen and (max-width:992px)
+        margin-bottom: 20px
       .top
         color: $black
         padding: 1rem
