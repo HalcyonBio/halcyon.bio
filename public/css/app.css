@@ -1570,6 +1570,9 @@ footer .footer-bottom > *{
 .thought-section-1{
   margin-bottom:10px;
 }
+header .mobile-menus .show-mobile-icon{
+  color:#000;
+}
 @media only screen and (max-width: 650px){
   .flex-columns,
   .columns{
@@ -1685,5 +1688,10 @@ footer .footer-bottom > *{
 @media (max-aspect-ratio: 16/9){
   #index .hero video{
     height:100vh;
+  }
+}
+@media screen and (max-width: 440px){
+  #index #shop #shop-widget .title .hb{
+    font-size:7vw;
   }
 }/*# sourceMappingURL=app.css.map */
