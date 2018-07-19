@@ -376,11 +376,16 @@ textBorder(size, color)
       padding: 1.5rem
 
     .values
+      .mobile-top-padding
+        @media screen and (max-width:755px)
+          padding-top: 20px
       .value
         text-align: center
 
-        h2
-          font-weight: 900
+        h4
+          font-weight: 600
+          padding-bottom: 20px
+
 
   #tolerance
     min-height: 500px

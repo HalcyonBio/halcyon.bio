@@ -4254,8 +4254,9 @@ footer .footer-bottom > *{
 #index #value .values .value{
   text-align:center;
 }
-#index #value .values .value h2{
-  font-weight:900;
+#index #value .values .value h4{
+  font-weight:600;
+  padding-bottom:20px;
 }
 #index #tolerance{
   min-height:500px;
@@ -4664,5 +4665,10 @@ header .mobile-menus .show-mobile-icon{
 @media screen and (max-width: 440px){
   #index #shop #shop-widget .title .hb{
     font-size:7vw;
+  }
+}
+@media screen and (max-width: 755px){
+  #index #value .values .mobile-top-padding{
+    padding-top:20px;
   }
 }/*# sourceMappingURL=app.css.map */
