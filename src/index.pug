@@ -85,26 +85,19 @@ block content
                 span ADD TO CART&nbsp;
                 span(class='{ hide: !subscribe }') AND SUBSCRIBE
             input#more-links(type='checkbox')
-            .links-start
-              .link
-                a(href='') link 1
-              .link
-                a(href='') link 2
-              .link
-                a(href='') link 3  
-            .more
-              label(for='more-links')
-                span more...
-            .links
-              .link
-                a(href='') link 4
-              .link
-                a(href='') link 5
-              .link
-                a(href='') link 6
-            .less
-              label(for='more-links')
-                span less...
+              .more
+                label(for='more-links')
+                  span more...
+              .links
+                .link
+                  a(href='') link 1
+                .link
+                  a(href='') link 1
+                .link
+                  a(href='') link 1
+              .less
+                label(for='more-links')
+                  span less...
 
       .row.badges.flex-center
         .badge
@@ -156,10 +149,8 @@ block content
               p Ron White
               .locator
                 img(src='/img/location-marker.png')
-                p.testimonial-p
-                  Austin, TX
-              p.testimonial-p
-                Two-time USA Memory Champion
+                p.testimonial-p Austin, TX
+                p.testimonial-p Two-time USA Memory Champion
 
         .col-md-4.col-12
           .testimonial-card

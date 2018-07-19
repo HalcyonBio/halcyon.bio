@@ -3694,7 +3694,8 @@ gallery{
   position:absolute;
   top:0;
   left:0;
-  width:90%;
+  width:100%;
+  text-align:center;
   margin:0 auto;
   height:100%;
   opacity:0;
@@ -3996,106 +3997,113 @@ footer .footer-bottom > *{
   color:#fff;
   background-color:#304191;
 }
-#index #shop #shop-widget .body .links .link{
+#index #shop #shop-widget .body .links .link,
+#index #shop #shop-widget .body .links-start .link{
   width:100%;
   border-bottom:1px solid #b6bde9;
   display:block;
   line-height:2.5em;
 }
-#index #shop #shop-widget .body .links .link:last-child{
-  border-bottom:0;
-}
-#index #shop #shop-widget .body .more,
-#index #shop #shop-widget .body .less{
+#index #shop #shop-widget .body .links .link .more,
+#index #shop #shop-widget .body .links-start .link .more,
+#index #shop #shop-widget .body .links .link .less,
+#index #shop #shop-widget .body .links-start .link .less{
   display:none;
 }
-#index #shop #shop-widget .body .more span,
-#index #shop #shop-widget .body .less span{
+#index #shop #shop-widget .body .links .link .more span,
+#index #shop #shop-widget .body .links-start .link .more span,
+#index #shop #shop-widget .body .links .link .less span,
+#index #shop #shop-widget .body .links-start .link .less span{
   cursor:pointer;
 }
-#index #shop #shop-widget .body .links{
+#index #shop #shop-widget .body .links .link .links,
+#index #shop #shop-widget .body .links-start .link .links{
   display:none;
 }
-#index #shop #shop-widget .body #more-links{
+#index #shop #shop-widget .body .links .link #more-links,
+#index #shop #shop-widget .body .links-start .link #more-links{
   display:none;
 }
-#index #shop #shop-widget .body #more-links:not(:checked) ~ .more{
+#index #shop #shop-widget .body .links .link #more-links:not(:checked) ~ .more,
+#index #shop #shop-widget .body .links-start .link #more-links:not(:checked) ~ .more{
   display:initial;
 }
-#index #shop #shop-widget .body #more-links:checked ~ .less{
+#index #shop #shop-widget .body .links .link #more-links:checked ~ .less,
+#index #shop #shop-widget .body .links-start .link #more-links:checked ~ .less{
   display:initial;
 }
-#index #shop #shop-widget .body #more-links:checked ~ .links{
+#index #shop #shop-widget .body .links .link #more-links:checked ~ .links,
+#index #shop #shop-widget .body .links-start .link #more-links:checked ~ .links{
   display:initial;
 }
-#index #shop .badges{
+#index #shop #shop-widget .body .badges{
   width:100%;
   padding:2rem 0;
   border-bottom:2px solid #304191;
 }
-#index #shop .studies{
+#index #shop #shop-widget .body .studies{
   margin-top:2rem;
 }
-#index #shop .studies h3{
+#index #shop #shop-widget .body .studies h3{
   text-align:center;
   font-weight:normal;
 }
-#index #shop .studies .coming-soon{
+#index #shop #shop-widget .body .studies .coming-soon{
   text-align:center;
 }
-#index #shop .studies .coming-soon .pre-order-image{
+#index #shop #shop-widget .body .studies .coming-soon .pre-order-image{
   margin:1rem 0;
 }
-#index #shop .studies .coming-soon .pre-order-image img{
+#index #shop #shop-widget .body .studies .coming-soon .pre-order-image img{
   height:300px;
 }
-#index #testimonials{
+#index #shop #shop-widget #testimonials{
   background-color:#292f4d;
   overflow:hidden;
   min-height:100vh;
 }
-#index #testimonials .bg{
+#index #shop #shop-widget #testimonials .bg{
   position:absolute;
 }
-#index #testimonials .fg{
+#index #shop #shop-widget #testimonials .fg{
   z-index:1;
   padding-top:5rem;
 }
-#index #testimonials row{
+#index #shop #shop-widget #testimonials row{
   width:100%;
 }
-#index #testimonials .glow{
+#index #shop #shop-widget #testimonials .glow{
   text-shadow:0 0 #292f4d, -1px 0 #292f4d, 1px 0 #292f4d, 0 -1px #292f4d, 0 1px #292f4d, -2px 0 #292f4d, 2px 0 #292f4d, 0 -2px #292f4d, 0 2px #292f4d, -3px 0 #292f4d, 3px 0 #292f4d, 0 -3px #292f4d, 0 3px #292f4d, -4px 0 #292f4d, 4px 0 #292f4d, 0 -4px #292f4d, 0 4px #292f4d, -5px 0 #292f4d, 5px 0 #292f4d, 0 -5px #292f4d, 0 5px #292f4d, -6px 0 #292f4d, 6px 0 #292f4d, 0 -6px #292f4d, 0 6px #292f4d, -1px -1px #292f4d, -1px 1px #292f4d, 1px -1px #292f4d, 1px 1px #292f4d, -2px -2px #292f4d, -2px 2px #292f4d, 2px -2px #292f4d, 2px 2px #292f4d, -3px -3px #292f4d, -3px 3px #292f4d, 3px -3px #292f4d, 3px 3px #292f4d, -4px -4px #292f4d, -4px 4px #292f4d, 4px -4px #292f4d, 4px 4px #292f4d, -5px -5px #292f4d, -5px 5px #292f4d, 5px -5px #292f4d, 5px 5px #292f4d;
 }
-#index #testimonials .header{
+#index #shop #shop-widget #testimonials .header{
   font-size:48px;
   font-weight:bold;
   text-transform:uppercase;
   line-height:1.2;
   text-align:center;
 }
-#index #testimonials .subheader{
+#index #shop #shop-widget #testimonials .subheader{
   font-weight:bold;
   text-transform:uppercase;
   line-height:1.2;
   text-align:center;
 }
-#index #testimonials .testimonial-cards > :first-child{
+#index #shop #shop-widget #testimonials .testimonial-cards > :first-child{
   margin-top:3rem;
 }
-#index #testimonials .testimonial-card{
+#index #shop #shop-widget #testimonials .testimonial-card{
   background-color:#fff;
   border-radius:16px;
   border:4px solid #fff;
 }
-#index #testimonials .testimonial-card .top{
+#index #shop #shop-widget #testimonials .testimonial-card .top{
   color:#000;
   padding:1rem;
   border-top-right-radius:16px;
   border-top-left-radius:16px;
   padding-bottom:50px;
 }
-#index #testimonials .testimonial-card .bottom{
+#index #shop #shop-widget #testimonials .testimonial-card .bottom{
   background-color:#304191;
   padding:1rem;
   border-bottom-right-radius:16px;
@@ -4104,7 +4112,7 @@ footer .footer-bottom > *{
   position:relative;
   padding-top:50px;
 }
-#index #testimonials .testimonial-card .bottom:before{
+#index #shop #shop-widget #testimonials .testimonial-card .bottom:before{
   content:'';
   position:absolute;
   left:50%;
@@ -4116,7 +4124,7 @@ footer .footer-bottom > *{
   background-size:contain;
   background-repeat:no-repeat;
 }
-#index #testimonials .testimonial-card .bottom .locator{
+#index #shop #shop-widget #testimonials .testimonial-card .bottom .locator{
   position:absolute;
   top:0;
   left:calc(50% + 50px);
@@ -4124,53 +4132,53 @@ footer .footer-bottom > *{
   line-height:2.143;
   font-weight:200;
 }
-#index #testimonials .testimonial-card .bottom .locator > *{
+#index #shop #shop-widget #testimonials .testimonial-card .bottom .locator > *{
   display:inline;
   text-align:left;
 }
-#index #testimonials .testimonial-card .bottom .locator img{
+#index #shop #shop-widget #testimonials .testimonial-card .bottom .locator img{
   margin-right:2px;
 }
-#index #video{
+#index #shop #shop-widget #video{
   background-color:#1d243d;
 }
-#index #video .container{
+#index #shop #shop-widget #video .container{
   margin-top:5rem;
   margin-bottom:5rem;
 }
-#index #video .video{
+#index #shop #shop-widget #video .video{
   position:relative;
   width:100%;
   height:0;
   padding-bottom:56.25%;
 }
-#index #video .video iframe{
+#index #shop #shop-widget #video .video iframe{
   position:absolute;
   top:0;
   left:0;
   width:100%;
   height:100%;
 }
-#index #video h2{
+#index #shop #shop-widget #video h2{
   font-size:40px;
   color:#f26621;
   line-height:1.2;
   text-align:left;
 }
-#index #video p{
+#index #shop #shop-widget #video p{
   font-size:32px;
   line-height:1.2;
   text-align:left;
 }
-#index #video .footer{
+#index #shop #shop-widget #video .footer{
   text-align:center;
   width:100%;
   position:relative;
 }
-#index #video .footer img{
+#index #shop #shop-widget #video .footer img{
   width:80px;
 }
-#index #video .footer:before{
+#index #shop #shop-widget #video .footer:before{
   content:'';
   position:absolute;
   left:0;
@@ -4179,7 +4187,7 @@ footer .footer-bottom > *{
   width:calc(50% - 50px);
   background-color:#fff;
 }
-#index #video .footer:after{
+#index #shop #shop-widget #video .footer:after{
   content:'';
   position:absolute;
   right:0;
@@ -4188,27 +4196,27 @@ footer .footer-bottom > *{
   width:calc(50% - 50px);
   background-color:#fff;
 }
-#index #diff{
+#index #shop #shop-widget #diff{
   background-image:url("/img/diffbg.png");
   background-color:#292f4d;
   padding-top:5rem;
   padding-bottom:5rem;
 }
-#index #diff .cta{
+#index #shop #shop-widget #diff .cta{
   position:absolute;
   text-align:center;
 }
-#index #diff .cta h2{
+#index #shop #shop-widget #diff .cta h2{
   font-size:40px;
   font-weight:bold;
   text-transform:uppercase;
   line-height:1.2;
 }
-#index #diff .cta button{
+#index #shop #shop-widget #diff .cta button{
   color:#324099;
   margin-top:2rem;
 }
-#index #deadline{
+#index #shop #shop-widget #deadline{
   background-image:url("/img/businesswoman.jpg");
   background-size:cover;
   background-position:left;
@@ -4216,17 +4224,17 @@ footer .footer-bottom > *{
   padding-top:2rem;
   padding-bottom:2rem;
 }
-#index #deadline h2{
+#index #shop #shop-widget #deadline h2{
   font-size:40px;
   color:#324099;
   font-weight:bold;
   line-height:1.2;
   text-align:center;
 }
-#index #deadline p{
+#index #shop #shop-widget #deadline p{
   color:#000;
 }
-#index #value{
+#index #shop #shop-widget #value{
   background-image:url("/img/valuegradient.jpg");
   background-size:cover;
   background-position:center;
@@ -4234,30 +4242,30 @@ footer .footer-bottom > *{
   padding-top:2rem;
   padding-bottom:2rem;
 }
-#index #value .container{
+#index #shop #shop-widget #value .container{
   border:4px solid #272f4e;
   background-color:#1e253f;
   padding:1.5rem;
 }
-#index #value .values .value{
+#index #shop #shop-widget #value .values .value{
   text-align:center;
 }
-#index #value .values .value h4{
+#index #shop #shop-widget #value .values .value h4{
   font-weight:600;
   padding-bottom:20px;
 }
-#index #tolerance{
+#index #shop #shop-widget #tolerance{
   min-height:500px;
   background-color:#191936;
   padding-top:2rem;
   padding-bottom:2rem;
 }
-#index #tolerance blockquote{
+#index #shop #shop-widget #tolerance blockquote{
   margin:1.5em 10px;
   padding:0.5em 10px;
   quotes:"\201C" "\201D" "\2018" "\2019";
 }
-#index #tolerance blockquote:before{
+#index #shop #shop-widget #tolerance blockquote:before{
   content:open-quote;
   font-size:4em;
   line-height:0.1em;
@@ -4265,13 +4273,13 @@ footer .footer-bottom > *{
   top:2rem;
   left:-2rem;
 }
-#index #tolerance strong{
+#index #shop #shop-widget #tolerance strong{
   font-size:40px;
 }
-#index #tolerance strong.orange{
+#index #shop #shop-widget #tolerance strong.orange{
   color:#f26621;
 }
-#index #performance{
+#index #shop #shop-widget #performance{
   background-image:url("/img/performance.jpg");
   background-size:cover;
   background-position:left;
@@ -4279,36 +4287,36 @@ footer .footer-bottom > *{
   padding-top:2rem;
   padding-bottom:2rem;
 }
-#index #performance h2{
+#index #shop #shop-widget #performance h2{
   font-size:40px;
   font-weight:bold;
 }
-#index #made-in-usa{
+#index #shop #shop-widget #made-in-usa{
   background-color:#1e253f;
   text-align:center;
   padding-top:2rem;
   padding-bottom:2rem;
 }
-#index #made-in-usa p{
+#index #shop #shop-widget #made-in-usa p{
   font-size:40px;
 }
-#index #made-in-usa strong{
+#index #shop #shop-widget #made-in-usa strong{
   font-size:48px;
 }
-#index #nutrition{
+#index #shop #shop-widget #nutrition{
   background-color:#fff;
   color:#304191;
   font-size:24px;
   padding-top:2rem;
   padding-bottom:2rem;
 }
-#index #nutrition h2{
+#index #shop #shop-widget #nutrition h2{
   font-size:52px;
 }
-#index #nutrition .orange{
+#index #shop #shop-widget #nutrition .orange{
   color:#f26621;
 }
-#index #try-today{
+#index #shop #shop-widget #try-today{
   background-image:url("/img/trytoday.jpg");
   background-size:cover;
   background-position:top;
@@ -4316,64 +4324,64 @@ footer .footer-bottom > *{
   padding-top:20vh;
   padding-bottom:20vh;
 }
-#index #try-today h2{
+#index #shop #shop-widget #try-today h2{
   font-size:40px;
   font-weight:600;
   width:100%;
   text-align:center;
   margin-bottom:2rem;
 }
-#index #try-today .rush-options{
+#index #shop #shop-widget #try-today .rush-options{
   border-radius:16px;
   background-color:#fff;
   color:#304191;
   padding:1rem 0 2rem;
 }
-#index #try-today .rush-options .option{
+#index #shop #shop-widget #try-today .rush-options .option{
   padding:0.5rem 4vw;
   border-right:1px solid #b6bde9;
   text-align:center;
 }
-#index #try-today .rush-options .option:last-child{
+#index #shop #shop-widget #try-today .rush-options .option:last-child{
   border-right:0;
 }
-#index #try-today .rush-options .option h3{
+#index #shop #shop-widget #try-today .rush-options .option h3{
   text-align:center;
   font-size:22px;
   font-weight:bold;
 }
-#index #try-today .rush-options .option img{
+#index #shop #shop-widget #try-today .rush-options .option img{
   height:200px;
 }
-#index #try-today .rush-options .option p{
+#index #shop #shop-widget #try-today .rush-options .option p{
   color:#000;
   padding:10px 0;
   margin:0;
   min-height:3em;
 }
-#index #try-today .rush-options .option .image{
+#index #shop #shop-widget #try-today .rush-options .option .image{
   padding-bottom:30px;
 }
-#index #try-today .rush-options .option .image,
-#index #try-today .rush-options .option p{
+#index #shop #shop-widget #try-today .rush-options .option .image,
+#index #shop #shop-widget #try-today .rush-options .option p{
   border-bottom:1px solid #b6bde9;
 }
-#index #try-today .rush-options .option .double-line{
+#index #shop #shop-widget #try-today .rush-options .option .double-line{
   line-height:3rem;
 }
-#index #try-today .rush-options .option .price{
+#index #shop #shop-widget #try-today .rush-options .option .price{
   padding:10px 15px 20px;
   font-weight:600;
   font-size:20px;
 }
-#index #try-today .rush-options .option .price .orange{
+#index #shop #shop-widget #try-today .rush-options .option .price .orange{
   color:#f26621;
 }
-#index #try-today .rush-options .option button{
+#index #shop #shop-widget #try-today .rush-options .option button{
   width:100%;
   background-color:#f26621 !important;
 }
-#index #thought-leader{
+#index #shop #shop-widget #thought-leader{
   background-image:url("/img/thought-leaders-bg.jpg");
   background-size:cover;
   background-position:left;
@@ -4381,84 +4389,84 @@ footer .footer-bottom > *{
   padding-top:2rem;
   padding-bottom:2rem;
 }
-#index #thought-leader h2{
+#index #shop #shop-widget #thought-leader h2{
   font-size:40px;
   font-weight:600;
   width:100%;
   text-align:center;
   margin-bottom:2rem;
 }
-#index #thought-leader sub{
+#index #shop #shop-widget #thought-leader sub{
   bottom:1.25em;
 }
-#index #thought-leader a{
+#index #shop #shop-widget #thought-leader a{
   color:#c2c2c2 !important;
 }
-#index #thought-leader .gallery-thumbs{
+#index #shop #shop-widget #thought-leader .gallery-thumbs{
   margin-top:0;
 }
-#index #thought-leader .gallery-thumbs label{
+#index #shop #shop-widget #thought-leader .gallery-thumbs label{
   padding:0 0.5rem;
 }
-#index #thought-leader .gallery-thumbs label.selected img,
-#index #thought-leader .gallery-thumbs label:hover img{
+#index #shop #shop-widget #thought-leader .gallery-thumbs label.selected img,
+#index #shop #shop-widget #thought-leader .gallery-thumbs label:hover img{
   -webkit-filter:none;
           filter:none;
 }
-#index #thought-leader .description{
+#index #shop #shop-widget #thought-leader .description{
   background:rgba(0,0,0,0.5);
   pointer-events:none;
 }
-#index #thought-leader img{
+#index #shop #shop-widget #thought-leader img{
   -webkit-filter:contrast(50%) brightness(50%);
           filter:contrast(50%) brightness(50%);
 }
-#index #thought-leader .body{
+#index #shop #shop-widget #thought-leader .body{
   position:relative;
 }
-#index #thought-leader p{
+#index #shop #shop-widget #thought-leader p{
   margin:0;
 }
-#index #thought-leader img{
+#index #shop #shop-widget #thought-leader img{
   border:0;
   padding:0;
 }
-#index #thought-leader .description{
+#index #shop #shop-widget #thought-leader .description{
   position:absolute;
   width:100%;
   bottom:0;
   font-size:14px;
   padding:0.5rem 0.5rem 0.75rem;
 }
-#index #thought-leader .description strong{
+#index #shop #shop-widget #thought-leader .description strong{
   font-weight:600;
 }
-#difference{
+#index #difference{
   color:#000;
   text-align:center;
   min-height:600px;
   padding:5rem 0 0;
 }
-#difference h2{
+#index #difference h2{
   color:#304191;
   font-size:40px;
 }
-#difference h2,
-#difference h3,
-#difference .sub.sub.sub{
+#index #difference h2,
+#index #difference h3,
+#index #difference .sub.sub.sub{
   text-align:center;
   width:100%;
 }
-#difference img{
+#index #difference img{
   height:125px;
 }
-#difference p{
+#index #difference p{
   text-align:left;
 }
-#difference .sub{
+#index #difference .sub{
   font-size:24px;
 }
-#difference .bg{
+#index #difference .bg{
   width:100%;
   background-image:url("/img/bottom-pill-table-2.jpg");
   background-size:cover;
@@ -4624,6 +4632,11 @@ header .mobile-menus .show-mobile-icon{
     font-size:0.7em;
   }
 }
+@media screen and (max-width: 767){
+  .gallery .image{
+    width:90%;
+  }
+}
 @media screen and (max-width: 768px){
   .last-button{
     padding-left:10px;
@@ -4631,7 +4644,7 @@ header .mobile-menus .show-mobile-icon{
   .next-button{
     padding-right:10px;
   }
-  #index #thought-leader .gallery-thumbs label .description{
+  #index #shop #shop-widget #thought-leader .gallery-thumbs label .description{
     display:none;
   }
 }
@@ -4656,38 +4669,38 @@ header .mobile-menus .show-mobile-icon{
   }
 }
 @media screen and (max-width: 993px){
-  #index #testimonials row .testimonial-p{
+  #index #shop #shop-widget #testimonials row .testimonial-p{
     font-size:0.7rem;
   }
 }
 @media screen and (min-width: 993px){
-  #index #testimonials .testimonial-cards{
+  #index #shop #shop-widget #testimonials .testimonial-cards{
     margin-top:4rem;
     margin-bottom:5rem;
   }
-  #index #testimonials .testimonial-cards > *{
+  #index #shop #shop-widget #testimonials .testimonial-cards > *{
     transform:translateX(-1rem);
   }
-  #index #testimonials .testimonial-cards > * > :last-child{
+  #index #shop #shop-widget #testimonials .testimonial-cards > * > :last-child{
     margin-top:5rem;
   }
-  #index #testimonials .testimonial-cards > * > *{
+  #index #shop #shop-widget #testimonials .testimonial-cards > * > *{
     transform:translateX(1rem);
   }
-  #index #testimonials .testimonial-cards > * > * > *{
+  #index #shop #shop-widget #testimonials .testimonial-cards > * > * > *{
     margin:0 1rem;
   }
 }
 @media screen and (max-width: 992px){
-  #index #testimonials .testimonial-cards{
+  #index #shop #shop-widget #testimonials .testimonial-cards{
     margin-bottom:2rem;
   }
-  #index #testimonials .testimonial-card{
+  #index #shop #shop-widget #testimonials .testimonial-card{
     margin-bottom:20px;
   }
 }
 @media screen and (max-width: 755px){
-  #index #value .values .mobile-top-padding{
+  #index #shop #shop-widget #value .values .mobile-top-padding{
     padding-top:20px;
   }
 }/*# sourceMappingURL=app.css.map */
