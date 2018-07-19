@@ -28963,67 +28963,9 @@
     window.Shop = Shop$1;
   }
 
-  var Shop$2 = Shop$1;
-
-  // node_modules/el-controls/src/controls/recaptcha.coffee
-  var ReCaptcha;
-
-  ReCaptcha = (function() {
-    // requires <script src='//www.google.com/recaptcha/api.js?render=explicit'/>
-    class ReCaptcha extends El$1.View {
-      init() {
-        var tryRecaptcha;
-        if (!this.sitekey) {
-          console.error('recaptcha: no sitekey found');
-          return;
-        }
-        tryRecaptcha = () => {
-          return requestAnimationFrame(() => {
-            try {
-              return grecaptcha.render(this.root, {
-                sitekey: this.sitekey,
-                theme: this.theme,
-                callback: (res) => {
-                  return this.data.set('user.g-recaptcha-response', res);
-                }
-              });
-            } catch (error) {
-              return tryRecaptcha();
-            }
-          });
-        };
-        return tryRecaptcha();
-      }
-
-    }
-    ReCaptcha.prototype.tag = 'recaptcha';
-
-    ReCaptcha.prototype.html = '';
-
-    // sitekey from recaptcha
-    // sitekey: null
-
-    // theme ('dark'/'light')
-    ReCaptcha.prototype.theme = 'light';
-
-    return ReCaptcha;
-
-  }).call(undefined);
-
-  ReCaptcha.register();
-
   // src/js/shop.coffee
-  var settings$2;
 
-  settings$2 = {
-    // live key
-    // key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzIsImp0aSI6Ii1YdHE0cHJVdDNrIiwic3ViIjoiTzVUQWtKcjBzZSJ9.4N1r2FxixxCh4DkGMGA_Iqg4VCNgFOK36Pd-3Zt1BXcqhbUFahU-CnfbeM7eIb01udcvGE2yPQRjAH2DjpRRcA'
-
-    // test key
-    key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzYsImp0aSI6IkdxaUZ4dlFhZ1VJIiwic3ViIjoiTzVUQWtKcjBzZSJ9.E7Lc69XRmz-tq1U42aFqECLtcx_pv4w5NTGWeXqoLbM-o-uHcuM_2xS4_kJifA8LXIlLm2tx2M-CmJMdmeZuzA'
-  };
-
-  Shop$2.start(settings$2);
+  // Shop.start settings
 
   // src/js/app.coffee
 
