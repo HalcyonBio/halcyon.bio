@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "astley.js": "0.0.51",
+    "el-controls": "1.2.37",
     "el.js": "2.1.36",
     "shop.js": "2.2.49"
   }
