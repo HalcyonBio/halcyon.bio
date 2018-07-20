@@ -40,12 +40,12 @@ block content
                   img(src='/img/halcyon-bottle-back.jpg')
                 .image(class='{ show: current == 2 }')
                   img(src='/img/halcyon-bottle-front2.jpg')
-              .row.gallery-thumbs
-                label.col-md-4.col-4.thumb(for='halcyonbottlefront' onclick='{ jump(0) }')
+              .gallery-thumbs.product-img
+                label.thumb(for='halcyonbottlefront' onclick='{ jump(0) }')
                   img(src='/img/halcyon-bottle-front.jpg')
-                label.col-md-4.col-4.thumb(for='halcyonbottleback' onclick='{ jump(1) }')
+                label.thumb(for='halcyonbottleback' onclick='{ jump(1) }')
                   img(src='/img/halcyon-bottle-back.jpg')
-                label.col-md-4.col-4.thumb(for='halcyonbottlefront2' onclick='{ jump(2) }')
+                label.thumb(for='halcyonbottlefront2' onclick='{ jump(2) }')
                   img(src='/img/halcyon-bottle-front2.jpg')
               .last-button(onclick='{ last }') <
               .next-button(onclick='{ next }') >
