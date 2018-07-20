@@ -4,14 +4,14 @@ block vars
   - var pageId = 'launch-videos'
 
 block content
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=196248463763060&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+  div#fb-root
+  //- script(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=196248463763060&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs); }
+    (document, 'script', 'facebook-jssdk')); //
   section.l-header
     .container
       .row
@@ -35,8 +35,7 @@ block content
   .container.l-body
     .row
       .col-lg-9.col-12
-        p.
-          Hit the <span class="fblike"> "Like"</span> button and comment below
+        h3  Hit the <span class="fblike"> "Like"</span> button and comment below
         img(src="img/arrow.png")
         <div class="fb-comments" data-href="https://halcyon.bio/master-class-videos" data-width="600" data-numposts="10"></div>
       .col-lg-3.col-12.vid-title.text-center
