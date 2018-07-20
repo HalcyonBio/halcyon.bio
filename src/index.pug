@@ -84,20 +84,29 @@ block content
               button.btn(type='button')
                 span ADD TO CART&nbsp;
                 span(class='{ hide: !subscribe }') AND SUBSCRIBE
+            .first-links
+                  
+                    .link
+                      a(href='') link 1
+                    .link
+                      a(href='') link 2
+                    .link
+                      a(href='') link 3
             input#more-links(type='checkbox')
+            
             .more
-                label(for='more-links')
-                  span more...
+              label(for='more-links')
+                span more...
             .links
-                .link
-                  a(href='') link 1
-                .link
-                  a(href='') link 1
-                .link
-                  a(href='') link 1
+              .link
+                a(href='') link 4
+              .link
+                a(href='') link 5
+              .link
+                a(href='') link 6
             .less
-                label(for='more-links')
-                  span less...
+              label(for='more-links')
+                span less...
 
       .row.badges.flex-center
         .badge
@@ -150,7 +159,7 @@ block content
               .locator
                 img(src='/img/location-marker.png')
                 p.testimonial-p Austin, TX
-                p.testimonial-p Two-time USA Memory Champion
+              p.testimonial-p Two-time USA Memory Champion
 
         .col-md-4.col-12
           .testimonial-card

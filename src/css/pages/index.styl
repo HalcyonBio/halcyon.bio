@@ -116,15 +116,14 @@ textBorder(size, color)
             color: $hWhite
             background-color: $hBlue2
 
-        .links, .links-start
+        .links, .first-links
           .link
             width: 100%
             border-bottom: 1px solid $hLavender
             display: block
             line-height: 2.5em
 
-            // &:last-child
-              // border-bottom: 0
+
 
         .more
         .less
@@ -151,6 +150,7 @@ textBorder(size, color)
     .badges
       width: 100%
       padding: 2rem 0
+      margin: 0 auto;
 
       border-bottom: 2px solid $hBlue2
 
@@ -183,9 +183,10 @@ textBorder(size, color)
       padding-top: 5rem
 
     row
-      p
+    p
       width: 100%
-      .testimonial-p
+
+    .testimonial-p
         @media screen and (max-width:993px)
           font-size: .7rem
 
