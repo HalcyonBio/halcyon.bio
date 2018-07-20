@@ -1,7 +1,7 @@
 extends _layout.pug
 
 block vars
-  - var pageId = 'signup'
+  - var pageId = 'affiliate-signup'
 
 block content
   section
@@ -9,7 +9,8 @@ block content
       .row
         .col-md-8.offset-md-2.col-12
           h2 Sign Up
-          register(immediate-login='true')
+          register(immediate-login='true' affiliate='true')
+            user-status.input(placeholder='Email')
             user-name.input(placeholder='Name')
             user-email.input(placeholder='Email')
             user-password.input(placeholder='Password')

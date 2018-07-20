@@ -4004,7 +4004,7 @@ footer .footer-bottom > *{
   cursor:pointer;
 }
 #index #shop #shop-widget .body .price{
-  padding:5px 15px;
+  padding:5px 0px;
   font-weight:600;
   font-size:24px;
 }
@@ -4235,6 +4235,8 @@ footer .footer-bottom > *{
   background-color:#292f4d;
   padding-top:5rem;
   padding-bottom:5rem;
+  padding-left:0px;
+  padding-right:0px;
 }
 #index #diff .cta{
   position:absolute;
