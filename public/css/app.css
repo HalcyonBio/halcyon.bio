@@ -3866,6 +3866,9 @@ header .secondary.secondary.secondary a{
 body{
   background:#fff;
 }
+header .mobile-menus .show-mobile-icon{
+  color:#304191;
+}
 .flex-center{
   display:flex;
   align-items:center;
@@ -4507,9 +4510,6 @@ footer .footer-bottom > *{
 .thought-section-1{
   margin-bottom:10px;
 }
-header .mobile-menus .show-mobile-icon{
-  color:#000;
-}
 #login h2{
   color:#304191;
 }
@@ -4525,6 +4525,8 @@ header .mobile-menus .show-mobile-icon{
   margin-top:20vh;
   margin-bottom:10vh;
   text-align:center;
+  padding-left:5px;
+  padding-right:5px;
 }
 @media only screen and (max-width: 650px){
   .flex-columns,
