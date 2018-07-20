@@ -37,7 +37,7 @@ module.exports =
             {
               '@type': 'WebsiteMenu'
               name: 'SIGN IN'
-              url: '#sign-in'
+              url: '/login'
             }
       #       {
       #         '@type': 'WebsiteMenu'
