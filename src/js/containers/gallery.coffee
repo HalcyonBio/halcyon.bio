@@ -21,8 +21,6 @@ export class Gallery extends El.View
     @scheduleUpdate()
 
   jump: (n) ->
-    console.log('n:' , n)
-
     return ->
       @current = (@total + n) % @total
       @scheduleUpdate()

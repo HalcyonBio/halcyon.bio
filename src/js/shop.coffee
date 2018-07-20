@@ -1,5 +1,6 @@
 import Shop from 'shop.js/src'
 import 'el-controls/src/controls/recaptcha'
+import $ from 'zepto-modules/_min'
 
 settings =
   # live key
@@ -8,5 +9,12 @@ settings =
 
   # test key
   key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzYsImp0aSI6IkdxaUZ4dlFhZ1VJIiwic3ViIjoiTzVUQWtKcjBzZSJ9.E7Lc69XRmz-tq1U42aFqECLtcx_pv4w5NTGWeXqoLbM-o-uHcuM_2xS4_kJifA8LXIlLm2tx2M-CmJMdmeZuzA'
+  processor: 'authorizenet'
 
-Shop.start settings
+m = Shop.start settings
+Shop.addItem 'D1cONpe5ueODn1', 1
+
+$('.add-to-cart button').on 'click', (e)->
+  m.trigger 'checkout-open'
+
+
