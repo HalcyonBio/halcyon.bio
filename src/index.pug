@@ -109,10 +109,10 @@ block content
                 span less...
 
       .row.badges.flex-center
-        .badge
+        .badge.badge1
           img(src='/img/fda-gmp.png')
-        .badge
-          img(src='/img/usa.jpg')
+        .badge.badge2
+          img(src='/img/usa.svg')
         
       .row.studies
         .clinical.col-md-6.col-12
@@ -149,41 +149,50 @@ block content
           p.glow.subheader Awesome stat
 
       .row.testimonial-cards
-        .col-md-4.col-12
+        .col-lg-4.col-12
           .testimonial-card
             .top
               p.
                 I first tried Halcyon because it’s difficult for me to bear down with tasks and focus on days when I am in the office all day. This changed that for me.
             .bottom
-              p Ron White
+              h4 Ron White
               .locator
                 img(src='/img/location-marker.png')
                 p.testimonial-p Austin, TX
               p.testimonial-p Two-time USA Memory Champion
+              .locator-sm-screen
+                img(src='/img/location-marker.png')
+                span.testimonial-p Austin, TX
 
-        .col-md-4.col-12
+        .col-lg-4.col-12
           .testimonial-card
             .top
               p.
                 I first tried Halcyon because it’s difficult for me to bear down with tasks and focus on days when I am in the office all day. This changed that for me.
             .bottom
-              strong Andrew Tam
+              h4 Andrew Tam
               .locator
                 img(src='/img/location-marker.png')
-                p San Francisco
-              p Engineer/Founder, XXXXXX
+                p.testimonial-p San Francisco
+              p.testimonial-p Engineer/Founder, XXXXXX
+              .locator-sm-screen
+                img(src='/img/location-marker.png')
+                span.testimonial-p San Francisco
 
-        .col-md-4.col-12
+        .col-lg-4.col-12
           .testimonial-card
             .top
               p.
                 I first tried Halcyon because it’s difficult for me to bear down with tasks and focus on days when I am in the office all day. This changed that for me.
             .bottom
-              strong Julien Blin
+              h4 Julien Blin
               .locator
                 img(src='/img/location-marker.png')
-                p Silicon Valley
-              p ex-Google Strategist
+                p.testimonial-p Silicon Valley
+              p.testimonial-p ex-Google Strategist
+              .locator-sm-screen
+                img(src='/img/location-marker.png')
+                span.testimonial-p Silicon Valley
 
   section#video.flex-center
     .container
@@ -222,10 +231,10 @@ block content
           h4 MEMORY
           img(src='/img/graph1.png')
         .value.col-md-4.col-12.mobile-top-padding
-          h4 GRAY MATTER PERFUSION
+          h4.mvalue GRAY MATTER PERFUSION
           img(src='/img/graph2.png')
         .value.col-md-4.col-12.mobile-top-padding
-          h4 MOTIVATION
+          h4.mvalue MOTIVATION
           img(src='/img/graph3.png')
 
   section#tolerance.flex-center

@@ -77,7 +77,8 @@ textBorder(size, color)
             font-size: 7vw;
 
       .body
-        max-width: 280px
+        @media screen and (min-width:767px)
+          max-width: 280px
 
         .reviews
           padding: 5px 0
@@ -153,6 +154,11 @@ textBorder(size, color)
       margin: 0 auto;
 
       border-bottom: 2px solid $hBlue2
+    .badge1
+      max-width: 66%
+    .badge2
+      max-width: 33%
+
 
     .studies
       margin-top: 2rem
@@ -163,6 +169,8 @@ textBorder(size, color)
 
       .coming-soon
         text-align: center
+        @media screen and (max-width:767px)
+          padding-top: 20px;
 
         .pre-order-image
           margin: 1rem 0
@@ -272,6 +280,9 @@ textBorder(size, color)
           font-size: 14px
           line-height: 2.143
           font-weight: 200
+          @media screen and (max-width:382px)
+            display:none
+
 
           & > *
             display: inline
@@ -279,6 +290,11 @@ textBorder(size, color)
 
           img
             margin-right: 2px
+        .locator-sm-screen
+          @media screen and (max-width:382px)
+            display:block
+          @media screen and (min-width:383px)
+            display:none
 
   #video
     background-color: $hBlue4
@@ -395,10 +411,13 @@ textBorder(size, color)
       .value
         text-align: center
 
+
         h4
           font-weight: 600
           padding-bottom: 20px
-
+    @media screen and (max-width:767px)
+      .mvalue
+        padding-top: 20px
 
   #tolerance
     min-height: 500px
@@ -424,6 +443,9 @@ textBorder(size, color)
 
       &.orange
         color: $hOrange
+    @media screen and (max-width:767px)
+      img
+        margin: 0 auto;
 
   #performance
     background-image: url(/img/performance.jpg)

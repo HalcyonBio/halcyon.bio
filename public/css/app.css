@@ -3958,9 +3958,6 @@ footer .footer-bottom > *{
   padding-top:5px;
   font-size:34px;
 }
-#index #shop #shop-widget .body{
-  max-width:280px;
-}
 #index #shop #shop-widget .body .reviews{
   padding:5px 0;
 }
@@ -4032,6 +4029,12 @@ footer .footer-bottom > *{
   padding:2rem 0;
   margin:0 auto;
   border-bottom:2px solid #304191;
+}
+#index #shop .badge1{
+  max-width:66%;
+}
+#index #shop .badge2{
+  max-width:33%;
 }
 #index #shop .studies{
   margin-top:2rem;
@@ -4661,6 +4664,22 @@ header .mobile-menus .show-mobile-icon{
     font-size:7vw;
   }
 }
+@media screen and (min-width: 767px){
+  #index #shop #shop-widget .body{
+    max-width:280px;
+  }
+}
+@media screen and (max-width: 767px){
+  #index #shop .studies .coming-soon{
+    padding-top:20px;
+  }
+  #index #value .mvalue{
+    padding-top:20px;
+  }
+  #index #tolerance img{
+    margin:0 auto;
+  }
+}
 @media screen and (max-width: 993px){
   #index #testimonials .testimonial-p{
     font-size:0.7rem;
@@ -4690,6 +4709,19 @@ header .mobile-menus .show-mobile-icon{
   }
   #index #testimonials .testimonial-card{
     margin-bottom:20px;
+  }
+}
+@media screen and (max-width: 382px){
+  #index #testimonials .testimonial-card .bottom .locator{
+    display:none;
+  }
+  #index #testimonials .testimonial-card .bottom .locator-sm-screen{
+    display:block;
+  }
+}
+@media screen and (min-width: 383px){
+  #index #testimonials .testimonial-card .bottom .locator-sm-screen{
+    display:none;
   }
 }
 @media screen and (max-width: 755px){
