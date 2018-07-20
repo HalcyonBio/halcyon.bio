@@ -5,13 +5,14 @@ block vars
 
 block content
   div#fb-root
-  //- script(function(d, s, id) {
+   script.
+    (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
     js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=196248463763060&autoLogAppEvents=1';
     fjs.parentNode.insertBefore(js, fjs); }
-    (document, 'script', 'facebook-jssdk')); //
+    (document, 'script', 'facebook-jssdk'));
   section.l-header
     .container
       .row
@@ -55,5 +56,6 @@ block content
         h5 Video 4 
         h5 Coming soon
 
+block header
 
       

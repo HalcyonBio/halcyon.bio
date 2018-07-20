@@ -1,0 +1,23 @@
+extends _layout.pug
+
+block vars
+  - var pageId = 'signup'
+
+block content
+  section
+    .container
+      .row
+        .col-md-8.offset-md-2.col-12
+          h2 Sign Up
+          register(immediate-login='true')
+            user-name.input(placeholder='Name')
+            user-email.input(placeholder='Email')
+            user-password.input(placeholder='Password')
+            user-password-confirm.input(placeholder='Retype Password')
+            recaptcha(sitekey='6Ldp8mQUAAAAAKfBJ8OxNgvvMkNxvQhbnFfYVO-D')
+            .error(if='{ errorMessage }')
+              | { errorMessage }
+
+            button.input(type='submit')
+              | Register
+          a(href='login') Already have an account?
