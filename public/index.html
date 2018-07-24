@@ -57,7 +57,7 @@
         </div>
         <div class="right secondary"><a class="fade-on-hover" href="#order-now" tabindex="0">ORDER NOW</a>
         </div>
-        <div class="center primary"><a class="fade-on-hover" href="#benefits" tabindex="0">BENEFITS</a><a class="fade-on-hover" href="#ingredients" tabindex="0">INGREDIENTS</a><a class="fade-on-hover" href="#reviews" tabindex="0">REVIEWS</a><a class="fade-on-hover" href="#sign-in" tabindex="0">SIGN IN</a>
+        <div class="center primary"><a class="fade-on-hover" href="#benefits" tabindex="0">BENEFITS</a><a class="fade-on-hover" href="#ingredients" tabindex="0">INGREDIENTS</a><a class="fade-on-hover" href="#reviews" tabindex="0">REVIEWS</a><a class="fade-on-hover" href="/login" tabindex="0">SIGN IN</a>
         </div>
         <div class="menu-wrapper { active: menuToShow }" onmouseleave="{ hideMenu }">
           <div class="menu-bodies" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
@@ -67,7 +67,7 @@
               <meta itemprop="name" content="INGREDIENTS"></span><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
               <meta itemprop="url" content="#reviews">
               <meta itemprop="name" content="REVIEWS"></span><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
-              <meta itemprop="url" content="#sign-in">
+              <meta itemprop="url" content="/login">
               <meta itemprop="name" content="SIGN IN"></span>
           </div>
           <div class="menu-bodies" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><span class="meta-only" itemprop="menus" itemscope itemtype="WebsiteMenu">
@@ -81,7 +81,7 @@
         <div class="mobile-menu-content">
           <div class="mobile-menu-wrapper">
             <label class="close-mobile-icon fade-on-hover" for="show-mobile-menu">&#215;</label>
-            <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="#benefits" tabindex="0" itemprop="url"><span itemprop="name">BENEFITS</span></a><a class="fade-on-hover" href="#ingredients" tabindex="0" itemprop="url"><span itemprop="name">INGREDIENTS</span></a><a class="fade-on-hover" href="#reviews" tabindex="0" itemprop="url"><span itemprop="name">REVIEWS</span></a><a class="fade-on-hover" href="#sign-in" tabindex="0" itemprop="url"><span itemprop="name">SIGN IN</span></a>
+            <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="#benefits" tabindex="0" itemprop="url"><span itemprop="name">BENEFITS</span></a><a class="fade-on-hover" href="#ingredients" tabindex="0" itemprop="url"><span itemprop="name">INGREDIENTS</span></a><a class="fade-on-hover" href="#reviews" tabindex="0" itemprop="url"><span itemprop="name">REVIEWS</span></a><a class="fade-on-hover" href="/login" tabindex="0" itemprop="url"><span itemprop="name">SIGN IN</span></a>
             </div>
             <div class="menu-collection" itemprop="menuCollections" itemscope itemtype="WebsiteMenuCollection"><a class="fade-on-hover" href="#order-now" tabindex="0" itemprop="url"><span itemprop="name">ORDER NOW</span></a>
             </div>
@@ -93,6 +93,7 @@
     <!-- This exists to support optional css parallax-->
     <!-- import css/parallax/parallax.styl to enable it-->
     <main class="parallax">
+      <checkout-modal></checkout-modal>
       <div class="hero">
         <video width="auto" height="auto" loop muted autoplay>
           <source src="/img/hero.mp4" type="video/mp4">

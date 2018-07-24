@@ -5596,7 +5596,6 @@
       }
 
       jump(n) {
-        console.log('n:', n);
         return function() {
           this.current = (this.total + n) % this.total;
           return this.scheduleUpdate();
@@ -29013,17 +29012,60 @@
   ReCaptcha.register();
 
   // src/js/shop.coffee
-  var settings$2;
+  var m$2, settings$2;
+
+  window.raf = requestAnimationFrame;
 
   settings$2 = {
     // live key
     // key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzIsImp0aSI6Ii1YdHE0cHJVdDNrIiwic3ViIjoiTzVUQWtKcjBzZSJ9.4N1r2FxixxCh4DkGMGA_Iqg4VCNgFOK36Pd-3Zt1BXcqhbUFahU-CnfbeM7eIb01udcvGE2yPQRjAH2DjpRRcA'
 
     // test key
-    key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzYsImp0aSI6IkdxaUZ4dlFhZ1VJIiwic3ViIjoiTzVUQWtKcjBzZSJ9.E7Lc69XRmz-tq1U42aFqECLtcx_pv4w5NTGWeXqoLbM-o-uHcuM_2xS4_kJifA8LXIlLm2tx2M-CmJMdmeZuzA'
+    key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzYsImp0aSI6IkdxaUZ4dlFhZ1VJIiwic3ViIjoiTzVUQWtKcjBzZSJ9.E7Lc69XRmz-tq1U42aFqECLtcx_pv4w5NTGWeXqoLbM-o-uHcuM_2xS4_kJifA8LXIlLm2tx2M-CmJMdmeZuzA',
+    processor: 'authorizenet',
+    referralProgram: {
+      id: 'gQtb0m4FprDyN'
+    }
   };
 
-  Shop$2.start(settings$2);
+  m$2 = Shop$2.start(settings$2);
+
+  Shop$2.addItem('D1cONpe5ueODn1', 1);
+
+  _min('.add-to-cart button').on('click', function(e) {
+    return m$2.trigger('checkout-open');
+  });
+
+  // account page stuff
+  if (window.location.pathname.indexOf('account') >= 0) {
+    if (!Shop$2.client.client.customerToken) {
+      window.location.replace('/login');
+    }
+    // print errors
+    m$2.on('profile-load-failed', function(err) {
+      return console.log(err.stack);
+    });
+    m$2.on('profile-load-success', function(data) {});
+  }
+
+  // affiliate only stuff
+  // if data.affiliateId && data.affiliate.enabled
+  //   $('.referrals.ambassador').addClass('show')
+  if (window.location.pathname.indexOf('signup') >= 0) {
+    m$2.on('register', function() {});
+    m$2.on('register-success', function() {
+      return window.location.replace('account');
+    });
+    m$2.on('register-failed', function() {});
+  }
+
+  if (window.location.pathname.indexOf('login') >= 0) {
+    m$2.on('login', function() {});
+    m$2.on('login-success', function() {
+      return window.location.replace('account');
+    });
+    m$2.on('login-failed', function() {});
+  }
 
   // src/js/app.coffee
 
