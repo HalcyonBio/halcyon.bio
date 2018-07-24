@@ -4352,6 +4352,15 @@ footer .footer-bottom > *{
 #index #nutrition .orange{
   color:#f26621;
 }
+#index #ingredients{
+  padding-top:20vh;
+  padding-bottom:20vh;
+  background-color:#304191;
+}
+#index #ingredients h2{
+  color:White;
+  text-align:center;
+}
 #index #try-today{
   background-image:url("/img/trytoday.jpg");
   background-size:cover;
