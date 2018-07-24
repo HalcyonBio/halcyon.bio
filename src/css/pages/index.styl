@@ -486,16 +486,27 @@ textBorder(size, color)
 
     .orange
       color: $hOrange
+
   #ingredients
-    padding-top: 20vh
-    padding-bottom: 20vh
-    background-color: $hBlue2
+    padding-top: 10vh
+    padding-bottom: 10vh
+    background-color: $hBlue3
 
-
+    .ing2
+      @media screen and (min-width:767px)
+        padding-top: 40px
     h2
       color: White
-      text-align: center;
-      
+      text-align: center
+    p
+      text-align: left
+
+    .ingredients
+        text-align: center
+    img
+      @media screen and (max-width:767px)
+        display:none
+
   #try-today
     background-image: url(/img/trytoday.jpg)
     background-size: cover

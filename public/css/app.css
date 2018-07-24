@@ -4353,12 +4353,18 @@ footer .footer-bottom > *{
   color:#f26621;
 }
 #index #ingredients{
-  padding-top:20vh;
-  padding-bottom:20vh;
-  background-color:#304191;
+  padding-top:10vh;
+  padding-bottom:10vh;
+  background-color:#292f4d;
 }
 #index #ingredients h2{
   color:White;
+  text-align:center;
+}
+#index #ingredients p{
+  text-align:left;
+}
+#index #ingredients .ingredients{
   text-align:center;
 }
 #index #try-today{
@@ -4713,6 +4719,9 @@ footer .footer-bottom > *{
   #index #tolerance img{
     margin:0 auto;
   }
+  #index #ingredients img{
+    display:none;
+  }
 }
 @media (min-aspect-ratio: 16/9){
   #index .hero video{
@@ -4732,6 +4741,9 @@ footer .footer-bottom > *{
 @media screen and (min-width: 767px){
   #index #shop #shop-widget .body{
     max-width:280px;
+  }
+  #index #ingredients .ing2{
+    padding-top:40px;
   }
 }
 @media screen and (max-width: 993px){

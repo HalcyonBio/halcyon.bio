@@ -209,7 +209,7 @@ block content
   section#diff
     .container.flex-center
       video(width='auto' height='auto' loop muted autoplay)
-        source(src='/img/pills in hand and water.mp4'type='video/mp4')
+        source(src='/img/pills in hand and water.mp4' type='video/mp4')
         source(src='/img/pills in hand and water.mp4' type='video/webm')
         | Your browser does not support the video tag.
       .cta
@@ -243,7 +243,7 @@ block content
   section#tolerance.flex-center
     .container
       .row
-        .col-md-6.col-12.flex-center.justify-flex-end
+        .col-md-6.col-12.flex-center.justify-flex-end.align-items-start
           img(src='/img/drweller.png')
         .col-md-6.col-12
           blockquote
@@ -285,35 +285,36 @@ block content
 
   section#ingredients.flex-center
     .container
-      .row.flex-center
-        .col-md-4.col-12
+      .row.flex-center.align-items-start
+        .col-md-4.col-12.ingredients
           img(src='/img/rhodiola-rosea.png')
           h2 Rhodiola Rosea
           p.
           
 
-        .col-md-4.col-12
+        .col-md-4.col-12.ingredients
           img(src='/img/edemame.png')
           h2 Alpha-GPC    
           p.
         
-        .col-md-4.col-12
+        .col-md-4.col-12.ingredients
           img(src='/img/theacrine.png')
           h2 Theacrine
           p.
-      .row.flex-center
-        .col-md-4.col-12
+      .row.flex-center.align-items-start.ing2
+        .col-md-4.col-12.ingredients
           img(src='/img/anthocyanin.png')
           h2 Bilberry Extract
           p.
-            | Plants rich in anthocyanins are Vaccinium species, such as blueberry, raspberry, cranberry, etc. In a 2017 study, healthy people who consumed Anthocyanin every day for 12 weeks showed improvements in cognitive function, blood flow to the brain, and activation of the brain while carrying out cognitive tests. 
-            | Anthocyanin is cited as enhancing neuron growth by increasing blood flow to the brain and is a potent antioxidant that has been shown to have particularly positive effects on brain health.
-        .col-md-4.col-12
+            Plants rich in anthocyanins are Vaccinium species, such as blueberry, raspberry, cranberry, etc. In a 2017 study, healthy people who consumed Anthocyanin every day for 12 weeks showed improvements in cognitive function, blood flow to the brain, and activation of the brain while carrying out cognitive tests. 
+            Anthocyanin is cited as enhancing neuron growth by increasing blood flow to the brain and is a potent antioxidant that has been shown to have particularly positive effects on brain health.
+        .col-md-4.col-12.ingredients
           img(src='/img/rhodiola-rosea.png')
-          h2 Dopa-XR 
+          h2.
+            Dopa-XR 
           sup TM
           p.
-        .col-md-4.col-12
+        .col-md-4.col-12.ingredients
           img(src='/img/huperzine-a.png')
           h2 Huperzine A
           p.
