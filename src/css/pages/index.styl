@@ -605,9 +605,9 @@ textBorder(size, color)
           img
             filter: none
 
-        @media screen and (max-width:768px) {
-            .description {
-              display: none }}
+          +below(768px)
+            .description
+              display: none
 
           .description
             background: rgba(0,0,0,.5)
@@ -625,6 +625,7 @@ textBorder(size, color)
         img
           border: 0
           padding: 0
+          max-width: 100%
 
         .description
           position: absolute

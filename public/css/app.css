@@ -225,9 +225,14 @@ body{
 .flex6.flex6.flex6{
   flex:6;
 }
+.flex-center{
+  justify-content:center;
+  align-items:center;
+}
 .justify-flex-start.justify-flex-start.justify-flex-start{
   justify-content:flex-start;
 }
+.flex-align-middle.flex-align-middle.flex-align-middle,
 .justify-flex-center.justify-flex-center.justify-flex-center{
   justify-content:center;
 }
@@ -237,6 +242,7 @@ body{
 .align-flex-start.align-flex-start.align-flex-start{
   align-items:flex-start;
 }
+.flex-align-center.flex-align-center.flex-align-center,
 .align-flex-center.align-flex-center.align-flex-center{
   align-items:center;
 }
@@ -4464,60 +4470,62 @@ footer .footer-bottom > *{
   -webkit-filter:none;
           filter:none;
 }
-#index #thought-leader .description{
+#index #thought-leader .gallery-thumbs label.selected .description,
+#index #thought-leader .gallery-thumbs label:hover .description{
   background:rgba(0,0,0,0.5);
   pointer-events:none;
 }
-#index #thought-leader img{
+#index #thought-leader .gallery-thumbs label img{
   -webkit-filter:contrast(50%) brightness(50%);
           filter:contrast(50%) brightness(50%);
 }
-#index #thought-leader .body{
+#index #thought-leader .gallery-thumbs label .body{
   position:relative;
 }
-#index #thought-leader p{
+#index #thought-leader .gallery-thumbs label p{
   margin:0;
 }
-#index #thought-leader img{
+#index #thought-leader .gallery-thumbs label img{
   border:0;
   padding:0;
+  max-width:100%;
 }
-#index #thought-leader .description{
+#index #thought-leader .gallery-thumbs label .description{
   position:absolute;
   width:100%;
   bottom:0;
   font-size:14px;
   padding:0.5rem 0.5rem 0.75rem;
 }
-#index #thought-leader .description strong{
+#index #thought-leader .gallery-thumbs label .description strong{
   font-weight:600;
 }
-#difference{
+#index #difference{
   color:#000;
   text-align:center;
   min-height:600px;
   padding:5rem 0 0;
 }
-#difference h2{
+#index #difference h2{
   color:#304191;
   font-size:40px;
 }
-#difference h2,
-#difference h3,
-#difference .sub.sub.sub{
+#index #difference h2,
+#index #difference h3,
+#index #difference .sub.sub.sub{
   text-align:center;
   width:100%;
 }
-#difference img{
+#index #difference img{
   height:125px;
 }
-#difference p{
+#index #difference p{
   text-align:left;
 }
-#difference .sub{
+#index #difference .sub{
   font-size:24px;
 }
-#difference .bg{
+#index #difference .bg{
   width:100%;
   background-image:url("/img/bottom-pill-table-2.jpg");
   background-size:cover;
@@ -4694,9 +4702,6 @@ footer .footer-bottom > *{
   .next-button{
     padding-right:10px;
   }
-  #index #thought-leader .gallery-thumbs label .description{
-    display:none;
-  }
 }
 @media screen and (min-width: 768px){
   td:last-child{
@@ -4793,5 +4798,11 @@ footer .footer-bottom > *{
 @media screen and (max-width: 755px){
   #index #value .values .mobile-top-padding{
     padding-top:20px;
+  }
+}
+@media only screen and (max-width: 768px){
+  #index #thought-leader .gallery-thumbs label.selected .description,
+  #index #thought-leader .gallery-thumbs label:hover .description{
+    display:none;
   }
 }/*# sourceMappingURL=app.css.map */
