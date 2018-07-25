@@ -3955,6 +3955,14 @@ header .mobile-menus .show-mobile-icon{
   background-color:White;
   color:#304191;
 }
+#ToS,
+#PP{
+  padding-top:10rem;
+}
+#ToS p,
+#PP p{
+  color:#000;
+}
 footer{
   background-color:#304191;
   padding-top:5vh;
