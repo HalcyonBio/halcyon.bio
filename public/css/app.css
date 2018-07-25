@@ -225,14 +225,9 @@ body{
 .flex6.flex6.flex6{
   flex:6;
 }
-.flex-center{
-  justify-content:center;
-  align-items:center;
-}
 .justify-flex-start.justify-flex-start.justify-flex-start{
   justify-content:flex-start;
 }
-.flex-align-middle.flex-align-middle.flex-align-middle,
 .justify-flex-center.justify-flex-center.justify-flex-center{
   justify-content:center;
 }
@@ -242,7 +237,6 @@ body{
 .align-flex-start.align-flex-start.align-flex-start{
   align-items:flex-start;
 }
-.flex-align-center.flex-align-center.flex-align-center,
 .align-flex-center.align-flex-center.align-flex-center{
   align-items:center;
 }
@@ -3915,6 +3909,52 @@ header .mobile-menus .show-mobile-icon{
 .fblike{
   color:#1a88fb;
 }
+#launch-squeeze{
+  background-color:#304191;
+  min-height:100vh;
+}
+#launch-squeeze .lsfooter{
+  background-color:#1d2650;
+  min-height:100px;
+  text-align:center;
+}
+#launch-squeeze .lsbold{
+  font-weight:bold;
+}
+#launch-squeeze .title{
+  background-color:#304191;
+  padding-top:20px;
+  font-weight:lighter;
+}
+#launch-squeeze a{
+  color:White !important;
+}
+#launch-squeeze .cta .btn{
+  background-color:White;
+  color:#304191;
+  margin:0 auto;
+  display:block;
+  width:100%;
+  max-width:255px;
+  margin-top:20px;
+}
+#launch-squeeze .disclaimer{
+  font-size:10pt;
+  color:#ebebeb;
+  text-align:center;
+}
+#launch-squeeze .sp-reg{
+  max-width:289px;
+  margin:0 auto;
+}
+#launch-squeeze .sp-reg .btn{
+  background-color:#304191;
+  color:#fff;
+}
+#launch-squeeze .step2and3{
+  background-color:White;
+  color:#304191;
+}
 footer{
   background-color:#304191;
   padding-top:5vh;
@@ -4715,6 +4755,14 @@ footer .footer-bottom > *{
   .l-vid img{
     width:100%;
   }
+  #launch-squeeze .ron{
+    padding-left:0px;
+    padding-right:0px;
+    padding-bottom:20px;
+  }
+  #launch-squeeze .disclaimer{
+    padding-bottom:20px;
+  }
   #index #shop .studies .coming-soon{
     padding-top:20px;
   }
@@ -4726,6 +4774,16 @@ footer .footer-bottom > *{
   }
   #index #ingredients img{
     display:none;
+  }
+}
+@media screen and (max-width: 560px){
+  #launch-squeeze .title{
+    font-size:11vw;
+  }
+}
+@media screen and (min-width: 560px){
+  #launch-squeeze .title{
+    font-size:60px;
   }
 }
 @media (min-aspect-ratio: 16/9){
