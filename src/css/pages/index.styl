@@ -360,7 +360,9 @@ textBorder(size, color)
     padding-bottom: 5rem
     padding-left: 0px;
     padding-right: 0px;
-
+    .container
+      padding-right:0px
+      padding-left: 0px
     .cta
       position: absolute
       text-align: center
@@ -370,10 +372,15 @@ textBorder(size, color)
         font-weight: bold
         text-transform: uppercase
         line-height: 1.2
-
+        text-shadow: -1px -1px 0 #898989;
+        @media screen and (max-width:382px)
+          font-size:32px
       button
         color: $hBlue
         margin-top: 2rem
+        @media screen and (max-width:438px)
+          margin-top:10px
+
 
   #deadline
     background-image: url(/img/businesswoman.jpg)
@@ -382,6 +389,19 @@ textBorder(size, color)
     min-height: 600px
     padding-top: 2rem
     padding-bottom: 2rem
+    @media screen and (min-width:768px) and (max-width:1200px)
+      .container
+        margin-top: -50px
+    @media screen and (max-width:767px)
+        .container
+          margin-top: 250px
+        .col-md-6
+          background-color: rgba(0, 0, 0, .6);
+        p
+          color:white
+        h2
+          color: white
+
 
     h2
       font-size: 40px

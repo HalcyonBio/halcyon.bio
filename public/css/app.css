@@ -4292,6 +4292,10 @@ footer .footer-bottom > *{
   padding-left:0px;
   padding-right:0px;
 }
+#index #diff .container{
+  padding-right:0px;
+  padding-left:0px;
+}
 #index #diff .cta{
   position:absolute;
   text-align:center;
@@ -4301,6 +4305,7 @@ footer .footer-bottom > *{
   font-weight:bold;
   text-transform:uppercase;
   line-height:1.2;
+  text-shadow:-1px -1px 0 #898989;
 }
 #index #diff .cta button{
   color:#324099;
@@ -4774,6 +4779,18 @@ footer .footer-bottom > *{
   #index #shop .studies .coming-soon{
     padding-top:20px;
   }
+  #index #deadline .container{
+    margin-top:250px;
+  }
+  #index #deadline .col-md-6{
+    background-color:rgba(0,0,0,0.6);
+  }
+  #index #deadline p{
+    color:#fff;
+  }
+  #index #deadline h2{
+    color:#fff;
+  }
   #index #value .mvalue{
     padding-top:20px;
   }
@@ -4855,10 +4872,23 @@ footer .footer-bottom > *{
   #index #testimonials .testimonial-card .bottom .locator-sm-screen{
     display:block;
   }
+  #index #diff .cta h2{
+    font-size:32px;
+  }
 }
 @media screen and (min-width: 383px){
   #index #testimonials .testimonial-card .bottom .locator-sm-screen{
     display:none;
+  }
+}
+@media screen and (max-width: 438px){
+  #index #diff .cta button{
+    margin-top:10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+  #index #deadline .container{
+    margin-top:-50px;
   }
 }
 @media screen and (max-width: 755px){
