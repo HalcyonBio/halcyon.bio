@@ -472,15 +472,34 @@ textBorder(size, color)
   #performance
     background-image: url(/img/performance.jpg)
     background-size: cover
-    background-position: left
+    background-position: top right
     min-height: 600px
     padding-top: 2rem
     padding-bottom: 2rem
+    @media screen and (max-width:661px)
+      background-image: url(/img/performance-sm.jpg)
+    @media screen and (max-width:535px)
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: black
+    .container
+      @media screen and (min-width:536px) and (max-width:993px)
+        margin-top: 240px
+      @media screen and (max-width:535px)
+        margin-top:54%
+
+
+    .performance-p
+      @media screen and (max-width:767px)
+        background-color: rgba(0,0,0,.7);
 
     h2
       font-size: 40px
       font-weight: bold
-
+      @media screen and (max-width:767px)
+        background-color: rgba(0,0,0,.2);
+      @media screen and (max-width:500px)
+        font-size:32px
 
   #made-in-usa
     background-color: $hBlue6

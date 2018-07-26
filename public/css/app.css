@@ -4377,7 +4377,7 @@ footer .footer-bottom > *{
 #index #performance{
   background-image:url("/img/performance.jpg");
   background-size:cover;
-  background-position:left;
+  background-position:top right;
   min-height:600px;
   padding-top:2rem;
   padding-bottom:2rem;
@@ -4797,6 +4797,12 @@ footer .footer-bottom > *{
   #index #tolerance img{
     margin:0 auto;
   }
+  #index #performance .performance-p{
+    background-color:rgba(0,0,0,0.7);
+  }
+  #index #performance h2{
+    background-color:rgba(0,0,0,0.2);
+  }
   #index #ingredients img{
     display:none;
   }
@@ -4894,6 +4900,31 @@ footer .footer-bottom > *{
 @media screen and (max-width: 755px){
   #index #value .values .mobile-top-padding{
     padding-top:20px;
+  }
+}
+@media screen and (max-width: 661px){
+  #index #performance{
+    background-image:url("/img/performance-sm.jpg");
+  }
+}
+@media screen and (max-width: 535px){
+  #index #performance{
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-color:#000;
+  }
+  #index #performance .container{
+    margin-top:54%;
+  }
+}
+@media screen and (min-width: 536px) and (max-width: 993px){
+  #index #performance .container{
+    margin-top:240px;
+  }
+}
+@media screen and (max-width: 500px){
+  #index #performance h2{
+    font-size:32px;
   }
 }
 @media only screen and (max-width: 768px){
