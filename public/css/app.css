@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 html{
   box-sizing:border-box;
@@ -3744,6 +3743,9 @@ price .strike{
 price .hide{
   display:none !important;
 }
+price .option{
+  cursor:pointer;
+}
 .performance-facts{
   line-height:1.4em;
   font-size:small;
@@ -4955,5 +4957,3 @@ footer .footer-bottom > *{
     display:none;
   }
 }/*# sourceMappingURL=app.css.map */
-=======
->>>>>>> 1e50bb1770c3756db4cc3c545efb57ed54d8fb99
