@@ -4,6 +4,8 @@ block vars
   - var pageId = 'partner'
 
 block content
+  .header-img 
+    img(src='/img/partner-header.jpg')
   section
     .container.join-team
       .row
@@ -61,6 +63,8 @@ block content
             user-email.input(placeholder='Email')
             user-password.input(placeholder='Password')
             user-password-confirm.input(placeholder='Retype Password')
+            user-source.input(placeholder='How did you hear about our Ambassador Program?')
+            user-promotion.input(placeholder='how do you plan to promote Halcyon?')
             recaptcha(sitekey='6Ldp8mQUAAAAAKfBJ8OxNgvvMkNxvQhbnFfYVO-D')
             .error(if='{ errorMessage }')
               | { errorMessage }

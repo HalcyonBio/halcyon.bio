@@ -3972,6 +3972,9 @@ header .mobile-menus .show-mobile-icon{
 #PP p{
   color:#000;
 }
+#partner .header-img{
+  margin-top:10rem;
+}
 #partner h4{
   text-decoration:underline;
   color:#304191;
@@ -3981,7 +3984,7 @@ header .mobile-menus .show-mobile-icon{
 }
 #partner .join-team{
   padding-bottom:40px;
-  margin-top:10rem;
+  margin-top:5rem;
 }
 #partner h2,
 #partner h1{
