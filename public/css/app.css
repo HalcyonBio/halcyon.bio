@@ -3963,6 +3963,10 @@ header .mobile-menus .show-mobile-icon{
 #PP p{
   color:#000;
 }
+#partner h4{
+  text-decoration:underline;
+  color:#304191;
+}
 footer{
   background-color:#304191;
   padding-top:5vh;
@@ -4226,6 +4230,12 @@ footer .footer-bottom > *{
 }
 #index #testimonials .testimonial-card .bottom .locator img{
   margin-right:2px;
+}
+#index #testimonials .testimonial-card .bottom .locator-sm-screen{
+  font-size:14px;
+}
+#index #testimonials .testimonial-card .bottom .locator-sm-screen img{
+  padding-right:3px;
 }
 #index #video{
   background-color:#1d243d;
@@ -4831,6 +4841,10 @@ footer .footer-bottom > *{
   #index #shop #shop-widget .title .hb{
     font-size:7vw;
   }
+  #index #testimonials .col-12{
+    padding-left:0px;
+    padding-right:0px;
+  }
 }
 @media screen and (min-width: 767px){
   #index #shop #shop-widget .body{
@@ -4838,11 +4852,6 @@ footer .footer-bottom > *{
   }
   #index #ingredients .ing2{
     padding-top:40px;
-  }
-}
-@media screen and (max-width: 993px){
-  #index #testimonials .testimonial-p{
-    font-size:0.7rem;
   }
 }
 @media screen and (min-width: 993px){
@@ -4853,14 +4862,11 @@ footer .footer-bottom > *{
   #index #testimonials .testimonial-cards > *{
     transform:translateX(-1rem);
   }
-  #index #testimonials .testimonial-cards > * > :last-child{
+  #index #testimonials .testimonial-cards > :last-child{
     margin-top:5rem;
   }
-  #index #testimonials .testimonial-cards > * > *{
+  #index #testimonials .testimonial-cards > *{
     transform:translateX(1rem);
-  }
-  #index #testimonials .testimonial-cards > * > * > *{
-    margin:0 1rem;
   }
 }
 @media screen and (max-width: 992px){
@@ -4882,7 +4888,22 @@ footer .footer-bottom > *{
     font-size:32px;
   }
 }
-@media screen and (min-width: 383px){
+@media screen and (min-width: 991px) and (max-width: 1200px){
+  #index #testimonials .testimonial-card .bottom .locator{
+    display:none;
+  }
+}
+@media screen and (min-width: 990px) and (max-width: 1200px){
+  #index #testimonials .testimonial-card .bottom .locator-sm-screen{
+    display:block;
+  }
+}
+@media screen and (min-width: 382px) and (max-width: 990px){
+  #index #testimonials .testimonial-card .bottom .locator-sm-screen{
+    display:none;
+  }
+}
+@media screen and (min-width: 1200px){
   #index #testimonials .testimonial-card .bottom .locator-sm-screen{
     display:none;
   }

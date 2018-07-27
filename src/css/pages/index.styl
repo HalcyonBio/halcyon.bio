@@ -182,7 +182,10 @@ textBorder(size, color)
     background-color: $hBlue3
     overflow: hidden
     min-height: 100vh
-
+    .col-12
+      @media screen and (max-width:440px)
+        padding-left: 0px
+        padding-right: 0px
     .bg
       position: absolute
 
@@ -194,9 +197,9 @@ textBorder(size, color)
     p
       width: 100%
 
-    .testimonial-p
-        @media screen and (max-width:993px)
-          font-size: .7rem
+    // .testimonial-p doesn't seem needed anymore since fixing markers
+    //    @media screen and (max-width:993px)
+    //      font-size: .7rem
 
 
     .glow
@@ -228,16 +231,16 @@ textBorder(size, color)
         @media screen and (min-width:993px)
           transform: translateX(-1rem)
 
-        & > :last-child
-          @media screen and (min-width:993px)
-            margin-top: 5rem
+      & > :last-child
+        @media screen and (min-width:993px)
+          margin-top: 5rem
 
-        & > *
-          @media screen and (min-width:993px)
-            transform: translateX(1rem)
-        & > * > *
-          @media screen and (min-width:993px)
-            margin: 0 1rem
+      & > *
+        @media screen and (min-width:993px)
+          transform: translateX(1rem)
+      //  & > * > * this no longer seems necessary and moves blue in from the sides
+      //   @media screen and (min-width:993px)
+      //      margin: 0 1rem
 
     .testimonial-card
       background-color: $hWhite
@@ -282,6 +285,8 @@ textBorder(size, color)
           font-weight: 200
           @media screen and (max-width:382px)
             display:none
+          @media screen and (min-width:991px) and (max-width:1200px)
+            display:none
 
 
           & > *
@@ -291,10 +296,18 @@ textBorder(size, color)
           img
             margin-right: 2px
         .locator-sm-screen
+          font-size:14px
+          img
+            padding-right: 3px
           @media screen and (max-width:382px)
             display:block
-          @media screen and (min-width:383px)
+          @media screen and (min-width:990px) and (max-width:1200px)
+            display:block
+          @media screen and (min-width:382px) and (max-width:990px)
             display:none
+          @media screen and (min-width:1200px)
+            display: none
+
 
   #video
     background-color: $hBlue4
