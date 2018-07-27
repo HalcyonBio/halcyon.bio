@@ -3970,6 +3970,21 @@ header .mobile-menus .show-mobile-icon{
   text-decoration:underline;
   color:#304191;
 }
+#partner p{
+  color:#000;
+}
+#partner .container{
+  padding-bottom:40px;
+  margin-top:10rem;
+}
+#partner h2,
+#partner h1{
+  color:#304191;
+  text-align:center;
+}
+#partner .center{
+  text-align:center;
+}
 footer{
   background-color:#304191;
   padding-top:5vh;
