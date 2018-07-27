@@ -57,18 +57,23 @@ block content
           br
           br
           p.center Start by answering a few questions and creating an account below
-          register(immediate-login='true' affiliate='true')
-            user-status.input(placeholder='Email')
-            user-name.input(placeholder='Name')
-            user-email.input(placeholder='Email')
-            user-password.input(placeholder='Password')
-            user-password-confirm.input(placeholder='Retype Password')
-            user-source.input(placeholder='How did you hear about our Ambassador Program?')
-            user-promotion.input(placeholder='how do you plan to promote Halcyon?')
-            recaptcha(sitekey='6Ldp8mQUAAAAAKfBJ8OxNgvvMkNxvQhbnFfYVO-D')
-            .error(if='{ errorMessage }')
-              | { errorMessage }
+  section.form
+    .container.join-team
+      .row
+        .col-md-8.offset-md-2.col-12
+            register(immediate-login='true' affiliate='true')
+              user-status.input(placeholder='Email')
+              user-name.input(placeholder='Name')
+              user-email.input(placeholder='Email')
+              user-password.input(placeholder='Password')
+              user-password-confirm.input(placeholder='Retype Password')
+              user-source.input(placeholder='How did you hear about our Ambassador Program?')
+              user-promotion.input(placeholder='how do you plan to promote Halcyon?')
+              .recaptcha-m
+                recaptcha(sitekey='6Ldp8mQUAAAAAKfBJ8OxNgvvMkNxvQhbnFfYVO-D')
+              .error(if='{ errorMessage }')
+                | { errorMessage }
 
-            button.input(type='submit')
-              | Register
-          .center #[a(href='login') Already have an account?]
+              button.input(type='submit')
+                | Register
+            .center #[a(href='login') Already have an account?]

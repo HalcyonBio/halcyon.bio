@@ -105,7 +105,9 @@ header
 
 #partner
   .header-img
-    margin-top: 10rem
+    margin-top: 28px;
+    padding-left: 0px;
+    padding-right: 0px;
   h4
     text-decoration: underline;
     color: $hBlue2
@@ -119,3 +121,13 @@ header
     text-align: center
   .center
     text-align: center
+  .recaptcha-m
+    @media screen and (max-width:362px)
+      transform:scale(0.77);
+      transform-origin:0 0
+  .form
+    @media screen and (max-width:450px)
+      padding-left: 0px
+      padding-right: 0px
+      margin-left: 0px
+      margin-right: 0px

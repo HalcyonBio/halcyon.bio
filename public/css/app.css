@@ -3973,7 +3973,9 @@ header .mobile-menus .show-mobile-icon{
   color:#000;
 }
 #partner .header-img{
-  margin-top:10rem;
+  margin-top:28px;
+  padding-left:0px;
+  padding-right:0px;
 }
 #partner h4{
   text-decoration:underline;
@@ -4856,6 +4858,20 @@ footer .footer-bottom > *{
 @media screen and (min-width: 560px){
   #launch-squeeze .title{
     font-size:60px;
+  }
+}
+@media screen and (max-width: 362px){
+  #partner .recaptcha-m{
+    transform:scale(0.77);
+    transform-origin:0 0;
+  }
+}
+@media screen and (max-width: 450px){
+  #partner .form{
+    padding-left:0px;
+    padding-right:0px;
+    margin-left:0px;
+    margin-right:0px;
   }
 }
 @media (min-aspect-ratio: 16/9){
