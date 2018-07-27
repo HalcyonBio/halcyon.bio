@@ -74,13 +74,13 @@ block content
                 option(selected) 1 Bottle (60ct.)
             .subscription-options.input-group
               .option.flex-center(onclick='{ subscription }')
-                input#subscribe(name='subscription-option' type='radio' checked)
+                input#subscribe(name='subscription-option' type='radio' checked='{ subscribe }')
                 span Subscribe & Save 23%
                 img(src='/img/question.png')
               .option.flex-center(onclick='{ onetime }')
-                input#one-time(name='subscription-option' type='radio')
+                input#one-time(name='subscription-option' type='radio' checked='{ !subscribe }')
                 span Purchase this time only
-            .add-to-cart
+            .add-to-cart(onclick='{ addToCart }')
               button.btn(type='button')
                 span ADD TO CART&nbsp;
                 span(class='{ hide: !subscribe }') AND SUBSCRIBE

@@ -16,7 +16,6 @@ settings =
     id: 'gQtb0m4FprDyN'
 
 m = Shop.start settings
-Shop.addItem 'D1cONpe5ueODn1', 1
 
 $('.add-to-cart button').on 'click', (e)->
   m.trigger 'checkout-open'

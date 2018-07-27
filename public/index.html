@@ -148,13 +148,13 @@
                 </div>
                 <div class="subscription-options input-group">
                   <div class="option flex-center" onclick="{ subscription }">
-                    <input id="subscribe" name="subscription-option" type="radio" checked><span>Subscribe & Save 23%</span><img src="/img/question.png">
+                    <input id="subscribe" name="subscription-option" type="radio" checked="{ subscribe }"><span>Subscribe & Save 23%</span><img src="/img/question.png">
                   </div>
                   <div class="option flex-center" onclick="{ onetime }">
-                    <input id="one-time" name="subscription-option" type="radio"><span>Purchase this time only</span>
+                    <input id="one-time" name="subscription-option" type="radio" checked="{ !subscribe }"><span>Purchase this time only</span>
                   </div>
                 </div>
-                <div class="add-to-cart">
+                <div class="add-to-cart" onclick="{ addToCart }">
                   <button class="btn" type="button"><span>ADD TO CART&nbsp;</span><span class="{ hide: !subscribe }">AND SUBSCRIBE</span></button>
                 </div>
                 <div class="first-links">
