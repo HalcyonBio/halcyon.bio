@@ -4065,6 +4065,7 @@ footer .footer-bottom > *{
   font-weight:lighter;
   font-size:18px;
   letter-spacing:1px;
+  text-align:left;
 }
 #index .hero .cross{
   font-size:9px;
@@ -4097,6 +4098,10 @@ footer .footer-bottom > *{
   font-family:Palatino;
   padding-top:5px;
   font-size:34px;
+}
+#index #shop #shop-widget .title .hb .hb-sup sup{
+  top:-0.95em;
+  font-size:45%;
 }
 #index #shop #shop-widget .body .reviews{
   padding:5px 0;
@@ -4284,10 +4289,16 @@ footer .footer-bottom > *{
 }
 #index #video{
   background-color:#1d243d;
+  padding-left:0px;
+  padding-right:0px;
 }
 #index #video .container{
   margin-top:5rem;
   margin-bottom:5rem;
+}
+#index #video .vid-col{
+  padding-right:0px;
+  padding-left:0px;
 }
 #index #video .video{
   position:relative;
@@ -4842,6 +4853,10 @@ footer .footer-bottom > *{
   #launch-squeeze .disclaimer{
     padding-bottom:20px;
   }
+  #index #shop #shop-widget .title .hb .hb-sup sup{
+    top:-0.95em;
+    font-size:45%;
+  }
   #index #shop .studies .coming-soon{
     padding-top:20px;
   }
@@ -4868,6 +4883,12 @@ footer .footer-bottom > *{
   }
   #index #performance h2{
     background-color:rgba(0,0,0,0.2);
+  }
+  #index #made-in-usa p{
+    font-size:28px;
+  }
+  #index #made-in-usa strong{
+    font-size:32px;
   }
   #index #ingredients img{
     display:none;
@@ -4929,6 +4950,25 @@ footer .footer-bottom > *{
     margin-right:0px;
   }
 }
+@media screen and (max-width: 575px){
+  #index .hero .logo{
+    text-align:center;
+  }
+  #index .hero .logo-text{
+    margin-top:20px;
+    text-align:center;
+  }
+}
+@media screen and (min-width: 575px){
+  #index .hero .logo img{
+    float:right;
+  }
+}
+@media screen and (max-width: 346px){
+  #index .hero .hb{
+    font-size:23px;
+  }
+}
 @media (min-aspect-ratio: 16/9){
   #index .hero video{
     width:100vw;
@@ -4941,7 +4981,7 @@ footer .footer-bottom > *{
 }
 @media screen and (max-width: 440px){
   #index #shop #shop-widget .title .hb{
-    font-size:7vw;
+    font-size:10vw;
   }
   #index #testimonials .col-12{
     padding-left:0px;
@@ -5007,9 +5047,20 @@ footer .footer-bottom > *{
     margin-top:10px;
   }
 }
+@media screen and (max-width: 375px){
+  #index #deadline{
+    background-image:url("/img/businesswoman-m.jpg");
+    background-position:right;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1200px){
   #index #deadline .container{
     margin-top:-50px;
+  }
+}
+@media screen and (max-width: 350px){
+  #index #deadline h2{
+    font-size:32px;
   }
 }
 @media screen and (max-width: 755px){

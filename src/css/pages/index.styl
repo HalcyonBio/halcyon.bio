@@ -19,13 +19,24 @@ textBorder(size, color)
   .hero
     height: 100vh
     margin-top: 50px
-
+    .logo
+      @media screen and (max-width:575px)
+        text-align: center
+      img
+        @media screen and (min-width:575px)
+          float:right
+    .logo-text
+      @media screen and (max-width:575px)
+        margin-top:20px
+        text-align:center;
     .container
       margin-top: -2rem
 
     .hb
       font-family: Palatino
       font-size: 26px
+      @media screen and (max-width:346px)
+        font-size:23px
 
     .tm
       font-size: 14px
@@ -37,6 +48,7 @@ textBorder(size, color)
       font-weight: lighter
       font-size: 18px
       letter-spacing: 1px
+      text-align: left
 
     .cross
       font-size: 9px
@@ -75,7 +87,14 @@ textBorder(size, color)
           padding-top: 5px
           font-size: 34px
           @media screen and (max-width:440px)
-            font-size: 7vw;
+            font-size: 10vw;
+          .hb-sup
+            sup
+              top: -.95em;
+              font-size: 45%;
+              @media screen and (max-width:767px)
+                top: -.95em;
+                font-size: 45%;
 
       .body
         @media screen and (min-width:767px)
@@ -313,11 +332,14 @@ textBorder(size, color)
 
   #video
     background-color: $hBlue4
-
+    padding-left: 0px;
+    padding-right: 0px;
     .container
       margin-top: 5rem
       margin-bottom: 5rem
-
+    .vid-col
+      padding-right: 0px;
+      padding-left: 0px;
     .video
       position: relative
       width: 100%
@@ -401,6 +423,9 @@ textBorder(size, color)
     background-image: url(/img/businesswoman.jpg)
     background-size: cover
     background-position: left
+    @media screen and (max-width:375px)
+      background-image: url(/img/businesswoman-m.jpg)
+      background-position: right
     min-height: 600px
     padding-top: 2rem
     padding-bottom: 2rem
@@ -424,7 +449,8 @@ textBorder(size, color)
       font-weight: bold
       line-height: 1.2
       text-align: center
-
+      @media screen and (max-width:350px)
+        font-size:32px
     p
       color: $black
 
@@ -524,8 +550,12 @@ textBorder(size, color)
 
     p
       font-size: 40px
+      @media screen and (max-width:767px)
+        font-size: 28px
 
     strong
+      @media screen and (max-width:767px)
+        font-size: 32px
       font-size: 48px
 
   #nutrition
