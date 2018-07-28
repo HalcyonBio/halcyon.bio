@@ -3922,6 +3922,15 @@ header .mobile-menus .show-mobile-icon{
   background-color:#304191;
   min-height:100vh;
 }
+#launch-squeeze .btn{
+  background-color:#304191;
+}
+#launch-squeeze .main{
+  background-color:#304191;
+}
+#launch-squeeze .ron{
+  z-index:100;
+}
 #launch-squeeze .lsfooter{
   background-color:#1d2650;
   min-height:100px;
@@ -3938,9 +3947,12 @@ header .mobile-menus .show-mobile-icon{
 #launch-squeeze a{
   color:White !important;
 }
+#launch-squeeze .cta h4{
+  color:#fff;
+}
 #launch-squeeze .cta .btn{
-  background-color:White;
-  color:#304191;
+  background-color:#304191;
+  color:#fff;
   margin:0 auto;
   display:block;
   width:100%;
@@ -4815,6 +4827,17 @@ footer .footer-bottom > *{
     padding-left:0px;
     padding-right:0px;
     padding-bottom:20px;
+    text-align:center;
+  }
+  #launch-squeeze .desktop{
+    display:none;
+  }
+  #launch-squeeze .mobile{
+    display:block;
+  }
+  #launch-squeeze .cta .btn{
+    background-color:#fff;
+    color:#304191;
   }
   #launch-squeeze .disclaimer{
     padding-bottom:20px;
@@ -4850,6 +4873,37 @@ footer .footer-bottom > *{
     display:none;
   }
 }
+@media screen and (min-width: 767px){
+  #launch-squeeze .main{
+    margin-top:-60px;
+    background-color:White;
+    background-image:url("/img/ron-white-desktop-bg.png");
+  }
+  #launch-squeeze .ron{
+    text-align:right;
+  }
+  #launch-squeeze .desktop{
+    display:block;
+  }
+  #launch-squeeze .mobile{
+    display:none;
+  }
+  #launch-squeeze .cta h4{
+    color:#000;
+  }
+  #launch-squeeze .cta h4{
+    margin-top:210px;
+  }
+  #launch-squeeze .disclaimer{
+    color:#abaaaa;
+  }
+  #index #shop #shop-widget .body{
+    max-width:280px;
+  }
+  #index #ingredients .ing2{
+    padding-top:40px;
+  }
+}
 @media screen and (max-width: 560px){
   #launch-squeeze .title{
     font-size:11vw;
@@ -4858,6 +4912,7 @@ footer .footer-bottom > *{
 @media screen and (min-width: 560px){
   #launch-squeeze .title{
     font-size:60px;
+    z-index:99;
   }
 }
 @media screen and (max-width: 362px){
@@ -4891,14 +4946,6 @@ footer .footer-bottom > *{
   #index #testimonials .col-12{
     padding-left:0px;
     padding-right:0px;
-  }
-}
-@media screen and (min-width: 767px){
-  #index #shop #shop-widget .body{
-    max-width:280px;
-  }
-  #index #ingredients .ing2{
-    padding-top:40px;
   }
 }
 @media screen and (min-width: 993px){
