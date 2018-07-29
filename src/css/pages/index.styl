@@ -481,7 +481,39 @@ textBorder(size, color)
     @media screen and (max-width:767px)
       .mvalue
         padding-top: 20px
-
+      .box-21
+        display: inline-block;
+        width: 15px
+        height: 15px
+        background: #68708b
+        margin-bottom: -2px;
+      .text-21
+        color: #68708b
+        font-size: 14px
+        font-weight: bold
+        display: inline-block;
+        a
+          color: #68708b !important
+          text-decoration: underline;
+      .text-21-wrap
+        text-align: left;
+        padding-left: 30%;
+      .box-22
+        display: inline-block;
+        width: 15px
+        height: 15px
+        background: #31458a
+        margin-bottom: -2px;
+      .text-22
+        color: #31458a
+        font-weight: bold
+        font-size: 14px
+        display: inline-block;
+        a
+          text-decoration: underline;
+      .text-22-wrap
+        text-align: left;
+        padding-left: 30%;
   #tolerance
     min-height: 500px
     background-color: $hBlue5
@@ -576,12 +608,21 @@ textBorder(size, color)
     padding-bottom: 10vh
     background-color: $hBlue3
 
-    .ing2
-      @media screen and (min-width:767px)
-        padding-top: 40px
+    .ing-row-padding
+      @media screen and (min-width:768px)
+        padding-bottom: 40px
+    .ing-row-padding3
+      @media screen and (min-width:768px) and (max-width:991.98px)
+        padding-bottom: 40px
     h2
       color: White
       text-align: center
+      @media screen and (max-width:767px)
+        text-decoration: underline;
+        text-decoration-color: $hOrange;
+      sup
+        top: -1.5em
+        font-size:40%
     p
       text-align: left
 
@@ -590,6 +631,10 @@ textBorder(size, color)
     img
       @media screen and (max-width:767px)
         display:none
+    a
+      color: #f26621 !important;
+      text-decoration: underline;
+      text-decoration-color: white;
 
   #try-today
     background-image: url(/img/trytoday.jpg)

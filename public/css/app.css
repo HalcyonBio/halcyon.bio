@@ -3758,6 +3758,7 @@ price .option{
   border:1px solid #324099;
   max-width:360px;
   padding:0.5rem;
+  margin:0 auto;
 }
 .serving-size{
   font-size:12pt;
@@ -4486,11 +4487,21 @@ footer .footer-bottom > *{
   color:White;
   text-align:center;
 }
+#index #ingredients h2 sup{
+  top:-1.5em;
+  font-size:40%;
+}
 #index #ingredients p{
   text-align:left;
 }
 #index #ingredients .ingredients{
   text-align:center;
+}
+#index #ingredients a{
+  color:#f26621 !important;
+  text-decoration:underline;
+  -webkit-text-decoration-color:#fff;
+          text-decoration-color:#fff;
 }
 #index #try-today{
   background-image:url("/img/trytoday.jpg");
@@ -4826,6 +4837,9 @@ footer .footer-bottom > *{
   td:last-child{
     padding-right:10px;
   }
+  #index #ingredients .ing-row-padding{
+    padding-bottom:40px;
+  }
 }
 @media screen and (max-width: 767px){
   .l-header-34{
@@ -4875,6 +4889,47 @@ footer .footer-bottom > *{
   #index #value .mvalue{
     padding-top:20px;
   }
+  #index #value .box-21{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background:#68708b;
+    margin-bottom:-2px;
+  }
+  #index #value .text-21{
+    color:#68708b;
+    font-size:14px;
+    font-weight:bold;
+    display:inline-block;
+  }
+  #index #value .text-21 a{
+    color:#68708b !important;
+    text-decoration:underline;
+  }
+  #index #value .text-21-wrap{
+    text-align:left;
+    padding-left:30%;
+  }
+  #index #value .box-22{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background:#31458a;
+    margin-bottom:-2px;
+  }
+  #index #value .text-22{
+    color:#31458a;
+    font-weight:bold;
+    font-size:14px;
+    display:inline-block;
+  }
+  #index #value .text-22 a{
+    text-decoration:underline;
+  }
+  #index #value .text-22-wrap{
+    text-align:left;
+    padding-left:30%;
+  }
   #index #tolerance img{
     margin:0 auto;
   }
@@ -4889,6 +4944,11 @@ footer .footer-bottom > *{
   }
   #index #made-in-usa strong{
     font-size:32px;
+  }
+  #index #ingredients h2{
+    text-decoration:underline;
+    -webkit-text-decoration-color:#f26621;
+            text-decoration-color:#f26621;
   }
   #index #ingredients img{
     display:none;
@@ -4920,9 +4980,6 @@ footer .footer-bottom > *{
   }
   #index #shop #shop-widget .body{
     max-width:280px;
-  }
-  #index #ingredients .ing2{
-    padding-top:40px;
   }
 }
 @media screen and (max-width: 560px){
@@ -5091,6 +5148,11 @@ footer .footer-bottom > *{
 @media screen and (max-width: 500px){
   #index #performance h2{
     font-size:32px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px){
+  #index #ingredients .ing-row-padding3{
+    padding-bottom:40px;
   }
 }
 @media only screen and (max-width: 768px){
