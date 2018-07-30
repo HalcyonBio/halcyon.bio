@@ -3919,6 +3919,22 @@ header .mobile-menus .show-mobile-icon{
 .fblike{
   color:#1a88fb;
 }
+#launch-video-4 .title{
+  color:#304191;
+  font-weight:bold;
+}
+#launch-video-4 .title-360{
+  color:#f26621;
+  font-weight:bold;
+}
+#launch-video-4 .old-price{
+  text-decoration:line-through;
+  color:#f00;
+}
+#launch-video-4 h2,
+#launch-video-4 h4{
+  color:#000;
+}
 #launch-squeeze{
   background-color:#304191;
   min-height:100vh;
