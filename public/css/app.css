@@ -1205,6 +1205,7 @@ reset-password-complete .input .disabled,
 shippingaddress .input .disabled,
 thankyou .input .disabled{
   opacity:0.5;
+  pointer-events:none;
 }
 cart .input input,
 checkout .input input,
@@ -2555,6 +2556,7 @@ view .input .label.active{
 view .input *:disabled,
 view .input .disabled{
   opacity:0.5;
+  pointer-events:none;
 }
 view .input input{
   outline:none;
@@ -3691,11 +3693,12 @@ gallery{
 }
 .gallery{
   position:relative;
+  min-height:20px;
 }
 .gallery input{
   display:none;
 }
-.gallery .image{
+.gallery > *{
   position:absolute;
   top:0;
   left:0;
@@ -3706,25 +3709,44 @@ gallery{
   opacity:0;
   transition:all 400ms ease-in-out;
 }
-.gallery .image.first{
+.gallery > *.first{
   position:initial;
 }
 .gallery input:checked + .image,
-.gallery .image.show{
+.gallery > .show{
   opacity:1;
 }
 .gallery-thumbs{
   margin-top:10px;
   text-align:center;
 }
-.gallery-thumbs label{
+.gallery-thumbs label,
+.gallery-thumbs .thumb{
   cursor:pointer;
   padding:0 0.5rem;
 }
-.gallery-thumbs label img{
+.gallery-thumbs label img,
+.gallery-thumbs .thumb img{
   padding:0.5rem;
   border:2px solid #b6bde9;
   max-width:50px;
+}
+.gallery-dots{
+  margin-top:10px;
+  text-align:center;
+}
+.gallery-dots label,
+.gallery-dots .dot{
+  width:10px;
+  height:10px;
+  border-radius:10px;
+  border:1px solid #b6bde9;
+  position:relative;
+  cursor:pointer;
+}
+.gallery-dots label.selected,
+.gallery-dots .dot.selected{
+  background-color:#324099;
 }
 .last-button,
 .next-button{
@@ -3732,6 +3754,10 @@ gallery{
   top:40%;
   position:absolute;
   cursor:pointer;
+  -webkit-user-select:none;
+     -moz-user-select:none;
+      -ms-user-select:none;
+          user-select:none;
 }
 .last-button{
   left:-1rem;
@@ -4882,7 +4908,7 @@ footer .footer-bottom > *{
   }
 }
 @media screen and (max-width: 767){
-  .gallery .image{
+  .gallery > *{
     width:90%;
   }
 }
