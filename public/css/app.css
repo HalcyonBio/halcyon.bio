@@ -3974,9 +3974,6 @@ header .mobile-menus .show-mobile-icon{
   padding-bottom:10px;
   padding-top:10px;
 }
-#launch-squeeze .desktop{
-  margin-top:15px;
-}
 #launch-squeeze .mobile{
   max-width:305px;
 }
@@ -3987,7 +3984,6 @@ header .mobile-menus .show-mobile-icon{
   z-index:100;
   padding-left:15px;
   padding-right:15px;
-  background-color:#304191;
 }
 #launch-squeeze .cta .logo{
   background-color:rgba(25,44,133,0.9);
@@ -3995,13 +3991,7 @@ header .mobile-menus .show-mobile-icon{
   z-index:999;
   height:147px;
 }
-#launch-squeeze .cta .cta-text{
-  background-color:#304191;
-  padding-left:15px;
-  padding-right:15px;
-}
 #launch-squeeze .cta .cta-title{
-  background-color:#f26621;
   margin-bottom:5px;
   margin-top:15px;
   margin-bottom:15px;
@@ -5039,12 +5029,6 @@ footer .footer-bottom > *{
   #launch-squeeze .cta .logo{
     display:none;
   }
-  #launch-squeeze .cta h4{
-    color:#000;
-  }
-  #launch-squeeze .cta h4{
-    margin-top:210px;
-  }
   #launch-squeeze .disclaimer{
     color:#abaaaa;
   }
@@ -5061,6 +5045,37 @@ footer .footer-bottom > *{
   #launch-squeeze .title{
     font-size:60px;
     z-index:99;
+  }
+}
+@media screen and (max-width: 992px){
+  #launch-squeeze .cta{
+    background-color:#304191;
+  }
+  #launch-squeeze .cta .cta-text{
+    background-color:#304191;
+    padding-left:15px;
+    padding-right:15px;
+  }
+  #launch-squeeze .cta .cta-title{
+    background-color:#f26621;
+    font-size:40px;
+  }
+  #index #testimonials .testimonial-cards{
+    margin-bottom:2rem;
+  }
+  #index #testimonials .testimonial-card{
+    margin-bottom:20px;
+  }
+}
+@media screen and (min-width: 992px){
+  #launch-squeeze .cta .cta-text1{
+    padding-top:210px;
+  }
+  #launch-squeeze .cta .cta-title h2{
+    color:#f26621;
+  }
+  #launch-squeeze .cta h4{
+    color:#000;
   }
 }
 @media screen and (max-width: 362px){
@@ -5128,14 +5143,6 @@ footer .footer-bottom > *{
   }
   #index #testimonials .testimonial-cards > *{
     transform:translateX(1rem);
-  }
-}
-@media screen and (max-width: 992px){
-  #index #testimonials .testimonial-cards{
-    margin-bottom:2rem;
-  }
-  #index #testimonials .testimonial-card{
-    margin-bottom:20px;
   }
 }
 @media screen and (max-width: 382px){

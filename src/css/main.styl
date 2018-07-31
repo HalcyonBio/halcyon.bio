@@ -114,7 +114,7 @@ header
     @media screen and (min-width:767px)
       display: none
   .desktop
-    margin-top: 15px;
+
     @media screen and (max-width:767px)
       display: none;
     @media screen and (min-width:767px)
@@ -132,7 +132,8 @@ header
     z-index: 100
     padding-left: 15px
     padding-right: 15px
-    background-color: $hBlue2
+    @media screen and (max-width:992px)
+      background-color: $hBlue2
     .logo
       background-color: rgba(25, 44, 133, 0.9);
       margin-top: -147px;
@@ -140,12 +141,18 @@ header
       height:147px
       @media screen and (min-width:767px)
         display: none
+    .cta-text1
+      @media screen and (min-width:992px)
+        padding-top: 210px
     .cta-text
-      background-color: $hBlue2
-      padding-left:15px
-      padding-right:15px
+      @media screen and (max-width:992px)
+        background-color: $hBlue2
+        padding-left:15px
+        padding-right:15px
     .cta-title
-      background-color: $hOrange
+      @media screen and (max-width:992px)
+        background-color: $hOrange
+        font-size: 40px
       margin-bottom: 5px
       margin-top: 15px
       margin-bottom: 15px
@@ -153,12 +160,13 @@ header
 
       h2
         color: white
+        @media screen and (min-width:992px)
+          color: $hOrange
     h4
       color: white
-      @media screen and (min-width:767px)
+      @media screen and (min-width:992px)
         color: black
-      @media screen and (min-width:767px)
-        margin-top:210px
+
     .btn
       background-color: $hBlue2
       color: white
