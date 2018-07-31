@@ -12,6 +12,7 @@ settings =
   # test key
   key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzYsImp0aSI6IkdxaUZ4dlFhZ1VJIiwic3ViIjoiTzVUQWtKcjBzZSJ9.E7Lc69XRmz-tq1U42aFqECLtcx_pv4w5NTGWeXqoLbM-o-uHcuM_2xS4_kJifA8LXIlLm2tx2M-CmJMdmeZuzA'
   processor: 'authorizenet'
+  storeId: 'bkt8nygoh8eE74'
   referralProgram:
     id: 'gQtb0m4FprDyN'
 
