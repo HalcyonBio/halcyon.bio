@@ -44,7 +44,8 @@
     <link rel="stylesheet" href="/css/app.css" type="text/css">
     <title>Your Site
     </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><!--[if lt IE 10]>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"><!--[if lt IE 10]>
     <script src="/js/polyfill/html5-shiv.js"></script><![endif]-->
   </head>
   <body id="index">
@@ -132,8 +133,8 @@
                     <label class="thumb" for="halcyonbottleback" onclick="{ jump(1) }"><img src="/img/halcyon-bottle-back.jpg"></label>
                     <label class="thumb" for="halcyonbottlefront2" onclick="{ jump(2) }"><img src="/img/halcyon-bottle-front2.jpg"></label>
                   </div>
-                  <div class="last-button" onclick="{ last }"><</div>
-                  <div class="next-button" onclick="{ next }">></div>
+                  <div class="last-button" onclick="{ last }"><i class="fas fa-chevron-left"></i></div>
+                  <div class="next-button" onclick="{ next }"><i class="fas fa-chevron-right"></i></div>
                 </gallery>
               </div>
             </div>
@@ -198,8 +199,8 @@
                 <label class="dot { selected: current == 2 }" onclick="{ jump(2) }"></label>
                 <label class="dot { selected: current == 3 }" onclick="{ jump(3) }"></label>
               </div>
-              <div class="last-button" onclick="{ last }"><</div>
-              <div class="next-button" onclick="{ next }">></div>
+              <div class="last-button" onclick="{ last }"><i class="fas fa-chevron-left"></i></div>
+              <div class="next-button" onclick="{ next }"><i class="fas fa-chevron-right"></i></div>
             </gallery>
           </div>
           <div class="row studies">
@@ -306,7 +307,7 @@
       </section>
       <section id="diff">
         <div class="container flex-center">
-          <video width="auto" height="auto" loop muted autoplay>
+          <video width="auto" height="auto" autoplay loop muted playsinline>
             <source src="/img/pills in hand and water.mp4" type="video/mp4">
             <source src="/img/pills in hand and water.mp4" type="video/webm">Your browser does not support the video tag.
           </video>
@@ -556,7 +557,7 @@
           <div class="row">
             <h2>THOUGHT LEADERS</h2>
           </div>
-          <div class="gallery row">
+          <div class="row">
             <div class="col-md-5 col-12 thought-section-1">
               <div class="row gallery">
                 <div class="image first { show: current == 0 }"><img src="/img/thought-leader-marcus.jpg">

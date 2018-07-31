@@ -3750,7 +3750,6 @@ gallery{
 }
 .last-button,
 .next-button{
-  transform:scaleY(4);
   top:40%;
   position:absolute;
   cursor:pointer;
