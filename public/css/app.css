@@ -3936,14 +3936,19 @@ header .mobile-menus .show-mobile-icon{
   color:#000;
 }
 #launch-squeeze{
-  background-color:#304191;
   min-height:100vh;
 }
 #launch-squeeze .btn{
   background-color:#304191;
 }
 #launch-squeeze .main{
-  background-color:#304191;
+  padding-left:0px;
+  padding-right:0px;
+  text-align:center;
+  margin-top:-45px;
+}
+#launch-squeeze .logo-mobile{
+  max-width:350px;
 }
 #launch-squeeze .ron{
   z-index:100;
@@ -3959,10 +3964,51 @@ header .mobile-menus .show-mobile-icon{
 #launch-squeeze .title{
   background-color:#304191;
   padding-top:20px;
+  padding-bottom:20px;
   font-weight:lighter;
+}
+#launch-squeeze .title img{
+  max-width:410px;
+}
+#launch-squeeze .logo-mobile{
+  padding-bottom:10px;
+  padding-top:10px;
+}
+#launch-squeeze .desktop{
+  margin-top:15px;
+}
+#launch-squeeze .mobile{
+  max-width:305px;
 }
 #launch-squeeze a{
   color:White !important;
+}
+#launch-squeeze .cta{
+  z-index:100;
+  padding-left:15px;
+  padding-right:15px;
+  background-color:#304191;
+}
+#launch-squeeze .cta .logo{
+  background-color:rgba(25,44,133,0.9);
+  margin-top:-147px;
+  z-index:999;
+  height:147px;
+}
+#launch-squeeze .cta .cta-text{
+  background-color:#304191;
+  padding-left:15px;
+  padding-right:15px;
+}
+#launch-squeeze .cta .cta-title{
+  background-color:#f26621;
+  margin-bottom:5px;
+  margin-top:15px;
+  margin-bottom:15px;
+  padding:5px;
+}
+#launch-squeeze .cta .cta-title h2{
+  color:#fff;
 }
 #launch-squeeze .cta h4{
   color:#fff;
@@ -4870,6 +4916,9 @@ footer .footer-bottom > *{
     padding-bottom:20px;
     text-align:center;
   }
+  #launch-squeeze .title{
+    display:none;
+  }
   #launch-squeeze .desktop{
     display:none;
   }
@@ -4979,10 +5028,16 @@ footer .footer-bottom > *{
   #launch-squeeze .ron{
     text-align:right;
   }
+  #launch-squeeze .logo-mobile{
+    display:none;
+  }
   #launch-squeeze .desktop{
     display:block;
   }
   #launch-squeeze .mobile{
+    display:none;
+  }
+  #launch-squeeze .cta .logo{
     display:none;
   }
   #launch-squeeze .cta h4{

@@ -5,29 +5,33 @@ block vars
 
 block content
   .flex-center.title
-    img(src='/img/neuromethod360-logo.png')
+    img.logo(src='/img/neuromethod360-logo2.png')
   section.hide-on-submit.main
     container
       .row.justify-content-center.align-items-center
-        .col-lg-6.col-12.ron.align-self-start
+        .col-lg-6.col-12.ron.align-self-start.flex-center
           .desktop
             img(src='/img/ron-white-desktop.png')
           .mobile  
             img(src='/img/ron-white-mobile.jpg')
         .col-lg-6.col-12.cta
-          h4
-            | Learn about Boosting Mental Performance in our Free Master Class with Ron White, 2x USA Memory Champion
-            br
-            br
-            | Learn the lifestyle hacks, mental strategies, and supplementation that enables you to reach your PEAK MENTAL STATE every single say.  
-          button.btn(type='button') GET INSTANT ACCESS
-          p.disclaimer *Does not require any credit card info, this is free! 
-          // this (below) is what should show after the above button is clicked
-          h4 Almost there! Enter your email address to begin 
-          register.sp-reg 
-            user-email.input(placeholder='Email')
-            button.btn(type='button') SUBMIT
-          p.disclaimer We will not spam you, your privacy is important to us. We will not sell your email or share it. 
+          .logo
+            img.logo-mobile(src='/img/neuromethod360-logo2.png')
+          .cta-text 
+            h4
+              | Learn About Boosting Mental Performance in our Free Master Class With Ron White, 2x USA Memory Champion
+          .cta-title
+            h2 #[STRONG FREE] BRAIN POWER WORKSHOP
+          .cta-text  
+            h4 Learn the lifestyle hacks, mental strategies, and supplementation that enables you to reach your PEAK MENTAL STATE every single day.  
+            button.btn(type='button') GET INSTANT ACCESS
+            p.disclaimer *Does not require any credit card info, this is free! 
+            // this (below) is what should show after the above button is clicked
+            h4 Almost there! Enter your email address to begin 
+            register.sp-reg 
+              user-email.input(placeholder='Email')
+              button.btn(type='button') SUBMIT
+            p.disclaimer We will not spam you, your privacy is important to us. We will not sell your email or share it. 
   section.step2and3
     container
       .row

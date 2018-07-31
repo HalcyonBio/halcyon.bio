@@ -55,17 +55,23 @@ header
   h2, h4
       color: black
 #launch-squeeze
-  background-color: $hBlue2
+
   min-height:100vh
   .btn
     background-color: $hBlue2
   .main
-
-    background-color: $hBlue2
+    padding-left: 0px
+    padding-right: 0px
+    text-align:center
+    margin-top: -45px
+    // background-color: $hBlue2
     @media screen and (min-width:767px)
       margin-top: -60px
       background-color: White
       background-image:url('/img/ron-white-desktop-bg.png')
+
+  .logo-mobile
+    max-width: 350px
   .ron
     @media screen and (max-width:767px)
       padding-left: 0px
@@ -89,18 +95,32 @@ header
   //  background-position: top right;
     background-color: $hBlue2
     padding-top: 20px
+    padding-bottom: 20px
     font-weight: lighter
+
     @media screen and (max-width:560px)
       font-size: 11vw
     @media screen and (min-width:560px)
       font-size: 60px
       z-index: 99
+    @media screen and (max-width:767px)
+      display: none
+    img
+      max-width:410px
+  .logo-mobile
+    padding-bottom: 10px;
+
+    padding-top: 10px;
+    @media screen and (min-width:767px)
+      display: none
   .desktop
+    margin-top: 15px;
     @media screen and (max-width:767px)
       display: none;
     @media screen and (min-width:767px)
       display: block;
   .mobile
+    max-width: 305px;
     @media screen and (max-width:767px)
       display: block;
     @media screen and (min-width:767px)
@@ -109,6 +129,30 @@ header
   a
       color: White !important
   .cta
+    z-index: 100
+    padding-left: 15px
+    padding-right: 15px
+    background-color: $hBlue2
+    .logo
+      background-color: rgba(25, 44, 133, 0.9);
+      margin-top: -147px;
+      z-index: 999;
+      height:147px
+      @media screen and (min-width:767px)
+        display: none
+    .cta-text
+      background-color: $hBlue2
+      padding-left:15px
+      padding-right:15px
+    .cta-title
+      background-color: $hOrange
+      margin-bottom: 5px
+      margin-top: 15px
+      margin-bottom: 15px
+      padding:5px
+
+      h2
+        color: white
     h4
       color: white
       @media screen and (min-width:767px)
