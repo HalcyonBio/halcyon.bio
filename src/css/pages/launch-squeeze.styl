@@ -1,84 +1,40 @@
-body
-  background: $hWhite
+#launch-squeeze
+  checkout-modal
+    display: none
 
-header
-  .mobile-menus
-    .show-mobile-icon
-      color: $hBlue2 //this was in some other set of css files so adding here for easier reference
-#launch-videos
+  launch-squeeze-form
+    padding: 0
+
+    .input
+      @import 'el-controls/src/css/theme-inputs-no-context'
+
+    section
+      display: none
+
+    .step-1
+      display: initial
+
+    &.ready
+      section
+        display: initial
+
+#launch-video-4
   .title
-
-    background-color: $hBlue2
-    padding-top: 20px
-
-    font-weight: lighter
-    @media screen and (max-width:767px)
-      padding-right: 0px
-      padding-left: 0px
-
-
-    img
-      width: 60vw;
-      max-width: 300px;
-.flex-center
-  display: flex
-  align-items: center
-  justify-content: center
-
-.l-header
-  background-color: $hBlue2
-
-
-  padding-bottom:100px
-  h2,h3
-    text-align: center
-.l-header-34
-  @media screen and (max-width:767px)
-      padding-top:10px
-.l-vid
-  margin-top: -80px
-  adding-bottom: 40px;
-  img
-    @media screen and (max-width:767px)
-      width:100%
-    margin: 0 auto;
-.title
-  padding-top:20px
-.vid-title
-
-    h5, h2
-      color:$hBlue2
-      font-weight: bold
-    h5
-      text-transform: uppercase;
-      padding-bottom: 20px
-.l-body
-  @media screen and (min-width:992px)
-    margin-top: 40px
-  padding-bottom: 40px
-  h3
+    color: $hBlue2
+    font-weight: bold;
+  .title-360
+    color: $hOrange
+    font-weight: bold;
+  .old-price
+    text-decoration: line-through;
+    color: red
+  h2, h4
     color: black
-    margin-top: 10px;
-    @media screen and (max-width:767px)
-      font-size: 4.6vw;
 
-    @media screen and (max-width:608px)
-      text-align: center;
-
-  .arrow
-    @media screen and (max-width:608px)
-      display: none;
-    position: absolute;
-    margin-left: -46px;
-    margin-top: -28px;
-.fblike
-  color: #1a88fb
-<<<<<<< HEAD
+#launch-squeeze
 .fb-like
-
-  display: block !important
   @media screen and (min-width:608px)
-    margin-top: 60px;
+    margin-top: 58px;
 #launch-video-4
   .title
     color: $hBlue2
@@ -230,7 +186,8 @@ header
     .btn
       background-color: $hBlue2
       color: white
-  .step2and3
+  .step-3
+  .step-4
     background-color: White
     color: $hBlue2
 
@@ -267,5 +224,3 @@ header
       padding-right: 0px
       margin-left: 0px
       margin-right: 0px
-=======
->>>>>>> 5fa1a0ca577afe16a43ff796f9160ac75c4570ee

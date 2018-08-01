@@ -11,6 +11,13 @@ block content
           h2 Profile
           profile
             h3 Number of Referrals: { data.get('user.referrals') ? data.get('user.referrals').length : 0  }
-            h3(if='{ isAffiliate }') Fees Earned: { renderCurrency('usd', parseInt((data.get('user.transactions.points.balance') || 0) * .15), 10)}
+            h3(if='{ isAffiliate() }') Fees Earned: { renderCurrency('usd', parseInt((data.get('user.transactions.points.balance') || 0) * .15), 10)}
             h3 Your Link
             copy.input(text='{ ()=>{return "http://" + window.location.host + "#" + data.get("user.referrers.0.id")} }')
+            div(if='{ isAffiliate() }')
+              Affiliate Stuff Here
+
+            div(if='{ !isAffiliate() }')
+              Normal Stuff Here
+
+
