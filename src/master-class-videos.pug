@@ -13,12 +13,10 @@ block content
     js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=499421243843386&autoLogAppEvents=1';
     fjs.parentNode.insertBefore(js, fjs); }
     (document, 'script', 'facebook-jssdk'));
-  .flex-center.title
-      
-      img.logo(src='/img/neuromethod360-logo2.png')
+  
   section.l-header
     .container
-      //.row  recommend removing as we are changing landing page. valuable space above the fold
+      .row  
         .col-md-3.col-6
           img(src="/img/vid-placeholder.jpg")
         .col-md-3.col-6
@@ -29,20 +27,28 @@ block content
           img(src="/img/vid-placeholder.jpg"  )
       .row
         .col-12.title
-          h2 Master Class for the Mind 
-          h3
-            i with #[strong Ron White]
+          .flex-center.title
+                        
+                        img.logo(src='/img/neuromethod360-logo2.png')
+      .row
+        .col-12.title
+          h2 Masterclass for the Mind 
+          h3 with #[strong Ron White,] 2x USA Memory Champion
+  
   .container-fluid.l-vid
       .row
         .col-12.text-center
           .overlay-opt-in
             .opt-in
-              h4 Enter your email address to watch the videos
-              .sp-reg
-                text.input(bind='email' label='Email')
-                button.btn(type='button' onclick='{ submit }') SUBMIT
-              p.disclaimer We will not spam you, your privacy is important to us. We will not sell your email or share it.
-          img(src="/img/video-preview.jpg")
+              h4 Enter your email address to watch the masterclass
+              launch-squeeze-form
+                text.input(bind='email' placeholder='Email')
+                button.btn(type='button' onclick='{ submit }') WATCH NOW
+              // p.disclaimer We will not spam you, your privacy is important to us. We will not sell your email or share it.
+          .vid-container 
+            a(href='#test') #[img(src="/img/video-preview.jpg")]
+            br
+            .fb-share <div class="fb-share-button" data-href="https://www.facebook.com/HalcyonBiotech/videos/403575770040505/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FHalcyonBiotech%2Fvideos%2F403575770040505%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
   .container.l-body
     .row
       .col-lg-9.col-12
@@ -53,18 +59,18 @@ block content
       .col-lg-3.col-12.vid-title.text-center
         h2 Watch the Entire Launch Series
         img(src="/img/vid-placeholder.jpg")
-        h5 Video 1 
+        h5.t Video 1 
         h5 Lifestyle Hacks for the Brain
 
         img(src="/img/vid-placeholder.jpg")
-        h5 Video 2 
+        h5.t Video 2 
         h5 Adding these Mental Strategies<br> to your day
         img(src="/img/vid-placeholder.jpg")
-        h5 Video 3 
+        h5.t Video 3 
         h5 Supplementation for<br> mental Performance 
         
         img(src="/img/vid-placeholder.jpg")
-        h5 Video 4 
+        h5.t Video 4 
         h5 Coming soon
   .lsfooter
           p

@@ -3920,6 +3920,7 @@ header .mobile-menus .show-mobile-icon{
 }
 .l-header{
   background-color:#304191;
+  padding-top:20px;
   padding-bottom:100px;
 }
 .l-header h2,
@@ -4870,6 +4871,40 @@ footer .footer-bottom > *{
 #launch-squeeze launch-squeeze-form.ready section{
   display:initial;
 }
+#launch-videos .btn{
+  background-color:#304191;
+  margin-bottom:3px;
+}
+#launch-videos input{
+  height:40px;
+}
+#launch-videos .overlay-opt-in{
+  width:100%;
+  background-color:rgba(0,0,0,0.6);
+  z-index:9999;
+  display:block;
+  position:absolute;
+  max-width:961px;
+  max-height:537px;
+  left:50%;
+  transform:translate(-50%);
+}
+#launch-videos .opt-in{
+  top:50%;
+  position:relative;
+  margin-right:15px;
+  margin-left:15px;
+  transform:translateY(-50%);
+}
+#launch-videos .disclaimer{
+  font-size:0.7rem;
+}
+#launch-videos .fb-share{
+  text-align:left;
+}
+#launch-videos .t{
+  padding--bottom:0px;
+}
 #launch-video-4 .title{
   color:#304191;
   font-weight:bold;
@@ -5297,6 +5332,9 @@ footer .footer-bottom > *{
   #index #ingredients img{
     display:none;
   }
+  #launch-videos .overlay-opt-in{
+    height:95%;
+  }
   #launch-squeeze .ron{
     padding-left:0px;
     padding-right:0px;
@@ -5534,6 +5572,58 @@ footer .footer-bottom > *{
   #index #thought-leader .gallery-thumbs label.selected .description,
   #index #thought-leader .gallery-thumbs label:hover .description{
     display:none;
+  }
+}
+@media screen and (max-width: 407px){
+  #launch-videos .btn{
+    width:90%;
+    margin-top:10px;
+  }
+  #launch-videos input{
+    width:90%;
+  }
+}
+@media screen and (max-width: 884px){
+  #launch-videos .overlay-opt-in{
+    height:95.7%;
+  }
+}
+@media screen and (max-width: 664px){
+  #launch-videos .overlay-opt-in{
+    height:94.5%;
+  }
+}
+@media screen and (max-width: 606px){
+  #launch-videos .overlay-opt-in{
+    height:93%;
+  }
+}
+@media screen and (max-width: 462px){
+  #launch-videos .overlay-opt-in{
+    height:92%;
+  }
+}
+@media screen and (max-width: 360px){
+  #launch-videos .overlay-opt-in{
+    height:90%;
+  }
+}
+@media screen and (max-width: 356px){
+  #launch-videos .overlay-opt-in{
+    height:89%;
+  }
+}
+@media screen and (max-width: 576px){
+  #launch-videos .opt-in h4{
+    font-size:1.2rem;
+  }
+  #launch-videos .disclaimer{
+    font-size:0.6rem;
+  }
+}
+@media screen and (max-width: 367px){
+  #launch-videos .launch-squeeze-form{
+    margin-bottom:5px;
   }
 }
 @media screen and (min-width: 608px){
