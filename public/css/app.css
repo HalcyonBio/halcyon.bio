@@ -1205,7 +1205,6 @@ reset-password-complete .input .disabled,
 shippingaddress .input .disabled,
 thankyou .input .disabled{
   opacity:0.5;
-  pointer-events:none;
 }
 cart .input input,
 checkout .input input,
@@ -2556,7 +2555,6 @@ view .input .label.active{
 view .input *:disabled,
 view .input .disabled{
   opacity:0.5;
-  pointer-events:none;
 }
 view .input input{
   outline:none;
@@ -3904,6 +3902,15 @@ body{
 header .mobile-menus .show-mobile-icon{
   color:#304191;
 }
+#launch-videos .title{
+  background-color:#304191;
+  padding-top:20px;
+  padding-bottom:20px;
+  font-weight:lighter;
+}
+#launch-videos .title img{
+  max-width:410px;
+}
 .flex-center{
   display:flex;
   align-items:center;
@@ -3912,7 +3919,7 @@ header .mobile-menus .show-mobile-icon{
 .l-header{
   background-color:#304191;
   min-height:300px;
-  padding-top:75px;
+  padding-top:20px;
   padding-bottom:100px;
 }
 .l-header h2,
@@ -3920,8 +3927,8 @@ header .mobile-menus .show-mobile-icon{
   text-align:center;
 }
 .l-vid{
-  margin-top:-50px;
-  min-height:600px;
+  margin-top:-80px;
+  adding-bottom:40px;
 }
 .l-vid img{
   margin:0 auto;
@@ -3940,6 +3947,14 @@ header .mobile-menus .show-mobile-icon{
 }
 .l-body{
   padding-bottom:40px;
+}
+.l-body h3{
+  color:#000;
+}
+.l-body .arrow{
+  position:absolute;
+  margin-left:-46px;
+  margin-top:-28px;
 }
 .fblike{
   color:#1a88fb;
@@ -5031,6 +5046,16 @@ footer .footer-bottom > *{
   }
   #index #ingredients img{
     display:none;
+  }
+}
+@media screen and (max-width: 608px){
+  .l-body .arrow{
+    display:none;
+  }
+}
+@media screen and (min-width: 608px){
+  .fb-like{
+    margin-top:58px;
   }
 }
 @media screen and (min-width: 767px){

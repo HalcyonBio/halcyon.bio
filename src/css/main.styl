@@ -5,7 +5,17 @@ header
   .mobile-menus
     .show-mobile-icon
       color: $hBlue2 //this was in some other set of css files so adding here for easier reference
+#launch-videos
+  .title
 
+    background-color: $hBlue2
+    padding-top: 20px
+    padding-bottom: 20px
+    font-weight: lighter
+
+
+    img
+      max-width:410px
 .flex-center
   display: flex
   align-items: center
@@ -14,7 +24,7 @@ header
 .l-header
   background-color: $hBlue2
   min-height: 300px
-  padding-top: 75px
+  padding-top: 20px
   padding-bottom:100px
   h2,h3
     text-align: center
@@ -22,8 +32,8 @@ header
   @media screen and (max-width:767px)
       padding-top:10px
 .l-vid
-  margin-top: -50px
-  min-height: 600px
+  margin-top: -80px
+  adding-bottom: 40px;
   img
     @media screen and (max-width:767px)
       width:100%
@@ -40,8 +50,19 @@ header
       padding-bottom: 20px
 .l-body
   padding-bottom: 40px
+  h3
+    color: black
+  .arrow
+    @media screen and (max-width:608px)
+      display: none;
+    position: absolute;
+    margin-left: -46px;
+    margin-top: -28px;
 .fblike
   color: #1a88fb
+.fb-like
+  @media screen and (min-width:608px)
+    margin-top: 58px;
 #launch-video-4
   .title
     color: $hBlue2
