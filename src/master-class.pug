@@ -6,62 +6,78 @@ block vars
 block content
   .flex-center.title
     img.logo(src='/img/neuromethod360-logo2.png')
-  section.hide-on-submit.main
-    container
-      .row.justify-content-center.align-items-center
-        .col-lg-6.col-12.ron.align-self-start.flex-center
-          .desktop
-            img(src='/img/ron-white-desktop.png')
-          .mobile  
-            img(src='/img/ron-white-mobile.jpg')
-        .col-lg-6.col-12.cta
-          .logo
-            img.logo-mobile(src='/img/neuromethod360-logo2.png')
-          .cta-text.cta-text1
-            h4
-              | Learn About Boosting Mental Performance in our Free Master Class With Ron White, 2x USA Memory Champion
-          .cta-title
-            h2 #[STRONG FREE] BRAIN POWER WORKSHOP
-          .cta-text  
-            h4 Learn the lifestyle hacks, mental strategies, and supplementation that enables you to reach your PEAK MENTAL STATE every single day.  
-            button.btn(type='button') GET INSTANT ACCESS
-            p.disclaimer *Does not require any credit card info, this is free! 
-            // this (below) is what should show after the above button is clicked
-            h4 Almost there! Enter your email address to begin 
-            register.sp-reg 
-              user-email.input(placeholder='Email')
-              button.btn(type='button') SUBMIT
-            p.disclaimer We will not spam you, your privacy is important to us. We will not sell your email or share it. 
-  section.step2and3
-    container
-      .row
-        .col-12
-          // this (below) should show after the submit button above is clicked. also, the entire container above "hide-on-submit" should be hidden. doing it this way instead of a new page so there's no load time
-          p
-          | Hi. We’re VERY close to finishing our long-awaited Rapid Mental Performance project called our NeuroMethod360. 
-          br
-          br
-          | We have been working on this for more than two years, and are finally going to be releasing it in early August.
-          br
-          br
-          | This project is entirely focused on a holistic method to getting the fastest possible improvement in mental functioning including lifestyle hacks, mental strategies, and supplements to speed up your progress. 
-          br
-          br
-          | It will include mental training techniques, my daily routine, and life hacks of the best performing minds in the world, including my specific supplement regimen that I used to help me memorize over 300 people’s names live, in just 30 minutes. 
-          br
-          br
-          | It is going to be the first all-in-one rapid enhancement program with everything we know about proven methods to accelerate skill acquisition. Get ready to learn quicker, be more efficient, and reach goals faster.
-          br
-          br
-          | HOWEVER, we need your help. Before we finalize it and reveal it to the world, we need to make sure we have covered everything.
-          br
-          br
-          | That is where you come in. Please take a few minutes to answer this super-short survey—there is really only one thing we want to ask you …
-          br
-          br
-          | What are your top two questions about boosting focus and memory that we absolutely NEED to answer in our NeuroMethod360 program? 
-                
-          register
+  launch-squeeze-form
+    section.step-1.main(if='{ step == 1 }')
+      container
+        .row.justify-content-center.align-items-center
+          .col-lg-6.col-12.ron.align-self-start.flex-center
+            .desktop
+              img(src='/img/ron-white-desktop.png')
+            .mobile
+              img(src='/img/ron-white-mobile.jpg')
+          .col-lg-6.col-12.cta
+            .logo
+              img.logo-mobile(src='/img/neuromethod360-logo2.png')
+            .cta-text
+              h4
+                | Learn About Boosting Mental Performance in our Free Master Class With Ron White, 2x USA Memory Champion
+            .cta-title
+              h2 #[STRONG FREE] BRAIN POWER WORKSHOP
+            .cta-text
+              h4 Learn the lifestyle hacks, mental strategies, and supplementation that enables you to reach your PEAK MENTAL STATE every single day.
+              button.btn(type='button' onclick='{ start }') GET INSTANT ACCESS
+              p.disclaimer *Does not require any credit card info, this is free!
+    section.step-2.main(if='{ step == 2 }')
+      container
+        .row.justify-content-center.align-items-center
+          .col-lg-6.col-12.ron.align-self-start.flex-center
+            .desktop
+              img(src='/img/ron-white-desktop.png')
+            .mobile
+              img(src='/img/ron-white-mobile.jpg')
+          .col-lg-6.col-12.cta
+            .logo
+              img.logo-mobile(src='/img/neuromethod360-logo2.png')
+            .cta-text
+              h4
+                | Learn About Boosting Mental Performance in our Free Master Class With Ron White, 2x USA Memory Champion
+            .cta-title
+              h2 #[STRONG FREE] BRAIN POWER WORKSHOP
+            .cta-text
+              h4 Almost there! Enter your email address to begin
+              .sp-reg
+                text.input(bind='email' label='Email')
+                button.btn(type='button' onclick='{ submit }') SUBMIT
+              p.disclaimer We will not spam you, your privacy is important to us. We will not sell your email or share it.
+    section.step-3(if='{ step == 3 }')
+      container
+        .row
+          .col-12
+            // this (below) should show after the submit button above is clicked. also, the entire container above "hide-on-submit" should be hidden. doing it this way instead of a new page so there's no load time
+            p
+            | Hi. We’re VERY close to finishing our long-awaited Rapid Mental Performance project called our NeuroMethod360.
+            br
+            br
+            | We have been working on this for more than two years, and are finally going to be releasing it in early August.
+            br
+            br
+            | This project is entirely focused on a holistic method to getting the fastest possible improvement in mental functioning including lifestyle hacks, mental strategies, and supplements to speed up your progress.
+            br
+            br
+            | It will include mental training techniques, my daily routine, and life hacks of the best performing minds in the world, including my specific supplement regimen that I used to help me memorize over 300 people’s names live, in just 30 minutes.
+            br
+            br
+            | It is going to be the first all-in-one rapid enhancement program with everything we know about proven methods to accelerate skill acquisition. Get ready to learn quicker, be more efficient, and reach goals faster.
+            br
+            br
+            | HOWEVER, we need your help. Before we finalize it and reveal it to the world, we need to make sure we have covered everything.
+            br
+            br
+            | That is where you come in. Please take a few minutes to answer this super-short survey—there is really only one thing we want to ask you …
+            br
+            br
+            | What are your top two questions about boosting focus and memory that we absolutely NEED to answer in our NeuroMethod360 program?
+
             label Which of the following best describes you right now?
             br
             select(name='stage')
@@ -71,7 +87,7 @@ block content
               option(value='Recently graduated from college') Recently graduated from college
               option(value='Own my own business') Own my own business
               option(value='different') Something completely different (please specify)
-            br    
+            br
             label What do you identify as?
             br
             input(type='radio', name='gender', value='male')
@@ -82,31 +98,33 @@ block content
             br
             label What's your profession?
             br
-            input(type='text' name='profession')
+            text.input(type='text' label='Profession' bind='profession')
             br
-            button.btn(type='button') CONTINUE
-            // on click of button above, hide those input fields and show these below. 
-            // the information above should still be submitted in case they do not finish the form we still capture the partial submission 
+            button.btn(type='button' onclick='{ submit }') CONTINUE
+            // on click of button above, hide those input fields and show these below.
+            // the information above should still be submitted in case they do not finish the form we still capture the partial submission
             // when button is clicked three things should happen:
             //  1. the second button should appear that says "back" so they can change info. upon changing should re-submit once they click continue again
             // 2. continue button above should be hidden
             // 3. the submit button below should show
-          register
+
+    section.step-4(if='{ step == 4 }')
+      container
+        .row
+          .col-12
             label #[strong What's your #1 single biggest mental challenge right now?]
             label
-            | Please be as detailed as possible.  For example if you’d say “focus” also tell us when/how do you struggle to focus?   
-            | Things like Memory, focus, recall, stress, anxiety, motivation, attention, brain fog, all apply
-            textarea(rows='4' name='challenge')
+              | Please be as detailed as possible.  For example if you’d say “focus” also tell us when/how do you struggle to focus?
+              | Things like Memory, focus, recall, stress, anxiety, motivation, attention, brain fog, all apply
+            textbox.input(rows='4' label='Challenge' bind='challenge')
             label
-              i 
-              | Lastly, I may want to follow up with a few people personally to learn about your situation. 
+              i
+              | Lastly, I may want to follow up with a few people personally to learn about your situation.
               | If you'd be open to chatting for a few minutes on the condition that I promise not to sell you anything--- please leave your name.
-            label name 
-            input(type='text' name='name')  
-            button.btn(type='button') BACK
-            button.btn(type='button') SUBMIT
-    
-    
+            text.input(type='text' label='Name' bind='name')
+            button.btn(type='button' onclick='{ back }') BACK
+            button.btn(type='button' onclick='{ submit }') SUBMIT
+
   .lsfooter
     p
     | ©2018 Halcyon Biotechnologies
