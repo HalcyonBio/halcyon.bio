@@ -10,12 +10,16 @@ header
 
     background-color: $hBlue2
     padding-top: 20px
-    padding-bottom: 20px
+
     font-weight: lighter
+    @media screen and (max-width:767px)
+      padding-right: 0px
+      padding-left: 0px
 
 
     img
-      max-width:410px
+      width: 60vw;
+      max-width: 300px;
 .flex-center
   display: flex
   align-items: center
@@ -23,8 +27,8 @@ header
 
 .l-header
   background-color: $hBlue2
-  min-height: 300px
-  padding-top: 20px
+
+
   padding-bottom:100px
   h2,h3
     text-align: center
@@ -49,9 +53,18 @@ header
       text-transform: uppercase;
       padding-bottom: 20px
 .l-body
+  @media screen and (min-width:992px)
+    margin-top: 40px
   padding-bottom: 40px
   h3
     color: black
+    margin-top: 10px;
+    @media screen and (max-width:767px)
+      font-size: 4.6vw;
+
+    @media screen and (max-width:608px)
+      text-align: center;
+
   .arrow
     @media screen and (max-width:608px)
       display: none;
@@ -61,8 +74,10 @@ header
 .fblike
   color: #1a88fb
 .fb-like
+
+  display: block !important
   @media screen and (min-width:608px)
-    margin-top: 58px;
+    margin-top: 60px;
 #launch-video-4
   .title
     color: $hBlue2
