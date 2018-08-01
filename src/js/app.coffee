@@ -14,8 +14,14 @@ import Shop from 'shop.js/src'
 
 El.mount 'price, gallery'
 
+m = Shop.getMediator()
+
 El.mount 'launch-squeeze-form',
-  mediator: Shop.getMediator()
+  mediator: m
   data: ref {}
+
+window.addToCart = (productId, number)->
+  Shop.setItem productId, number
+  m.trigger 'checkout-open'
 
 window?.$ = $
