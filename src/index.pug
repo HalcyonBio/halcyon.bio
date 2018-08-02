@@ -15,21 +15,21 @@ block content
     (document, 'script', 'facebook-jssdk'));
 
   section.l-header
-    .container
+    .container.thumb
       .row
-        .col-md-3.col-6
+        .col-3.col-thumb
           img(src="/img/vid-placeholder.jpg")
-        .col-md-3.col-6
+        .col-3.col-thumb
           img(src="/img/vid-placeholder.jpg")
-        .col-md-3.col-6.l-header-34
+        .col-3.col-thumb
           img(src="/img/vid-placeholder.jpg")
-        .col-md-3.col-6.l-header-34
-          img(src="/img/vid-placeholder.jpg"  )
+        .col-3.col-thumb
+          img(src="/img/vid-placeholder.jpg")
       .row
         .col-12.title
           .flex-center.title
 
-                        img.logo(src='/img/neuromethod360-logo2.png')
+                        img.logo(src='/img/nm360-logo-white.jpg')
       .row
         .col-12.title
           h2 Masterclass for the Mind
@@ -53,27 +53,36 @@ block content
             .fb-share <div class="fb-share-button" data-href="https://www.facebook.com/HalcyonBiotech/videos/403575770040505/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FHalcyonBiotech%2Fvideos%2F403575770040505%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
   .container.l-body
     .row
-      .col-lg-9.col-12
+      .col-12
         h3  Hit the <span class="fblike"> "Like"</span> button and comment below
         img.arrow(src="img/arrow.png")
         <div class="fb-like" data-href="https://www.facebook.com/HalcyonBiotech/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
         <div class="fb-comments" data-href="https://halcyon.bio/master-class-videos" data-width="600" data-numposts="10"></div>
-      .col-lg-3.col-12.vid-title.text-center
+    .row
+      .col-md-8
+        img(src='/img/ron-white-desktop.jpg')
+      .col-md-4.col-12.vid-title.text-center
         h2 Watch the Entire Launch Series
-        img(src="/img/vid-placeholder.jpg")
-        h5.t Video 1
-        h5 Lifestyle Hacks for the Brain
+        .row
+          .col-md-6.col-12
+            img(src="/img/vid-placeholder.jpg")
+            h5.t Video 1
+            h5 Lifestyle Hacks for the Brain
 
-        img(src="/img/vid-placeholder.jpg")
-        h5.t Video 2
-        h5 Adding these Mental Strategies<br> to your day
-        img(src="/img/vid-placeholder.jpg")
-        h5.t Video 3
-        h5 Supplementation for<br> mental Performance
+            img(src="/img/vid-placeholder.jpg")
+            h5.t Video 2
+            h5 Adding these Mental Strategies<br> to your day
+          .col-md-6.col-12
+            img(src="/img/vid-placeholder.jpg")
+            h5.t Video 3
+            h5 Supplementation for<br> mental Performance
 
-        img(src="/img/vid-placeholder.jpg")
-        h5.t Video 4
-        h5 Coming soon
+            img(src="/img/vid-placeholder.jpg")
+            h5.t Video 4
+            h5 Coming soon
+        .row
+          .col-12.blue-bottom
+            
   .lsfooter
           p
           | ©2018 Halcyon Biotechnologies
@@ -81,4 +90,3 @@ block content
           |  #[a(href='/privacy-policy') Privacy Policy ] |  #[a(href='/terms-of-service') Terms of Service]
 block header
 block footer
-
