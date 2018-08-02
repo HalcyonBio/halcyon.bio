@@ -50,9 +50,11 @@
     "stylus": "0.54.5"
   },
   "dependencies": {
+    "akasha": "0.1.10",
     "astley.js": "0.0.52",
     "el-controls": "1.2.38",
     "el.js": "2.1.36",
+    "hanzo.js": "2.5.1",
     "referential": "0.5.23",
     "shop.js": "2.2.51"
   }

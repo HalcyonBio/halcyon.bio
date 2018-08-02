@@ -4871,6 +4871,15 @@ footer .footer-bottom > *{
 #launch-squeeze launch-squeeze-form.ready section{
   display:initial;
 }
+#launch-videos .overlay-opt-in{
+  height:100%;
+}
+#launch-videos .overlay-opt-in text{
+  float:right;
+}
+#launch-videos .overlay-opt-in .btn{
+  float:left;
+}
 #launch-videos .btn{
   background-color:#304191;
   margin-bottom:3px;
