@@ -25,6 +25,33 @@
         display: initial
 
 #launch-videos
+  background-color: black
+  .title-top
+    z-index: 9999
+    font-family: Palatino
+    background-color: rgba(0,0,0,.7)
+    padding:5px
+    position:fixed;
+    top:0px
+    font-size:1rem
+    width: 100%
+    left: 0px
+    @media screen and (max-width:540px)
+      font-size:.5rem
+      text-align: left
+  .t360
+    color: $hOrange
+  .name
+
+      font-size: 2rem;
+      font-weight: 700;
+    p, h1, h2, h3, h4
+    color: White
+    font-family: "Lato", "Helvetica", "Arial", sans-serif;
+  .subtitle
+    font-size: 1rem;
+    color: #7c7c80
+    text-transform: uppercase;
   .opt-in-fields
     @media screen and (max-width:767px)
       display: flex;
@@ -104,16 +131,22 @@
     font-size: .7rem
     @media screen and (max-width:576px)
       font-size: .6rem
-
+  .col-thumb
+    border: 1px solid gray
+    margin-left:2px
+    margin-right:2px
 
   .fb-share
     text-align: left
   .launch-squeeze-form
     @media screen and (max-width:367px)
         margin-bottom:5px
-
+  .title
+    h2
+      @media screen and (max-width:520px)
+        font-size: 1.5rem
   .t
-    padding--bottom: 0px
+    padding-bottom: 0px
 #launch-video-4
   .title
     color: $hBlue2
@@ -179,20 +212,21 @@
   //  background-repeat: no-repeat
   //  background-size: contain
   //  background-position: top right;
-    background-color: $hBlue2
-    padding-top: 20px
-    padding-bottom: 20px
-    font-weight: lighter
 
-    @media screen and (max-width:560px)
-      font-size: 11vw
-    @media screen and (min-width:560px)
-      font-size: 60px
-      z-index: 99
-    @media screen and (max-width:767px)
-      display: none
-    img
-      max-width:410px
+  //  background-color: $hBlue2
+  //  padding-top: 20px
+  //  padding-bottom: 20px
+  //  font-weight: lighter
+
+    // @media screen and (max-width:560px)
+      // font-size: 11vw
+    // @media screen and (min-width:560px)
+      // font-size: 60px
+      // z-index: 99
+    // @media screen and (max-width:767px)
+      // display: none
+    // img
+      // max-width:410px
   .logo-mobile
     padding-bottom: 10px;
 
