@@ -1,6 +1,6 @@
 .lsfooter
       background-color: #0f1033
-      min-height:60px
+      min-height:80px
       text-align: center
       padding-top: 10px
     a
@@ -44,6 +44,8 @@
       border-bottom: 1px solid #262626;
   .title-top
     float: left;
+    img
+      max-width: 60px
   .t360
     color: $hOrange
   .name
@@ -183,7 +185,8 @@
   .l-body2-ron
     img
       float: right;
-      padding-right: 100px;
+      @media screen and (min-width:767px)
+        padding-right: 100px;
   .vid-title
     img
       border: 1px solid gray

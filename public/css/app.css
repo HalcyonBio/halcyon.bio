@@ -4630,7 +4630,7 @@ footer .footer-bottom > *{
 }
 .lsfooter{
   background-color:#0f1033;
-  min-height:60px;
+  min-height:80px;
   text-align:center;
   padding-top:10px;
 }
@@ -4901,6 +4901,9 @@ a{
 #launch-videos .title-top{
   float:left;
 }
+#launch-videos .title-top img{
+  max-width:60px;
+}
 #launch-videos .t360{
   color:#f26621;
 }
@@ -5010,7 +5013,6 @@ a{
 }
 #launch-videos .l-body2-ron img{
   float:right;
-  padding-right:100px;
 }
 #launch-videos .vid-title img{
   border:1px solid #808080;
@@ -5489,6 +5491,9 @@ a{
   #index #shop #shop-widget .body{
     max-width:280px;
   }
+  #launch-videos .l-body2-ron img{
+    padding-right:100px;
+  }
   #launch-squeeze .main{
     margin-top:-60px;
     background-color:White;
@@ -5513,7 +5518,18 @@ a{
     color:#abaaaa;
   }
 }
+@media screen and (max-width: 520px){
+  .l-vid .desktop{
+    display:none;
+  }
+  #launch-videos .title h2{
+    font-size:1.5rem;
+  }
+}
 @media screen and (min-width: 520px){
+  .l-vid .mobile{
+    display:none;
+  }
   .vid-title h5,
   .vid-title h2{
     color:#304191;
@@ -5759,11 +5775,6 @@ a{
 @media screen and (max-width: 367px){
   #launch-videos .launch-squeeze-form{
     margin-bottom:5px;
-  }
-}
-@media screen and (max-width: 520px){
-  #launch-videos .title h2{
-    font-size:1.5rem;
   }
 }
 @media screen and (min-width: 608px){
