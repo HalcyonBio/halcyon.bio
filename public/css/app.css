@@ -4899,8 +4899,9 @@ a{
   background-color:#304191;
   margin-bottom:3px;
 }
-#launch-videos input{
+#launch-videos .input input{
   height:40px;
+  width:100%;
 }
 #launch-videos .overlay-opt-in{
   width:100%;
@@ -5256,6 +5257,14 @@ a{
     padding-right:0px;
     padding-left:0px;
   }
+  .l-header h2 h2,
+  .l-header h3 h2{
+    font-size:22px;
+  }
+  .l-header h2 h3,
+  .l-header h3 h3{
+    font-size:18px;
+  }
   .l-header-34{
     padding-top:10px;
   }
@@ -5350,6 +5359,20 @@ a{
   }
   #index #ingredients img{
     display:none;
+  }
+  #launch-videos .opt-in-fields{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  #launch-videos .btn{
+    width:90%;
+    margin-top:10px;
+    max-width:300px;
+  }
+  #launch-videos .input{
+    width:90%;
+    max-width:300px;
   }
   #launch-videos .overlay-opt-in{
     height:95%;
@@ -5593,15 +5616,6 @@ a{
     display:none;
   }
 }
-@media screen and (max-width: 407px){
-  #launch-videos .btn{
-    width:90%;
-    margin-top:10px;
-  }
-  #launch-videos input{
-    width:90%;
-  }
-}
 @media screen and (max-width: 884px){
   #launch-videos .overlay-opt-in{
     height:95.7%;
@@ -5619,10 +5633,10 @@ a{
 }
 @media screen and (max-width: 462px){
   #launch-videos .overlay-opt-in{
-    height:92%;
+    height:91%;
   }
 }
-@media screen and (max-width: 360px){
+@media screen and (max-width: 439px){
   #launch-videos .overlay-opt-in{
     height:90%;
   }

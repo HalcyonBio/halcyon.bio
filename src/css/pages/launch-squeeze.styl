@@ -27,6 +27,11 @@
 
 
 #launch-videos
+  .opt-in-fields
+    @media screen and (max-width:767px)
+      display: flex;
+      align-items: center;
+      justify-content: center;
   .overlay-opt-in
     height: 100%
 
@@ -39,13 +44,18 @@
   .btn
     background-color: $hBlue2
     margin-bottom: 3px;
-    @media screen and (max-width:407px)
+    @media screen and (max-width:767px)
       width: 90%
       margin-top:10px
-  input
-    height: 40px;
-    @media screen and (max-width:407px)
+      max-width: 300px
+  .input
+
+    input
+      height: 40px;
+      width: 100%
+    @media screen and (max-width:767px)
       width: 90%
+      max-width: 300px
   .overlay-opt-in
     width: 100%;
 
@@ -58,8 +68,8 @@
     @media screen and (max-width:606px)
       height:93%
     @media screen and (max-width:462px)
-      height:92%
-    @media screen and (max-width:360px)
+      height:91%
+    @media screen and (max-width:439px)
       height:90%
     @media screen and (max-width:356px)
       height: 89%
@@ -134,6 +144,7 @@
 #launch-squeeze
 
   min-height:100vh
+
   .btn
     background-color: $hBlue2
   .main
