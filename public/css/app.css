@@ -3914,7 +3914,6 @@ header .mobile-menus .show-mobile-icon{
 }
 .l-header{
   padding-top:20px;
-  padding-bottom:100px;
 }
 .l-header .col-thumb{
   padding-left:2px;
@@ -3945,8 +3944,7 @@ header .mobile-menus .show-mobile-icon{
 }
 .vid-title h5,
 .vid-title h2{
-  color:#304191;
-  font-weight:bold;
+  color:#fff;
 }
 .vid-title h5{
   text-transform:uppercase;
@@ -4631,9 +4629,10 @@ footer .footer-bottom > *{
   text-align:center;
 }
 .lsfooter{
-  background-color:#304191;
-  min-height:100px;
+  background-color:#0f1033;
+  min-height:60px;
   text-align:center;
+  padding-top:10px;
 }
 a{
   color:White !important;
@@ -4888,10 +4887,10 @@ a{
 #launch-videos{
   background-color:#000;
 }
-#launch-videos .title-top{
+#launch-videos .title-top-container{
   z-index:9999;
   font-family:Palatino;
-  background-color:rgba(0,0,0,0.7);
+  background-color:rgba(5,6,57,0.8);
   padding:5px;
   position:fixed;
   top:0px;
@@ -4899,12 +4898,17 @@ a{
   width:100%;
   left:0px;
 }
+#launch-videos .title-top{
+  float:left;
+}
 #launch-videos .t360{
   color:#f26621;
 }
 #launch-videos .name{
+  margin-top:-40px;
+  text-transform:uppercase;
   font-size:2rem;
-  font-weight:700;
+  font-weight:500;
 }
 #launch-videos p,
 #launch-videos h1,
@@ -4960,16 +4964,62 @@ a{
 #launch-videos .disclaimer{
   font-size:0.7rem;
 }
+#launch-videos .thumb{
+  margin-top:10px;
+}
+#launch-videos .thumb .col-3{
+  max-width:23.5%;
+}
 #launch-videos .col-thumb{
   border:1px solid #808080;
   margin-left:2px;
   margin-right:2px;
 }
+#launch-videos .col-thumb p{
+  position:absolute;
+  right:2px;
+  bottom:-21px;
+}
 #launch-videos .fb-share{
   text-align:left;
 }
+#launch-videos .ron-media{
+  margin-top:20px;
+}
+#launch-videos .ron-media img{
+  max-width:90px;
+  opacity:0.5;
+}
+#launch-videos .ron-media img :hover{
+  opacity:0.9;
+}
+#launch-videos .ron-media .col-6,
+#launch-videos .ron-media .col-md-3{
+  margin-bottom:15px;
+}
 #launch-videos .t{
   padding-bottom:0px;
+}
+#launch-videos .l-body-transition,
+#launch-videos .l-body{
+  background-color:#0f1033;
+}
+#launch-videos .l-body2{
+  margin-bottom:-7px;
+  background-color:#050639;
+}
+#launch-videos .l-body2-ron img{
+  float:right;
+  padding-right:100px;
+}
+#launch-videos .vid-title img{
+  border:1px solid #808080;
+}
+#launch-videos .vid-title .col-md-6{
+  min-height:220px;
+}
+#launch-videos .fb-comments{
+  display:block;
 }
 #launch-video-4 .title{
   color:#304191;
@@ -5289,6 +5339,9 @@ a{
     padding-right:0px;
     padding-left:0px;
   }
+  .l-header{
+    padding-bottom:20px;
+  }
   .l-header h2 h2,
   .l-header h3 h2{
     font-size:22px;
@@ -5429,6 +5482,47 @@ a{
     padding-bottom:20px;
   }
 }
+@media screen and (min-width: 767px){
+  .l-header{
+    padding-bottom:100px;
+  }
+  #index #shop #shop-widget .body{
+    max-width:280px;
+  }
+  #launch-squeeze .main{
+    margin-top:-60px;
+    background-color:White;
+    background-image:url("/img/ron-white-desktop-bg.png");
+  }
+  #launch-squeeze .ron{
+    text-align:right;
+  }
+  #launch-squeeze .logo-mobile{
+    display:none;
+  }
+  #launch-squeeze .desktop{
+    display:block;
+  }
+  #launch-squeeze .mobile{
+    display:none;
+  }
+  #launch-squeeze .cta .logo{
+    display:none;
+  }
+  #launch-squeeze .disclaimer{
+    color:#abaaaa;
+  }
+}
+@media screen and (min-width: 520px){
+  .vid-title h5,
+  .vid-title h2{
+    color:#304191;
+  }
+  #launch-videos .l-body2{
+    background-color:#fff;
+    margin-top:40px;
+  }
+}
 @media screen and (min-width: 992px){
   .l-body{
     margin-top:40px;
@@ -5487,34 +5581,6 @@ a{
   #index #testimonials .col-12{
     padding-left:0px;
     padding-right:0px;
-  }
-}
-@media screen and (min-width: 767px){
-  #index #shop #shop-widget .body{
-    max-width:280px;
-  }
-  #launch-squeeze .main{
-    margin-top:-60px;
-    background-color:White;
-    background-image:url("/img/ron-white-desktop-bg.png");
-  }
-  #launch-squeeze .ron{
-    text-align:right;
-  }
-  #launch-squeeze .logo-mobile{
-    display:none;
-  }
-  #launch-squeeze .desktop{
-    display:block;
-  }
-  #launch-squeeze .mobile{
-    display:none;
-  }
-  #launch-squeeze .cta .logo{
-    display:none;
-  }
-  #launch-squeeze .disclaimer{
-    color:#abaaaa;
   }
 }
 @media screen and (min-width: 993px){
@@ -5646,9 +5712,10 @@ a{
   }
 }
 @media screen and (max-width: 540px){
-  #launch-videos .title-top{
+  #launch-videos .title-top-container{
     font-size:0.5rem;
     text-align:left;
+    border-bottom:1px solid #262626;
   }
 }
 @media screen and (max-width: 884px){

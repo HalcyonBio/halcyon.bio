@@ -1,7 +1,8 @@
 .lsfooter
-      background-color: $hBlue2
-      min-height:100px
+      background-color: #0f1033
+      min-height:60px
       text-align: center
+      padding-top: 10px
     a
       color: White !important;
 #launch-squeeze
@@ -26,25 +27,30 @@
 
 #launch-videos
   background-color: black
-  .title-top
+  .title-top-container
     z-index: 9999
     font-family: Palatino
-    background-color: rgba(0,0,0,.7)
+    background-color: rgba(5, 6, 57, 0.8);
     padding:5px
     position:fixed;
     top:0px
     font-size:1rem
     width: 100%
     left: 0px
+
     @media screen and (max-width:540px)
       font-size:.5rem
       text-align: left
+      border-bottom: 1px solid #262626;
+  .title-top
+    float: left;
   .t360
     color: $hOrange
   .name
-
+      margin-top:-40px
+      text-transform: uppercase;
       font-size: 2rem;
-      font-weight: 700;
+      font-weight: 500;
     p, h1, h2, h3, h4
     color: White
     font-family: "Lato", "Helvetica", "Arial", sans-serif;
@@ -131,13 +137,30 @@
     font-size: .7rem
     @media screen and (max-width:576px)
       font-size: .6rem
+  .thumb
+    margin-top:10px
+    .col-3
+      max-width: 23.5%;
   .col-thumb
     border: 1px solid gray
     margin-left:2px
     margin-right:2px
+    p
+      position: absolute;
+      right: 2px;
+      bottom: -21px;
 
   .fb-share
     text-align: left
+  .ron-media
+    margin-top:20px
+    img
+      max-width:90px
+      opacity: .5
+      :hover
+        opacity: .9
+    .col-6, .col-md-3
+      margin-bottom:15px
   .launch-squeeze-form
     @media screen and (max-width:367px)
         margin-bottom:5px
@@ -147,6 +170,27 @@
         font-size: 1.5rem
   .t
     padding-bottom: 0px
+  .l-body-transition
+
+  .l-body
+    background-color: #0f1033;
+  .l-body2
+    margin-bottom: -7px;
+    background-color: rgba(5, 6, 57, 1);
+    @media screen and (min-width:520px)
+      background-color:white;
+      margin-top: 40px
+  .l-body2-ron
+    img
+      float: right;
+      padding-right: 100px;
+  .vid-title
+    img
+      border: 1px solid gray
+    .col-md-6
+      min-height: 220px
+  .fb-comments
+    display:block
 #launch-video-4
   .title
     color: $hBlue2
