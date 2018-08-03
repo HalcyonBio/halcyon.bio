@@ -5897,6 +5897,12 @@ a.lightbox-close:after{
     font-size:1rem;
   }
 }
+@media screen and (min-width: 420px){
+  #launch-videos .col-thumb p{
+    right:8px;
+    font-size:25px;
+  }
+}
 @media screen and (max-width: 367px){
   #launch-videos .launch-squeeze-form{
     margin-bottom:5px;
