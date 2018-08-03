@@ -32,7 +32,7 @@ block content
           .title-top-container
             .title-top.flex-center
               img.logoHB(src='/img/logo_square.png')
-              a.btn.btn-share(type='button' target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fa fa-facebook-square"></i> Share
+              a.btn.btn-share(type='button' target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fa fa-facebook-f"></i> Share
               button.btn.btn-trailer(type='button' onclick="location.href='#opt-in' ")  <i class="fa fa-play-circle"></i> 
               
     .container-fluid.l-vid
@@ -74,11 +74,11 @@ block content
         .col-12.title
           h2 UPCOMING EPISODES
           p
-          |Free online masterclass taught by the one of the
-          |world’s greatest minds. Ron White is a 2X USA memory
-          |champion. He teaches you how to get the most from
-          |your brain with his best lifestyle hacks, mental
-          | strategies and supplements for peak brain health and performance.
+            |Free online masterclass taught by the one of the
+            |world’s greatest minds. Ron White is a 2X USA memory
+            |champion. He teaches you how to get the most from
+            |your brain with his best lifestyle hacks, mental
+            | strategies and supplements for peak brain health and performance.
       .title
         h2 AS SEEN ON
       .row.ron-media.flex-center
@@ -144,10 +144,10 @@ block content
           .col-12.blue-bottom
   video-form.lightbox-target#opt-in.overlay-opt-in(if='{ !submited }')
         .opt-in
-          h4 Enter your email address to watch the trailer
+          // h4 Enter your email address to watch the trailer
           .row
             .col-md-6.col-12.opt-in-fields
-              text.input(bind='email' placeholder='Email')
+              text.input(bind='email' placeholder='Enter Your Email')
             .col-md-6.col-12.opt-in-fields
               button.btn.submit-opt-in(type='button' onclick='{ submit }') WATCH NOW
             p.disclaimer We will notify you when each masterclass episode is released. Providing your emails gives you unlimited free access to all 4 masterclass episodes.
