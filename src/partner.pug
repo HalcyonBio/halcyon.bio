@@ -67,8 +67,10 @@ block content
               user-email.input(placeholder='Email')
               user-password.input(placeholder='Password')
               user-password-confirm.input(placeholder='Retype Password')
-              input(placeholder='How did you hear about our Ambassador Program?')
-              input(placeholder='how do you plan to promote Halcyon?')
+              label How did you hear about our Ambassador Program?
+              input.input(type='question' placeholder='')
+              label How do you plan to promote Halcyon?
+              input.input( type='question' placeholder='')
               .recaptcha-m
                 recaptcha(sitekey='6Ldp8mQUAAAAAKfBJ8OxNgvvMkNxvQhbnFfYVO-D')
               .error(if='{ errorMessage }')

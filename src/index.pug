@@ -30,11 +30,11 @@ block content
       .row
         .col-12.title
           .title-top-container
-            .title-top
-              img.mobile(src='/img/logo_square.png')
-              button.btn.btn-share(type='button' onclick='location.href=') SHARE
-              button.btn.btn-trailer(type='button' onclick="location.href='#opt-in' ")  WATCH NOW
-              // img.mobile(src='/img/nm-box-logo-oj360.png')
+            .title-top.flex-center
+              img.logoHB(src='/img/logo_square.png')
+              a.btn.btn-share(type='button' target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fa fa-share"></i>
+              button.btn.btn-trailer(type='button' onclick="location.href='#opt-in' ")  <i class="fa fa-play-circle-o"></i>
+              
     .container-fluid.l-vid
       video-form.row
         .col-12.text-center.header-img
@@ -96,12 +96,12 @@ block content
           img(src='/img/time.png')
         .col-12.col-md-3.col-lg-1.flex-center
           img(src='/img/wsj.png')
-
+      #fb
   // .flex-container.l-body-transition
     .row
       .col-12
         p
-  #fb.flex-container.l-body.flex-center
+  .flex-container.l-body.flex-center
     .row
       .col-12
         h3  Hit the <span class="fblike"> "Like"</span> button and comment below
@@ -154,12 +154,12 @@ block content
             <a class="lightbox-close lightbox-close1" href="#fb"></a>
   .lightbox-target#trailer2424neuro
     .trailer
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/XbGiqt-iZN8?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/71fptRWCwuQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <a style="" class="lightbox-close lightbox-close2" href="#fb"></a>
   .lsfooter
           p
           | ©2018 Halcyon Biotechnologies
           br
-          |  #[a(href='/privacy-policy') Privacy Policy ] |  #[a(href='/privacy-policy#terms-of-service') Terms of Service]
+          |  #[a(href='/privacy-policy' target='blank') Privacy Policy ] |  #[a(href='/privacy-policy#terms-of-service' target='blank') Terms of Service]
 block header
 block footer
