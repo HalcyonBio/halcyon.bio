@@ -4883,6 +4883,10 @@ iframe.fb_ltr{
 #launch-videos{
   background-color:#000;
 }
+#launch-videos .trailer{
+  text-align:center;
+  padding-top:5%;
+}
 #launch-videos .title-top-container{
   z-index:9999;
   font-family:Palatino;

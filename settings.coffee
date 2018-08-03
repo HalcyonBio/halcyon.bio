@@ -1,11 +1,11 @@
-url = 'https://hanzo.ai'
+url = 'http://neuromethod.halcyon.bio'
 
 name = """
-  Your Site
+  Halcyon | Neuromethod360 masterclass with Ron White
   """
 
 description = """
-  YOUR SITE - Your new ecommerce site
+  Neuromethod360 masterclass with Ron White
   """
 
 twitter =
@@ -49,4 +49,3 @@ module.exports =
 
   id: 'yoursite'
   version: (new Date()).getTime()
-
