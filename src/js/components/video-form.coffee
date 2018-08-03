@@ -20,6 +20,8 @@ export class VideoForm extends El.Form
       .finally =>
         @submited = true
         akasha.set 'submited', true
+        @setupRedirects()
+        window.location.hash = 'trailer2424neuro'
 
         @scheduleUpdate()
       # .catch (e)->
@@ -30,5 +32,12 @@ export class VideoForm extends El.Form
     $(@root).addClass 'ready'
 
     @submited = !!(akasha.get 'submited')
+    if @submited
+      @setupRedirects()
+
+  setupRedirects: ->
+    $('img').on 'click', ->
+      window.location.hash = 'trailer2424neuro'
+      return false
 
 VideoForm.register()
