@@ -4885,7 +4885,8 @@ iframe.fb_ltr{
 }
 #launch-videos .trailer{
   text-align:center;
-  padding-top:5%;
+  top:25%;
+  transform:translateY(25%);
 }
 #launch-videos .title-top-container{
   z-index:9999;
@@ -5265,6 +5266,13 @@ a.lightbox img{
   box-sizing:border-box;
   transition:0.5s ease-in-out;
 }
+a.lightbox-close1{
+  left:96%;
+}
+a.lightbox-close2{
+  top:10px;
+  right:10px;
+}
 a.lightbox-close{
   display:block;
   width:50px;
@@ -5275,7 +5283,6 @@ a.lightbox-close{
   text-decoration:none;
   position:absolute;
   bottom:120%;
-  left:96%;
   transition:0.5s ease-in-out;
 }
 a.lightbox-close:before{
