@@ -24,7 +24,9 @@
     &.ready
       section
         display: initial
-
+.pluginSkinDark
+  a
+    color:#0f1033;
 #launch-videos
   background-color: black
   .title-top-container
@@ -36,16 +38,22 @@
     top:0px
     font-size:1rem
     width: 100%
-    left: 0px
-
+    left: 0
     @media screen and (max-width:540px)
       font-size:.5rem
       text-align: left
-      border-bottom: 1px solid #262626;
   .title-top
-    float: left;
-    img
+    display: inline-block
+    float: left
+    .mobile
       max-width: 60px
+      display: block
+    .btn-share
+      width:49.5%
+      font-family: "Lato", "Helvetica", "Arial", sans-serif;
+    .btn-trailer
+      width:49.5%
+      font-family: "Lato", "Helvetica", "Arial", sans-serif;
   .t360
     color: $hOrange
   .name
@@ -56,10 +64,15 @@
     p, h1, h2, h3, h4
     color: White
     font-family: "Lato", "Helvetica", "Arial", sans-serif;
-  .subtitle
-    font-size: 1rem;
+  .subtitle, .subtitle2
+
     color: #7c7c80
     text-transform: uppercase;
+  .subtitle
+    font-size: 1rem;
+  .subtitle2
+    font-size: 1.5rem
+    line-height: 1
   .opt-in-fields
     @media screen and (max-width:767px)
       display: flex;
@@ -182,16 +195,55 @@
     @media screen and (min-width:520px)
       background-color:white;
       margin-top: 40px
+    .vid-desc-trailer
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-bottom: 10px
+      img
+        border: 3px solid white
+    .vid-desc
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-bottom: 10px
+      h5
+        text-transform: uppercase;
+        margin-bottom: 0px
+
+
+        color:white
+        @media screen and (min-width:520px)
+          color: $hBlue2
+      img
+        border: 1px solid gray
+      .vid-desc-wrapper
+        position: absolute;
+        width: 99.5%;
+        background-color: rgba(5,6,57,0.5);
+
+        bottom: 4px;
+      .vid-desc-wrapper-trailer
+        background-color: none
+        position: absolute;
+        width: 99.5%;
+
+
+        bottom: 4px;
+
+
   .l-body2-ron
     img
-      float: right;
+
       @media screen and (min-width:767px)
         padding-right: 100px;
+        float: right;
   .vid-title
-    img
-      border: 1px solid gray
-    .col-md-6
-      min-height: 220px
+      h2
+        color:white
+        @media screen and (min-width:520px)
+          color: $hBlue2
+
+
+
   .fb-comments
     display:block
 #launch-video-4
