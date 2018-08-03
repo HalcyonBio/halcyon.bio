@@ -85,16 +85,20 @@
         <div class="container-fluid l-vid">
           <video-form class="row">
             <div class="col-12 text-center header-img">
-              <!-- .overlay-opt-in(if='{ !submited }')
-              .opt-in
-                h4 Enter your email address to watch the masterclass
-                .row
-                  .col-md-6.col-12.opt-in-fields
-                    text.input(bind='email' placeholder='Email')
-                  .col-md-6.col-12.opt-in-fields
-                    button.btn(type='button' onclick='{ submit }') WATCH NOW
-                  p.disclaimer We will not spam you, your privacy is important to us. We will not sell your email or share it.
-              -->
+              <div class="lightbox-target overlay-opt-in" id="opt-in" if="{ !submited }">
+                <div class="opt-in">
+                  <h4>Enter your email address to watch the masterclass</h4>
+                  <div class="row">
+                    <div class="col-md-6 col-12 opt-in-fields">
+                      <text class="input" bind="email" placeholder="Email"></text>
+                    </div>
+                    <div class="col-md-6 col-12 opt-in-fields">
+                      <button class="btn" type="button" onclick="{ submit }">WATCH NOW</button>
+                    </div>
+                    <p class="disclaimer">We will not spam you, your privacy is important to us. We will not sell your email or share it.</p><a class="lightbox-close" href="#"></a> 
+                  </div>
+                </div>
+              </div>
               <div class="vid-container"><img class="mobile" src="/img/header-ron-mobile.jpg"><img class="desktop" src="/img/header-ron-desktop.jpg">
                 <div class="name">Ron White</div>
                 <div class="subtitle">2 time USA Memory Champion</div>
@@ -152,7 +156,7 @@
         <div class="row">
           <div class="col-12">
             <h3> Hit the <span class="fblike"> "Like"</span> button and comment below</h3><img class="arrow" src="img/arrow.png"><div class="fb-like" data-colorscheme="dark" data-href="https://www.facebook.com/HalcyonBiotech/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-<div class="fb-comments" data-colorscheme="dark" data-href="https://halcyon.bio/master-class-videos" data-width="600" data-numposts="10"></div>
+<div class="fb-comments" data-colorscheme="dark" data-href="https://halcyon.bio/master-class-videos" data-width="100%" data-numposts="10"></div>
           </div>
         </div>
       </div>
@@ -185,7 +189,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div><a class="lightbox" href="#opt-in"><img src="/img/vid-1-thumb.jpg"></a>
+      <!--.lightbox-target#opt-in
+      img(src="/img/vid-2-thumb.jpg") 
+      <a class="lightbox-close" href="#"></a>             
+      -->
       <div class="lsfooter">
         <p></p>©2018 Halcyon Biotechnologies<br> <a href="/privacy-policy">Privacy Policy </a> |  <a href="/privacy-policy#terms-of-service">Terms of Service</a>
       </div>
