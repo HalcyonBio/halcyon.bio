@@ -4960,6 +4960,11 @@ iframe.fb_ltr{
 #launch-videos .btn{
   margin-bottom:3px;
 }
+#launch-videos .submit-opt-in{
+  background-color:#304191;
+  width:90%;
+  max-width:300px;
+}
 #launch-videos .input input{
   height:40px;
   width:100%;
@@ -4971,8 +4976,14 @@ iframe.fb_ltr{
   margin-left:15px;
   transform:translateY(-50%);
 }
+#launch-videos .opt-in h4{
+  text-align:center;
+}
 #launch-videos .disclaimer{
-  font-size:0.7rem;
+  max-width:900px;
+  text-align:center;
+  margin:0 auto;
+  font-size:1.2rem;
 }
 #launch-videos .thumb{
   margin-top:10px;
@@ -5223,7 +5234,7 @@ a.lightbox img{
   position:fixed;
   top:-100%;
   width:100%;
-  background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0.85);
   width:100%;
   opacity:0;
   transition:opacity 0.5s ease-in-out;
@@ -5252,8 +5263,8 @@ a.lightbox-close{
   color:#000;
   text-decoration:none;
   position:absolute;
-  top:-80px;
-  right:0;
+  bottom:120%;
+  left:96%;
   transition:0.5s ease-in-out;
 }
 a.lightbox-close:before{
@@ -5287,9 +5298,6 @@ a.lightbox-close:after{
 .lightbox-target:target img{
   max-height:100%;
   max-width:100%;
-}
-.lightbox-target:target a.lightbox-close{
-  top:0px;
 }
 #signup h2{
   color:#304191;
@@ -5575,6 +5583,9 @@ a.lightbox-close:after{
     align-items:center;
     justify-content:center;
   }
+  #launch-videos .submit-opt-in{
+    margin-top:10px;
+  }
   #launch-videos .input{
     width:90%;
     max-width:300px;
@@ -5607,7 +5618,6 @@ a.lightbox-close:after{
     max-width:280px;
   }
   #launch-videos .btn{
-    margin-top:10px;
     max-width:300px;
   }
   #launch-videos .l-body2-ron img{
@@ -5864,7 +5874,7 @@ a.lightbox-close:after{
     font-size:1.2rem;
   }
   #launch-videos .disclaimer{
-    font-size:0.6rem;
+    font-size:1rem;
   }
 }
 @media screen and (max-width: 367px){

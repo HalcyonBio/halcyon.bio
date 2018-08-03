@@ -30,7 +30,7 @@ block content
         .col-12.title
           .title-top-container
             .title-top
-              img.mobile(src='/img/nm-box-logo-oj360.png')
+              img.mobile(src='/img/logo_square.png')
               button.btn.btn-share(type='button' onclick='location.href=') SHARE
               button.btn.btn-trailer(type='button' onclick="location.href='#opt-in' ")  WATCH NOW
               // img.mobile(src='/img/nm-box-logo-oj360.png')
@@ -148,13 +148,13 @@ block content
         <a class="lightbox-close" href="#"></a>
   video-form.lightbox-target#opt-in.overlay-opt-in(if='{ !submited }')
         .opt-in
-          h4 Enter your email address to watch the masterclass
+          h4 Enter your email address to watch the trailer
           .row
             .col-md-6.col-12.opt-in-fields
               text.input(bind='email' placeholder='Email')
             .col-md-6.col-12.opt-in-fields
-              button.btn(type='button' onclick='{ submit }') WATCH NOW
-            p.disclaimer We will not spam you, your privacy is important to us. We will not sell your email or share it.
+              button.btn.submit-opt-in(type='button' onclick='{ submit }') WATCH NOW
+            p.disclaimer Enter your email above so we can notify you when we release the masterclass here in the next few days - you'll get FREE access to the entire masterclass!
             <a class="lightbox-close" href="#"></a>
   .lightbox-target#trailer2424neuro
     img(src="/img/vid-1-thumb.jpg")
