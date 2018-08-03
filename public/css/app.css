@@ -4895,19 +4895,25 @@ iframe.fb_ltr{
   left:0;
 }
 #launch-videos .title-top{
+  text-align:center;
   display:inline-block;
   width:100%;
 }
 #launch-videos .title-top .mobile{
   max-width:60px;
-  display:block;
 }
 #launch-videos .title-top .btn-share{
-  width:49.5%;
+  background-color:#304191;
+  margin-left:5px;
+  padding-left:10px;
+  padding-right:10px;
   font-family:"Lato", "Helvetica", "Arial", sans-serif;
 }
 #launch-videos .title-top .btn-trailer{
-  width:49.5%;
+  background-color:#f00;
+  margin-left:5px;
+  padding-left:10px;
+  padding-right:10px;
   font-family:"Lato", "Helvetica", "Arial", sans-serif;
 }
 #launch-videos .t360{
@@ -4952,7 +4958,6 @@ iframe.fb_ltr{
   float:left;
 }
 #launch-videos .btn{
-  background-color:#304191;
   margin-bottom:3px;
 }
 #launch-videos .input input{
@@ -5570,11 +5575,6 @@ a.lightbox-close:after{
     align-items:center;
     justify-content:center;
   }
-  #launch-videos .btn{
-    width:90%;
-    margin-top:10px;
-    max-width:300px;
-  }
   #launch-videos .input{
     width:90%;
     max-width:300px;
@@ -5605,6 +5605,10 @@ a.lightbox-close:after{
   }
   #index #shop #shop-widget .body{
     max-width:280px;
+  }
+  #launch-videos .btn{
+    margin-top:10px;
+    max-width:300px;
   }
   #launch-videos .l-body2-ron img{
     padding-right:100px;

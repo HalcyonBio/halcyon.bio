@@ -44,20 +44,27 @@
       font-size:.5rem
       text-align: left
   .title-top
+    text-align: center;
     display: inline-block
     width: 100%;
     .mobile
       max-width: 60px
-      display: block
+
       @media screen and (min-width:540px)
         display: inline-block;
         text-align: center;
         float:left
     .btn-share
-      width:49.5%
+      background-color: $hBlue2
+      margin-left: 5px
+      padding-left: 10px
+      padding-right: 10px
       font-family: "Lato", "Helvetica", "Arial", sans-serif;
     .btn-trailer
-      width:49.5%
+      background-color: #ff0000
+      margin-left: 5px
+      padding-left: 10px
+      padding-right: 10px
       font-family: "Lato", "Helvetica", "Arial", sans-serif;
   .t360
     color: $hOrange
@@ -97,10 +104,10 @@
       float: left
 
   .btn
-    background-color: $hBlue2
+
     margin-bottom: 3px;
-    @media screen and (max-width:767px)
-      width: 90%
+    @media screen and (min-width:767px)
+
       margin-top:10px
       max-width: 300px
   .input
@@ -454,6 +461,9 @@ width: 100%;
 background: rgba(0,0,0,.7);
 width: 100%;
 opacity: 0;
+-webkit-transition: opacity .5s ease-in-out;
+-moz-transition: opacity .5s ease-in-out;
+-o-transition: opacity .5s ease-in-out;
 transition: opacity .5s ease-in-out;
 overflow: hidden;
 }
@@ -472,6 +482,9 @@ max-width: 0%;
 border: 3px solid white;
 box-shadow: 0px 0px 8px rgba(0,0,0,.3);
 box-sizing: border-box;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
 transition: .5s ease-in-out;
 }
 
@@ -488,6 +501,9 @@ text-decoration: none;
 position: absolute;
 top: -80px;
 right: 0;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
 transition: .5s ease-in-out;
 }
 
@@ -502,6 +518,9 @@ background: black;
 position: absolute;
 left: 26px;
 top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
 transform:rotate(45deg);
 }
 
@@ -516,6 +535,9 @@ background: black;
 position: absolute;
 left: 26px;
 top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
 transform:rotate(-45deg);
 }
 
