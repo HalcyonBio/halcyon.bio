@@ -4959,17 +4959,6 @@ iframe.fb_ltr{
   height:40px;
   width:100%;
 }
-#launch-videos .overlay-opt-in{
-  width:100%;
-  background-color:rgba(0,0,0,0.6);
-  z-index:9999;
-  display:block;
-  position:absolute;
-  max-width:961px;
-  max-height:537px;
-  left:50%;
-  transform:translate(-50%);
-}
 #launch-videos .opt-in{
   top:50%;
   position:relative;
@@ -5590,9 +5579,6 @@ a.lightbox-close:after{
     width:90%;
     max-width:300px;
   }
-  #launch-videos .overlay-opt-in{
-    height:95%;
-  }
   #launch-squeeze .ron{
     padding-left:0px;
     padding-right:0px;
@@ -5865,37 +5851,8 @@ a.lightbox-close:after{
 @media screen and (min-width: 540px){
   #launch-videos .title-top .mobile{
     display:inline-block;
+    text-align:center;
     float:left;
-  }
-}
-@media screen and (max-width: 884px){
-  #launch-videos .overlay-opt-in{
-    height:95.7%;
-  }
-}
-@media screen and (max-width: 664px){
-  #launch-videos .overlay-opt-in{
-    height:94.5%;
-  }
-}
-@media screen and (max-width: 606px){
-  #launch-videos .overlay-opt-in{
-    height:93%;
-  }
-}
-@media screen and (max-width: 462px){
-  #launch-videos .overlay-opt-in{
-    height:91%;
-  }
-}
-@media screen and (max-width: 439px){
-  #launch-videos .overlay-opt-in{
-    height:90%;
-  }
-}
-@media screen and (max-width: 356px){
-  #launch-videos .overlay-opt-in{
-    height:89%;
   }
 }
 @media screen and (max-width: 576px){

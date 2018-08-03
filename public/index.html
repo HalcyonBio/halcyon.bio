@@ -56,6 +56,18 @@
     <!-- import css/parallax/parallax.styl to enable it-->
     <main class="parallax">
       <checkout-modal></checkout-modal>
+      <div id="mousetracker">
+        <script>
+          window._mfq = window._mfq || [];
+          (function() {
+          var mf = document.createElement("script");
+          mf.type = "text/javascript"; mf.async = true;
+          mf.src = "//cdn.mouseflow.com/projects/083f1b02-ccd7-4510-8625-e3dfd2fbaf6d.js";
+          document.getElementsByTagName("head")[0].appendChild(mf);
+          })();
+          
+        </script>
+      </div>
       <div id="fb-root">
         <script>
           (function(d, s, id) {
@@ -74,8 +86,8 @@
             <div class="col-12 title">
               <div class="title-top-container">
                 <div class="title-top"><img class="mobile" src="/img/nm-box-logo-oj360.png">
-                  <button class="btn btn-share" type="button" onclick="">SHARE</button>
-                  <button class="btn btn-trailer" type="button" onclick=""> WATCH NOW     </button>
+                  <button class="btn btn-share" type="button" onclick="location.href=">SHARE</button>
+                  <button class="btn btn-trailer" type="button" onclick="location.href='#opt-in' "> WATCH NOW     </button>
                   <!-- img.mobile(src='/img/nm-box-logo-oj360.png')-->
                 </div>
               </div>
@@ -85,21 +97,7 @@
         <div class="container-fluid l-vid">
           <video-form class="row">
             <div class="col-12 text-center header-img">
-              <div class="lightbox-target overlay-opt-in" id="opt-in" if="{ !submited }">
-                <div class="opt-in">
-                  <h4>Enter your email address to watch the masterclass</h4>
-                  <div class="row">
-                    <div class="col-md-6 col-12 opt-in-fields">
-                      <text class="input" bind="email" placeholder="Email"></text>
-                    </div>
-                    <div class="col-md-6 col-12 opt-in-fields">
-                      <button class="btn" type="button" onclick="{ submit }">WATCH NOW</button>
-                    </div>
-                    <p class="disclaimer">We will not spam you, your privacy is important to us. We will not sell your email or share it.</p><a class="lightbox-close" href="#"></a> 
-                  </div>
-                </div>
-              </div>
-              <div class="vid-container"><img class="mobile" src="/img/header-ron-mobile.jpg"><img class="desktop" src="/img/header-ron-desktop.jpg">
+              <div class="vid-container"><a href="#opt-in"><img class="mobile" src="/img/header-ron-mobile.jpg"></a><a href="#opt-in"><img class="desktop" src="/img/header-ron-desktop.jpg"></a>
                 <div class="name">Ron White</div>
                 <div class="subtitle">2 time USA Memory Champion</div>
                 <div class="subtitle2">
@@ -110,18 +108,14 @@
         </div>
         <div class="container thumb">
           <div class="row">
-            <div class="col-3 col-thumb">
-              <p>1</p><img src="/img/vid-1-thumb.jpg">
-            </div>
-            <div class="col-3 col-thumb">
-              <p>2</p><img src="/img/vid-2-thumb.jpg">
-            </div>
-            <div class="col-3 col-thumb">
-              <p>3</p><img src="/img/vid-3-thumb.jpg">
-            </div>
-            <div class="col-3 col-thumb">
-              <p>4</p><img src="/img/vid-4-thumb.jpg">
-            </div>
+            <div class="col-3 col-thumb"><a href="#opt-in">
+                <p>1</p><img src="/img/vid-1-thumb.jpg"></a></div>
+            <div class="col-3 col-thumb"><a href="#opt-in">
+                <p>2</p><img src="/img/vid-2-thumb.jpg"></a></div>
+            <div class="col-3 col-thumb"><a href="#opt-in">
+                <p>3</p><img src="/img/vid-3-thumb.jpg"></a></div>
+            <div class="col-3 col-thumb"><a href="#opt-in">
+                <p>4</p><img src="/img/vid-4-thumb.jpg"></a></div>
           </div>
           <div class="row">
             <div class="col-12 title">
@@ -166,34 +160,44 @@
           <div class="col-md-4 col-12 vid-title text-center">
             <h2>WATCH ALL FOUR EPISODES</h2>
             <div class="row">
-              <div class="col-md-6 col-12 flex-center vid-desc-trailer">
-                <h5 class="flex-center vid-desc-wrapper-trailer">Trailer</h5><img src="/img/trailer-thumb.jpg">
-              </div>
-              <div class="col-md-6 col-12 vid-desc flex-center">
-                <h5 class="vid-desc-wrapper flex-center">Lifestyle Hacks</h5><img src="/img/vid-1-thumb.jpg">
-              </div>
-              <div class="col-md-6 col-12 vid-desc flex-center"><img src="/img/vid-2-thumb.jpg">
-                <h5 class="vid-desc-wrapper flex-center">Mental Strategies</h5>
-              </div>
+              <div class="col-md-6 col-12 flex-center vid-desc-trailer"><a href="#opt-in">
+                  <h5 class="flex-center vid-desc-wrapper-trailer">Trailer</h5><img src="/img/trailer-thumb.jpg"></a></div>
+              <div class="col-md-6 col-12 vid-desc flex-center"><a href="#opt-in">
+                  <h5 class="vid-desc-wrapper flex-center">Lifestyle Hacks</h5><img src="/img/vid-1-thumb.jpg"></a></div>
+              <div class="col-md-6 col-12 vid-desc flex-center"><a href="#opt-in"><img src="/img/vid-2-thumb.jpg">
+                  <h5 class="vid-desc-wrapper flex-center">Mental Strategies</h5></a></div>
             </div>
             <div class="row">           
-              <div class="col-md-6 col-12 vid-desc flex-center"><img src="/img/vid-3-thumb.jpg">
-                <h5 class="vid-desc-wrapper flex-center">Supplements for mental Performance</h5>
-              </div>
-              <div class="col-md-6 col-12 vid-desc flex-center"><img src="/img/vid-4-thumb.jpg">
-                <h5 class="vid-desc-wrapper flex-center">putting it all together</h5>
-              </div>
+              <div class="col-md-6 col-12 vid-desc flex-center"><a href="#opt-in"><img src="/img/vid-3-thumb.jpg">
+                  <h5 class="vid-desc-wrapper flex-center">Supplements for mental Performance</h5></a></div>
+              <div class="col-md-6 col-12 vid-desc flex-center"><a href="#opt-in"><img src="/img/vid-4-thumb.jpg">
+                  <h5 class="vid-desc-wrapper flex-center">putting it all together</h5></a></div>
             </div>
             <div class="row">
               <div class="col-12 blue-bottom"></div>
             </div>
           </div>
         </div>
-      </div><a class="lightbox" href="#opt-in"><img src="/img/vid-1-thumb.jpg"></a>
-      <!--.lightbox-target#opt-in
-      img(src="/img/vid-2-thumb.jpg") 
-      <a class="lightbox-close" href="#"></a>             
-      -->
+      </div><a href="#opt-in"><img src="/img/vid-1-thumb.jpg">
+        <!--.lightbox-target#opt-in
+        img(src="/img/vid-2-thumb.jpg") 
+        <a class="lightbox-close" href="#"></a>   
+        --></a>
+      <video-form class="lightbox-target overlay-opt-in" id="opt-in" if="{ !submited }">
+        <div class="opt-in">
+          <h4>Enter your email address to watch the masterclass</h4>
+          <div class="row">
+            <div class="col-md-6 col-12 opt-in-fields">
+              <text class="input" bind="email" placeholder="Email"></text>
+            </div>
+            <div class="col-md-6 col-12 opt-in-fields">
+              <button class="btn" type="button" onclick="{ submit }">WATCH NOW</button>
+            </div>
+            <p class="disclaimer">We will not spam you, your privacy is important to us. We will not sell your email or share it.</p><a class="lightbox-close" href="#"></a>             
+          </div>
+        </div>
+      </video-form>
+      <div class="lightbox-target" id="trailer2424neuro"><img src="/img/vid-1-thumb.jpg"></div>
       <div class="lsfooter">
         <p></p>©2018 Halcyon Biotechnologies<br> <a href="/privacy-policy">Privacy Policy </a> |  <a href="/privacy-policy#terms-of-service">Terms of Service</a>
       </div>

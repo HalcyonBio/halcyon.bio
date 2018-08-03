@@ -4,14 +4,15 @@ block vars
   - var pageId = 'launch-videos'
 
 block content
-  script.
-    window._mfq = window._mfq || [];
-    (function() {
-    var mf = document.createElement("script");
-    mf.type = "text/javascript"; mf.async = true;
-    mf.src = "//cdn.mouseflow.com/projects/083f1b02-ccd7-4510-8625-e3dfd2fbaf6d.js";
-    document.getElementsByTagName("head")[0].appendChild(mf);
-    })();
+  div#mousetracker
+    script.
+      window._mfq = window._mfq || [];
+      (function() {
+      var mf = document.createElement("script");
+      mf.type = "text/javascript"; mf.async = true;
+      mf.src = "//cdn.mouseflow.com/projects/083f1b02-ccd7-4510-8625-e3dfd2fbaf6d.js";
+      document.getElementsByTagName("head")[0].appendChild(mf);
+      })();
   
   div#fb-root
    script.
@@ -30,15 +31,17 @@ block content
           .title-top-container
             .title-top
               img.mobile(src='/img/nm-box-logo-oj360.png')
-              button.btn.btn-share(type='button' onclick='') SHARE
-              button.btn.btn-trailer(type='button' onclick='')  WATCH NOW     
+              button.btn.btn-share(type='button' onclick='location.href=') SHARE
+              button.btn.btn-trailer(type='button' onclick="location.href='#opt-in' ")  WATCH NOW     
               // img.mobile(src='/img/nm-box-logo-oj360.png')
     .container-fluid.l-vid
       video-form.row
         .col-12.text-center.header-img
           .vid-container
-            img.mobile(src="/img/header-ron-mobile.jpg")
-            img.desktop(src="/img/header-ron-desktop.jpg")
+            a(href='#opt-in')
+              img.mobile(src="/img/header-ron-mobile.jpg")
+            a(href='#opt-in')
+              img.desktop(src="/img/header-ron-desktop.jpg")
             .name Ron White
             .subtitle 2 time USA Memory Champion
             
@@ -50,17 +53,21 @@ block content
     .container.thumb
       .row
         .col-3.col-thumb
-          p 1
-          img(src="/img/vid-1-thumb.jpg")
+          a(href='#opt-in')
+            p 1
+            img(src="/img/vid-1-thumb.jpg")
         .col-3.col-thumb
-          p 2
-          img(src="/img/vid-2-thumb.jpg")
+          a(href='#opt-in')
+            p 2
+            img(src="/img/vid-2-thumb.jpg")
         .col-3.col-thumb
-          p 3
-          img(src="/img/vid-3-thumb.jpg")
+          a(href='#opt-in')
+            p 3
+            img(src="/img/vid-3-thumb.jpg")
         .col-3.col-thumb
-          p 4
-          img(src="/img/vid-4-thumb.jpg")
+          a(href='#opt-in')
+            p 4
+            img(src="/img/vid-4-thumb.jpg")
       
       .row
         .col-12.title
@@ -108,33 +115,38 @@ block content
         h2 WATCH ALL FOUR EPISODES
         .row
           .col-md-6.col-12.flex-center.vid-desc-trailer
-            h5.flex-center.vid-desc-wrapper-trailer Trailer
+            a(href='#opt-in')
+              h5.flex-center.vid-desc-wrapper-trailer Trailer
               
-            img(src="/img/trailer-thumb.jpg")
+              img(src="/img/trailer-thumb.jpg")
           .col-md-6.col-12.vid-desc.flex-center
-            h5.vid-desc-wrapper.flex-center Lifestyle Hacks
+            a(href='#opt-in')
+              h5.vid-desc-wrapper.flex-center Lifestyle Hacks
               
-            img(src="/img/vid-1-thumb.jpg")    
+              img(src="/img/vid-1-thumb.jpg")    
           .col-md-6.col-12.vid-desc.flex-center
-            img(src="/img/vid-2-thumb.jpg")
-            h5.vid-desc-wrapper.flex-center Mental Strategies
+            a(href='#opt-in')
+              img(src="/img/vid-2-thumb.jpg")
+              h5.vid-desc-wrapper.flex-center Mental Strategies
         .row            
           .col-md-6.col-12.vid-desc.flex-center
-            img(src="/img/vid-3-thumb.jpg")
-            h5.vid-desc-wrapper.flex-center Supplements for mental Performance
+            a(href='#opt-in')
+              img(src="/img/vid-3-thumb.jpg")
+              h5.vid-desc-wrapper.flex-center Supplements for mental Performance
               
           .col-md-6.col-12.vid-desc.flex-center
-            img(src="/img/vid-4-thumb.jpg")
-            h5.vid-desc-wrapper.flex-center putting it all together
+            a(href='#opt-in')
+              img(src="/img/vid-4-thumb.jpg")
+              h5.vid-desc-wrapper.flex-center putting it all together
               
         .row
           .col-12.blue-bottom
-  a.lightbox(href='#opt-in')
+  a(href='#opt-in')
     img(src="/img/vid-1-thumb.jpg")
-      //.lightbox-target#opt-in
+    //.lightbox-target#opt-in
         img(src="/img/vid-2-thumb.jpg") 
         <a class="lightbox-close" href="#"></a>   
-  .lightbox-target#opt-in.overlay-opt-in(if='{ !submited }')
+  video-form.lightbox-target#opt-in.overlay-opt-in(if='{ !submited }')
         .opt-in
           h4 Enter your email address to watch the masterclass
           .row
@@ -144,6 +156,8 @@ block content
               button.btn(type='button' onclick='{ submit }') WATCH NOW
             p.disclaimer We will not spam you, your privacy is important to us. We will not sell your email or share it.
             <a class="lightbox-close" href="#"></a>             
+  .lightbox-target#trailer2424neuro
+    img(src="/img/vid-1-thumb.jpg")
   .lsfooter
           p
           | ©2018 Halcyon Biotechnologies
