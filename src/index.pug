@@ -114,7 +114,7 @@ block content
       .col-md-4.col-12.vid-title.text-center
         h2 WATCH ALL FOUR EPISODES
         .row
-          .col-md-6.col-12.flex-center.vid-desc-trailer
+          .col-md-8.offset-md-2.col-12.flex-center.vid-desc-trailer
             a(href='#opt-in')
               h5.flex-center.vid-desc-wrapper-trailer Trailer
 
@@ -141,11 +141,6 @@ block content
 
         .row
           .col-12.blue-bottom
-  a(href='#opt-in')
-    img(src="/img/vid-1-thumb.jpg")
-    //.lightbox-target#opt-in
-        img(src="/img/vid-2-thumb.jpg")
-        <a class="lightbox-close" href="#"></a>
   video-form.lightbox-target#opt-in.overlay-opt-in(if='{ !submited }')
         .opt-in
           h4 Enter your email address to watch the trailer
@@ -158,6 +153,7 @@ block content
             <a class="lightbox-close" href="#"></a>
   .lightbox-target#trailer2424neuro
     img(src="/img/vid-1-thumb.jpg")
+    <a class="lightbox-close" href="#"></a>  
   .lsfooter
           p
           | ©2018 Halcyon Biotechnologies
