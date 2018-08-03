@@ -4967,6 +4967,9 @@ iframe.fb_ltr{
   font-size:1.5rem;
   line-height:1;
 }
+#launch-videos .opt-in-fields input{
+  text-align:center;
+}
 #launch-videos checkout-modal{
   display:none;
 }
@@ -4985,11 +4988,12 @@ iframe.fb_ltr{
 #launch-videos .submit-opt-in{
   background-color:#304191;
   width:90%;
-  max-width:300px;
+  max-width:209px;
 }
 #launch-videos .input input{
   height:40px;
   width:100%;
+  text-align:center;
 }
 #launch-videos .opt-in{
   top:50%;
@@ -5615,7 +5619,7 @@ a.lightbox-close:after{
   }
   #launch-videos .input{
     width:90%;
-    max-width:300px;
+    max-width:209px;
   }
   #launch-squeeze .ron{
     padding-left:0px;
