@@ -4880,6 +4880,10 @@ iframe.fb_ltr{
 #launch-videos{
   background-color:#000;
 }
+#launch-videos *{
+  color:White;
+  font-family:"Lato", "Helvetica", "Arial", sans-serif;
+}
 #launch-videos a{
   color:White !important;
 }
@@ -4920,6 +4924,8 @@ iframe.fb_ltr{
   font-family:"Lato", "Helvetica", "Arial", sans-serif;
   width:48%;
   max-width:180px;
+  border-radius:0;
+  height:40px;
 }
 #launch-videos .title-top .btn-share:hover,
 #launch-videos .title-top .btn-share:focus{
@@ -4929,7 +4935,7 @@ iframe.fb_ltr{
   color:#3b5998;
 }
 #launch-videos .title-top .btn-trailer{
-  background-color:#f26621;
+  background-color:rgba(247,108,17,0.9);
   margin-left:5px;
   margin-top:3px;
   padding-left:10px;
@@ -4937,6 +4943,7 @@ iframe.fb_ltr{
   font-family:"Lato", "Helvetica", "Arial", sans-serif;
   width:48%;
   max-width:180px;
+  box-shadow:none;
 }
 #launch-videos .t360{
   color:#f26621;
@@ -4946,14 +4953,6 @@ iframe.fb_ltr{
   text-transform:uppercase;
   font-size:2rem;
   font-weight:500;
-}
-#launch-videos p,
-#launch-videos h1,
-#launch-videos h2,
-#launch-videos h3,
-#launch-videos h4{
-  color:White;
-  font-family:"Lato", "Helvetica", "Arial", sans-serif;
 }
 #launch-videos .subtitle,
 #launch-videos .subtitle2{
@@ -5071,6 +5070,8 @@ iframe.fb_ltr{
 #launch-videos .l-body2 .vid-desc-trailer h5{
   text-transform:uppercase;
   margin-bottom:0px;
+  text-align:left;
+  margin-left:4px;
   color:#fff;
 }
 #launch-videos .l-body2 .vid-desc{
@@ -5078,10 +5079,14 @@ iframe.fb_ltr{
   padding-right:0px;
   margin-bottom:10px;
 }
-#launch-videos .l-body2 .vid-desc h5{
+#launch-videos .l-body2 .vid-desc h5,
+#launch-videos .l-body2 .vid-desc h6{
   text-transform:uppercase;
   margin-bottom:0px;
+  margin-left:4px;
   color:#fff;
+  text-align:left;
+  margin-left:4px;
 }
 #launch-videos .l-body2 .vid-desc img{
   border:1px solid #808080;
@@ -5089,7 +5094,6 @@ iframe.fb_ltr{
 #launch-videos .l-body2 .vid-desc .vid-desc-wrapper{
   position:absolute;
   width:99.5%;
-  background-color:rgba(5,6,57,0.5);
   bottom:4px;
 }
 #launch-videos .vid-title h2{

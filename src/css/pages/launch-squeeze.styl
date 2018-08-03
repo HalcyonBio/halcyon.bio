@@ -28,7 +28,9 @@
     color:#0f1033;
 .fb_iframe_widget_fluid span, iframe.fb_ltr { width: 100% !important; }
 #launch-videos
-
+  *
+    color: White
+    font-family: "Lato", "Helvetica", "Arial", sans-serif;
   background-color: black
   a
     color: White !important;
@@ -69,6 +71,8 @@
       font-family: "Lato", "Helvetica", "Arial", sans-serif;
       width: 48%
       max-width: 180px
+      border-radius: 0;
+      height: 40px
       &:hover
       &:focus
         color:  #ff0000 !important
@@ -76,7 +80,7 @@
       .fa
         color: #3B5998;
     .btn-trailer
-      background-color: $hOrange
+      background-color: rgba(247, 108, 17, 0.9);
       margin-left: 5px
       margin-top: 3px;
       padding-left: 10px
@@ -84,6 +88,7 @@
       font-family: "Lato", "Helvetica", "Arial", sans-serif;
       width: 48%
       max-width: 180px
+      box-shadow: none;
 
 
 
@@ -95,9 +100,7 @@
       text-transform: uppercase;
       font-size: 2rem;
       font-weight: 500;
-    p, h1, h2, h3, h4
-    color: White
-    font-family: "Lato", "Helvetica", "Arial", sans-serif;
+
   .subtitle, .subtitle2
 
     color: #7c7c80
@@ -231,26 +234,28 @@
       h5
         text-transform: uppercase;
         margin-bottom: 0px
-
+        text-align: left;
+        margin-left: 4px
 
         color:white
     .vid-desc
       padding-left: 0px;
       padding-right: 0px;
       margin-bottom: 10px
-      h5
+      h5, h6
         text-transform: uppercase;
         margin-bottom: 0px
-
+        margin-left: 4px
 
         color:white
-
+        text-align: left;
+        margin-left: 4px
       img
         border: 1px solid gray
       .vid-desc-wrapper
         position: absolute;
         width: 99.5%;
-        background-color: rgba(5,6,57,0.5);
+
 
         bottom: 4px;
 
