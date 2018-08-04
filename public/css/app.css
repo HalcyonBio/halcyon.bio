@@ -4878,11 +4878,11 @@ iframe.fb_ltr{
   width:100% !important;
 }
 #launch-videos{
+  font-family:"Lato", "Helvetica", "Arial", sans-serif;
   background-color:#000;
 }
 #launch-videos *{
   color:White;
-  font-family:"Lato", "Helvetica", "Arial", sans-serif;
 }
 #launch-videos a{
   color:White !important;
