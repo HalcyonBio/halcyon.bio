@@ -4916,6 +4916,7 @@ iframe.fb_ltr{
   margin-bottom:2px;
 }
 #launch-videos .title-top .btn-share{
+  font-family:'Open Sans', sans-serif;
   background-color:rgba(255,255,255,0.8);
   margin-top:3px;
   margin-left:5px;
@@ -4929,12 +4930,14 @@ iframe.fb_ltr{
 }
 #launch-videos .title-top .btn-share:hover,
 #launch-videos .title-top .btn-share:focus{
-  color:#f00 !important;
+  color:#df6214 !important;
 }
 #launch-videos .title-top .btn-share .fa{
   color:#3b5998;
+  font-family:"Font Awesome 5 Free" !important;
 }
 #launch-videos .title-top .btn-trailer{
+  font-family:'Open Sans', sans-serif;
   background-color:rgba(247,108,17,0.9);
   margin-left:5px;
   margin-top:3px;
@@ -4944,6 +4947,10 @@ iframe.fb_ltr{
   width:48%;
   max-width:180px;
   box-shadow:none;
+}
+#launch-videos .title-top .btn-trailer .fa{
+  font-family:"Font Awesome 5 Free" !important;
+  color:#fff;
 }
 #launch-videos .t360{
   color:#f26621;
@@ -4991,8 +4998,11 @@ iframe.fb_ltr{
 }
 #launch-videos .input input{
   height:40px;
-  width:100%;
+  color:#000;
   text-align:center;
+  background-color:rgba(0,0,0,0.7);
+  width:90%;
+  min-width:209px;
 }
 #launch-videos .opt-in{
   top:50%;
@@ -5053,12 +5063,11 @@ iframe.fb_ltr{
   background-color:#0f1033;
 }
 #launch-videos .l-body2{
-  margin-bottom:-7px;
-  background-color:#050639;
+  padding-top:20px;
 }
 #launch-videos .l-body2 .vid-desc-trailer{
   padding-left:0px;
-  padding-right:0px;
+  padding-right:10px;
   margin-bottom:10px;
 }
 #launch-videos .l-body2 .vid-desc-trailer img{
@@ -5074,12 +5083,12 @@ iframe.fb_ltr{
   text-transform:uppercase;
   margin-bottom:0px;
   text-align:left;
-  margin-left:4px;
+  margin-left:8px;
   color:#fff;
 }
 #launch-videos .l-body2 .vid-desc{
   padding-left:0px;
-  padding-right:0px;
+  padding-right:10px;
   margin-bottom:10px;
 }
 #launch-videos .l-body2 .vid-desc h5,
@@ -5624,10 +5633,6 @@ a.lightbox-close:after{
   #launch-videos .submit-opt-in{
     margin-top:10px;
   }
-  #launch-videos .input{
-    width:90%;
-    max-width:209px;
-  }
   #launch-squeeze .ron{
     padding-left:0px;
     padding-right:0px;
@@ -5699,11 +5704,8 @@ a.lightbox-close:after{
     display:none;
   }
   #launch-videos .l-body2{
-    background-color:#fff;
+    background-color:#000;
     padding-top:40px;
-  }
-  #launch-videos .vid-title h2{
-    color:#304191;
   }
 }
 @media screen and (min-width: 992px){

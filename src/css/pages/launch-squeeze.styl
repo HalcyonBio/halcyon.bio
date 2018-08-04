@@ -63,6 +63,7 @@
       text-align: center;
       margin-bottom: 2px
     .btn-share
+      font-family: 'Open Sans', sans-serif
       background-color: #fffc;
       margin-top: 3px;
       margin-left: 5px
@@ -75,11 +76,13 @@
       height: 40px
       &:hover
       &:focus
-        color:  #ff0000 !important
+        color:  #df6214 !important
 
       .fa
         color: #3B5998;
+        font-family: "Font Awesome 5 Free" !important;
     .btn-trailer
+      font-family: 'Open Sans', sans-serif
       background-color: rgba(247, 108, 17, 0.9);
       margin-left: 5px
       margin-top: 3px;
@@ -89,7 +92,9 @@
       width: 48%
       max-width: 180px
       box-shadow: none;
-
+      .fa
+          font-family: "Font Awesome 5 Free" !important;
+          color: white
 
 
 
@@ -147,11 +152,11 @@
 
     input
       height: 40px;
-      width: 100%
+      color: black
       text-align: center;
-    @media screen and (max-width:767px)
+      background-color: rgba(0,0,0,0.7)
       width: 90%
-      max-width: 209px
+      min-width: 209px
 
   .opt-in
     top: 50%;
@@ -215,14 +220,14 @@
   .l-body
     background-color: #0f1033;
   .l-body2
-    margin-bottom: -7px;
-    background-color: rgba(5, 6, 57, 1);
+    
+    padding-top: 20px
     @media screen and (min-width:520px)
-      background-color:white;
+      background-color:black;
       padding-top: 40px
     .vid-desc-trailer
       padding-left: 0px;
-      padding-right: 0px;
+      padding-right: 10px;
       margin-bottom: 10px
       img
         border: 3px solid white
@@ -237,12 +242,12 @@
         text-transform: uppercase;
         margin-bottom: 0px
         text-align: left;
-        margin-left: 4px
+        margin-left: 8px
 
         color:white
     .vid-desc
       padding-left: 0px;
-      padding-right: 0px;
+      padding-right: 10px;
       margin-bottom: 10px
       h5, h6
         text-transform: uppercase;
@@ -272,8 +277,7 @@
   .vid-title
       h2
         color:white
-        @media screen and (min-width:520px)
-          color: $hBlue2
+
 
 
 
