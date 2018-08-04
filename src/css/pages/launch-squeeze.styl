@@ -1,8 +1,11 @@
 .lsfooter
-      background-color: #0f1033
-      min-height:80px
-      text-align: center
-      padding-top: 10px
+  background-color: #0f1033
+  min-height:80px
+  text-align: center
+  padding-top: 10px
+  a
+    color: White !important
+
 
 #launch-squeeze
   checkout-modal
@@ -82,9 +85,9 @@
       &:focus
         color:  #df6214 !important
 
-      .fa
+      .fab
         color: rgba(5,6,57,0.8)
-        font-family: "Font Awesome 5 Free" !important;
+
         &:hover
         &:focus
           color: #df6214
@@ -153,18 +156,21 @@
   .submit-opt-in
       background-color: $hBlue2
       width: 90%
-      max-width: 209px
+      max-width: 209px !important
       @media screen and (max-width:767px)
         margin-top:10px
   .input
 
     input
       height: 40px;
-      color: black
+
       text-align: center;
-      background-color: rgba(0,0,0,0.7)
+      background-color: #ffffffb3
       width: 90%
       min-width: 209px
+      &:focus
+        &::placeholder
+          color: #304191
 
   .opt-in
     top: 50%;
@@ -178,7 +184,7 @@
         font-size:1.2rem
   .disclaimer
     max-width: 900px;
-
+    color: #ffffffb3
     text-align: center;
 
     margin: 0 auto;
@@ -273,6 +279,9 @@
 
 
         bottom: 4px;
+        .puttting
+          h6
+            max-width: 196px;
 
 
 
@@ -393,8 +402,7 @@
     @media screen and (min-width:767px)
       display: none;
 
-  a
-      color: White !important
+
   .cta
     z-index: 100
     padding-left: 15px
@@ -448,7 +456,7 @@
 
   .disclaimer
     font-size:10pt
-    color: #ebebeb
+    color: #fffc
     @media screen and (min-width:767px)
       color: #abaaaa
     text-align:center

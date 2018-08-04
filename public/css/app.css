@@ -4623,6 +4623,9 @@ footer .footer-bottom > *{
   text-align:center;
   padding-top:10px;
 }
+.lsfooter a{
+  color:White !important;
+}
 #launch-squeeze checkout-modal{
   display:none;
 }
@@ -4933,12 +4936,11 @@ iframe.fb_ltr{
 #launch-videos .title-top .btn-share:focus{
   color:#df6214 !important;
 }
-#launch-videos .title-top .btn-share .fa{
+#launch-videos .title-top .btn-share .fab{
   color:rgba(5,6,57,0.8);
-  font-family:"Font Awesome 5 Free" !important;
 }
-#launch-videos .title-top .btn-share .fa:hover,
-#launch-videos .title-top .btn-share .fa:focus{
+#launch-videos .title-top .btn-share .fab:hover,
+#launch-videos .title-top .btn-share .fab:focus{
   color:#df6214;
 }
 #launch-videos .title-top .btn-trailer{
@@ -5000,15 +5002,26 @@ iframe.fb_ltr{
 #launch-videos .submit-opt-in{
   background-color:#304191;
   width:90%;
-  max-width:209px;
+  max-width:209px !important;
 }
 #launch-videos .input input{
   height:40px;
-  color:#000;
   text-align:center;
-  background-color:rgba(0,0,0,0.7);
+  background-color:rgba(255,255,255,0.702);
   width:90%;
   min-width:209px;
+}
+#launch-videos .input input:focus::-webkit-input-placeholder{
+  color:#304191;
+}
+#launch-videos .input input:focus:-ms-input-placeholder{
+  color:#304191;
+}
+#launch-videos .input input:focus::-ms-input-placeholder{
+  color:#304191;
+}
+#launch-videos .input input:focus::placeholder{
+  color:#304191;
 }
 #launch-videos .opt-in{
   top:50%;
@@ -5022,6 +5035,7 @@ iframe.fb_ltr{
 }
 #launch-videos .disclaimer{
   max-width:900px;
+  color:rgba(255,255,255,0.702);
   text-align:center;
   margin:0 auto;
   font-size:1.2rem;
@@ -5114,6 +5128,9 @@ iframe.fb_ltr{
   width:99.5%;
   bottom:4px;
 }
+#launch-videos .l-body2 .vid-desc .vid-desc-wrapper .puttting h6{
+  max-width:196px;
+}
 #launch-videos .vid-title h3{
   color:#fff;
   margin:0 auto;
@@ -5184,9 +5201,6 @@ iframe.fb_ltr{
 #launch-squeeze .mobile{
   max-width:305px;
 }
-#launch-squeeze a{
-  color:White !important;
-}
 #launch-squeeze .cta{
   z-index:100;
   padding-left:15px;
@@ -5221,7 +5235,7 @@ iframe.fb_ltr{
 }
 #launch-squeeze .disclaimer{
   font-size:10pt;
-  color:#ebebeb;
+  color:rgba(255,255,255,0.8);
   text-align:center;
 }
 #launch-squeeze .sp-reg{
