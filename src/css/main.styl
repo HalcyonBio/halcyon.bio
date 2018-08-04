@@ -47,13 +47,35 @@ header
   @media screen and (max-width:767px)
       padding-top:10px
 .l-vid
-  margin-top: 20px
+  @media screen and (min-width:767px)
+    margin-top: 60px
   padding-left: 0px !important
   padding-right: 0px !important
+  margin-bottom: 110px
   .header-img
     padding-left: 0px
     padding-right: 0px
+    max-width: 1056px;
 
+    height: 100%;
+    @media screen and (max-width:420px)
+      margin-top: 40px;
+    .trailer-container
+      height: 56.25vw;
+      .trailer-view
+        margin-top: 40px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        iframe
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          margin-top: 100px;
+    .vid-container
+      text-align: center;
   img
     @media screen and (max-width:767px)
       width:100%
