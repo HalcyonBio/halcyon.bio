@@ -43,11 +43,14 @@ if window.location.pathname.indexOf('signup') >= 0
     window.location.replace 'account'
   m.on 'register-failed', ->
 
+if window.location.pathname.indexOf('partner') >= 0
+  m.on 'register', ->
+  m.on 'register-success', ->
+    window.location.replace 'account'
+  m.on 'register-failed', ->
+
 if window.location.pathname.indexOf('login') >= 0
   m.on 'login', ->
   m.on 'login-success', ->
     window.location.replace 'account'
   m.on 'login-failed', ->
-
-
-

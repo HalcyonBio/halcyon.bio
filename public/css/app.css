@@ -5291,6 +5291,9 @@ iframe.fb_ltr{
   padding-left:0px;
   padding-right:0px;
 }
+#partner .header-img img{
+  width:100%;
+}
 #partner h4{
   text-decoration:underline;
   color:#304191;
