@@ -13,12 +13,9 @@ block content
             h3 Number of Referrals: { data.get('user.referrals') ? data.get('user.referrals').length : 0  }
             h3(if='{ isAffiliate() }') Fees Earned: { renderCurrency('usd', parseInt((data.get('user.transactions.points.balance') || 0) * .15), 10)}
             h3 Your Link
-            copy.input(text='{ ()=>{return "http://" + window.location.host + "#" + data.get("user.referrers.0.id")} }')
-            div(if='{ isAffiliate() }')
-              Affiliate Thanks for being a part of the Halcyon Ambassador Team. For digital assets please reach out to your account manager.
+            copy.input(text='{ ()=>{return "https://" + window.location.host + "#" + data.get("user.referrers.0.id")} }')
+            div(if='{ isAffiliate() }') Thanks for being a part of the Halcyon Ambassador Team. For digital assets please reach out to your account manager.
 
-            div(if='{ !isAffiliate() }')
-              Normal Stuff Here
-
+            div(if='{ !isAffiliate() }') Normal Stuff Here
 
 block header
