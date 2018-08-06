@@ -36,7 +36,8 @@ export class VideoForm extends El.Form
       @setupRedirects()
 
   setupRedirects: ->
-    $('[href="#opt-in"], .btn-trailer').on 'click', ->
+    $('[href="#opt-in"]').attr 'href', '#trailer2424neuro'
+    $('.btn-trailer').on 'click', ->
       window.location.hash = ''
       requestAnimationFrame ->
         window.location.hash = 'trailer2424neuro'
