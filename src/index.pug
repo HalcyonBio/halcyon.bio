@@ -24,6 +24,16 @@ block content
     fjs.parentNode.insertBefore(js, fjs); }
     (document, 'script', 'facebook-jssdk'));
 
+  div#enter-submit
+    script.
+      var input = document.getElementById("opt-in-email");
+      input.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+            document.getElementById("email-submit").click();
+          }
+          });
+
   div#opt-in-focus-js
     script.
       inputfocus = function getFocus() {           
@@ -165,7 +175,7 @@ block content
             .col-12.opt-in-fields.flex-center
               a.btn.btn-share.btn-share2(type='button' onload="document.video-form.email.focus()" target="_blank"
               href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fab fa-lg fa-facebook-square"></i> Share
-              button.btn.btn-opt-in(type='button' onclick='{ submit }') <i class="fa fa-lg fa-play-circle"></i> WATCH NOW 
+              button.btn.btn-opt-in(type='button' id="email-submit" onclick='{ submit }') <i class="fa fa-lg fa-play-circle"></i> WATCH NOW 
             .col-12.opt-in-fields.flex-center
               text.input(bind='email' id='opt-in-email' placeholder='Enter Your Email')
             
