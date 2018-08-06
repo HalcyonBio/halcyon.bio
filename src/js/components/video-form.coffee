@@ -37,7 +37,9 @@ export class VideoForm extends El.Form
 
   setupRedirects: ->
     $('[href="#opt-in"], .btn-trailer').on 'click', ->
-      window.location.hash = 'trailer2424neuro'
+      window.location.hash = ''
+      requestAnimationFrame ->
+        window.location.hash = 'trailer2424neuro'
       return false
 
 VideoForm.register()
