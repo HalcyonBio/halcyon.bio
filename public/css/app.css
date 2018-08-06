@@ -4012,6 +4012,14 @@ footer .footer-bottom{
 footer .footer-bottom > *{
   padding:0;
 }
+#account h2{
+  color:#304191;
+}
+#account section{
+  margin-top:20vh;
+  margin-bottom:10vh;
+  text-align:center;
+}
 #index .hero{
   height:100vh;
 }
@@ -4630,14 +4638,6 @@ footer .footer-bottom > *{
 }
 .thought-section-1{
   margin-bottom:10px;
-}
-#login h2{
-  color:#304191;
-}
-#login section{
-  margin-top:20vh;
-  margin-bottom:10vh;
-  text-align:center;
 }
 .lsfooter{
   background-color:#0f1033;
@@ -5427,6 +5427,7 @@ a.lightbox img{
 .lightbox-target:target .subtitle2{
   display:none;
 }
+<<<<<<< HEAD
 @keyframes pulse{
   0%{
     box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
@@ -5443,6 +5444,23 @@ a.lightbox img{
     -moz-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
     -webkit-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
   }
+=======
+#login h2{
+  color:#304191;
+}
+#login section{
+  margin-top:20vh;
+  margin-bottom:10vh;
+  text-align:center;
+}
+#register-success h2{
+  color:#304191;
+}
+#register-success section{
+  margin-top:20vh;
+  margin-bottom:10vh;
+  text-align:center;
+>>>>>>> e5476f8cb8f4adf9fe40a2da5b261505123ae097
 }
 #signup h2{
   color:#304191;

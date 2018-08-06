@@ -1,0 +1,14 @@
+extends _layout.pug
+
+block vars
+  - var pageId = 'register-success'
+
+block content
+  section
+    .container
+      .row
+        .col-md-8.offset-md-2.col-12
+          h2 Thanks for Registering
+          register-complete
+          a(href='/login') Log into your account.
+
