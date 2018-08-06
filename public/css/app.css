@@ -4920,7 +4920,7 @@ iframe.fb_ltr{
 #launch-videos .title-top-container{
   z-index:9999;
   font-family:Palatino;
-  background-color:rgba(5,6,57,0.8);
+  background-color:rgba(0,0,0,0.502);
   padding:5px;
   position:fixed;
   top:0px;
@@ -4940,11 +4940,16 @@ iframe.fb_ltr{
   text-align:center;
   margin-bottom:2px;
 }
-#launch-videos .title-top .btn-share{
-  font-family:'Open Sans', sans-serif;
+#launch-videos .btn-share1{
   background-color:rgba(255,255,255,0.8);
+}
+#launch-videos .btn-share2{
+  background-color:#656161;
+}
+#launch-videos .btn-share{
+  font-family:'Open Sans', sans-serif;
   margin-top:3px;
-  margin-left:5px;
+  margin-right:2px;
   padding-left:10px;
   padding-right:10px;
   font-family:"Lato", "Helvetica", "Arial", sans-serif;
@@ -4953,23 +4958,23 @@ iframe.fb_ltr{
   border-radius:0;
   -webkit-border-radius:0;
   height:40px;
-  color:rgba(5,6,57,0.8);
+  color:rgba(5,6,57,0.8) !important;
 }
-#launch-videos .title-top .btn-share:hover,
-#launch-videos .title-top .btn-share:focus{
+#launch-videos .btn-share:hover,
+#launch-videos .btn-share:focus{
   color:#df6214 !important;
 }
-#launch-videos .title-top .btn-share .fab{
+#launch-videos .btn-share .fab{
   color:rgba(5,6,57,0.8);
 }
-#launch-videos .title-top .btn-share .fab:hover,
-#launch-videos .title-top .btn-share .fab:focus{
+#launch-videos .btn-share .fab:hover,
+#launch-videos .btn-share .fab:focus{
   color:#df6214;
 }
-#launch-videos .title-top .btn-trailer{
+#launch-videos .btn-trailer,
+#launch-videos .btn-opt-in{
   font-family:'Open Sans', sans-serif;
-  background-color:rgba(247,108,17,0.9);
-  margin-left:5px;
+  border:3px solid rgba(247,108,17,0.9);
   margin-top:3px;
   padding-left:10px;
   padding-right:10px;
@@ -4978,9 +4983,23 @@ iframe.fb_ltr{
   max-width:180px;
   box-shadow:none;
 }
-#launch-videos .title-top .btn-trailer .fa{
+#launch-videos .btn-trailer .fa,
+#launch-videos .btn-opt-in .fa{
   font-family:"Font Awesome 5 Free" !important;
   color:#fff;
+}
+#launch-videos .btn-trailer{
+  background-color:rgba(5,6,57,0.8);
+  margin-left:2px;
+  border:3px solid #fff;
+  box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
+  -moz-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
+  -webkit-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
+}
+#launch-videos .btn-opt-in{
+  margin-left:4px;
+  background-color:rgba(5,6,57,0.8);
+  border:3px solid rgba(247,108,17,0.9);
 }
 #launch-videos .t360{
   color:#f26621;
@@ -5012,12 +5031,12 @@ iframe.fb_ltr{
 }
 #launch-videos .overlay-opt-in{
   height:100%;
+  padding-left:0px;
+  padding-right:0px;
 }
 #launch-videos .overlay-opt-in text{
-  float:right;
-}
-#launch-videos .overlay-opt-in .btn{
-  float:left;
+  width:100%;
+  max-width:368px;
 }
 #launch-videos .btn{
   margin-bottom:3px;
@@ -5027,43 +5046,46 @@ iframe.fb_ltr{
   width:90%;
   max-width:209px !important;
 }
+#launch-videos .input{
+  width:100%;
+  max-width:368px;
+}
 #launch-videos .input input{
   height:40px;
   text-align:center;
-  background-color:rgba(255,255,255,0.702);
-  width:90%;
-  min-width:209px;
+  background-color:rgba(0,0,0,0.29);
+  width:100%;
+  max-width:368px;
 }
 #launch-videos .input input:focus,
 #launch-videos .input input::-webkit-input-placeholder{
-  color:#304191;
+  color:#fff;
 }
 #launch-videos .input input:focus,
 #launch-videos .input input:-ms-input-placeholder{
-  color:#304191;
+  color:#fff;
 }
 #launch-videos .input input:focus,
 #launch-videos .input input::-ms-input-placeholder{
-  color:#304191;
+  color:#fff;
 }
 #launch-videos .input input:focus,
 #launch-videos .input input::placeholder{
-  color:#304191;
+  color:#fff;
 }
 #launch-videos .opt-in{
-  top:50%;
+  top:57px;
   position:relative;
-  margin-right:15px;
-  margin-left:15px;
-  transform:translateY(-50%);
+  background-color:rgba(0,0,0,0.702);
 }
 #launch-videos .opt-in h4{
   text-align:center;
 }
 #launch-videos .disclaimer{
-  max-width:900px;
+  max-width:370px;
   color:rgba(255,255,255,0.702);
   text-align:center;
+  padding-bottom:4px;
   margin:0 auto;
   font-size:1.2rem;
 }
@@ -5074,6 +5096,9 @@ iframe.fb_ltr{
   max-width:23.5%;
 }
 #launch-videos .col-thumb{
+  box-shadow:0px 0px 21px 5px rgba(255,255,255,0.17);
+  -moz-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.17);
+  -webkit-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.17);
   margin-left:2px;
   margin-right:2px;
 }
@@ -5155,7 +5180,7 @@ iframe.fb_ltr{
   width:99.5%;
   bottom:4px;
 }
-#launch-videos .l-body2 .vid-desc .vid-desc-wrapper .putting h6{
+#launch-videos .l-body2 .vid-desc .putting h6{
   max-width:196px;
 }
 #launch-videos .vid-title h3{
@@ -5263,6 +5288,8 @@ iframe.fb_ltr{
 #launch-squeeze .disclaimer{
   font-size:10pt;
   color:rgba(255,255,255,0.8);
+  background-color:rgba(0,0,0,0.302);
+  margin-bottom:4px;
   text-align:center;
 }
 #launch-squeeze .sp-reg{
@@ -5320,7 +5347,7 @@ html{
   text-align:center;
 }
 a.lightbox-close1{
-  left:96%;
+  left:50%;
 }
 a.lightbox-close2{
   top:10px;
@@ -5331,19 +5358,19 @@ a.lightbox-close{
   width:50px;
   height:50px;
   box-sizing:border-box;
-  background:#fff;
-  color:#000;
+  margin-left:200px;
+  color:#808080;
   text-decoration:none;
   position:absolute;
-  bottom:120%;
+  top:-12px;
   transition:0.5s ease-in-out;
 }
 a.lightbox-close:before{
   content:"";
   display:block;
-  height:30px;
-  width:1px;
-  background:#000;
+  height:46px;
+  width:3px;
+  background:#6f6c6c;
   position:absolute;
   left:26px;
   top:10px;
@@ -5352,9 +5379,9 @@ a.lightbox-close:before{
 a.lightbox-close:after{
   content:"";
   display:block;
-  height:30px;
-  width:1px;
-  background:#000;
+  height:46px;
+  width:3px;
+  background:#6f6c6c;
   position:absolute;
   left:26px;
   top:10px;
@@ -5373,7 +5400,6 @@ a.lightbox img{
   position:fixed;
   top:-100%;
   width:100%;
-  background:rgba(0,0,0,0.85);
   width:100%;
   opacity:0;
   transition:opacity 0.5s ease-in-out;
@@ -5700,6 +5726,11 @@ a.lightbox img{
   #launch-squeeze .disclaimer{
     padding-bottom:20px;
   }
+  a.lightbox-close{
+    right:0px;
+    bottom:103%;
+    top:auto;
+  }
 }
 @media screen and (min-width: 767px){
   .l-header{
@@ -5710,9 +5741,6 @@ a.lightbox img{
   }
   #index #shop #shop-widget .body{
     max-width:280px;
-  }
-  #launch-videos .btn{
-    max-width:300px;
   }
   #launch-videos .l-body2-ron img{
     padding-right:100px;

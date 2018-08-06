@@ -24,7 +24,12 @@ block content
     fjs.parentNode.insertBefore(js, fjs); }
     (document, 'script', 'facebook-jssdk'));
 
-
+  div#opt-in-focus-js
+    script.
+      inputfocus = function getFocus() {           
+      document.getElementById("opt-in-email").focus();
+      }
+  
   section.l-header
     .container
       .row
@@ -32,9 +37,10 @@ block content
           .title-top-container
             .title-top.flex-center
               img.logoHB(src='/img/logo_square.png')
-              a.btn.btn-share(type='button' target="_blank"
+              a.btn.btn-share.btn-share1(type='button' target="_blank"
               href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fab fa-facebook-square"></i> Share
-              button.btn.btn-trailer(type='button' onclick="location.href='#opt-in' ")  <i class="fa fa-play-circle"></i>
+              button.btn.btn-trailer(type='button' onclick="location.href='#opt-in' ")  <i class="fa fa-lg fa-play-circle"></i>
+              
 
     .container-fluid.l-vid
       video-form.row.flex-center
@@ -47,7 +53,7 @@ block content
               img.mobile(src="/img/header-ron-mobile.jpg")
             a(href='#opt-in')
               img.desktop(src="/img/header-ron-desktop.jpg")
-            .name Ron White
+            .name Ron White 
             .subtitle 2 time USA Memory Champion
 
             .subtitle2
@@ -140,7 +146,7 @@ block content
           .col-md-6.col-12.vid-desc.flex-center
             a(href='#opt-in')
               img(src="/img/vid-3-thumb.jpg")
-              h6.vid-desc-wrapper Supplements for mental Performance
+              h6.vid-desc-wrapper Nootropics
 
           .col-md-6.col-12.vid-desc.flex-center
             a(href='#opt-in')
@@ -153,12 +159,15 @@ block content
         .opt-in
           // h4 Enter your email address to watch the trailer
           .row
-            .col-md-6.col-12.opt-in-fields
-              text.input(bind='email' placeholder='Enter Your Email')
-            .col-md-6.col-12.opt-in-fields
-              button.btn.submit-opt-in(type='button' onclick='{ submit }') WATCH NOW
-            p.disclaimer We will notify you when each masterclass episode is released. Providing your emails gives you unlimited free access to all 4 masterclass episodes.
-            <a class="lightbox-close lightbox-close1" href="#fb"></a>
+            .col-12.opt-in-fields.flex-center
+              a.btn.btn-share.btn-share2(type='button' onload="document.video-form.email.focus()" target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fab fa-lg fa-facebook-square"></i> Share
+              button.btn.btn-opt-in(type='button' onclick='{ submit }') <i class="fa fa-lg fa-play-circle"></i> WATCH NOW 
+            .col-12.opt-in-fields.flex-center
+              text.input(bind='email' id='opt-in-email' placeholder='Enter Your Email')
+            
+            p.disclaimer We will notify you when each masterclass episode is released. Providing your email gives you unlimited free access to all 4 masterclass episodes.
+            <a class="lightbox-close lightbox-close1" style="color: gray !important;" href="#fb"></a>
   
   
   .lsfooter
