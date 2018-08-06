@@ -4,42 +4,6 @@ block vars
   - var pageId = 'launch-videos'
 
 block content
-  div#mousetracker
-    script.
-      window._mfq = window._mfq || [];
-      (function() {
-      var mf = document.createElement("script");
-      mf.type = "text/javascript"; mf.async = true;
-      mf.src = "//cdn.mouseflow.com/projects/083f1b02-ccd7-4510-8625-e3dfd2fbaf6d.js";
-      document.getElementsByTagName("head")[0].appendChild(mf);
-      })();
-
-  div#fb-root
-   script.
-    (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=499421243843386&autoLogAppEvents=1';
-    fjs.parentNode.insertBefore(js, fjs); }
-    (document, 'script', 'facebook-jssdk'));
-
-  div#enter-submit
-    script.
-      var input = document.getElementById("opt-in-email");
-      input.addEventListener("keyup", function(event) {
-        event.preventDefault();
-        if (event.keyCode === 13) {
-            document.getElementById("email-submit").click();
-          }
-          });
-
-  div#opt-in-focus-js
-    script.
-      inputfocus = function getFocus() {           
-      document.getElementById("opt-in-email").focus();
-      }
-  
   section.l-header
     .container
       .row
@@ -50,7 +14,6 @@ block content
               a.btn.btn-share.btn-share1(type='button' target="_blank"
               href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fab fa-facebook-square"></i> Share
               button.btn.btn-trailer(type='button' onclick="location.href='#opt-in' ")  <i class="fa fa-lg fa-play-circle"></i>
-              
 
     .container-fluid.l-vid
       video-form.row.flex-center
@@ -63,7 +26,7 @@ block content
               img.mobile(src="/img/header-ron-mobile.jpg")
             a(href='#opt-in')
               img.desktop(src="/img/header-ron-desktop.jpg")
-            .name Ron White 
+            .name Ron White
             .subtitle 2 time USA Memory Champion
 
             .subtitle2
@@ -133,16 +96,16 @@ block content
       .col-md-7.col-12.l-body2-ron
         img(src='/img/ron-white-dark.jpg')
       .col-md-4.col-12.vid-title.text-center
-        
+
         .row
-          
+
           .col-md-8.offset-md-2.col-12.flex-center.vid-desc-trailer
             a(href='#opt-in')
               h5.vid-desc-wrapper-trailer Trailer
 
               img(src="/img/trailer-thumb.jpg")
         .row
-          h3 UPCOMING EPISODES 
+          h3 UPCOMING EPISODES
           .col-md-6.col-12.vid-desc.flex-center
             a(href='#opt-in')
               h6.vid-desc-wrapper.vid-coming-soon Coming Soon
@@ -167,7 +130,7 @@ block content
               h6.vid-desc-wrapper.vid-coming-soon Coming Soon
 
       .col-md-1
-        
+
   video-form.lightbox-target2#opt-in.overlay-opt-in(if='{ !submited }')
         .opt-in
           // h4 Enter your email address to watch the trailer
@@ -175,18 +138,49 @@ block content
             .col-12.opt-in-fields.flex-center
               a.btn.btn-share.btn-share2(type='button' onload="document.video-form.email.focus()" target="_blank"
               href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fab fa-lg fa-facebook-square"></i> Share
-              button.btn.btn-opt-in(type='button' id="email-submit" onclick='{ submit }') <i class="fa fa-lg fa-play-circle"></i> WATCH NOW 
+              button.btn.btn-opt-in(type='button' id="email-submit" onclick='{ submit }') <i class="fa fa-lg fa-play-circle"></i> WATCH NOW
             .col-12.opt-in-fields.flex-center
               text.input(bind='email' id='opt-in-email' placeholder='Enter Your Email')
-            
+
             p.disclaimer We will notify you when each masterclass episode is released. Providing your email gives you unlimited free access to all 4 masterclass episodes.
             <a class="lightbox-close lightbox-close1" style="color: gray !important;" href="#fb"></a>
-  
-  
+
+
   .lsfooter
           p
           | ©2018 Halcyon Biotechnologies
           br
           |  #[a(href='/privacy-policy' target='blank') Privacy Policy ] |  #[a(href='/privacy-policy#terms-of-service' target='blank') Terms of Service]
+
+  div#mousetracker
+    script.
+      window._mfq = window._mfq || [];
+      (function() {
+      var mf = document.createElement("script");
+      mf.type = "text/javascript"; mf.async = true;
+      mf.src = "//cdn.mouseflow.com/projects/083f1b02-ccd7-4510-8625-e3dfd2fbaf6d.js";
+      document.getElementsByTagName("head")[0].appendChild(mf);
+      })();
+
+  div#fb-root
+   script.
+    (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=499421243843386&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs); }
+    (document, 'script', 'facebook-jssdk'));
+
+  div#enter-submit
+    script.
+      var input = document.getElementById("opt-in-email");
+      input.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+            document.getElementById("email-submit").click();
+          }
+          });
+
 block header
 block footer

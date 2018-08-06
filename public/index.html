@@ -56,50 +56,6 @@
     <!-- import css/parallax/parallax.styl to enable it-->
     <main class="parallax">
       <checkout-modal></checkout-modal>
-      <div id="mousetracker">
-        <script>
-          window._mfq = window._mfq || [];
-          (function() {
-          var mf = document.createElement("script");
-          mf.type = "text/javascript"; mf.async = true;
-          mf.src = "//cdn.mouseflow.com/projects/083f1b02-ccd7-4510-8625-e3dfd2fbaf6d.js";
-          document.getElementsByTagName("head")[0].appendChild(mf);
-          })();
-          
-        </script>
-      </div>
-      <div id="fb-root">
-        <script>
-          (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=499421243843386&autoLogAppEvents=1';
-          fjs.parentNode.insertBefore(js, fjs); }
-          (document, 'script', 'facebook-jssdk'));
-          
-        </script>
-      </div>
-      <div id="enter-submit">
-        <script>
-          var input = document.getElementById("opt-in-email");
-          input.addEventListener("keyup", function(event) {
-            event.preventDefault();
-            if (event.keyCode === 13) {
-                document.getElementById("email-submit").click();
-              }
-              });
-          
-        </script>
-      </div>
-      <div id="opt-in-focus-js">
-        <script>
-          inputfocus = function getFocus() {           
-          document.getElementById("opt-in-email").focus();
-          }
-          
-        </script>
-      </div>
       <section class="l-header">
         <div class="container">
           <div class="row">
@@ -119,7 +75,7 @@
                 <div class="trailer-view"><iframe src="https://www.youtube.com/embed/71fptRWCwuQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
               </div>
               <div class="vid-container"><a href="#opt-in"><img class="mobile" src="/img/header-ron-mobile.jpg"></a><a href="#opt-in"><img class="desktop" src="/img/header-ron-desktop.jpg"></a>
-                <div class="name">Ron White </div>
+                <div class="name">Ron White</div>
                 <div class="subtitle">2 time USA Memory Champion</div>
                 <div class="subtitle2">
                   Teaches
@@ -190,7 +146,7 @@
                   <h5 class="vid-desc-wrapper-trailer">Trailer</h5><img src="/img/trailer-thumb.jpg"></a></div>
             </div>
             <div class="row">
-              <h3>UPCOMING EPISODES </h3>
+              <h3>UPCOMING EPISODES</h3>
               <div class="col-md-6 col-12 vid-desc flex-center"><a href="#opt-in">
                   <h6 class="vid-desc-wrapper vid-coming-soon">Coming Soon</h6>
                   <h6 class="vid-desc-wrapper">Lifestyle Hacks</h6><img src="/img/vid-1-thumb.jpg"></a></div>
@@ -215,7 +171,7 @@
           <!-- h4 Enter your email address to watch the trailer-->
           <div class="row">
             <div class="col-12 opt-in-fields flex-center"><a class="btn btn-share btn-share2" type="button" onload="document.video-form.email.focus()" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/"><i class="fab fa-lg fa-facebook-square"></i> Share</a>
-              <button class="btn btn-opt-in" type="button" id="email-submit" onclick="{ submit }"><i class="fa fa-lg fa-play-circle"></i> WATCH NOW </button>
+              <button class="btn btn-opt-in" type="button" id="email-submit" onclick="{ submit }"><i class="fa fa-lg fa-play-circle"></i> WATCH NOW</button>
             </div>
             <div class="col-12 opt-in-fields flex-center">
               <text class="input" bind="email" id="opt-in-email" placeholder="Enter Your Email"></text>
@@ -226,6 +182,42 @@
       </video-form>
       <div class="lsfooter">
         <p></p>©2018 Halcyon Biotechnologies<br> <a href="/privacy-policy" target="blank">Privacy Policy </a> |  <a href="/privacy-policy#terms-of-service" target="blank">Terms of Service</a>
+      </div>
+      <div id="mousetracker">
+        <script>
+          window._mfq = window._mfq || [];
+          (function() {
+          var mf = document.createElement("script");
+          mf.type = "text/javascript"; mf.async = true;
+          mf.src = "//cdn.mouseflow.com/projects/083f1b02-ccd7-4510-8625-e3dfd2fbaf6d.js";
+          document.getElementsByTagName("head")[0].appendChild(mf);
+          })();
+          
+        </script>
+      </div>
+      <div id="fb-root">
+        <script>
+          (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=499421243843386&autoLogAppEvents=1';
+          fjs.parentNode.insertBefore(js, fjs); }
+          (document, 'script', 'facebook-jssdk'));
+          
+        </script>
+      </div>
+      <div id="enter-submit">
+        <script>
+          var input = document.getElementById("opt-in-email");
+          input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("email-submit").click();
+              }
+              });
+          
+        </script>
       </div>
     </main>
     <privacy-popup>
