@@ -4948,6 +4948,7 @@ iframe.fb_ltr{
 }
 #launch-videos .btn-share{
   font-family:'Open Sans', sans-serif;
+  -webkit-appearance:none;
   margin-top:3px;
   margin-right:2px;
   padding-left:10px;
@@ -5074,7 +5075,7 @@ iframe.fb_ltr{
   color:#fff;
 }
 #launch-videos .opt-in{
-  top:57px;
+  top:54px;
   position:relative;
   background-color:rgba(0,0,0,0.702);
 }
@@ -5180,7 +5181,7 @@ iframe.fb_ltr{
   width:99.5%;
   bottom:4px;
 }
-#launch-videos .l-body2 .vid-desc .putting h6{
+#launch-videos .l-body2 .vid-desc .vid-desc-wrapper .putting h6{
   max-width:196px;
 }
 #launch-videos .vid-title h3{
