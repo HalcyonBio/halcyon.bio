@@ -21,11 +21,7 @@ export class VideoForm extends El.Form
         @submited = true
         akasha.set 'submited', true
         @setupRedirects()
-<<<<<<< HEAD
-        window.location.hash = 'neuromethodtrailer'
-=======
-        window.location.hash = '#trailer2424neuro'
->>>>>>> f9643654aa62e3dba0bdac9075d4450f935e94a3
+        window.location.hash = '#neuromethodtrailer'
 
         @scheduleUpdate()
       # .catch (e)->
@@ -39,7 +35,7 @@ export class VideoForm extends El.Form
     if @submited
       @setupRedirects()
 
-    if window.location.hash == '#trailer2424neuro' && !@submited
+    if window.location.hash == '#neuromethodtrailer' && !@submited
       window.location.hash = ''
 
     requestAnimationFrame ->
@@ -52,16 +48,11 @@ export class VideoForm extends El.Form
           $('input[name="email"]').focus()
 
   setupRedirects: ->
-<<<<<<< HEAD
-    $('[href="#opt-in"], .btn-trailer').on 'click', ->
-      window.location.hash = 'neuromethodtrailer'
-=======
-    $('[href="#opt-in"]').attr 'href', '#trailer2424neuro'
+    $('[href="#opt-in"]').attr 'href', '#neuromethodtrailer'
     $('.btn-trailer').on 'click', ->
       window.location.hash = ''
       requestAnimationFrame ->
-        window.location.hash = '#trailer2424neuro'
->>>>>>> f9643654aa62e3dba0bdac9075d4450f935e94a3
+        window.location.hash = '#neuromethodtrailer'
       return false
 
 VideoForm.register()
