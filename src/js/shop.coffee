@@ -54,3 +54,15 @@ if window.location.pathname.indexOf('login') >= 0
   m.on 'login-success', ->
     window.location.replace 'account'
   m.on 'login-failed', ->
+
+if window.location.pathname.indexOf('reset-password') >= 0
+  m.on 'reset-password', ->
+  m.on 'reset-password-success', ->
+    window.location.replace 'reset-password-sent'
+  m.on 'reset-password-failed', ->
+
+if window.location.pathname.indexOf('reset-password-confirm') >= 0
+  m.on 'reset-password-complete', ->
+  m.on 'reset-password-complete-success', ->
+    window.location.replace 'login'
+  m.on 'reset-password-complete-failed', ->
