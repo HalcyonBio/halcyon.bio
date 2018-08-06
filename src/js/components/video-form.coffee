@@ -38,9 +38,14 @@ export class VideoForm extends El.Form
     if window.location.hash == '#trailer2424neuro' && !@submited
       window.location.hash = ''
 
-    window.addEventListener 'hashchange', ->
+    requestAnimationFrame ->
       if window.location.hash == '#opt-in'
         $('input[name="email"]').focus()
+
+    window.addEventListener 'hashchange', ->
+      requestAnimationFrame ->
+        if window.location.hash == '#opt-in'
+          $('input[name="email"]').focus()
 
   setupRedirects: ->
     $('[href="#opt-in"]').attr 'href', '#trailer2424neuro'
