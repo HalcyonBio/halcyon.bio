@@ -21,7 +21,7 @@ export class VideoForm extends El.Form
         @submited = true
         akasha.set 'submited', true
         @setupRedirects()
-        window.location.hash = 'trailer2424neuro'
+        window.location.hash = '#trailer2424neuro'
 
         @scheduleUpdate()
       # .catch (e)->
@@ -35,12 +35,19 @@ export class VideoForm extends El.Form
     if @submited
       @setupRedirects()
 
+    if window.location.hash == '#trailer2424neuro' && !@submited
+      window.location.hash = ''
+
+    window.addEventListener 'hashchange', ->
+      if window.location.hash == '#opt-in'
+        $('input[name="email"]').focus()
+
   setupRedirects: ->
     $('[href="#opt-in"]').attr 'href', '#trailer2424neuro'
     $('.btn-trailer').on 'click', ->
       window.location.hash = ''
       requestAnimationFrame ->
-        window.location.hash = 'trailer2424neuro'
+        window.location.hash = '#trailer2424neuro'
       return false
 
 VideoForm.register()
