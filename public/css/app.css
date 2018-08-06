@@ -4992,10 +4992,8 @@ iframe.fb_ltr{
   background-color:rgba(5,6,57,0.8);
   margin-left:2px;
   border:3px solid #fff;
-  box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
-  -moz-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
-  -webkit-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
   margin-top:3px;
+  animation:pulse 3s infinite;
 }
 #launch-videos .btn-opt-in{
   margin-left:4px;
@@ -5118,7 +5116,7 @@ iframe.fb_ltr{
   max-width:90px;
   opacity:0.5;
 }
-#launch-videos .ron-media img :hover{
+#launch-videos .ron-media img:hover{
   opacity:0.9;
 }
 #launch-videos .ron-media .col-6,
@@ -5251,6 +5249,9 @@ iframe.fb_ltr{
 }
 #launch-squeeze .lsbold{
   font-weight:bold;
+}
+#launch-squeeze .title h2{
+  margin-bottom:20px;
 }
 #launch-squeeze .logo-mobile{
   padding-bottom:10px;
@@ -5425,6 +5426,23 @@ a.lightbox img{
 .lightbox-target:target .subtitle,
 .lightbox-target:target .subtitle2{
   display:none;
+}
+@keyframes pulse{
+  0%{
+    box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
+    -moz-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
+    -webkit-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
+  }
+  50%{
+    box-shadow:0px 0px 21px 5px rgba(255,255,255,0.6);
+    -moz-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.6);
+    -webkit-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.6);
+  }
+  100%{
+    box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
+    -moz-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
+    -webkit-box-shadow:0px 0px 21px 5px rgba(255,255,255,0.4);
+  }
 }
 #signup h2{
   color:#304191;

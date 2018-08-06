@@ -12,7 +12,7 @@ module.exports =
           '@type': 'WebsiteLogo'
           image: '/img/logo.svg'
           alt: 'HALCYON BIO'
-          url: '/'
+          url: 'https://halcyon.bio'
         }
       ]
       menuCollections: [
@@ -332,5 +332,3 @@ module.exports =
       ]
     }
   }
-
-
