@@ -75,7 +75,7 @@
   .btn-share
     font-family: 'Open Sans', sans-serif
     -webkit-appearance: none;
-  
+
     margin-top: 3px;
     margin-right: 2px
     padding-left: 10px
@@ -100,7 +100,7 @@
   .btn-trailer, .btn-opt-in
       font-family: 'Open Sans', sans-serif
       border: 3px solid rgba(247, 108, 17, 0.9);
-      margin-top: 3px;
+
       padding-left: 10px
       padding-right: 10px
       font-family: "Lato", "Helvetica", "Arial", sans-serif;
@@ -117,6 +117,7 @@
     box-shadow: 0px 0px 21px 5px rgba(255,255,255,.4);
     -moz-box-shadow: 0px 0px 21px 5px rgba(255,255,255,.4);
     -webkit-box-shadow: 0px 0px 21px 5px rgba(255,255,255,.4);
+    margin-top: 3px;
   .btn-opt-in
     margin-left: 4px
     background-color: rgba(5,6,57,0.8);
@@ -189,7 +190,7 @@
 
   .opt-in
     //top: 50%;
-    top: 54px
+    top: 56px
     position: relative;
 
     background-color: #000000b3;
@@ -297,9 +298,12 @@
 
 
         bottom: 4px;
-        .putting
-          h6
-            max-width: 196px;
+      .vid-coming-soon
+        text-align: center;
+        top: 0
+        color: #a5a4a4;
+  .putting
+    max-width: 196px;
 
 
 
@@ -536,9 +540,11 @@ text-align: center;
 }
 
 /* Styles the close link, adds the slide down transition */
-a.lightbox-close1{
+a.lightbox-close1
   left: 50%;
-}
+  @media screen and (max-width:500px)
+    left: auto
+
 a.lightbox-close2 {
   top: 10px;right: 10px;
 }
@@ -558,7 +564,7 @@ a.lightbox-close
   transition: .5s ease-in-out;
   @media screen and (max-width:767px)
     right: 0px
-    bottom: 103%;
+    bottom: 105%;
     top: auto
 
 /* Provides part of the "X" to eliminate an image from the close link */

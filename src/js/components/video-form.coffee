@@ -21,7 +21,7 @@ export class VideoForm extends El.Form
         @submited = true
         akasha.set 'submited', true
         @setupRedirects()
-        window.location.hash = 'trailer2424neuro'
+        window.location.hash = 'neuromethodtrailer'
 
         @scheduleUpdate()
       # .catch (e)->
@@ -37,7 +37,7 @@ export class VideoForm extends El.Form
 
   setupRedirects: ->
     $('[href="#opt-in"], .btn-trailer').on 'click', ->
-      window.location.hash = 'trailer2424neuro'
+      window.location.hash = 'neuromethodtrailer'
       return false
 
 VideoForm.register()
