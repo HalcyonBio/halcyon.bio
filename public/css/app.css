@@ -3963,6 +3963,7 @@ header .mobile-menus .show-mobile-icon{
 }
 .l-body{
   padding-bottom:40px;
+  padding-top:20px;
 }
 .l-body h3{
   color:#000;
@@ -5158,6 +5159,7 @@ iframe.fb_ltr{
 #launch-videos .title p{
   font-size:1.25rem;
   margin-top:20px;
+  color:#e9e7e7;
 }
 #launch-videos .t{
   padding-bottom:0px;
