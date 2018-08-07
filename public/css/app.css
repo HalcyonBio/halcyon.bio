@@ -5352,7 +5352,13 @@ iframe.fb_ltr{
   padding-top:10rem;
 }
 #ToS p,
-#PP p{
+#PP p,
+#ToS h2,
+#PP h2,
+#ToS h3,
+#PP h3,
+#ToS h4,
+#PP h4{
   color:#000;
 }
 #partner .header-img{
