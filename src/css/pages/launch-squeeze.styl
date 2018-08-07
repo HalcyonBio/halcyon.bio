@@ -90,8 +90,15 @@
       margin-bottom: 2px
   .btn-share1
     background-color: #fffc;
+    width: 48%
+  .btn-share2-container
+    width: 96%;
+    max-width: 365px;
   .btn-share2
     background-color: rgb(101, 97, 97);
+    margin-bottom: 4px;
+    width: 50%
+    margin-left: -2px;
   .btn-share
     font-family: 'Open Sans', sans-serif
     -webkit-appearance: none;
@@ -101,7 +108,7 @@
     padding-left: 10px
     padding-right: 10px
     font-family: "Lato", "Helvetica", "Arial", sans-serif;
-    width: 48%
+
     max-width: 180px
     border-radius: 0;
     -webkit-border-radius: 0;
@@ -109,7 +116,7 @@
     color: rgba(5,6,57,0.8) !important
     &:hover
     &:focus
-      color:  #df6214 !important
+      color: #1e2186 !important
 
     .fab
       color: rgba(5,6,57,0.8)
@@ -124,8 +131,8 @@
       padding-left: 10px
       padding-right: 10px
       font-family: "Lato", "Helvetica", "Arial", sans-serif;
-      width: 48%
-      max-width: 180px
+
+
       box-shadow: none;
       .fa
           font-family: "Font Awesome 5 Free" !important;
@@ -134,13 +141,16 @@
     background-color: rgba(5,6,57,0.8);
     margin-left: 2px
     border: 3px solid white;
-
+    width: 48%
+    max-width: 180px
     margin-top: 3px;
     animation: pulse 3s infinite;
   .btn-opt-in
     margin-left: 4px
     background-color: rgba(5,6,57,0.8);
-    border: 3px solid rgba(247, 108, 17, 0.9);
+    border: 3px solid white;
+    max-width: 100px
+    margin-bottom: 21px;
 
 
   .t360
@@ -162,6 +172,8 @@
     line-height: 1
     margin-top:10px
   .opt-in-fields
+    max-width: 98%;
+    margin-top: 2px;
     input
       text-align:center;
     @media screen and (max-width:767px)
@@ -178,13 +190,7 @@
     padding-right: 0px;
     text
       width: 100%;
-      max-width: 368px;
-
-
-
-  .btn
-
-    margin-bottom: 3px;
+      max-width: 318px;
 
   .submit-opt-in
       background-color: $hBlue2
@@ -194,22 +200,26 @@
         margin-top:10px
   .input
     width: 100%
-    max-width:368px
+    max-width: 317px;
     input
       height: 40px;
 
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.29);
-      width: 100%
-      max-width:368px
+      background-color: rgba(255, 255, 255, 0.9);
+      width: 100%;
+      max-width: 318px;
+      border: 3px solid rgba(255, 255, 255, 0.9);
 
       &:focus
       &::placeholder
-          color: white
+          color: black
+      margin-bottom: 21px;
+	    .invalid
+		       margin-bottom: -3px;
 
   .opt-in
     //top: 50%;
-    top: 56px
+    top: 53px
     position: relative;
 
     background-color: #000000b3;
@@ -544,7 +554,7 @@ text-align: center;
 
 /* Styles the close link, adds the slide down transition */
 a.lightbox-close1
-  left: 50%;
+  left: 44.5%;
   @media screen and (max-width:500px)
     left: auto
 
@@ -560,7 +570,7 @@ a.lightbox-close
   color: gray;
   text-decoration: none;
   position: absolute;
-  top: -12px
+  top: -9px
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;

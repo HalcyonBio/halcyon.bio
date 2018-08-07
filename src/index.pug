@@ -171,14 +171,15 @@ block content
   video-form.lightbox-target2#opt-in.overlay-opt-in(if='{ !submited }')
         .opt-in
           // h4 Enter your email address to watch the trailer
-          .row
+          .row.flex-center
             .col-12.opt-in-fields.flex-center
-              a.btn.btn-share.btn-share2(type='button' onload="document.video-form.email.focus()" target="_blank"
-              href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fab fa-lg fa-facebook-square"></i> Share
-              button.btn.btn-opt-in(type='button' id="email-submit" onclick='{ submit }') <i class="fa fa-lg fa-play-circle"></i> WATCH NOW 
+              .btn-share2-container
+                .btn.btn-share.btn-share2(type='button' onload="document.video-form.email.focus()" target="_blank"
+                href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fab fa-lg fa-facebook-square"></i> Share
+              
             .col-12.opt-in-fields.flex-center
               text.input(bind='email' id='opt-in-email' placeholder='Enter Your Email')
-            
+              button.btn.btn-opt-in(type='button' id="email-submit" onclick='{ submit }') <i class="fa fa-lg fa-play-circle"></i>  
             p.disclaimer We will notify you when each masterclass episode is released. Providing your email gives you unlimited free access to all 4 masterclass episodes.
             <a class="lightbox-close lightbox-close1" style="color: gray !important;" href="#fb"></a>
   
