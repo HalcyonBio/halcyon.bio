@@ -50,7 +50,7 @@ export class VideoForm extends El.Form
             $(@root).find('input[name="email"]').focus()
 
       $(@root).find('input[name="email"]').on 'keypress', (e) =>
-        @submit() if event.keyCode is 13
+        @submit() if e.keyCode is 13
 
   setupRedirects: ->
     $('[href="#opt-in"]').attr 'href', '#neuromethodtrailer'
