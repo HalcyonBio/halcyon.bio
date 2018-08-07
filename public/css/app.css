@@ -3970,8 +3970,8 @@ header .mobile-menus .show-mobile-icon{
 }
 .l-body .arrow{
   position:absolute;
-  margin-left:-46px;
-  margin-top:-28px;
+  margin-left:-64px;
+  margin-top:-33px;
 }
 .fblike{
   color:#1a88fb;
@@ -4977,7 +4977,7 @@ iframe.fb_ltr{
 }
 #launch-videos .btn-share .fab:hover,
 #launch-videos .btn-share .fab:focus{
-  color:#df6214;
+  color:#324bd4;
 }
 #launch-videos .btn-trailer,
 #launch-videos .btn-opt-in{
@@ -5130,6 +5130,13 @@ iframe.fb_ltr{
   position:absolute;
   right:2px;
   bottom:-21px;
+}
+#launch-videos .col-thumb h6{
+  position:absolute;
+  top:0;
+  text-align:center;
+  width:100%;
+  color:#a5a4a4;
 }
 #launch-videos .fb-share{
   text-align:left;
@@ -6088,12 +6095,6 @@ a.lightbox img{
 @media screen and (max-width: 367px){
   #launch-videos .launch-squeeze-form{
     margin-bottom:5px;
-  }
-}
-@media screen and (min-width: 608px){
-  #launch-squeeze,
-  .fb-like{
-    margin-top:58px;
   }
 }
 @media screen and (max-width: 362px){
