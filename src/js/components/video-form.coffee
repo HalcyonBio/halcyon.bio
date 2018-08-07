@@ -29,23 +29,28 @@ export class VideoForm extends El.Form
 
   init: ->
     super arguments...
-    $(@root).addClass 'ready'
-
     @submited = !!(akasha.get 'submited')
-    if @submited
-      @setupRedirects()
 
-    if window.location.hash == '#neuromethodtrailer' && !@submited
-      window.location.hash = ''
+    @on 'mount', =>
+      $(@root).addClass 'ready'
 
-    requestAnimationFrame ->
-      if window.location.hash == '#opt-in'
-        $('input[name="email"]').focus()
+      if @submited
+        @setupRedirects()
 
-    window.addEventListener 'hashchange', ->
-      requestAnimationFrame ->
+      if window.location.hash == '#neuromethodtrailer' && !@submited
+        window.location.hash = ''
+
+      requestAnimationFrame =>
         if window.location.hash == '#opt-in'
-          $('input[name="email"]').focus()
+          $(@root).find('input[name="email"]').focus()
+
+      window.addEventListener 'hashchange', =>
+        requestAnimationFrame =>
+          if window.location.hash == '#opt-in'
+            $(@root).find('input[name="email"]').focus()
+
+      $(@root).find('input[name="email"]').on 'keypress', (e) =>
+        @submit() if event.keyCode is 13
 
   setupRedirects: ->
     $('[href="#opt-in"]').attr 'href', '#neuromethodtrailer'
