@@ -5167,6 +5167,7 @@ iframe.fb_ltr{
 #launch-videos .l-body-transition,
 #launch-videos .l-body{
   background-color:#0f1033;
+  min-height:200px;
 }
 #launch-videos .l-body2{
   padding-top:20px;
@@ -5229,8 +5230,17 @@ iframe.fb_ltr{
 #launch-videos .4videos{
   margin-top:10px;
 }
+#launch-videos .loading{
+  height:60px;
+  margin-bottom:-60px;
+  text-align:center;
+}
+#launch-videos .fb-like{
+  background-color:#0f1033;
+}
 #launch-videos .fb-comments{
   display:block;
+  background-color:#0f1033;
 }
 #launch-videos .hm,
 #launch-videos .fb-new{
