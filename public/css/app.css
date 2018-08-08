@@ -5230,9 +5230,14 @@ iframe.fb_ltr{
 #launch-videos .4videos{
   margin-top:10px;
 }
+#launch-videos .fb-like-frame{
+  background-color:#0f1033;
+  position:relative;
+}
 #launch-videos .loading{
-  height:60px;
-  margin-bottom:-60px;
+  height:80px;
+  margin-bottom:-85px;
+  padding-top:20px;
   text-align:center;
 }
 #launch-videos .fb-like{
