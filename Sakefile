@@ -52,8 +52,8 @@ task 'build:js', 'build js', ->
 
 task 'build-min:js', 'build minified js', ['build'], ->
   exec '''
-  node_modules/.bin/uglifyjs public/js/app.js -o public/js/app.min.js
-  cp public/js/app.min.js public/js/app.js
+  buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js
+  node_modules/.bin/uglifyjs public/js/app.es5.js -o public/js/app.js
   '''
 
 task 'build:static', 'build static assets', ->
