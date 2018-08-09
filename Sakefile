@@ -17,7 +17,7 @@ task 'build', 'build project', ['build:static', 'build:js']
 task 'build:min', 'build minified project', ['build:static', 'build:js:min']
 
 task 'build:js', 'build js', ->
-  return if (running 'build:js')
+  # return if (running 'build:js')
 
   bundle.write
     entry:    'src/js/app.coffee'
@@ -29,24 +29,6 @@ task 'build:js', 'build js', ->
     compilers:
       coffee:
         version: 2
-  .then ->
-    console.log 'REPLACING CONSTS'
-    fs.readFile 'public/js/app.js', 'utf8', (err,data)->
-      console.log 'REPLACING CONSTS R'
-      return console.log(err) if (err)
-
-      result = data.replace /const /g, 'var '
-      result = result.replace /const\n/g, 'var\n'
-      result = result.replace "`__${mixins_id++}__`", "'__' + (mixins_id++) + '__'"
-      result = result.replace "`Unregistered mixin: ${ name }`", "'Unregistered mixin: ' + name"
-      result = result.replace "`__${mixins_id++}__`", "'__' + (mixins_id++) + '__'"
-      result = result.replace "`,[${IS_DIRECTIVE}=\"${name}\"]`", "',[' + IS_DIRECTIVE + '=\"' + name + '\"]'"
-      result = result.replace "`<svg xmlns=\"${ SVG_NS }\">${ html }</svg>`", "'<svg xmlns=\"' + SVG_NS + '\">' + html + '</svg>'"
-      result = result.replace "`${acc} ${prop}: ${style[prop]};`", "acc + ' ' + prop + ': ' + style[prop] + ';'"
-
-      fs.writeFile 'public/js/app.js', result, 'utf8', (err) ->
-        console.log 'REPLACING CONSTS W'
-        return console.log(err) if (err)
   .catch (err) ->
     console.error err
 
@@ -55,28 +37,30 @@ task 'build:js:min', 'build minified js', ['build:js'], ->
     console.log 'Trying to Build'
 
     exec '''
-    node_modules/.bin/buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js
-    node_modules/.bin/uglifyjs public/js/app.es5.js -o public/js/app.js
-    '''
-
+      node_modules/.bin/buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js'
+      node_modules/.bin/uglifyjs public/js/app.es5.js -o public/js/app.js
+      '''
 
     buildMin = ->
       fs.readFile 'public/js/app.js', 'utf8', (err, data)->
         if err?
           reject err
+          return
 
         if data.length < 0
           console.log 'Build Failed Trying to Build'
           exec '''
-          node_modules/.bin/buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js
-          node_modules/.bin/uglifyjs public/js/app.es5.js -o public/js/app.js
-          '''
+            node_modules/.bin/buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js'
+            node_modules/.bin/uglifyjs public/js/app.es5.js -o public/js/app.js
+            '''
           buildMin()
 
         console.log 'Build Success'
         resolve true
 
     buildMin()
+  .catch (err) ->
+    console.error err
 
 task 'build:static', 'build static assets', ->
   exec '''
