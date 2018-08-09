@@ -1,3 +1,5 @@
+import fs from 'fs'
+
 use 'sake-bundle'
 use 'sake-linked'
 use 'sake-outdated'
@@ -28,18 +30,17 @@ task 'build:js', 'build js', ->
       coffee:
         version: 1
   .then ->
-    return
-    # console.log 'REPLACING CONSTS'
-    # fs.readFile 'public/js/app.js', 'utf8', (err,data)->
-    #   console.log 'REPLACING CONSTS R'
-    #   return console.log(err) if (err)
+    console.log 'REPLACING CONSTS'
+    fs.readFile 'public/js/app.js', 'utf8', (err,data)->
+      console.log 'REPLACING CONSTS R'
+      return console.log(err) if (err)
 
-    #   result = data.replace /const /g, 'var '
-    #   result = result.replace /const\n/g, 'var\n'
+      result = data.replace /const /g, 'var '
+      result = result.replace /const\n/g, 'var\n'
 
-    #   fs.writeFile 'public/js/app.js', result, 'utf8', (err) ->
-    #     console.log 'REPLACING CONSTS W'
-    #     return console.log(err) if (err)
+      fs.writeFile 'public/js/app.js', result, 'utf8', (err) ->
+        console.log 'REPLACING CONSTS W'
+        return console.log(err) if (err)
   .catch (err) ->
     console.error err
 

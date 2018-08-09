@@ -14,17 +14,17 @@ import './shop'
 
 import Shop from 'shop.js/src'
 
-El.mount 'price, gallery'
+El.mount('price, gallery')
 
 m = Shop.getMediator()
 
-statusCreated = (res) -> res.status is 201
+statusCreated = (res) => { return res.status is 201 }
 
 client = new Hanzo.Api
 client.addBlueprints 'mailinglist',
   subscribe:
     method: 'POST'
-    url:    (x) -> '/mailinglist/' + (x.mailinglistId ? x) + '/subscribe'
+    url:    (x) -> "/mailinglist/#{x.mailinglistId ? x}/subscribe"
     expects: statusCreated
 
 El.mount 'launch-squeeze-form, video-form',
