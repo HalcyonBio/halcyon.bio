@@ -1,3 +1,5 @@
+fs = require 'fs'
+
 use 'sake-bundle'
 use 'sake-linked'
 use 'sake-outdated'
@@ -26,7 +28,19 @@ task 'build:js', 'build js', ->
     external: false
     compilers:
       coffee:
-        version: 2
+        version: 1
+  .then ->
+    console.log 'REPLACING CONSTS'
+    fs.readFile 'public/js/app.js', 'utf8', (err,data)->
+      console.log 'REPLACING CONSTS R'
+      return console.log(err) if (err)
+
+      result = data.replace /const /g, 'var '
+
+      fs.writeFile 'public/js/app.js', result, 'utf8', (err) ->
+        console.log 'REPLACING CONSTS W'
+        return console.log(err) if (err)
+
   .catch (err) ->
     console.error err
 
