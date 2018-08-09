@@ -28,7 +28,7 @@ task 'build:js', 'build js', ->
     external: false
     compilers:
       coffee:
-        version: 1
+        version: 2
   .then ->
     console.log 'REPLACING CONSTS'
     fs.readFile 'public/js/app.js', 'utf8', (err,data)->
@@ -37,6 +37,12 @@ task 'build:js', 'build js', ->
 
       result = data.replace /const /g, 'var '
       result = result.replace /const\n/g, 'var\n'
+      result = result.replace "`__${mixins_id++}__`", "'__' + (mixins_id++) + '__'"
+      result = result.replace "`Unregistered mixin: ${ name }`", "'Unregistered mixin: ' + name"
+      result = result.replace "`__${mixins_id++}__`", "'__' + (mixins_id++) + '__'"
+      result = result.replace "`,[${IS_DIRECTIVE}=\"${name}\"]`", "',[' + IS_DIRECTIVE + '=\"' + name + '\"]'"
+      result = result.replace "`<svg xmlns=\"${ SVG_NS }\">${ html }</svg>`", "'<svg xmlns=\"' + SVG_NS + '\">' + html + '</svg>'"
+      result = result.replace "`${acc} ${prop}: ${style[prop]};`", "acc + ' ' + prop + ': ' + style[prop] + ';'"
 
       fs.writeFile 'public/js/app.js', result, 'utf8', (err) ->
         console.log 'REPLACING CONSTS W'
@@ -46,8 +52,8 @@ task 'build:js', 'build js', ->
 
 task 'build-min:js', 'build minified js', ['build'], ->
   exec '''
-  uglifyjs public/js/app.js -o public/js/app.min.js
-  cp public/js/app.min.js public/js/app.js
+  node_modules/.bin/buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js
+  node_modules/.bin/uglifyjs public/js/app.es5.js -o public/js/app.js
   '''
 
 task 'build:static', 'build static assets', ->

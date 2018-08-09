@@ -25,7 +25,7 @@
     "autoprefixer": "9.1.0",
     "bebop": "1.15.1",
     "clean-css": "4.2.1",
-    "coffeescript": "1.12.4",
+    "coffeescript": "2.3.1",
     "css-mqpacker": "7.0.0",
     "es-raf": "3.3.1",
     "esmangle": "1.0.1",
@@ -51,11 +51,14 @@
   },
   "dependencies": {
     "akasha": "0.1.10",
-    "astley.js": "0.0.52",
+    "astley.js": "0.0.53",
+    "buble": "^0.19.3",
     "el-controls": "1.2.38",
     "el.js": "2.1.36",
+    "es-object-assign": "^4.1.4",
     "hanzo.js": "2.5.1",
     "referential": "0.5.23",
-    "shop.js": "2.2.51"
+    "shop.js": "2.2.51",
+    "uglify": "0.1.5"
   }
 }

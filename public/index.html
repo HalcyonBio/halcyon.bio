@@ -139,7 +139,7 @@
         <div class="row">
           <div class="col-12">
             <h3> Hit the <span class="fblike"> "Like"</span> button and comment below</h3>
-            <h3 class="loading"><i class="fa fa-spinner fa-spin fa-fw"></i> Loading... </h3><img class="arrow" src="img/new-arrow.png" width="70px"><div class="fb-like-frame"><div class="fb-like" data-colorscheme="dark" data-href="https://www.facebook.com/HalcyonBiotech/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></div>
+            <h3 class="loading"><i class="fa fa-spinner fa-spin fa-fw"></i> Loading...</h3><img class="arrow" src="img/new-arrow.png" width="70px"><div class="fb-like-frame"><div class="fb-like" data-colorscheme="dark" data-href="https://www.facebook.com/HalcyonBiotech/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></div>
 <div class="hm"></div>
             <!-- <div class="fb-comments fb-new" data-colorscheme="dark" data-href="https://neuromethod.halcyon.bio" data-width="100%" data-numposts="50"></div>--><div class="hm"></div>
 <div class="fb-comments" data-colorscheme="dark" data-href="https://halcyon.bio/master-class-videos" data-width="100%" data-numposts="50"></div>
@@ -185,8 +185,12 @@
               </div>
             </div>
             <div class="col-12 opt-in-fields flex-center">
-              <text class="input" bind="email" id="opt-in-email" placeholder="Enter Your Email"></text>
-              <button class="btn btn-opt-in" type="button" id="email-submit" onclick="{ submit }"><i class="fa fa-lg fa-play-circle"></i>  </button>
+              <text class="input" bind="email" id="opt-in-email" placeholder="Enter Your Email">
+                <yield to="123">
+                  <input name="email" type="text" autocomplete="on" placeholder="Enter Your Email">
+                </yield>
+              </text>
+              <button class="btn btn-opt-in" type="button" id="email-submit" onclick="{ submit }"><i class="fa fa-lg fa-play-circle"></i></button>
             </div>
             <p class="disclaimer">We will notify you when each masterclass episode is released. Providing your email gives you unlimited free access to all 4 masterclass episodes.</p><a class="lightbox-close lightbox-close1" style="color: gray !important;" href="#fb"></a>
           </div>

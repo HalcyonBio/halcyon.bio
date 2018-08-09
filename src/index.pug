@@ -8,7 +8,7 @@ block meta
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
   meta(name='msapplication-tap-highlight' content='no')
   meta(property="fb:app_id" content="499421243843386")
-  meta(property="og:image" content="https://neuromethod.halcyon.bio/img/fb-share-preview.jpg")    
+  meta(property="og:image" content="https://neuromethod.halcyon.bio/img/fb-share-preview.jpg")
 
 block content
   section.l-header
@@ -99,7 +99,7 @@ block content
     .row
       .col-12
         h3  Hit the <span class="fblike"> "Like"</span> button and comment below
-        h3.loading <i class="fa fa-spinner fa-spin fa-fw"></i> Loading... 
+        h3.loading <i class="fa fa-spinner fa-spin fa-fw"></i> Loading...
         img.arrow(src="img/new-arrow.png" width="70px")
         <div class="fb-like-frame"><div class="fb-like" data-colorscheme="dark" data-href="https://www.facebook.com/HalcyonBiotech/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></div>
         <div class="hm"></div>
@@ -155,10 +155,12 @@ block content
               .btn-share2-container
                 .btn.btn-share.btn-share2(type='button' onload="document.video-form.email.focus()" target="_blank"
                 href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fab fa-lg fa-facebook-square"></i> Share
-              
+
             .col-12.opt-in-fields.flex-center
               text.input(bind='email' id='opt-in-email' placeholder='Enter Your Email')
-              button.btn.btn-opt-in(type='button' id="email-submit" onclick='{ submit }') <i class="fa fa-lg fa-play-circle"></i>  
+                yield(to='123')
+                  input(name="email" type="text" autocomplete="on" placeholder="Enter Your Email")
+              button.btn.btn-opt-in(type='button' id="email-submit" onclick='{ submit }') <i class="fa fa-lg fa-play-circle"></i>
 
             p.disclaimer We will notify you when each masterclass episode is released. Providing your email gives you unlimited free access to all 4 masterclass episodes.
             <a class="lightbox-close lightbox-close1" style="color: gray !important;" href="#fb"></a>

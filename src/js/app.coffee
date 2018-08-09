@@ -14,6 +14,9 @@ import './shop'
 
 import Shop from 'shop.js/src'
 
+import objectAssign from 'es-object-assign'
+window.objectAssign = objectAssign
+
 El.mount 'price, gallery'
 
 m = Shop.getMediator()
