@@ -25,7 +25,7 @@
     "autoprefixer": "9.1.0",
     "bebop": "1.15.1",
     "clean-css": "4.2.1",
-    "coffeescript": "1.12.4",
+    "coffeescript": "2.3.1",
     "css-mqpacker": "7.0.0",
     "es-raf": "3.3.1",
     "esmangle": "1.0.1",
