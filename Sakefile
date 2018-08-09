@@ -1,4 +1,4 @@
-fs = require 'fs'
+import fs from 'fs'
 
 use 'sake-bundle'
 use 'sake-linked'
