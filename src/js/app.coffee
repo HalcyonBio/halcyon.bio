@@ -14,11 +14,11 @@ import './shop'
 
 import Shop from 'shop.js/src'
 
-El.mount('price, gallery')
+El.mount 'price, gallery'
 
 m = Shop.getMediator()
 
-statusCreated = (res) => { return res.status is 201 }
+statusCreated = (res) -> res.status is 201
 
 client = new Hanzo.Api
 client.addBlueprints 'mailinglist',
