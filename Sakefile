@@ -52,7 +52,7 @@ task 'build:js', 'build js', ->
 
 task 'build-min:js', 'build minified js', ['build'], ->
   exec '''
-  buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js
+  node_modules/.bin/buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js
   node_modules/.bin/uglifyjs public/js/app.es5.js -o public/js/app.js
   '''
 
