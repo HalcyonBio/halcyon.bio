@@ -51,10 +51,32 @@ task 'build:js', 'build js', ->
     console.error err
 
 task 'build:js:min', 'build minified js', ['build:js'], ->
-  exec '''
-  node_modules/.bin/buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js
-  node_modules/.bin/uglifyjs public/js/app.es5.js -o public/js/app.js
-  '''
+  new Promise (resolve, reject)->
+    console.log 'Trying to Build'
+
+    exec '''
+    node_modules/.bin/buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js
+    node_modules/.bin/uglifyjs public/js/app.es5.js -o public/js/app.js
+    '''
+
+
+    buildMin = ->
+      fs.readFile 'public/js/app.js', 'utf8', (err, data)->
+        if err?
+          reject err
+
+        if data.length < 0
+          console.log 'Build Failed Trying to Build'
+          exec '''
+          node_modules/.bin/buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js
+          node_modules/.bin/uglifyjs public/js/app.es5.js -o public/js/app.js
+          '''
+          buildMin()
+
+        console.log 'Build Success'
+        resolve true
+
+    buildMin()
 
 task 'build:static', 'build static assets', ->
   exec '''
