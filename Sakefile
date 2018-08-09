@@ -36,7 +36,7 @@ task 'build:js', 'build js', ->
       return console.log(err) if (err)
 
       result = data.replace /const /g, 'var '
-      result = result.replace /'use strict';/g, ''
+      result = result.replace /const\n/g, 'var\n'
 
       fs.writeFile 'public/js/app.js', result, 'utf8', (err) ->
         console.log 'REPLACING CONSTS W'
