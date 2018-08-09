@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/hanzoai/ecommerce-boilerplate#readme",
   "devDependencies": {
-    "autoprefixer": "9.0.1",
+    "autoprefixer": "9.1.0",
     "bebop": "1.15.1",
-    "clean-css": "4.1.11",
+    "clean-css": "4.2.1",
     "coffeescript": "2.3.1",
     "css-mqpacker": "7.0.0",
     "es-raf": "3.3.1",
