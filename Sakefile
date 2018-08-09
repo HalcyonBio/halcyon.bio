@@ -14,10 +14,10 @@ use 'sake-publish',
 
 task 'build', 'build project', ['build:static', 'build:js']
 
-task 'build-min', 'build minified project', ['build:static', 'build-min:js']
+task 'build:min', 'build minified project', ['build:static', 'build:js:min']
 
 task 'build:js', 'build js', ->
-  return if (running 'build')
+  return if (running 'build:js')
 
   bundle.write
     entry:    'src/js/app.coffee'
@@ -50,7 +50,7 @@ task 'build:js', 'build js', ->
   .catch (err) ->
     console.error err
 
-task 'build-min:js', 'build minified js', ['build'], ->
+task 'build:js:min', 'build minified js', ['build:js'], ->
   exec '''
   node_modules/.bin/buble public/js/app.js --objectAssign=objectAssign -o public/js/app.es5.js
   node_modules/.bin/uglifyjs public/js/app.es5.js -o public/js/app.js
