@@ -6119,6 +6119,11 @@ a.lightbox img{
     font-size:25px;
   }
 }
+@media screen and (max-width: 565px){
+  #launch-videos .col-thumb .vid-coming-soon{
+    display:none;
+  }
+}
 @media screen and (max-width: 367px){
   #launch-videos .launch-squeeze-form{
     margin-bottom:5px;
