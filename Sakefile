@@ -37,6 +37,12 @@ task 'build:js', 'build js', ->
 
       result = data.replace /const /g, 'var '
       result = result.replace /const\n/g, 'var\n'
+      result = result.replace "`__${mixins_id++}__`", "'__' + (mixins_id++) + '__'"
+      result = result.replace "`Unregistered mixin: ${ name }`", "'Unregistered mixin: ' + name"
+      result = result.replace "`__${mixins_id++}__`", "'__' + (mixins_id++) + '__'"
+      result = result.replace "`,[${IS_DIRECTIVE}=\"${name}\"]`", "',[' + IS_DIRECTIVE + '=\"' + name + '\"]'"
+      result = result.replace "`<svg xmlns=\"${ SVG_NS }\">${ html }</svg>`", "'<svg xmlns=\"' + SVG_NS + '\">' + html + '</svg>'"
+      result = result.replace "`${acc} ${prop}: ${style[prop]};`", "acc + ' ' + prop + ': ' + style[prop] + ';'"
 
       fs.writeFile 'public/js/app.js', result, 'utf8', (err) ->
         console.log 'REPLACING CONSTS W'
