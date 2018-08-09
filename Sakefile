@@ -80,4 +80,3 @@ task 'start', 'start server', ['build'], ->
   exec '''
     coffee ./server.coffee
   '''
-
