@@ -55,6 +55,7 @@
     "buble": "^0.19.3",
     "el-controls": "1.2.38",
     "el.js": "2.1.36",
+    "es-object-assign": "^4.1.4",
     "hanzo.js": "2.5.1",
     "referential": "0.5.23",
     "shop.js": "2.2.51",
