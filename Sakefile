@@ -28,7 +28,7 @@ task 'build:js', 'build js', ->
     external: false
     compilers:
       coffee:
-        version: 2
+        version: 1
   .then ->
     console.log 'REPLACING CONSTS'
     fs.readFile 'public/js/app.js', 'utf8', (err,data)->
