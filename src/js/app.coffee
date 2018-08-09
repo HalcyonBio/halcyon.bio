@@ -14,7 +14,7 @@ import './shop'
 
 import Shop from 'shop.js/src'
 
-El.mount('price, gallery')
+El.mount 'price, gallery'
 
 m = Shop.getMediator()
 

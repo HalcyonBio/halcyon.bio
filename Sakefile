@@ -1,4 +1,4 @@
-fs = require 'fs'
+import fs from 'fs'
 
 use 'sake-bundle'
 use 'sake-linked'
@@ -41,7 +41,6 @@ task 'build:js', 'build js', ->
       fs.writeFile 'public/js/app.js', result, 'utf8', (err) ->
         console.log 'REPLACING CONSTS W'
         return console.log(err) if (err)
-
   .catch (err) ->
     console.error err
 
@@ -62,7 +61,10 @@ task 'build:static', 'build static assets', ->
     bebop compile'
   '''
 
-task 'watch', 'watch for changes and rebuild project', ['build:js', 'watch:js', 'watch:static']
+task 'watch', 'watch for changes and rebuild project', [
+  'build:js',
+  'watch:js',
+  'watch:static']
 
 task 'watch:js', 'watch js for changes and rebuild', ->
   build = (filename) ->
