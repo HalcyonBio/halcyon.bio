@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "akasha": "0.1.10",
-    "astley.js": "0.0.52",
+    "astley.js": "0.0.53",
     "buble": "^0.19.3",
     "el-controls": "1.2.38",
     "el.js": "2.1.36",
