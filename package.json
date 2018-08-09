@@ -56,6 +56,7 @@
     "el.js": "2.1.36",
     "hanzo.js": "2.5.1",
     "referential": "0.5.23",
-    "shop.js": "2.2.51"
+    "shop.js": "2.2.51",
+    "uglify": "0.1.5"
   }
 }
