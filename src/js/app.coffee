@@ -24,7 +24,7 @@ client = new Hanzo.Api
 client.addBlueprints 'mailinglist',
   subscribe:
     method: 'POST'
-    url:    (x) -> "/mailinglist/#{x.mailinglistId ? x}/subscribe"
+    url:    (x) -> '/mailinglist/' + (x.mailinglistId ? x) + '/subscribe'
     expects: statusCreated
 
 El.mount 'launch-squeeze-form, video-form',
