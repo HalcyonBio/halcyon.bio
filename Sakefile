@@ -28,7 +28,7 @@ task 'build:js', 'build js', ->
     external: false
     compilers:
       coffee:
-        version: 1
+        version: 2
   .then ->
     console.log 'REPLACING CONSTS'
     fs.readFile 'public/js/app.js', 'utf8', (err,data)->
@@ -62,7 +62,10 @@ task 'build:static', 'build static assets', ->
     bebop compile'
   '''
 
-task 'watch', 'watch for changes and rebuild project', ['build:js', 'watch:js', 'watch:static']
+task 'watch', 'watch for changes and rebuild project', [
+  'build:js',
+  'watch:js',
+  'watch:static']
 
 task 'watch:js', 'watch js for changes and rebuild', ->
   build = (filename) ->
