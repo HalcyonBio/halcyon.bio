@@ -14,6 +14,7 @@ block content
             h3(if='{ isAffiliate() }') Commission Earned: { renderCurrency('usd', parseInt((data.get('user.transactions.points.balance') || 0) * .15), 10)}
             h3 Your Link:
             copy.input(text='{ ()=>{return "https://" + window.location.host + "#" + data.get("user.referrers.0.id")} }')
+              button.input(onclick='{ copy }') Copy
             div(if='{ isAffiliate() }') Thanks for being a part of the Halcyon Ambassador Team. For specific digital assets please reach out to your account manager.
 
             div(if='{ !isAffiliate() }') Normal Stuff Here
