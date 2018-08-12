@@ -91,6 +91,16 @@
   .btn-share1
     background-color: #fffc;
     width: 48%
+    background-color: rgba(5,6,57,0.8)
+    border: 3px solid #fff;
+    font-weight: bold;
+    .fab
+      color: rgba(255, 255,255,0.8)
+      &:hover
+      &:focus
+        color: white
+    &:hover
+      background-color: #324bd4 !important
   .btn-share2-container
     width: 100%;
     max-width: 365px;
@@ -98,7 +108,16 @@
     background-color: rgb(101, 97, 97);
     margin-bottom: 4px;
     width: 48.5%
-
+    color: rgba(5,6,57,0.8) !important
+    .fab
+      color: rgba(5,6,57,0.8)
+      &:hover
+      &:focus
+        color: #324bd4
+    &:hover
+    &:focus
+      border-color: #324bd4 !important
+      color: #324bd4 !important
   .btn-share
     font-family: 'Open Sans', sans-serif
     -webkit-appearance: none;
@@ -113,18 +132,12 @@
     border-radius: 0;
     -webkit-border-radius: 0;
     height: 40px
-    color: rgba(5,6,57,0.8) !important
-    &:hover
-    &:focus
-      border-color: #324bd4 !important
-      color: #324bd4 !important
 
-    .fab
-      color: rgba(5,6,57,0.8)
 
-      &:hover
-      &:focus
-        color: #324bd4
+
+
+
+
   .btn-trailer, .btn-opt-in
       font-family: 'Open Sans', sans-serif
       border: 3px solid rgba(247, 108, 17, 0.9);
@@ -382,6 +395,17 @@
   .hm
   .fb-new
     display:none;
+  .vlns
+    color: #2b2f3e;
+    a
+      color: #2b2f3e !important;
+    .vl-sc
+      a
+        color: #fff !important;
+    button
+      background-color: black
+    b
+      color: rgb(102, 102, 102)
 #launch-video-4
   .title
     color: $hBlue2

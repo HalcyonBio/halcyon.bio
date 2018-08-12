@@ -4039,6 +4039,13 @@ footer .footer-bottom > *{
   margin-bottom:10vh;
   text-align:center;
 }
+#account .input button{
+  max-width:150px;
+  margin-top:4px;
+  box-shadow:none;
+  background-color:#304191;
+  color:#fff;
+}
 #account .copy-text{
   display:none;
 }
@@ -4965,6 +4972,19 @@ iframe.fb_ltr{
 #launch-videos .btn-share1{
   background-color:rgba(255,255,255,0.8);
   width:48%;
+  background-color:rgba(5,6,57,0.8);
+  border:3px solid #fff;
+  font-weight:bold;
+}
+#launch-videos .btn-share1 .fab{
+  color:rgba(255,255,255,0.8);
+}
+#launch-videos .btn-share1 .fab:hover,
+#launch-videos .btn-share1 .fab:focus{
+  color:#fff;
+}
+#launch-videos .btn-share1:hover{
+  background-color:#324bd4 !important;
 }
 #launch-videos .btn-share2-container{
   width:100%;
@@ -4974,6 +4994,19 @@ iframe.fb_ltr{
   background-color:#656161;
   margin-bottom:4px;
   width:48.5%;
+  color:rgba(5,6,57,0.8) !important;
+}
+#launch-videos .btn-share2 .fab{
+  color:rgba(5,6,57,0.8);
+}
+#launch-videos .btn-share2 .fab:hover,
+#launch-videos .btn-share2 .fab:focus{
+  color:#324bd4;
+}
+#launch-videos .btn-share2:hover,
+#launch-videos .btn-share2:focus{
+  border-color:#324bd4 !important;
+  color:#324bd4 !important;
 }
 #launch-videos .btn-share{
   font-family:'Open Sans', sans-serif;
@@ -4987,19 +5020,6 @@ iframe.fb_ltr{
   border-radius:0;
   -webkit-border-radius:0;
   height:40px;
-  color:rgba(5,6,57,0.8) !important;
-}
-#launch-videos .btn-share:hover,
-#launch-videos .btn-share:focus{
-  border-color:#324bd4 !important;
-  color:#324bd4 !important;
-}
-#launch-videos .btn-share .fab{
-  color:rgba(5,6,57,0.8);
-}
-#launch-videos .btn-share .fab:hover,
-#launch-videos .btn-share .fab:focus{
-  color:#324bd4;
 }
 #launch-videos .btn-trailer,
 #launch-videos .btn-opt-in{
@@ -5271,6 +5291,21 @@ iframe.fb_ltr{
 #launch-videos .hm,
 #launch-videos .fb-new{
   display:none;
+}
+#launch-videos .vlns{
+  color:#2b2f3e;
+}
+#launch-videos .vlns a{
+  color:#2b2f3e !important;
+}
+#launch-videos .vlns .vl-sc a{
+  color:#fff !important;
+}
+#launch-videos .vlns button{
+  background-color:#000;
+}
+#launch-videos .vlns b{
+  color:#666;
 }
 #launch-video-4 .title{
   color:#304191;
