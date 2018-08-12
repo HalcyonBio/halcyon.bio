@@ -4985,6 +4985,7 @@ iframe.fb_ltr{
 }
 #launch-videos .btn-share1:hover{
   background-color:#324bd4 !important;
+  border:3px solid #fff !important;
 }
 #launch-videos .btn-share2-container{
   width:100%;
