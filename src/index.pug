@@ -27,8 +27,6 @@ block content
         .col-12.flex-center.header-img.lightbox-target#neuromethodtrailer
           
           .trailer-container
-            .thank-you
-              h5 You're all set for the masterclass, the first video is coming to you soon - enjoy the trailer!
             .trailer-view
               <iframe src="https://www.youtube.com/embed/71fptRWCwuQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           .vid-container
@@ -43,6 +41,30 @@ block content
               |Teaches
               |
               | Brain Performance
+    video-form.main-optin
+            
+            .row.flex-center#thank-you.lightbox-target3
+              .col-12.cta
+                h4 Get #[strong free] access to the masterclass video series taught by one of the world’s greatest minds.
+                p.cta-p Enter your email below now to save your spot - space is limited!
+                
+
+              .col-12.opt-in-fields-main.flex-center
+                
+
+                text.input(bind='email' id='opt-in-email' placeholder='Enter Your Email')
+                  yield(to='123')
+                    input(name="email" type="text" autocomplete="on" placeholder="Enter Your Email")
+                button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') <i class="fa fa-lg fa-play-circle"></i> GET ACCESS
+              .thank-you
+                h5 You're all set for the masterclass, the first video is coming to you soon. 
+                h3 Help spread the word and get entered to win a #[strong free] 1-on-1 training session with Ronnie! #[strong Click Below]
+                button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') <i class="fab fa-facebook-square"></i> Share to Win <i class="fab fa-twitter-square"></i>
+              p.disclaimer.disclaimer-main 
+                | We will notify you when each masterclass episode is released. 
+                br
+                | Providing your email gives you unlimited free access to all 4 masterclass episodes.
+              
 
     .container.thumb
       .row.flex-center

@@ -21,7 +21,7 @@ export class VideoForm extends El.Form
         @submited = true
         akasha.set 'submited', true
         @setupRedirects()
-        window.location.hash = '#neuromethodtrailer'
+        window.location.hash = '#thank-you'
 
         @scheduleUpdate()
       # .catch (e)->

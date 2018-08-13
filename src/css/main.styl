@@ -51,7 +51,10 @@ header
     margin-top: 60px
   padding-left: 0px !important
   padding-right: 0px !important
-  margin-bottom: 110px
+  // margin-bottom: 110px oldoptin
+  margin-bottom: 45px
+  @media screen and (max-width:420px)
+    margin-bottom: 100px;
   .header-img
     padding-left: 0px
     padding-right: 0px
@@ -60,19 +63,6 @@ header
     height: 100%;
     @media screen and (max-width:420px)
       margin-top: 40px;
-    .thank-you
-      display:none
-      z-index: 999
-      position:relative;
-      top: 16px;
-      @media screen and (max-width:350px)
-        padding: 10px
-        background-color: rgba(0,0,0,.7)
-        padding: 20px
-        -webkit-animation: fade-out 2s ease-out 2s both
-        animation: fade-out 2s ease-out 2s both
-      h5
-        text-align: center;
     .trailer-container
       height: 56.25vw;
       .trailer-view
