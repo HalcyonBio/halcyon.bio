@@ -4937,7 +4937,7 @@ iframe.fb_ltr{
 #launch-videos .title-top-container{
   z-index:9999;
   font-family:Palatino;
-  background-color:rgba(0,0,0,0.502);
+  background-color:rgba(0,0,0,0.7);
   padding:5px;
   position:fixed;
   top:0px;
@@ -6266,15 +6266,18 @@ a.lightbox img{
     max-width:300px;
   }
 }
-@media screen and (max-width: 576px){
-  #launch-videos .opt-in h4{
-    font-size:1.2rem;
-  }
-}
 @media screen and (min-width: 420px){
+  #launch-videos .main-optin .cta{
+    padding-top:80px;
+  }
   #launch-videos .col-thumb p{
     right:8px;
     font-size:25px;
+  }
+}
+@media screen and (max-width: 576px){
+  #launch-videos .opt-in h4{
+    font-size:1.2rem;
   }
 }
 @media screen and (max-width: 565px){
