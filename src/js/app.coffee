@@ -48,3 +48,6 @@ $(window).on 'scroll', ->
     $('.scrolling-show').addClass 'show'
   else
     $('.scrolling-show').removeClass 'show'
+
+  $('.close-scrolling-show').on 'click', ->
+    $('.scrolling-show').hide()
