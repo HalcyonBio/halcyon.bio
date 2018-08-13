@@ -92,10 +92,9 @@
     background-color: #fffc;
     width: 48%
     background-color: rgba(5,6,57,0.8)
-    border: 2px solid gray;
-    color: gray !important;
-    font-size: .8rem;
-    padding: 10px;
+    border: 3px solid #c3c1c1;
+    color: #cfcfcf !important;
+
     .fab
       color: white
       &:hover
@@ -183,7 +182,9 @@
       background-color: $hBlue2
       width: 100%
       margin-left: 0px;
-
+      color: #d7d7d7;
+      .fa
+        color: #d7d7d7;
   .t360
     color: $hOrange
   .name
@@ -262,7 +263,7 @@
       text-align: center;
       @media screen and (min-width:420px)
         padding-top: 80px
-      
+
       h4
         text-transform: uppercase;
         font-size: 1.25rem
@@ -280,7 +281,9 @@
         margin-bottom:0px
     .btn-opt-in
       height: 60px
-      font-size: 1.5rem
+      font-size: 1.35rem
+      @media screen and (max-width:420px)
+        font-size: 1.2rem
   .opt-in
     //top: 50%;
     top: 53px
