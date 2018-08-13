@@ -40,3 +40,12 @@ window.addToCart = (productId, number)->
   m.trigger 'checkout-open'
 
 window?.$ = $
+
+$(window).on 'scroll', ->
+  top = $(@).scrollTop()
+  test = 100
+  if top >= test
+    $('.scrolling-show').addClass 'show'
+  else
+    $('.scrolling-show').removeClass 'show'
+

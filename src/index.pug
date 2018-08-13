@@ -25,7 +25,7 @@ block content
     .container-fluid.l-vid
       video-form.row.flex-center
         .col-12.flex-center.header-img.lightbox-target#neuromethodtrailer
-          
+
           .trailer-container
             .trailer-view
               <iframe src="https://www.youtube.com/embed/71fptRWCwuQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -42,29 +42,29 @@ block content
               |
               | Brain Performance
     video-form.main-optin
-            
+
             .row.flex-center#thank-you.lightbox-target3
               .col-12.cta
                 h4 Get access to the masterclass video series taught by one of the world’s greatest minds.
                 p.cta-p Enter your email below now to save your spot - space is limited.
-                
+
 
               .col-12.opt-in-fields-main.flex-center
-                
+
 
                 text.input(bind='email' id='opt-in-email' placeholder='enter your email')
                   yield(to='123')
                     input(name="email" type="text" autocomplete="on" placeholder="enter your email")
                 button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') FREE MASTERCLASS <i class="fa fa-lg fa-play-circle"></i>
               .thank-you
-                h5 You're all set for the masterclass, the first video is coming to you soon. 
+                h5 You're all set for the masterclass, the first video is coming to you soon.
                 h3 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
                 button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
-              p.disclaimer.disclaimer-main 
-                | We will notify you when each masterclass episode is released. 
+              p.disclaimer.disclaimer-main
+                | We will notify you when each masterclass episode is released.
                 br
                 | Providing your email gives you unlimited free access to all 4 masterclass episodes.
-              
+
 
     .container.thumb
       .row.flex-center
@@ -216,10 +216,12 @@ block content
     js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=499421243843386&autoLogAppEvents=1';
     fjs.parentNode.insertBefore(js, fjs); }
     (document, 'script', 'facebook-jssdk'));
-    
+
   div#viral-loops
     script.
       !function(a,b,c,d,t){var e,f=a.getElementsByTagName("head")[0];if(!a.getElementById(c)){if(e=a.createElement(b),e.id=c,e.setAttribute("data-vrlps-ucid",d),e.setAttribute("data-vrlps-version","2"), e.setAttribute("data-vrlps-template", t),e.src="https://app.viral-loops.com/popup_assets/js/vl_load_v2.min.js",window.ub){jQuery=null,$=null;var g=a.createElement(b);g.src="https://code.jquery.com/jquery-2.2.4.min.js",f.appendChild(g)}f.appendChild(e);var h=a.createElement("link");h.rel="stylesheet",h.type="text/css",h.href="https://app.viral-loops.com/static/vl-loader.css",f.appendChild(h);var i=a.createElement("div");i.id="vl-overlay",i.style.display="none";var j=a.createElement("div");j.id="vl-loader",i.appendChild(j),a.addEventListener("DOMContentLoaded",function(b){a.body.appendChild(i);for(var c=a.getElementsByClassName("vrlps-trigger"),d=0;d<c.length;d++)c[d].removeAttribute("href"),c[d].onclick=function(){a.getElementById("vl-overlay").style.display="block"};var e=a.querySelectorAll("[data-vl-widget='popupTrigger']");[].forEach.call(e,function(b){var c=a.createElement("div");c.className="vl-embedded-cta-loader",b.appendChild(c)})})}}(document,"script","vrlps-js","_FUZaZo3McnD1eiLnYdZwty6qJ0","sweepstake");
+
+  .container.scrolling-show
 
 block header
 block footer
