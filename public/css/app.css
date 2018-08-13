@@ -4961,8 +4961,10 @@ iframe.fb_ltr{
   background-color:rgba(255,255,255,0.8);
   width:48%;
   background-color:rgba(5,6,57,0.8);
-  border:3px solid #fff;
-  font-weight:bold;
+  border:2px solid #808080;
+  color:#808080 !important;
+  font-size:0.8rem;
+  padding:10px;
 }
 #launch-videos .btn-share1 .fab{
   color:#fff;
@@ -5142,6 +5144,13 @@ iframe.fb_ltr{
   max-width:767px;
   text-align:center;
 }
+#launch-videos .main-optin .cta h4{
+  text-transform:uppercase;
+  font-size:1.25rem;
+}
+#launch-videos .main-optin .cta p{
+  font-size:0.9rem;
+}
 #launch-videos .main-optin input{
   background-color:#fff;
   border:2px solid #ddd;
@@ -5175,6 +5184,7 @@ iframe.fb_ltr{
 #launch-videos .disclaimer-main{
   max-width:900px;
   font-size:0.9rem;
+  padding-top:1rem;
 }
 #launch-videos .thumb{
   margin-top:40px;
@@ -5357,6 +5367,7 @@ iframe.fb_ltr{
 }
 #launch-videos .thank-you h3{
   color:#e6e4e4;
+  text-transform:uppercase;
 }
 #launch-video-4 .title{
   color:#304191;
@@ -6019,6 +6030,7 @@ a.lightbox img{
   }
   #launch-videos .main-optin input{
     font-size:1rem;
+    margin-bottom:0px;
   }
   #launch-videos .fb-new{
     margin-top:-58px;
@@ -6257,12 +6269,6 @@ a.lightbox img{
 @media screen and (max-width: 576px){
   #launch-videos .opt-in h4{
     font-size:1.2rem;
-  }
-  #launch-videos .disclaimer{
-    font-size:1rem;
-  }
-  #launch-videos{
-    font-size:0.85rem;
   }
 }
 @media screen and (min-width: 420px){

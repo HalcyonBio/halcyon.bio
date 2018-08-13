@@ -92,8 +92,10 @@
     background-color: #fffc;
     width: 48%
     background-color: rgba(5,6,57,0.8)
-    border: 3px solid #fff;
-    font-weight: bold;
+    border: 2px solid gray;
+    color: gray !important;
+    font-size: .8rem;
+    padding: 10px;
     .fab
       color: white
       &:hover
@@ -258,6 +260,11 @@
     .cta
       max-width: 767px
       text-align: center;
+      h4
+        text-transform: uppercase;
+        font-size: 1.25rem
+      p
+        font-size: .9rem;
     input
       background-color: white
       border: 2px solid rgb(221, 221, 221);
@@ -267,6 +274,7 @@
       color: black
       @media screen and (max-width:420px)
         font-size: 1rem
+        margin-bottom:0px
     .btn-opt-in
       height: 60px
       font-size: 1.5rem
@@ -289,13 +297,12 @@
     padding-bottom: 4px
     margin: 0 auto;
     font-size: 1.2rem
-    @media screen and (max-width:576px)
-      font-size: 1rem
+
   .disclaimer-main
       max-width: 900px
       font-size: .9rem
-    @media screen and (max-width:576px)
-      font-size: .85rem
+      padding-top: 1rem;
+
   .thumb
     margin-top: 40px;
     // margin-top:10px oldoptin
@@ -473,6 +480,7 @@
       color: lightgray
     h3
       color: #e6e4e4;
+      text-transform: uppercase;
 
 #launch-video-4
   .title
