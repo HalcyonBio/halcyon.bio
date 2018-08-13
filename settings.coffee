@@ -1,11 +1,11 @@
 url = 'http://neuromethod.halcyon.bio'
 
 name = """
-  Halcyon | Neuromethod360 masterclass with Ron White
+  Halcyon | Neuromethod360 Masterclass With Ron White
   """
 
 description = """
-  Neuromethod360 masterclass with Ron White
+  Neuromethod360 Masterclass With Ron White
   """
 
 twitter =
