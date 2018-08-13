@@ -43,9 +43,8 @@ window?.$ = $
 
 $(window).on 'scroll', ->
   top = $(@).scrollTop()
-  test = 100
+  test = 3700
   if top >= test
     $('.scrolling-show').addClass 'show'
   else
     $('.scrolling-show').removeClass 'show'
-
