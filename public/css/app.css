@@ -5334,7 +5334,7 @@ iframe.fb_ltr{
 #launch-videos .fb-like-frame{
   background-color:#0f1033;
   position:relative;
-  z-index:10;
+  z-index:12;
 }
 #launch-videos .loading{
   height:80px;
@@ -5342,6 +5342,7 @@ iframe.fb_ltr{
   padding-top:20px;
   text-align:center;
   z-index:11;
+  position:relative;
 }
 #launch-videos .fb-like{
   background-color:#0f1033;
@@ -6072,7 +6073,7 @@ a.lightbox img{
 }
 @media screen and (max-width: 420px){
   .l-vid{
-    margin-bottom:100px;
+    margin-bottom:110px;
   }
   .l-vid .header-img{
     margin-top:60px;
