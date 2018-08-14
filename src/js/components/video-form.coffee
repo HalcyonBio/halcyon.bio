@@ -50,12 +50,12 @@ export class VideoForm extends El.Form
 
       requestAnimationFrame =>
         if window.location.hash == '#optincta'
-          $(@root).find('input[name="email"]').focus()
+          $(@root).find('.main-optin input[name="email"]').focus()
 
       window.addEventListener 'hashchange', =>
         requestAnimationFrame =>
           if window.location.hash == '#optincta'
-            $(@root).find('input[name="email"]').focus()
+            $(@root).find('.main-optin input[name="email"]').focus()
 
       $(@root).find('input[name="email"]').on 'keypress', (e) =>
         @submit() if e.keyCode is 13
