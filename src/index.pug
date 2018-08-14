@@ -11,7 +11,7 @@ block meta
   meta(property="og:image" content="https://neuromethod.halcyon.bio/img/fb-share-preview.jpg")
 
 block content
-  section.l-header
+  video-form.l-header
     .container
       .row
         .col-12.title
@@ -23,7 +23,7 @@ block content
               button.btn.btn-trailer(type='button' onclick="location.href='#neuromethodtrailer' ")  <i class="fa fa-lg fa-play-circle"></i>
 
     .container-fluid.l-vid
-      video-form.row.flex-center
+      .row.flex-center
         .col-12.flex-center.header-img.lightbox-target#neuromethodtrailer
 
           .trailer-container
@@ -41,8 +41,8 @@ block content
               |Teaches
               |
               | Brain Performance
-          
-    video-form.main-optin(if='{ !submited }')
+
+    .main-optin(if='{ !submited }')
 
             .row.flex-center#thank-you.lightbox-target3
               .col-12.cta
@@ -70,7 +70,7 @@ block content
     .container.thumb
       .row.flex-center
         .col-3.col-thumb
-          a(href='#episode-one')
+          a(href='#optincta' onclick='{ showVideo(1) }')
             h6.vid-desc-wrapper.vid-coming-soon COMING SOON
             p 1
             img(src="/img/vid-1-thumb.jpg")

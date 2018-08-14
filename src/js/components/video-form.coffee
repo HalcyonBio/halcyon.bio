@@ -9,7 +9,8 @@ export class VideoForm extends El.Form
   configs:
     'email': [isRequired, isEmail]
 
-  submited: false
+  submited:    false
+  videoToShow: 0
 
   _submit: ->
     opts =
@@ -21,7 +22,9 @@ export class VideoForm extends El.Form
         @submited = true
         akasha.set 'submited', true
         @setupRedirects()
-        window.location.hash = '#thank-you'
+        switch @videoToShow
+          when 0 then window.location.hash = '#thank-you'
+          when 1 then window.location.hash = '#episode-one'
 
         @scheduleUpdate()
       # .catch (e)->
@@ -59,5 +62,9 @@ export class VideoForm extends El.Form
       requestAnimationFrame ->
         window.location.hash = '#episode-one'
       return false
+
+  showVideo: (n)->
+    return () =>
+      @videoToShow = n
 
 VideoForm.register()
