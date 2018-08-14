@@ -760,6 +760,9 @@ margin: 94px 20px 20px 20px;
 display: none
 
 }
+.video-one-target
+  display:none
+  padding-top: 110px
 
 .lightbox-target2 {
 position: fixed;
@@ -782,6 +785,8 @@ z-index: 9999;
 display: block
 // z-index: 9999;
 }
+.video-one-target:target
+  display: block
 .lightbox-target2:target  {
 opacity: 1;
 top: 0;
@@ -825,7 +830,6 @@ display:none
   .popover-optin
     top: 50%;
     position: absolute;
-    transform: translateY(-50%);
-
+    transform: translateY(-50%)
   .show
     display: none;
