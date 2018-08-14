@@ -9,7 +9,7 @@ export class VideoForm extends El.Form
   configs:
     'email': [isRequired, isEmail]
 
-  submited:    false
+  submitted:    false
   videoToShow: 0
 
   _submit: ->
@@ -19,8 +19,8 @@ export class VideoForm extends El.Form
 
     @client.mailinglist.subscribe opts
       .finally =>
-        @submited = true
-        akasha.set 'submited', true
+        @submitted = true
+        akasha.set 'submitted', true
         @setupRedirects()
         switch @videoToShow
           when 0 then window.location.hash = '#thank-you'
@@ -37,15 +37,15 @@ export class VideoForm extends El.Form
 
   init: ->
     super arguments...
-    @submited = !!(akasha.get 'submited')
+    @submitted = !!(akasha.get 'submitted')
 
     @on 'mount', =>
       $(@root).addClass 'ready'
 
-      if @submited
+      if @submitted
         @setupRedirects()
 
-      if window.location.hash == '#episode-one' && !@submited
+      if window.location.hash == '#episode-one' && !@submitted
         window.location.hash = ''
 
       requestAnimationFrame =>

@@ -43,7 +43,7 @@ block content
               | Brain Performance
 
     .main-optin
-
+            // (if='{ !submitted }') added to hide if it has been submitted
             .row.flex-center#thank-you.lightbox-target3
               .col-12.cta
                 h4 Get access to the free masterclass video series taught by one of the world’s greatest minds.
@@ -178,7 +178,7 @@ block content
 
       .col-md-1
 
-  video-form.lightbox-target2#neuromethodtrailer.overlay-opt-in(if='{ !submited }')
+  video-form.lightbox-target2#neuromethodtrailer.overlay-opt-in(if='{ !submitted }')
         .opt-in
           // h4 Enter your email address to watch the trailer
           .row.flex-center
