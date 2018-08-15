@@ -24,10 +24,10 @@ m = Shop.getMediator()
 statusCreated = (res) -> res.status is 201
 
 client = new Hanzo.Api
-client.addBlueprints 'mailinglist',
+client.addBlueprints 'form',
   subscribe:
     method: 'POST'
-    url:    (x) -> "/mailinglist/#{x.mailinglistId ? x}/subscribe"
+    url:    (x) -> "/form/#{x.formId ? x}/subscribe"
     expects: statusCreated
 
 El.mount 'launch-squeeze-form, video-form',

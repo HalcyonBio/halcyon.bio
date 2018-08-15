@@ -17,6 +17,7 @@ settings =
     id: 'gQtb0m4FprDyN'
 
 m = Shop.start settings
+data = Shop.getData()
 
 $('.add-to-cart button').on 'click', (e)->
   m.trigger 'checkout-open'
@@ -44,6 +45,7 @@ if window.location.pathname.indexOf('signup') >= 0
   m.on 'register-failed', ->
 
 if window.location.pathname.indexOf('partner') >= 0
+  data.set 'user.formId','79ugEK4juG8m1X'
   m.on 'register', ->
   m.on 'register-success', ->
     window.location.replace 'account'
