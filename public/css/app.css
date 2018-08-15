@@ -6101,6 +6101,9 @@ a.lightbox img{
   #launch-videos .title h2{
     font-size:1.5rem;
   }
+  #launch-videos .thank-you h3{
+    font-size:1.5rem;
+  }
 }
 @media screen and (min-width: 520px){
   .l-vid .mobile{
