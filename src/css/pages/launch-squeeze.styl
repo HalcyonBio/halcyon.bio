@@ -689,12 +689,27 @@ text-align: center;
 /* Styles the close link, adds the slide down transition */
 a.lightbox-close1
   left: 44.5%;
+  top: -9px
   @media screen and (max-width:500px)
     left: auto
-
-a.lightbox-close2 {
+  @media screen and (max-width:767px)
+    right: 0px
+    bottom: 105%;
+    top: auto
+a.lightbox-close-trailer
+  right: -80px
+  top: 80px
+  position: absolute;
+  @media screen and (max-width:767px)
+    right: -10px
+    top: 50px
+a.lightbox-close2
   top: 10px;right: 10px;
-}
+  top: -9px
+  @media screen and (max-width:767px)
+    right: 0px
+    bottom: 105%;
+    top: auto
 a.lightbox-close
   display: block;
   width:50px;
@@ -704,49 +719,50 @@ a.lightbox-close
   color: gray;
   text-decoration: none;
   position: absolute;
-  top: -9px
+
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  @media screen and (max-width:767px)
-    right: 0px
-    bottom: 105%;
-    top: auto
+
 
 /* Provides part of the "X" to eliminate an image from the close link */
 
-a.lightbox-close:before {
-content: "";
-display: block;
-height: 46px;
-width: 3px;
-background: #6f6c6c;
-position: absolute;
-left: 26px;
-top:10px;
--webkit-transform:rotate(45deg);
--moz-transform:rotate(45deg);
--o-transform:rotate(45deg);
-transform:rotate(45deg);
-}
+a.lightbox-close:before
+  content: "";
+  display: block;
+  height: 46px;
+  width: 3px;
+  background: #6f6c6c;
+  position: absolute;
+  left: 26px;
+  top:10px;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+  .lct
+    @media screen and (max-width:767px)
+      height:36px
 
 /* Provides part of the "X" to eliminate an image from the close link */
 
-a.lightbox-close:after {
-content: "";
-display: block;
-height: 46px;
-width: 3px;
-background: #6f6c6c;
-position: absolute;
-left: 26px;
-top:10px;
--webkit-transform:rotate(-45deg);
--moz-transform:rotate(-45deg);
--o-transform:rotate(-45deg);
-transform:rotate(-45deg);
-}
+a.lightbox-close:after
+  content: "";
+  display: block;
+  height: 46px;
+  width: 3px;
+  background: #6f6c6c;
+  position: absolute;
+  left: 26px;
+  top:10px;
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  .lct
+    @media screen and (max-width:767px)
+      height:36px
 
 /* Styles the thumbnail */
 

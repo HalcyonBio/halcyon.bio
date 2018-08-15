@@ -5558,10 +5558,17 @@ html{
 }
 a.lightbox-close1{
   left:44.5%;
+  top:-9px;
+}
+a.lightbox-close-trailer{
+  right:-80px;
+  top:80px;
+  position:absolute;
 }
 a.lightbox-close2{
   top:10px;
   right:10px;
+  top:-9px;
 }
 a.lightbox-close{
   display:block;
@@ -5572,7 +5579,6 @@ a.lightbox-close{
   color:#808080;
   text-decoration:none;
   position:absolute;
-  top:-9px;
   transition:0.5s ease-in-out;
 }
 a.lightbox-close:before{
@@ -6026,10 +6032,25 @@ a.lightbox img{
   #launch-squeeze .disclaimer{
     padding-bottom:20px;
   }
-  a.lightbox-close{
+  a.lightbox-close1{
     right:0px;
     bottom:105%;
     top:auto;
+  }
+  a.lightbox-close-trailer{
+    right:-10px;
+    top:50px;
+  }
+  a.lightbox-close2{
+    right:0px;
+    bottom:105%;
+    top:auto;
+  }
+  a.lightbox-close:before .lct{
+    height:36px;
+  }
+  a.lightbox-close:after .lct{
+    height:36px;
   }
 }
 @media screen and (min-width: 767px){
