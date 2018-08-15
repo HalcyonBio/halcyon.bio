@@ -46,7 +46,7 @@ export class VideoForm extends El.Form
         @setupRedirects()
 
       if window.location.hash == '#episode-one' && !@submitted
-        window.location.hash = ''
+        window.location.hash = '#optincta'
 
       requestAnimationFrame =>
         if window.location.hash == '#optincta'
