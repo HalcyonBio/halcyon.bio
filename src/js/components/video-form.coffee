@@ -14,10 +14,10 @@ export class VideoForm extends El.Form
 
   _submit: ->
     opts =
-      mailinglistId: '94uloYDqfDKlbJ'
+      formId: '94uloYDqfDKlbJ'
       email: @data.get 'email'
 
-    @client.mailinglist.subscribe opts
+    @client.form.subscribe opts
       .finally =>
         @submitted = true
         akasha.set 'submitted', true
