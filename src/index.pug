@@ -43,32 +43,38 @@ block content
               |
               | Brain Performance
 
-    .main-optin(if='{ !submitted }')
+    .main-optin
             // (if='{ !submitted }') added to hide if it has been submitted
-            .row.flex-center#thank-you.lightbox-target3
-              .col-12.cta
+            .row.flex-center#thank-you.lightbox-target3.no-gutters
+              .col-12.cta(if='{ !submitted }')
                 h4 Get access to the free masterclass video series taught by one of the world’s greatest minds.
                 p.cta-p Enter your email below now to save your spot - space is limited.
 
 
-              .col-12.opt-in-fields-main.flex-center
+              .col-12.opt-in-fields-main.flex-center(if='{ !submitted }')
 
 
                 text.input(bind='email' id='opt-in-email' placeholder='enter your email')
                   yield(to='123')
                     input(name="email" type="text" autocomplete="on" placeholder="enter your email")
                 button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
-              .thank-you
+              .thank-you(if='{ submitted }')
                 h5 You're all set for the masterclass, video one is available now! Click the thumbnail below to watch.
                 h3 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
                 button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
-              p.disclaimer.disclaimer-main
+              p.disclaimer.disclaimer-main(if='{ !submitted }')
                 | We will notify you when each masterclass episode is released.
                 br
                 | Providing your email gives you unlimited free access to all 4 masterclass episodes.
 
 
     .container.thumb
+      .row
+        .col-12.header-img#episode-one.video-one-target.episodes
+          h2.text-center MASTERCLASS EPISODE 1: INTERMITTENT FASTING AND THE BRAIN
+          .masterclass-container.tc2
+            .masterclass-view
+              <iframe src="https://www.youtube.com/embed/R9DZF2IXGXk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row.flex-center
         .col-6.col-md-3.col-thumb
           a.ep1-link(href='#optincta' onclick='{ showVideo(1) }') 
@@ -101,12 +107,7 @@ block content
             |Champion. He teaches how to get the most from
             |your mind with his best lifestyle hacks, mental
             | strategies, and supplements for peak brain health and performance.
-      .row
-        .col-12.header-img#episode-one.video-one-target
-          h2.text-center MASTERCLASS EPISODE 1: INTERMITTENT FASTING AND THE BRAIN
-          .masterclass-container.tc2
-            .masterclass-view
-              <iframe src="https://www.youtube.com/embed/R9DZF2IXGXk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      
       .title
         h2 AS SEEN ON
       .row.ron-media.flex-center
@@ -231,7 +232,7 @@ block content
     script.
       !function(a,b,c,d,t){var e,f=a.getElementsByTagName("head")[0];if(!a.getElementById(c)){if(e=a.createElement(b),e.id=c,e.setAttribute("data-vrlps-ucid",d),e.setAttribute("data-vrlps-version","2"), e.setAttribute("data-vrlps-template", t),e.src="https://app.viral-loops.com/popup_assets/js/vl_load_v2.min.js",window.ub){jQuery=null,$=null;var g=a.createElement(b);g.src="https://code.jquery.com/jquery-2.2.4.min.js",f.appendChild(g)}f.appendChild(e);var h=a.createElement("link");h.rel="stylesheet",h.type="text/css",h.href="https://app.viral-loops.com/static/vl-loader.css",f.appendChild(h);var i=a.createElement("div");i.id="vl-overlay",i.style.display="none";var j=a.createElement("div");j.id="vl-loader",i.appendChild(j),a.addEventListener("DOMContentLoaded",function(b){a.body.appendChild(i);for(var c=a.getElementsByClassName("vrlps-trigger"),d=0;d<c.length;d++)c[d].removeAttribute("href"),c[d].onclick=function(){a.getElementById("vl-overlay").style.display="block"};var e=a.querySelectorAll("[data-vl-widget='popupTrigger']");[].forEach.call(e,function(b){var c=a.createElement("div");c.className="vl-embedded-cta-loader",b.appendChild(c)})})}}(document,"script","vrlps-js","_FUZaZo3McnD1eiLnYdZwty6qJ0","sweepstake");
 
-  .scrolling-show
+  .scrolling-show(if='{ !submitted }')
     video-form.main-optin.popover-optin
 
             .row.flex-center#thank-you.lightbox-target3

@@ -5231,6 +5231,9 @@ iframe.fb_ltr{
   width:100%;
   color:#a5a4a4;
 }
+#launch-videos .episodes{
+  margin-bottom:40px;
+}
 #launch-videos .fb-share{
   text-align:left;
 }
@@ -5653,9 +5656,6 @@ a.lightbox img{
 .lightbox-target3:target .cta{
   display:none !important;
 }
-.lightbox-target3 .thank-you{
-  display:none;
-}
 .lightbox-target3{
   max-width:100%;
   margin:0 auto;
@@ -6015,7 +6015,7 @@ a.lightbox img{
     margin-top:10px;
   }
   #launch-videos .col-thumb{
-    margin-bottom:2px;
+    margin-bottom:10px;
   }
   #launch-squeeze .ron{
     padding-left:0px;

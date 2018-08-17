@@ -14,10 +14,10 @@ export class VideoForm extends El.Form
 
   _submit: ->
     opts =
-      formId: '94uloYDqfDKlbJ'
+      mailinglistId: '94uloYDqfDKlbJ'
       email: @data.get 'email'
 
-    @client.form.subscribe opts
+    @client.mailinglist.subscribe opts
       .finally =>
         @submitted = true
         akasha.set 'submitted', true
@@ -67,7 +67,7 @@ export class VideoForm extends El.Form
     # $('.ep2-link').attr 'href', '#episode-two'
     # $('.ep3-link').attr 'href', '#episode-three'
     # $('.ep4-link').attr 'href', '#episode-four'
-    $('.btn-trailer').on 'click', ->
+    $('.btn-trailer-TURNEDOFF').on 'click', ->
       window.location.hash = ''
       requestAnimationFrame ->
         window.location.hash = '#episode-one'
