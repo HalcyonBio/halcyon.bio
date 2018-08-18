@@ -236,23 +236,23 @@ block content
     video-form.main-optin.popover-optin
 
             .row.flex-center#thank-you.lightbox-target3
-              .col-12.cta
+              .col-12.cta(if='{ !submitted }')
                 h4 Get access to the masterclass video series taught by one of the world’s greatest minds.
                 p.cta-p Enter your email below now to save your spot - space is limited.
 
 
-              .col-12.opt-in-fields-main.flex-center
+              .col-12.opt-in-fields-main.flex-center(if='{ !submitted }')
 
 
                 text.input(bind='email' id='opt-in-email' placeholder='enter your email')
                   yield(to='123')
                     input(name="email" type="text" autocomplete="on" placeholder="enter your email")
                 button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
-              .thank-you
+              .thank-you(if='{ submitted }')
                 h5 You're all set for the masterclass, the first video is coming to you soon.
                 h3 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
                 button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
-              p.disclaimer.disclaimer-main
+              p.disclaimer.disclaimer-main(if='{ !submitted }')
                 | We will notify you when each masterclass episode is released.
                 br
                 | Providing your email gives you unlimited free access to all 4 masterclass episodes.
