@@ -51,3 +51,9 @@ $(window).on 'scroll', ->
 
   $('.close-scrolling-show').on 'click', ->
     $('.scrolling-show').hide()
+
+
+$('.stripe-link')
+  .attr('href', '//www.authorize.net')
+  .find('img')
+  .attr('src', '/img/authorize-net-logo.png')

@@ -3688,6 +3688,15 @@ a:focus{
   color:#f26621 !important;
   border-color:#f26621 !important;
 }
+checkout-card .stripe-logo{
+  height:42px;
+}
+.checkout-content checkout-card .secured-text{
+  top:calc(-1.5em - 5px);
+}
+checkout-card .checkout-section .secured-text .lock-icon{
+  top:-2px;
+}
 gallery{
   display:block;
 }
