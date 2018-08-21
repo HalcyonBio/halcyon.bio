@@ -6387,6 +6387,6 @@ a.lightbox img{
 }
 @media screen and (min-width: 674px){
   #launch-videos .show{
-    display:block;
+    display:none;
   }
 }/*# sourceMappingURL=app.css.map */
