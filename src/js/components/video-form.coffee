@@ -11,10 +11,11 @@ export class VideoForm extends El.Form
 
   submitted:    false
   videoToShow: 0
+  formId: '94uloYDqfDKlbJ'
 
   _submit: ->
     opts =
-      formId: '94uloYDqfDKlbJ'
+      formId: @formId
       email: @data.get 'email'
 
     @client.form.subscribe opts
