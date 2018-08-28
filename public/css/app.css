@@ -5619,7 +5619,8 @@ a.lightbox img{
 .lightbox-target .trailer-container{
   display:none;
 }
-.video-one-target{
+.video-one-target,
+.video-two-target{
   display:none;
   padding-top:110px;
 }
@@ -5636,7 +5637,8 @@ a.lightbox img{
 .lightbox-target:target .trailer-container{
   display:block;
 }
-.video-one-target:target{
+.video-one-target:target,
+.video-two-target:target{
   display:block;
 }
 .lightbox-target2:target{

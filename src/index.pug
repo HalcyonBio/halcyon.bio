@@ -76,11 +76,11 @@ block content
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/R9DZF2IXGXk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row
-        .col-12.header-img#episode-one.video-one-target.episodes
+        .col-12.header-img#episode-two.video-two-target.episodes
           h2.text-center MASTERCLASS EPISODE 2: MENTAL STRATEGIES 
           .masterclass-container.tc2
             .masterclass-view
-              <iframe src="https://www.youtube.com/embed/R9DZF2IXGXk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/cbDlwmHFKyE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row.flex-center
         .col-6.col-md-3.col-thumb
           a.ep1-link(href='#optincta' onclick='{ showVideo(1) }') 
@@ -89,8 +89,8 @@ block content
             p 1
             img(src="/img/vid-1-thumb.jpg")
         .col-6.col-md-3.col-thumb
-          a.ep2-link(href='#optincta')
-            h6.vid-desc-wrapper.vid-coming-soon COMING SOON
+          a.ep2-link(href='#optincta' onclick='{ showVideo(2) }')
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
             p 2
             img(src="/img/vid-2-thumb.jpg")
         .col-6.col-md-3.col-thumb
@@ -170,10 +170,10 @@ block content
 
               img(src="/img/vid-1-thumb.jpg")
           .col-md-6.col-12.vid-desc.flex-center
-            a(href='#optincta')
+            a(href='#optincta' onclick='{ showVideo(2) }')
               img(src="/img/vid-2-thumb.jpg")
               h6.vid-desc-wrapper Mental Strategies
-              h6.vid-desc-wrapper.vid-coming-soon Coming Soon
+              h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
         .row.4videos
           .col-md-6.col-12.vid-desc.flex-center
             a(href='#optincta')
