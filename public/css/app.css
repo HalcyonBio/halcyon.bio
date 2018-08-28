@@ -5391,7 +5391,6 @@ iframe.fb_ltr{
   color:#666;
 }
 #launch-videos .thank-you{
-  padding-top:120px;
   text-align:center;
   max-width:767px;
 }
@@ -6378,6 +6377,11 @@ a.lightbox img{
 @media screen and (max-width: 367px){
   #launch-videos .launch-squeeze-form{
     margin-bottom:5px;
+  }
+}
+@media screen and (min-width: 421px){
+  #launch-videos .thank-you{
+    padding-top:120px;
   }
 }
 @media screen and (max-width: 362px){
