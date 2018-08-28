@@ -5342,6 +5342,11 @@ iframe.fb_ltr{
   background-color:#0f1033;
   position:relative;
   z-index:12;
+  height:60px;
+}
+#launch-videos .fb-comment-title{
+  position:relative;
+  z-index:22;
 }
 #launch-videos .loading{
   height:80px;
@@ -5356,6 +5361,12 @@ iframe.fb_ltr{
 }
 #launch-videos .fb-comments{
   display:block;
+  background-color:#0f1033;
+}
+#launch-videos .hm{
+  height:20px;
+  z-index:20;
+  position:relative;
   background-color:#0f1033;
 }
 #launch-videos .hm2{
