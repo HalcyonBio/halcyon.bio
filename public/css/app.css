@@ -6362,6 +6362,10 @@ a.lightbox img{
     right:8px;
     font-size:25px;
   }
+  #launch-videos .ueh3{
+    margin-top:20px;
+    margin-bottom:10px;
+  }
 }
 @media screen and (max-width: 576px){
   #launch-videos .opt-in h4{
