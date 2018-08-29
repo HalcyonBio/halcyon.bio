@@ -4075,6 +4075,16 @@ footer .footer-bottom > *{
   border-bottom:1px solid #d2d9f8;
   height:45px;
 }
+#account h3{
+  margin-top:40px;
+}
+#account .img-assets img{
+  max-width:100px;
+  padding:10px;
+}
+#account .dark{
+  background-color:#000;
+}
 #index .hero{
   height:100vh;
 }

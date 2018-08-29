@@ -18,7 +18,7 @@ block content
             copy.input(text='{ ()=>{return "https://" + window.location.host + "#" + data.get("user.referrers.0.id")} }')
               button.input(onclick='{ copy }') { copied ? 'Copied' : 'Copy' }
             div(if='{ isAffiliate() }') Thanks for being a part of the Halcyon Ambassador Team. Assets are below - for something specific please reach out to your account manager or email support@halcyon.bio.
-              h3 Email/Marketing Copy
+              h3 Email/Marketing Copy:
               a(href='https://docs.google.com/spreadsheets/d/1DbS3zVjrkZAOrtd2B-dli7VdsJYdfi2L2sAu_9SsyZQ/edit?usp=sharing')
                 img(style="max-width:50%" src="/img/gsheets-logo-link.png")
               p 
@@ -28,8 +28,23 @@ block content
                 strong Make a Copy...
                 |
                 | to copy the sheet to your Google Drive so you can easily make changes as needed to the copy
+              h3 Images:  
+              p 
+                |Download all image assets as a zip file #[a(href='https://drive.google.com/uc?export=download&id=10D6AfRURLFJbv2xOtbB1_iBC8009k4jr') here].
+                | Or, you can right click the image thumbnails below and select 
+                strong "Save Image As..."
+                | to download at full size.
+                br
+                br
+                | Note - the zip does include a mp4 video file for the trailer, not shown below.
+              .img-assets
+                img(src="/img/affiliate-assets/neuromethod-logo-dark.png")
+                img.dark(src="/img/affiliate-assets/neuromethod-logo-light.png")
+                img(src="/img/affiliate-assets/ron-white-teaching.jpg")
+                br
+                img(src="/img/affiliate-assets/ron-white-video-hero-no-play-button.jpg")
+                img(src="/img/affiliate-assets/ron-white-video-hero.jpg") 
             div(if='{ !isAffiliate() }') Normal Stuff Here
-              
-              
+               
 
 block header
