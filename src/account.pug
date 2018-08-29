@@ -17,8 +17,19 @@ block content
             h3 Your Link:
             copy.input(text='{ ()=>{return "https://" + window.location.host + "#" + data.get("user.referrers.0.id")} }')
               button.input(onclick='{ copy }') { copied ? 'Copied' : 'Copy' }
-            div(if='{ isAffiliate() }') Thanks for being a part of the Halcyon Ambassador Team. For specific digital assets please reach out to your account manager.
-
+            div(if='{ isAffiliate() }') Thanks for being a part of the Halcyon Ambassador Team. Assets are below - for something specific please reach out to your account manager or email support@halcyon.bio.
+              h3 Email/Marketing Copy
+              a(href='https://docs.google.com/spreadsheets/d/1DbS3zVjrkZAOrtd2B-dli7VdsJYdfi2L2sAu_9SsyZQ/edit?usp=sharing')
+                img(style="max-width:50%" src="/img/gsheets-logo-link.png")
+              p 
+                | 1. Open the Google Sheet 
+                br
+                | 2. Goto file > 
+                strong Make a Copy...
+                |
+                | to copy the sheet to your Google Drive so you can easily make changes as needed to the copy
             div(if='{ !isAffiliate() }') Normal Stuff Here
+              
+              
 
 block header
