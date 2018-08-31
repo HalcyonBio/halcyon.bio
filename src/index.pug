@@ -59,9 +59,10 @@ block content
                     input(name="email" type="text" autocomplete="on" placeholder="enter your email")
                 button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
               .thank-you(if='{ submitted }')
-                h4.clg You're all set for the masterclass, video one is available now! Click the thumbnail below to watch.
+                
                 h4.h4line2 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
                 button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
+                h4.clg You're all set for the masterclass, click the thumbnail below to watch.
               p.disclaimer.disclaimer-main(if='{ !submitted }')
                 | We will notify you when each masterclass episode is released.
                 br
@@ -87,7 +88,7 @@ block content
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/9XWgPwQ6Ip4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>        
-      .row.flex-center
+      .row.flex-center#episodes
         .col-6.col-md-3.col-thumb
           a.ep1-link(href='#optincta' onclick='{ showVideo(1) }') 
             

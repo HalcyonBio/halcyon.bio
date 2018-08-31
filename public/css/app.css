@@ -4085,6 +4085,12 @@ footer .footer-bottom > *{
 #account .dark{
   background-color:#000;
 }
+#account .divider{
+  width:100%;
+  border-top:2px solid #304191;
+  margin-bottom:20px;
+  margin-top:20px;
+}
 #index .hero{
   height:100vh;
 }
@@ -5239,7 +5245,7 @@ iframe.fb_ltr{
 }
 #launch-videos .disclaimer-main{
   max-width:900px;
-  font-size:0.9rem;
+  font-size:1rem;
   padding-top:1rem;
 }
 #launch-videos .thumb{
@@ -6157,7 +6163,7 @@ a.lightbox img{
     font-size:1.3rem;
   }
   #launch-videos .main-optin input{
-    font-size:1rem;
+    font-size:1.3rem;
     margin-bottom:0px;
   }
   #launch-videos .main-optin .btn-opt-in{
