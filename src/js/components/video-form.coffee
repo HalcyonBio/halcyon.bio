@@ -49,6 +49,9 @@ export class VideoForm extends El.Form
       if window.location.hash == '#episode-one' && !@submitted
         window.location.hash = '#optincta'
 
+      if window.location.hash == '#episode-two' && !@submitted
+        window.location.hash = '#optinctb'
+
       requestAnimationFrame =>
         if window.location.hash == '#optincta'
           $(@root).find('.main-optin input[name="email"]').focus()
