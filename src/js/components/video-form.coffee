@@ -29,7 +29,7 @@ export class VideoForm extends El.Form
           when 2 then window.location.hash = '#episode-two'
           # Uncomment and update these are videos come out
 
-          # when 3 then window.location.hash = '#episode-three'
+          when 3 then window.location.hash = '#episode-three'
           # when 4 then window.location.hash = '#episode-four'
 
         @scheduleUpdate()
@@ -66,7 +66,7 @@ export class VideoForm extends El.Form
     $('.ep2-link').attr 'href', '#episode-two'
     # Uncomment and update these are videos come out
 
-    # $('.ep3-link').attr 'href', '#episode-three'
+    $('.ep3-link').attr 'href', '#episode-three'
     # $('.ep4-link').attr 'href', '#episode-four'
     $('.btn-trailer-TURNEDOFF').on 'click', ->
       window.location.hash = ''

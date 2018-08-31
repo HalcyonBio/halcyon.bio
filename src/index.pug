@@ -59,8 +59,8 @@ block content
                     input(name="email" type="text" autocomplete="on" placeholder="enter your email")
                 button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
               .thank-you(if='{ submitted }')
-                h5 You're all set for the masterclass, video one is available now! Click the thumbnail below to watch.
-                h3 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
+                h4.clg You're all set for the masterclass, video one is available now! Click the thumbnail below to watch.
+                h4.h4line2 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
                 button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
               p.disclaimer.disclaimer-main(if='{ !submitted }')
                 | We will notify you when each masterclass episode is released.
@@ -71,16 +71,22 @@ block content
     .container.thumb
       .row
         .col-12.header-img#episode-one.video-one-target.episodes
-          h2.text-center MASTERCLASS EPISODE 1: INTERMITTENT FASTING AND THE BRAIN
+          h4.text-center MASTERCLASS EPISODE 1: INTERMITTENT FASTING AND THE BRAIN
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/R9DZF2IXGXk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row
         .col-12.header-img#episode-two.video-two-target.episodes
-          h2.text-center MASTERCLASS EPISODE 2: TRANSFORMING YOUR MEMORY 
+          h4.text-center MASTERCLASS EPISODE 2: TRANSFORMING YOUR MEMORY 
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/cbDlwmHFKyE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      .row
+        .col-12.header-img#episode-three.video-three-target.episodes
+          h4.text-center MASTERCLASS EPISODE 3: THE BEST SUPPLEMENTS FOR A STRONGER BRAIN
+          .masterclass-container.tc2
+            .masterclass-view
+              <iframe src="https://www.youtube.com/embed/9XWgPwQ6Ip4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>        
       .row.flex-center
         .col-6.col-md-3.col-thumb
           a.ep1-link(href='#optincta' onclick='{ showVideo(1) }') 
@@ -94,8 +100,8 @@ block content
             p 2
             img(src="/img/vid-2-thumb.jpg")
         .col-6.col-md-3.col-thumb
-          a.ep3-link(href='#optincta')
-            h6.vid-desc-wrapper.vid-coming-soon COMING SOON
+          a.ep3-link(href='#optincta' onclick='{ showVideo(3) }')
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
             p 3
             img(src="/img/vid-3-thumb.jpg")
         .col-6.col-md-3.col-thumb
@@ -144,9 +150,9 @@ block content
         img.arrow(src="img/new-arrow.png" width="70px")
         <div class="fb-like-frame"><div class="fb-like" data-colorscheme="dark" data-href="https://www.facebook.com/HalcyonBiotech/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></div>
         <div class="hm"></div>
-        <div class="fb-comments fb-new" data-colorscheme="dark" data-href="https://neuromethod.halcyon.bio" data-width="100%" data-numposts="50"></div>
+        <div class="fb-comments fb-new" data-colorscheme="dark" data-href="https://neuromethod.halcyon.bio" data-width="100%" data-numposts="40"></div>
         <div class="hm2"></div>
-        <div class="fb-comments fb-old" data-order-by="reverse_time" data-colorscheme="dark" data-href="https://halcyon.bio/master-class-videos" data-width="100%" data-numposts="50"></div>
+        <div class="fb-comments fb-old" data-order-by="reverse_time" data-colorscheme="dark" data-href="https://halcyon.bio/master-class-videos" data-width="100%" data-numposts="5"></div>
 
   .flex-container.l-body2
     .row
@@ -170,13 +176,13 @@ block content
 
               img(src="/img/vid-1-thumb.jpg")
           .col-md-6.col-12.vid-desc.flex-center
-            a(href='#optincta' onclick='{ showVideo(2) }')
+            a.ep2-link(href='#optincta' onclick='{ showVideo(2) }')
               img(src="/img/vid-2-thumb.jpg")
               h6.vid-desc-wrapper Mental Strategies
               h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
         .row.4videos
           .col-md-6.col-12.vid-desc.flex-center
-            a(href='#optincta')
+            a.ep3-link(href='#optincta' onclick='{ showVideo(3) }')
               img(src="/img/vid-3-thumb.jpg")
               h6.vid-desc-wrapper Nootropics
               h6.vid-desc-wrapper.vid-coming-soon Coming Soon

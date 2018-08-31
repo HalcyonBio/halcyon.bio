@@ -207,6 +207,8 @@
     font-size: 1.5rem
     line-height: 1
     margin-top:10px
+    @media screen and (max-width:420px)
+      font-size: 1.3rem
   .opt-in-fields
     max-width: 98%;
     margin-top: 2px;
@@ -270,9 +272,10 @@
 
       h4
         text-transform: uppercase;
-        font-size: 1.25rem
+        @media screen and (max-width:420px)
+          font-size: 1.3rem
       p
-        font-size: .9rem;
+        font-size: 1rem;
     input
       background-color: white
       border: 2px solid rgb(221, 221, 221);
@@ -285,9 +288,9 @@
         margin-bottom:0px
     .btn-opt-in
       height: 60px
-      font-size: 1.35rem
+      font-size: 1.5rem
       @media screen and (max-width:420px)
-        font-size: 1.2rem
+        font-size: 1.3rem
   .opt-in
     //top: 50%;
     top: 53px
@@ -344,6 +347,9 @@
       color: #a5a4a4;
   .episodes
     margin-bottom: 40px
+    h4
+      @media screen and (max-width:420px)
+        font-size: 1.3rem;
   .fb-share
     text-align: left
   .ron-media
@@ -501,13 +507,14 @@
       padding-top: 120px
     text-align: center;
     max-width: 767px
-    h5
+    .clg
       color: lightgray
-    h3
+    .h4line2
       color: #e6e4e4;
       text-transform: uppercase;
-      @media screen and (max-width:520px)
-        font-size: 1.5rem;
+    h4
+      @media screen and (max-width:420px)
+        font-size: 1.3rem;
   .ueh3
     @media screen and (min-width:420px)
       margin-top:20px
@@ -801,7 +808,7 @@ margin: 94px 20px 20px 20px;
 display: none
 
 }
-.video-one-target, .video-two-target
+.video-one-target, .video-two-target, .video-three-target, .video-four-target
   display:none
   padding-top: 110px
 
@@ -826,7 +833,7 @@ z-index: 9999;
 display: block
 // z-index: 9999;
 }
-.video-one-target:target, .video-two-target:target
+.video-one-target:target, .video-two-target:target, .video-three-target:target, .video-four-target:target
   display: block
 .lightbox-target2:target  {
 opacity: 1;
