@@ -70,9 +70,9 @@ export class VideoForm extends El.Form
   setupRedirects: ->
     $('.ep1-link').attr 'href', '#episode-one'
     $('.ep2-link').attr 'href', '#episode-two'
-    # Uncomment and update these are videos come out
-
     $('.ep3-link').attr 'href', '#episode-three'
+
+    # Uncomment and update these are videos come out
     # $('.ep4-link').attr 'href', '#episode-four'
     $('.btn-trailer-TURNEDOFF').on 'click', ->
       window.location.hash = ''
