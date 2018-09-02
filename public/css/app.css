@@ -3936,7 +3936,6 @@ header .mobile-menus .show-mobile-icon{
 .l-vid{
   padding-left:0px !important;
   padding-right:0px !important;
-  margin-bottom:45px;
 }
 .l-vid .header-img{
   padding-left:0px;
@@ -5249,7 +5248,7 @@ iframe.fb_ltr{
   padding-top:1rem;
 }
 #launch-videos .thumb{
-  margin-top:110px;
+  padding-top:110px;
 }
 #launch-videos .col-thumb{
   box-shadow:0px 0px 21px 5px rgba(255,255,255,0.17);
@@ -5658,6 +5657,7 @@ a.lightbox img{
 }
 .lightbox-target .trailer-container{
   display:none;
+  margin-bottom:40px;
 }
 .video-one-target,
 .video-two-target,
@@ -5728,6 +5728,44 @@ a.lightbox img{
   position:absolute;
   transform:translateY(-50%);
   left:0;
+}
+#checkout *{
+  color:#000;
+  font-family:"Lato", "Helvetica", "Arial", sans-serif;
+}
+#checkout .product-title{
+  color:#0f1033;
+}
+#checkout .limit-notice{
+  font-style:italic;
+}
+#checkout .title-top{
+  border-bottom:solid 1px #808080;
+}
+#checkout .btn{
+  background-color:$hblue2;
+  color:#fff;
+}
+#checkout .title-top-container{
+  z-index:9999;
+  font-family:Palatino;
+  background-color:rgba(0,0,0,0.7);
+  padding:5px;
+  position:fixed;
+  top:0px;
+  font-size:1rem;
+  width:100%;
+  left:0;
+}
+#checkout .title-top{
+  text-align:center;
+}
+#checkout .title-top img{
+  margin:0 auto;
+  max-width:50px;
+}
+#checkout .first{
+  margin-top:100px;
 }
 @keyframes pulse{
   0%{
@@ -6151,7 +6189,7 @@ a.lightbox img{
 }
 @media screen and (max-width: 420px){
   .l-vid{
-    margin-bottom:110px;
+    margin-bottom:40px;
   }
   .l-vid .header-img{
     margin-top:60px;
@@ -6177,6 +6215,9 @@ a.lightbox img{
   }
   #launch-videos .thank-you h4{
     font-size:1.3rem;
+  }
+  .lightbox-target .trailer-container{
+    margin-bottom:80px;
   }
 }
 @media screen and (max-width: 520px){

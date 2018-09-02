@@ -317,7 +317,7 @@
       padding-top: 1rem;
 
   .thumb
-    margin-top: 110px;
+    padding-top: 110px;
     // margin-top:10px oldoptin
     .col-md-3
       @media screen and (min-width:768px)
@@ -804,10 +804,11 @@ margin: 94px 20px 20px 20px;
 
 /* Styles the lightbox, removes it from sight and adds the fade-in transition */
 
-.lightbox-target .trailer-container{
-display: none
-
-}
+.lightbox-target .trailer-container
+  display: none
+  margin-bottom:40px
+  @media screen and (max-width:420px)
+    margin-bottom: 80px
 .video-one-target, .video-two-target, .video-three-target, .video-four-target
   display:none
   padding-top: 110px
@@ -887,3 +888,34 @@ display:none
   .show
     @media screen and (min-width:674px)
       display: none;
+#checkout
+
+  *
+    color: black
+    font-family: "Lato", "Helvetica", "Arial", sans-serif;
+  .product-title
+    color: #0f1033
+  .limit-notice
+    font-style: italic;
+  .title-top
+    border-bottom: solid 1px gray
+  .btn
+    background-color: $hblue2
+    color: white
+  .title-top-container
+    z-index: 9999
+    font-family: Palatino
+    background-color: rgba(0,0,0,0.7);
+    padding:5px
+    position:fixed;
+    top:0px
+    font-size:1rem
+    width: 100%
+    left: 0
+  .title-top
+    img
+      margin: 0 auto;
+      max-width: 50px
+    text-align: center
+  .first
+    margin-top: 100px
