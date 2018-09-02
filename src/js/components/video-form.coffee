@@ -50,7 +50,10 @@ export class VideoForm extends El.Form
         window.location.hash = '#optincta'
 
       if window.location.hash == '#episode-two' && !@submitted
-        window.location.hash = '#optinctb'
+        window.location.hash = '#optincta'
+
+      if window.location.hash == '#episode-three' && !@submitted
+        window.location.hash = '#optincta'
 
       requestAnimationFrame =>
         if window.location.hash == '#optincta'
