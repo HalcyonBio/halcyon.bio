@@ -13,7 +13,9 @@ block content
           h2 Profile
           profile
             h3 Number of Referrals: { data.get('user.referrals') ? data.get('user.referrals').length : 0  }
-            h3(if='{ isAffiliate() }') Commission Earned: { renderCurrency('usd', parseInt((data.get('user.transactions.points.balance') || 0) * .10), 10)}
+            h3(if='{ isAffiliate() }') Commission Earned: {
+            renderCurrency('usd',
+            parseInt((data.get('user.transactions.points.balance') || 0) * (user.commission.percent || 0.1)), 10)}
             h3 Your Link:
             copy.input(text='{ ()=>{return "https://" + window.location.host + "/360#" + data.get("user.referrers.0.id")} }')
               button.input(onclick='{ copy }') { copied ? 'Copied' : 'Copy' }
