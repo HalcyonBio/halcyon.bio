@@ -13,21 +13,23 @@ block content
           h2 Profile
           profile
             h3 Number of Referrals: { data.get('user.referrals') ? data.get('user.referrals').length : 0  }
-              h3(if='{ isAffiliate() }') Commission Earned: { renderCurrency('usd', parseInt((data.get('user.transactions.points.balance') || 0) * .15), 10)}
+            h3(if='{ isAffiliate() }') Commission Earned: {
+            renderCurrency('usd',
+            parseInt((data.get('user.transactions.points.balance') || 0) * (data.get('user.commission.percent') || 0.15)), 10)}
             h3 Your Link:
             copy.input(text='{ ()=>{return "https://" + window.location.host + "/360#" + data.get("user.referrers.0.id")} }')
               button.input(onclick='{ copy }') { copied ? 'Copied' : 'Copy' }
             div(if='{ isAffiliate() }') Thanks for being a part of the Halcyon Ambassador Team. Assets and details are below - for something specific please reach out to your account manager or email support@halcyon.bio.
               br
               br
-              p 
+              p
                 | We recommend redirecting to your affiliate link. You may do so as you wish - we recommend #[strong #[a(href="https://bitly.com/") Bitly]. ]
                 br
                 br
                 | Halcyon company video for embedding can be found on YouTube #[a(href="https://www.youtube.com/watch?v=XcD4YJ2HmeU") here].
-                
+
               .row
-                .col-md-6.col-12 
+                .col-md-6.col-12
                   h3 Email/Marketing Copy:
                   a(href='https://docs.google.com/spreadsheets/d/1Vp6q6Yns8507oHF7jCMbiWn_inHUGfB1/edit?usp=sharing')
                     img(style="max-width:150px" src="/img/gsheets-logo-link.png")
@@ -38,12 +40,12 @@ block content
                     strong Make a Copy...
                     |
                     | to copy the sheet to your Google Drive so you can easily make changes as needed to the copy.
-                .col-md-6.col-12 
-                  h3 Images:  
-                  p 
+                .col-md-6.col-12
+                  h3 Images:
+                  p
                     |Download all image assets as a zip file #[a(href='https://drive.google.com/uc?export=download&id=10D6AfRURLFJbv2xOtbB1_iBC8009k4jr') here].
                     br
-                    | Or, you can right click the image thumbnails below and select 
+                    | Or, you can right click the image thumbnails below and select
                     strong "Save Image As..."
                     |
                     | to download at full size.
@@ -92,15 +94,15 @@ block content
               p.
                 Welcome to the launch of the Neuromethod360 program by Halcyon. This is a structured, timed launch with a beginning and an end. If you are reading this the launch has begun and you may begin posting your link with information about the masterclass. In the spreadsheet you will find more information about the masterclass and the things that Ron is currently sending to his followers. You can simply follow his lead and make your own edits or you can write your own completely original content posts, as long as they align to the overall project. There are five videos in total to release to your following. There is the trailer, video 1, video 2, video 3, and video 4.
               p.
-                The trailer covers the entire master class. Video one covers lifestyle strategies. Video 2 covers memory and mental strategies. Video 3 covers nootropics and supplementation. Video 4 is about bringing it all together into a structured 12 week plan. Video 4 is where we make an offer wherein customers can purchase the 12 week program and also get a 12 week supply of Halcyon for free. The cost of the package is $200. There will be two other high ticket offers on that page as well for which you will also be eligible for commission if your leads purchase them. When you post your link announcing video 4 of the masterclass is live, this will be when we open the shopping cart and customers will be able to purchase. This open cart period will last for a period of 10 days. At the end of the 10 days we will close the cart. 
+                The trailer covers the entire master class. Video one covers lifestyle strategies. Video 2 covers memory and mental strategies. Video 3 covers nootropics and supplementation. Video 4 is about bringing it all together into a structured 12 week plan. Video 4 is where we make an offer wherein customers can purchase the 12 week program and also get a 12 week supply of Halcyon for free. The cost of the package is $200. There will be two other high ticket offers on that page as well for which you will also be eligible for commission if your leads purchase them. When you post your link announcing video 4 of the masterclass is live, this will be when we open the shopping cart and customers will be able to purchase. This open cart period will last for a period of 10 days. At the end of the 10 days we will close the cart.
               p
-                | We are all operating on the same schedule. The launch will end on Sept 27 when we close the cart. 
+                | We are all operating on the same schedule. The launch will end on Sept 27 when we close the cart.
                 br
                 br
-                | If you look at the spreadsheet and find you are behind schedule on posting, simply post your link with corresponding messaging once per day or every other day until you’re caught up. The system will handle the rest. 
+                | If you look at the spreadsheet and find you are behind schedule on posting, simply post your link with corresponding messaging once per day or every other day until you’re caught up. The system will handle the rest.
                 br
                 br
-                | Example: if you see in the below spreadsheet that video 2 is scheduled to be posted end of week, simply make a post or email (using your unique link) about the trailer on day 1, and video 1 being live on day 3. Then by the end of the week you are caught up to the schedule and able to post about video 2 being live per the schedule. 
+                | Example: if you see in the below spreadsheet that video 2 is scheduled to be posted end of week, simply make a post or email (using your unique link) about the trailer on day 1, and video 1 being live on day 3. Then by the end of the week you are caught up to the schedule and able to post about video 2 being live per the schedule.
                 br
                 br
                 | In the attached spreadsheet you will find the copy for the posts that Ron White will make throughout the campaign. These posts have dates associated with them that provide the schedule and structure for the campaign. When posting please consider the messaging that Ron White is putting out about the video. You can use copy that is as similar to Ron White as you like. You can post as frequently or often as you like within the schedule. The more often you post with your link the  | more likely your following is to convert. You will notice in the spreadsheet that each time Ron posts he has a new reason to post with new information. This is best practice rather than posting the same message multiple times. You can post your link to any platform you like including Facebook, Twitter, YouTube, and your email list. There is example copy for Facebook in the spreadsheet. Anytime that someone uses your link to go to the website this becomes your lead and your potential commission if this lead converts.
