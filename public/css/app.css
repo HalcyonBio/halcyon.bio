@@ -5797,6 +5797,12 @@ a.lightbox img{
   margin-bottom:10vh;
   text-align:center;
 }
+#login .logo-spelling{
+  margin-top:-25px;
+  text-align:center;
+  border-bottom:1px solid #d2d9f8;
+  height:45px;
+}
 #register-success h2{
   color:#304191;
 }
