@@ -6189,7 +6189,7 @@ a.lightbox img{
 }
 @media screen and (max-width: 420px){
   .l-vid{
-    margin-bottom:40px;
+    margin-bottom:-70px;
   }
   .l-vid .header-img{
     margin-top:60px;
@@ -6207,14 +6207,14 @@ a.lightbox img{
   #launch-videos .main-optin .btn-opt-in{
     font-size:1.3rem;
   }
+  #launch-videos .thumb{
+    padding-top:40px;
+  }
   #launch-videos .episodes h4{
     font-size:1.3rem;
   }
   #launch-videos .fb-new{
     margin-top:-58px;
-  }
-  #launch-videos .thank-you{
-    padding-top:40px;
   }
   #launch-videos .thank-you h4{
     font-size:1.3rem;
