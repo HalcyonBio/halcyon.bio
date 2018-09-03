@@ -4,6 +4,9 @@ import $ from 'zepto-modules/_min'
 
 window.raf = requestAnimationFrame
 
+if window.location.hash.toLowerCase() == '#ronnie'
+  window.location.hash = '#nWFZ68nZszl3YW'
+
 settings =
   # live key
   # key: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJiaXQiOjQ1MDM2MTcwNzU2NzUxNzIsImp0aSI6Ii1YdHE0cHJVdDNrIiwic3ViIjoiTzVUQWtKcjBzZSJ9.4N1r2FxixxCh4DkGMGA_Iqg4VCNgFOK36Pd-3Zt1BXcqhbUFahU-CnfbeM7eIb01udcvGE2yPQRjAH2DjpRRcA'
@@ -15,6 +18,8 @@ settings =
   storeId: 'bkt8nygoh8eE74'
   referralProgram:
     id: 'gQtb0m4FprDyN'
+  config:
+    hashReferrer: true
 
 m = Shop.start settings
 data = Shop.getData()
