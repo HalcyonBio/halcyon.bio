@@ -325,6 +325,24 @@ block content
             }
             return true
       }
+        function EpisodeToggle3() {
+            var ep1 = document.getElementById("episode-one");
+            var ep2 = document.getElementById("episode-two");
+            var ep3 = document.getElementById("episode-three");
+            var ep4 = document.getElementById("episode-four");
+            var ty = document.getElementById("thank-you");
+            var trailer = document.getElementById("neuromethodtrailer");
+            if (ep4.style.display = "block") {
+                trailer.style.display = "none"
+                ty.style.display = "none";
+                ep1.style.display = "none";
+                ep2.style.display = "none";
+                ep3.style.display = "none";
+            } else {
+              ep4.style.display = "none"
+            }
+            return true
+      }
     script.
       function TrailerToggle() {
           var trailer = document.getElementById("neuromethodtrailer");
