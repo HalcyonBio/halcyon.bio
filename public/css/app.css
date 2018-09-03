@@ -5148,6 +5148,9 @@ iframe.fb_ltr{
 #launch-videos .opt-in-fields .input{
   max-width:430px;
 }
+#launch-videos .opt-in-fields-main{
+  padding-top:110px;
+}
 #launch-videos .opt-in-fields-main input{
   text-align:center;
 }
@@ -5205,6 +5208,7 @@ iframe.fb_ltr{
 #launch-videos .main-optin .cta{
   max-width:767px;
   text-align:center;
+  padding-top:110px;
 }
 #launch-videos .main-optin .cta h4{
   text-transform:uppercase;
