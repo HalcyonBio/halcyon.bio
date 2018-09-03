@@ -20,7 +20,7 @@ block content
               img.logoHB(src='/img/neuromethod360-logo.png')
               a.btn.btn-share.btn-share1.vrlps-trigger(type='button' target="_blank"
               href="#") MEET RONNIE
-              button.btn.btn-trailer(type='button' onclick="location.href='#neuromethodtrailer'; TrailerToggle() ")  TRAILER <i class="fab fa-lg fa-youtube"></i>
+              button.btn.btn-trailer(type='button' onclick="location.href='#neuromethodtrailer'; TrailerToggle()")  TRAILER <i class="fab fa-lg fa-youtube"></i>
 
     .container-fluid.l-vid
       .row.flex-center
@@ -90,8 +90,8 @@ block content
               <iframe src="https://www.youtube.com/embed/9XWgPwQ6Ip4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row.flex-center
         .col-6.col-md-3.col-thumb
-          a.ep1-link(href='#optincta' onclick='{ showVideo(1) };EpisodeToggle()') 
-            
+          a.ep1-link(href='#optincta' onclick='{ showVideo(1) }' onmouseup='EpisodeToggle()')
+
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
             p 1
             img(src="/img/vid-1-thumb.jpg")
@@ -278,8 +278,9 @@ block content
               ty.style.display = "none";
           } else {
             x.style.display = "none"
-              
+
           }
+          return true
       }
     script.
       function TrailerToggle() {
@@ -296,7 +297,7 @@ block content
               ep4.style.display = "none"
           } else {
             trailer.style.display = "none"
-              
+
           }
       }
   div#mousetracker
