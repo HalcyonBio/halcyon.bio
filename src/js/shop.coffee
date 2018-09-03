@@ -4,7 +4,7 @@ import $ from 'zepto-modules/_min'
 
 window.raf = requestAnimationFrame
 
-if window.location.hash.toLowerCase() == '#ronnie'
+if window.location.hash.toLowerCase() == '#ronwhite'
   window.location.hash = '#nWFZ68nZszl3YW'
 
 settings =
