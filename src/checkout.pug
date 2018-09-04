@@ -20,8 +20,8 @@ block content
               img.logoHB(src='/img/nm-box-logo-dark-oj360.png')
               h5 Questions? Email us at #[a(href="mailto:support@halcyon.bio") support@halcyon.bio]
   .container.product
-    .row
-      .col-12
+    .row.flex-center
+      .col-md-8.offset-md-2.col-12
         h4.product-title Neuromethod360 Package $199 - #[strong valued at $569]
         p
           |- 12 week program #[strong ($299 value) ]
@@ -43,7 +43,8 @@ block content
           | Space is extremely limited as this is a highly interactive 12 week program. Only 
           | 300 spots are available for October access, for those who do not make it into 
           | the first 300, the second cohort of 1000 students will begin in December.  
-        button.btn(onclick='{ addToCart("P7c8KkgxUEGRO0", 1) }') ADD TO CART AND SUBSCRIBE
+        .flex-center
+          button.btn(onclick='{ addToCart("P7c8KkgxUEGRO0", 1) }') ADD TO CART AND SUBSCRIBE
 
   .lsfooter
     .row

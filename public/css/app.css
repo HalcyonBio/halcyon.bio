@@ -5740,6 +5740,7 @@ a.lightbox img{
   left:0;
 }
 #checkout .product{
+  margin:40px 0;
   color:#000;
   font-family:"Lato", "Helvetica", "Arial", sans-serif;
 }
@@ -5753,13 +5754,11 @@ a.lightbox img{
   border-bottom:solid 1px #808080;
 }
 #checkout .btn{
-  background-color:$hblue2;
+  background-color:#304191;
   color:#fff;
 }
 #checkout .title-top-container{
-  z-index:9999;
   font-family:Palatino;
-  background-color:rgba(0,0,0,0.7);
   padding:5px;
   position:fixed;
   top:0px;
@@ -5768,6 +5767,8 @@ a.lightbox img{
   left:0;
 }
 #checkout .title-top{
+  font-family:"Lato", "Helvetica", "Arial", sans-serif;
+  color:#304191;
   text-align:center;
 }
 #checkout .title-top img{
