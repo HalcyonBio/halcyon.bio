@@ -81,15 +81,15 @@ export class VideoForm extends El.Form
       return false
 
   showVideo: (n, collapse)->
-    return () =>
+    return (e) =>
       @videoToShow = n
       if @submitted && collapse
-        @episodeToggle n
+        @episodeToggle e, n
 
-  episodeToggle: (n)->
+  episodeToggle: (e, n)->
     ep1 = $('#episode-one')
-    ep2 = $('episode-two')
-    ep3 = $('episode-three')
+    ep2 = $('#episode-two')
+    ep3 = $('#episode-three')
     # ep4 = $('episode-four')
     ep = null
     switch n
@@ -98,26 +98,32 @@ export class VideoForm extends El.Form
       when 3 then ep = ep3
       # when 4 then ep = ep4
 
-    ty = $('thank-you')
-    trailer = $('neuromethodtrailer')
+    target = $(e.currentTarget)
+
+    ty = $('#thank-you')
+    trailer = $('#neuromethodtrailer')
     if ep.css('display') == 'none'
+      trailer.css 'display', 'none'
+      ty.css 'display', 'none'
+      ep1.css 'display', 'none'
+      ep2.css 'display', 'none'
+      ep3.css 'display', 'none'
+      # ep4.style.display = 'none'
+      ep.css 'display', 'block'
+      window.location.hash = target.attr 'href'
       requestAnimationFrame ->
-        trailer.css 'display', 'none'
-        ty.css 'display', 'none'
-        ep1.css 'display', 'none'
-        ep2.css 'display', 'none'
-        ep3.css 'display', 'none'
-        # ep4.style.display = 'none'
+        window.location.hash = target.attr 'href'
         requestAnimationFrame ->
-          ep.css 'display', 'block'
-          window.location.hash = ep.attr 'href'
-    return false
+          window.location.hash = target.attr 'href'
+
+    e.preventDefault()
+    e.stopPropagation()
 
   trailerToggle: ->
-    trailer = $('neuromethodtrailer')
+    trailer = $('#neuromethodtrailer')
     ep1 = $('#episode-one')
-    ep2 = $('episode-two')
-    ep3 = $('episode-three')
+    ep2 = $('#episode-two')
+    ep3 = $('#episode-three')
     # ep4 = document.getElementById 'episode-four'
     if trailer.css('display') == 'none'
       trailer.css 'display', 'flex'
@@ -125,8 +131,6 @@ export class VideoForm extends El.Form
       ep2.css 'display', 'none'
       ep3.css 'display', 'none'
       # ep4.style.display = 'none'
-
-    requestAnimationFrame ->
       window.location.hash = '#neuromethodtrailer'
 
 VideoForm.register()
