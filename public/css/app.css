@@ -4072,7 +4072,7 @@ footer .footer-bottom > *{
   margin-top:-25px;
   text-align:center;
   border-bottom:1px solid #d2d9f8;
-  height:45px;
+  min-height:45px;
 }
 #account h3{
   margin-top:40px;
@@ -4089,6 +4089,14 @@ footer .footer-bottom > *{
   border-top:2px solid #304191;
   margin-bottom:20px;
   margin-top:20px;
+}
+#account .logout{
+  float:right;
+  color:#304191;
+  background-color:#fff;
+  box-shadow:none;
+  border:2px solid #304191;
+  height:36px;
 }
 #index .hero{
   height:100vh;
@@ -5731,7 +5739,7 @@ a.lightbox img{
   transform:translateY(-50%);
   left:0;
 }
-#checkout *{
+#checkout .product{
   color:#000;
   font-family:"Lato", "Helvetica", "Arial", sans-serif;
 }
@@ -6202,6 +6210,14 @@ a.lightbox img{
   .l-vid .header-img{
     margin-top:60px;
   }
+  #account .logout{
+    text-decoration:underline;
+    float:none;
+    text-align:center;
+    margin-top:5px;
+    margin-bottom:5px;
+    border:none;
+  }
   #launch-videos .subtitle2{
     font-size:1.3rem;
   }
@@ -6274,6 +6290,22 @@ a.lightbox img{
   }
   .l-body .arrow{
     display:none;
+  }
+}
+@media screen and (min-width: 420px){
+  #account .title{
+    text-align:center;
+  }
+  #launch-videos .main-optin .cta{
+    padding-top:80px;
+  }
+  #launch-videos .col-thumb p{
+    right:8px;
+    font-size:25px;
+  }
+  #launch-videos .ueh3{
+    margin-top:20px;
+    margin-bottom:10px;
   }
 }
 @media screen and (max-width: 575px){
@@ -6459,19 +6491,6 @@ a.lightbox img{
 @media screen and (min-width: 521px){
   #launch-videos .new{
     max-width:300px;
-  }
-}
-@media screen and (min-width: 420px){
-  #launch-videos .main-optin .cta{
-    padding-top:80px;
-  }
-  #launch-videos .col-thumb p{
-    right:8px;
-    font-size:25px;
-  }
-  #launch-videos .ueh3{
-    margin-top:20px;
-    margin-bottom:10px;
   }
 }
 @media screen and (max-width: 576px){

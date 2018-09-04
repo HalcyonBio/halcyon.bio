@@ -4,18 +4,18 @@ block vars
   - var pageId = 'account'
 
 block content
-  <div class="left logos logo-spelling" ><a class="logo-link" href="https://neuromethod.halcyon.bio" itemprop="logos" itemscope="" itemtype="WebsiteLogo"><img class="logo-image" src="/img/logo.svg" alt="HALCYON.BIO" itemprop="image"></a>
-        </div>
+  .left.logos.logo-spelling
+    
+    <a class="logo-link" href="https://neuromethod.halcyon.bio" itemprop="logos" itemscope="" itemtype="WebsiteLogo"><img class="logo-image" src="/img/logo.svg" alt="HALCYON.BIO" itemprop="image"></a>
+    button.logout(onclick='{ logout }') Log Out
   section
     .container
       .row
         .col-md-8.offset-md-2.col-12
           profile
-            .row
-              .col-md-10
-                h2 Profile: { data.get('user.email') }
-              .col-md-2
-                button.logout(onclick='{ logout }') Logout
+            h2.title Your Account 
+            h3 Your Email:
+            p { data.get('user.email') }                 
             h3 Number of Referrals: { data.get('user.referrals') ? data.get('user.referrals').length : 0  }
             h3(if='{ isAffiliate() }') Commission Earned: { renderCurrency('usd', parseInt((data.get('user.transactions.points.balance') || 0) * (data.get('user.commission.percent') || 0.15)), 10)}
             h3 Your Link:
@@ -45,7 +45,7 @@ block content
                 .col-md-6.col-12
                   h3 Images:
                   p
-                    |Download all image assets as a zip file #[a(href='https://drive.google.com/uc?export=download&id=10D6AfRURLFJbv2xOtbB1_iBC8009k4jr') here].
+                    |Download all image assets as a zip file #[a(href='https://drive.google.com/uc?export=download&id=1rLdkVrVJLZ5o03CBu_6IF5nDHVbzcOlz') here].
                     br
                     | Or, you can right click the image thumbnails below and select
                     strong "Save Image As..."
@@ -108,5 +108,6 @@ block content
                 br
                 br
                 | In the attached spreadsheet you will find the copy for the posts that Ron White will make throughout the campaign. These posts have dates associated with them that provide the schedule and structure for the campaign. When posting please consider the messaging that Ron White is putting out about the video. You can use copy that is as similar to Ron White as you like. You can post as frequently or often as you like within the schedule. The more often you post with your link the  | more likely your following is to convert. You will notice in the spreadsheet that each time Ron posts he has a new reason to post with new information. This is best practice rather than posting the same message multiple times. You can post your link to any platform you like including Facebook, Twitter, YouTube, and your email list. There is example copy for Facebook in the spreadsheet. Anytime that someone uses your link to go to the website this becomes your lead and your potential commission if this lead converts.
-            div(if='{ !isAffiliate() }') Normal Stuff Here
+            div(if='{ !isAffiliate() }') 
+              // Normal Stuff Here
 block header

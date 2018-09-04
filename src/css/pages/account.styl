@@ -22,7 +22,7 @@
     margin-top: -25px;
     text-align: center;
     border-bottom: 1px solid #d2d9f8;
-    height: 45px;
+    min-height: 45px;
   h3
     margin-top: 40px
   .img-assets img
@@ -35,3 +35,20 @@
     border-top: 2px solid $hBlue2
     margin-bottom: 20px
     margin-top: 20px
+  .logout
+    float: right;
+    color: #304191;
+    background-color: white
+    box-shadow: none
+    border: 2px solid #304191;
+    height: 36px;
+    @media screen and (max-width:420px)
+      text-decoration: underline;
+      float: none;
+      text-align: center;
+      margin-top: 5px
+      margin-bottom: 5px
+      border: none
+  .title
+    @media screen and (min-width:420px)
+      text-align: center;
