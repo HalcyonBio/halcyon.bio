@@ -20,7 +20,7 @@ block content
               img.logoHB(src='/img/neuromethod360-logo.png')
               a.btn.btn-share.btn-share1.vrlps-trigger(type='button' target="_blank"
               href="#") MEET RONNIE
-              button.btn.btn-trailer(type='button' onclick="location.href='#neuromethodtrailer'; TrailerToggle()")  TRAILER <i class="fab fa-lg fa-youtube"></i>
+              button.btn.btn-trailer(type='button' onclick='{ trailerToggle }')  TRAILER <i class="fab fa-lg fa-youtube"></i>
 
     .container-fluid.l-vid
       .row.flex-center
@@ -90,18 +90,18 @@ block content
               <iframe src="https://www.youtube.com/embed/9XWgPwQ6Ip4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row.flex-center
         .col-6.col-md-3.col-thumb
-          a.ep1-link(href='#optincta' onclick='{ showVideo(1) }' onmouseup='EpisodeToggle()')
+          a.ep1-link(href='#optincta' onclick='{ showVideo(1, true) }')
 
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
             p 1
             img(src="/img/vid-1-thumb.jpg")
         .col-6.col-md-3.col-thumb
-          a.ep2-link(href='#optincta' onclick='{ showVideo(2) }' onmouseup='EpisodeToggle2()')
+          a.ep2-link(href='#optincta' onclick='{ showVideo(2, true) }')
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
             p 2
             img(src="/img/vid-2-thumb.jpg")
         .col-6.col-md-3.col-thumb
-          a.ep3-link(href='#optincta' onclick='{ showVideo(3) }' onmouseup='EpisodeToggle3()')
+          a.ep3-link(href='#optincta' onclick='{ showVideo(3, true) }')
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
             p 3
             img(src="/img/vid-3-thumb.jpg")
@@ -269,98 +269,6 @@ block content
 
   div#content-toggle
     script.
-      function EpisodeToggle() {
-          var ep1 = document.getElementById("episode-one");
-          var ep2 = document.getElementById("episode-two");
-          var ep3 = document.getElementById("episode-three");
-          var ep4 = document.getElementById("episode-four");
-          var ty = document.getElementById("thank-you");
-          var trailer = document.getElementById("neuromethodtrailer");
-          if (ep1.style.display = "block") {
-              trailer.style.display = "none"
-              ty.style.display = "none";
-              ep2.style.display = "none";
-              ep3.style.display = "none";
-              ep4.style.display = "none";
-          } else {
-            ep1.style.display = "none"
-          }
-          return true
-          
-      }
-      function EpisodeToggle2() {
-          var ep1 = document.getElementById("episode-one");
-          var ep2 = document.getElementById("episode-two");
-          var ep3 = document.getElementById("episode-three");
-          var ep4 = document.getElementById("episode-four");
-          var ty = document.getElementById("thank-you");
-          var trailer = document.getElementById("neuromethodtrailer");
-          if (ep2.style.display = "block") {
-              trailer.style.display = "none"
-              ty.style.display = "none"
-              ep1.style.display = "none";
-              ep3.style.display = "none";
-              ep4.style.display = "none";
-          } else {
-            ep2.style.display = "none"
-
-          }
-          return true
-        }
-        function EpisodeToggle3() {
-            var ep1 = document.getElementById("episode-one");
-            var ep2 = document.getElementById("episode-two");
-            var ep3 = document.getElementById("episode-three");
-            var ep4 = document.getElementById("episode-four");
-            var ty = document.getElementById("thank-you");
-            var trailer = document.getElementById("neuromethodtrailer");
-            if (ep3.style.display = "block") {
-                trailer.style.display = "none"
-                ty.style.display = "none";
-                ep1.style.display = "none";
-                ep2.style.display = "none";
-                ep4.style.display = "none";
-            } else {
-              ep3.style.display = "none"
-            }
-            return true
-      }
-        function EpisodeToggle4() {
-            var ep1 = document.getElementById("episode-one");
-            var ep2 = document.getElementById("episode-two");
-            var ep3 = document.getElementById("episode-three");
-            var ep4 = document.getElementById("episode-four");
-            var ty = document.getElementById("thank-you");
-            var trailer = document.getElementById("neuromethodtrailer");
-            if (ep4.style.display = "block") {
-                trailer.style.display = "none"
-                ty.style.display = "none";
-                ep1.style.display = "none";
-                ep2.style.display = "none";
-                ep3.style.display = "none";
-            } else {
-              ep4.style.display = "none"
-            }
-            return true
-      }
-    script.
-      function TrailerToggle() {
-          var trailer = document.getElementById("neuromethodtrailer");
-          var ep1 = document.getElementById("episode-one");
-          var ep2 = document.getElementById("episode-two");
-          var ep3 = document.getElementById("episode-three");
-          var ep4 = document.getElementById("episode-four");
-          if (trailer.style.display = "none") {
-              trailer.style.display = "flex"
-              ep1.style.display = "none"
-              ep2.style.display = "none"
-              ep3.style.display = "none"
-              ep4.style.display = "none"
-          } else {
-            trailer.style.display = "none"
-
-          }
-      }
   div#mousetracker
     script.
       window._mfq = window._mfq || [];
