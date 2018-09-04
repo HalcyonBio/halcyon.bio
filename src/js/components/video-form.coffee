@@ -87,47 +87,46 @@ export class VideoForm extends El.Form
         @episodeToggle n
 
   episodeToggle: (n)->
-    ep1 = document.getElementById 'episode-one'
-    ep2 = document.getElementById 'episode-two'
-    ep3 = document.getElementById 'episode-three'
-    ep4 = document.getElementById 'episode-four'
+    ep1 = $('#episode-one')
+    ep2 = $('episode-two')
+    ep3 = $('episode-three')
+    # ep4 = $('episode-four')
     ep = null
     switch n
       when 1 then ep = ep1
       when 2 then ep = ep2
       when 3 then ep = ep3
-      when 4 then ep = ep4
+      # when 4 then ep = ep4
 
-    ty = document.getElementById 'thank-you'
-    trailer = document.getElementById 'neuromethodtrailer'
-    if ep.style.display = 'block'
+    ty = $('thank-you')
+    trailer = $('neuromethodtrailer')
+    if ep.css('display') == 'none'
       requestAnimationFrame ->
-        trailer.style.display = 'none'
-        ty.style.display = 'none'
-        ep1.style.display = 'none'
-        ep2.style.display = 'none'
-        ep3.style.display = 'none'
+        trailer.css 'display', 'none'
+        ty.css 'display', 'none'
+        ep1.css 'display', 'none'
+        ep2.css 'display', 'none'
+        ep3.css 'display', 'none'
         # ep4.style.display = 'none'
         requestAnimationFrame ->
-          ep.style.display = 'block'
-    else
-      ep.style.display = 'block'
-    return true
+          ep.css 'display', 'block'
+          window.location.hash = ep.attr 'href'
+    return false
 
   trailerToggle: ->
-    window.location.hash = '#neuromethodtrailer'
-    trailer = document.getElementById 'neuromethodtrailer'
-    ep1 = document.getElementById 'episode-one'
-    ep2 = document.getElementById 'episode-two'
-    ep3 = document.getElementById 'episode-three'
+    trailer = $('neuromethodtrailer')
+    ep1 = $('#episode-one')
+    ep2 = $('episode-two')
+    ep3 = $('episode-three')
     # ep4 = document.getElementById 'episode-four'
-    if trailer.style.display = 'none'
-      trailer.style.display = 'flex'
-      ep1.style.display = 'none'
-      ep2.style.display = 'none'
-      ep3.style.display = 'none'
+    if trailer.css('display') == 'none'
+      trailer.css 'display', 'flex'
+      ep1.css 'display', 'none'
+      ep2.css 'display', 'none'
+      ep3.css 'display', 'none'
       # ep4.style.display = 'none'
-    else
-      trailer.style.display = 'flex'
+
+    requestAnimationFrame ->
+      window.location.hash = '#neuromethodtrailer'
 
 VideoForm.register()
