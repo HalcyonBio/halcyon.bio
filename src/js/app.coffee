@@ -39,6 +39,10 @@ window.addToCart = (productId, number)->
   Shop.setItem productId, number
   m.trigger 'checkout-open'
 
+window.logout = ->
+  Shop.client.account.logout()
+  window.location.replace '/login'
+
 window?.$ = $
 
 $(window).on 'scroll', ->

@@ -10,8 +10,12 @@ block content
     .container
       .row
         .col-md-8.offset-md-2.col-12
-          h2 Profile
           profile
+            .row
+              .col-md-10
+                h2 Profile: { data.get('user.email') }
+              .col-md-2
+                button.logout(onclick='{ logout }') Logout
             h3 Number of Referrals: { data.get('user.referrals') ? data.get('user.referrals').length : 0  }
             h3(if='{ isAffiliate() }') Commission Earned: { renderCurrency('usd', parseInt((data.get('user.transactions.points.balance') || 0) * (data.get('user.commission.percent') || 0.15)), 10)}
             h3 Your Link:
@@ -56,7 +60,7 @@ block content
                     img(src="/img/affiliate-assets/ron-white-teaching.jpg")
                     br
                     img(src="/img/affiliate-assets/ron-white-video-hero-no-play-button.jpg")
-                    img(src="/img/affiliate-assets/ron-white-video-hero.jpg") 
+                    img(src="/img/affiliate-assets/ron-white-video-hero.jpg")
                     img(src="/img/affiliate-assets/bottle-in-hand.jpg")
                     br
                     img(src="/img/affiliate-assets/halcyon-3-bottle.jpg")
@@ -85,7 +89,7 @@ block content
                     br
                     img(src="/img/affiliate-assets/focus7.jpg")
                     img(src="/img/affiliate-assets/focus8.jpg")
-                    img(src="/img/affiliate-assets/focus9.jpg")  
+                    img(src="/img/affiliate-assets/focus9.jpg")
                     br
                     img(src="/img/affiliate-assets/focus1.jpg")
               .divider
