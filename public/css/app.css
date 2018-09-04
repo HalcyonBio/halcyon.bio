@@ -5758,6 +5758,7 @@ a.lightbox img{
   color:#fff;
 }
 #checkout .title-top-container{
+  background-color:rgba(0,0,0,0.8);
   font-family:Palatino;
   padding:5px;
   position:fixed;

@@ -83,9 +83,9 @@ block content
               <iframe src="https://www.youtube.com/embed/R9DZF2IXGXk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>VMJZfLZWcIY
       .row.flex-center
         .col-6.col-md-3.col-thumb
-          a.ep1-link-wait(href='#optincta')
+          a.ep1-link-wait(href='#optincta' onclick='{ showVideo(1) }')
 
-            h6.vid-desc-wrapper.vid-coming-soon COMING SOON
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
             p 1
             img(src="/img/vid-1-thumb.jpg")
         .col-6.col-md-3.col-thumb
@@ -164,8 +164,8 @@ block content
         .row
           h3 UPCOMING EPISODES
           .col-md-6.col-12.vid-desc.flex-center
-            a.ep1-link-wait(href='#optincta')
-              h6.vid-desc-wrapper.vid-coming-soon COMING SOON
+            a.ep1-link-wait(href='#optincta' onclick='{ showVideo(1) }')
+              h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
               h6.vid-desc-wrapper Lifestyle Hacks
 
               img(src="/img/vid-1-thumb.jpg")
