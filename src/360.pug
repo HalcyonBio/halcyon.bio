@@ -59,7 +59,7 @@ block content
                     input(name="email" type="text" autocomplete="on" placeholder="enter your email")
                 button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
               .thank-you(if='{ submitted }')
-                h4.clg You're all set for the masterclass, we'll let you know as each episode is available. 
+                h4.clg You're all set for the masterclass, we'll let you know as each episode is available.
                 h4.h4line2 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
                 button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
               p.disclaimer.disclaimer-main(if='{ !submitted }')
@@ -83,13 +83,13 @@ block content
               <iframe src="https://www.youtube.com/embed/R9DZF2IXGXk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>VMJZfLZWcIY
       .row.flex-center
         .col-6.col-md-3.col-thumb
-          a.ep1-link-wait(href='#optincta' onclick='{ showVideo(1) }')
+          a.ep1-link(href='#optincta' onclick='{ showVideo(1) }')
 
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
             p 1
             img(src="/img/vid-1-thumb-live.jpg")
         .col-6.col-md-3.col-thumb
-          a.ep2-link-wait(href='#optincta')
+          a.ep2-link(href='#optincta')
             h6.vid-desc-wrapper.vid-coming-soon COMING SOON
             p 2
             img(src="/img/vid-2-thumb.jpg")
@@ -164,7 +164,7 @@ block content
         .row
           h3 UPCOMING EPISODES
           .col-md-6.col-12.vid-desc.flex-center
-            a.ep1-link-wait(href='#optincta' onclick='{ showVideo(1) }')
+            a.ep1-link(href='#optincta' onclick='{ showVideo(1) }')
               h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
               h6.vid-desc-wrapper Lifestyle Hacks
 
