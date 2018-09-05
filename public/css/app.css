@@ -3685,11 +3685,15 @@ select.select.select.select{
   border:2px solid #304191;
   border-radius:0;
 }
-a{
+a,
+.link{
   color:#2e3b8e !important;
+  cursor:pointer;
 }
 a:hover,
-a:focus{
+.link:hover,
+a:focus,
+.link:focus{
   color:#f26621 !important;
   border-color:#f26621 !important;
 }
@@ -4102,6 +4106,12 @@ footer .footer-bottom > *{
   box-shadow:none;
   border:2px solid #304191;
   height:36px;
+}
+#checkout checkout-flow{
+  width:100vw;
+}
+#checkout cart{
+  width:100%;
 }
 #index .hero{
   height:100vh;

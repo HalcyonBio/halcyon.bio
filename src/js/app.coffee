@@ -8,6 +8,7 @@ import './components/price'
 import './components/gallery'
 import './components/launch-squeeze-form'
 import './components/video-form'
+import './components/checkout-flow'
 
 import './astley'
 import './shop'

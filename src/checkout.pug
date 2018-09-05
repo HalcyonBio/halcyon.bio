@@ -19,33 +19,193 @@ block content
             .title-top
               img.logoHB(src='/img/nm-box-logo-dark-oj360.png')
               h5 Questions? Email us at #[a(href="mailto:support@halcyon.bio") support@halcyon.bio]
-  .container.product
-    .row.flex-center
-      .col-md-8.offset-md-2.col-12
-        h4.product-title Neuromethod360 Package $199 - #[strong valued at $569]
-        p
-          |- 12 week program #[strong ($299 value) ]
-          br
-          |- 12 week supply of Halcyon #[strong ($270 value) ]
-          br
-          |-- Cognitive Enhancement Guide #[strong ($88 value) ]
-          br
-          |– Neuromethod360 Private Facebook Group Membership
-          br
-          | – Five people will be selected in the first 24 hours to attend a live coaching call 
-          br
-          | series (space limited; #[strong valued at $9,999] )
-          br
-          |– One out of the first 100 will be selected for 1-on-1 memory coaching also #[strong valued at $18,000 ]
-          br
-          br
-        p.limit-notice
-          | Space is extremely limited as this is a highly interactive 12 week program. Only 
-          | 300 spots are available for October access, for those who do not make it into 
-          | the first 300, the second cohort of 1000 students will begin in December.  
-        .flex-center
-          button.btn(onclick='{ addToCart("P7c8KkgxUEGRO0", 1) }') ADD TO CART AND SUBSCRIBE
+  checkout
+    checkout-flow
+      .container.product(if='{ step == 0 }')
+        .row.flex-center
+          .col-md-8.offset-md-2.col-12
+            h4.product-title Neuromethod360 Package $199 - #[strong valued at $569]
+            p
+              |- 12 week program #[strong ($299 value) ]
+              br
+              |- 12 week supply of Halcyon #[strong ($270 value) ]
+              br
+              |-- Cognitive Enhancement Guide #[strong ($88 value) ]
+              br
+              |– Neuromethod360 Private Facebook Group Membership
+              br
+              | – Five people will be selected in the first 24 hours to attend a live coaching call
+              br
+              | series (space limited; #[strong valued at $9,999] )
+              br
+              |– One out of the first 100 will be selected for 1-on-1 memory coaching also #[strong valued at $18,000 ]
+              br
+              br
+            p.limit-notice
+              | Space is extremely limited as this is a highly interactive 12 week program. Only
+              | 300 spots are available for October access, for those who do not make it into
+              | the first 300, the second cohort of 1000 students will begin in December.
+            .flex-center
+              button.btn(onclick='{ toCart }') ADD TO CART AND SUBSCRIBE
+      .container.checkout-content(if='{ step >= 1 }')
+        .row.flex-center
+          .col-md-6.col-12.align-self-start
+            h2 Review Your Items
+            cart
+              h2(if='{ isEmpty() }')
+                | Your Cart Is Empty
+              lineitems(if='{ !isEmpty() }')
+                .animated.fadeIn
+                  .product-image-container(if='{ images }')
+                    img(riot-src='{ images[data.get().productSlug] || images[data.get().productId] || images[data.get().productName] }')
+                  .product-text-container
+                    span.product-description
+                      span.product-name { data.get('productName') }
+                      p { data.get('description') }
+                  span.product-quantity-container.locked(if="{ data.get('locked') }")
+                    | { data.get('quantity') }
+                  span.product-quantity-container(if="{ !data.get('locked') }")
+                    quantity-select.input(class="{ disabled: isSubmitted() }")
+                  .product-price-container.invoice-amount
+                    .product-price
+                      | { renderCurrency(parentData.get('currency'), data.get().price * data.get().quantity) } { parentData.get('currency').toUpperCase() }
+                    .product-list-price.invoice-amount(if='{ data.get().listPrice > data.get().price }')
+                      | { renderCurrency(parentData.get('currency'), data.get().listPrice * data.get().quantity) } { parentData.get('currency').toUpperCase() }
+                  .product-subscription-interval-container.invoice-subscription-interval(if="{ data.get('isSubscribeable') }")
+                    .product-subscription-interval
+                      | Every { data.get('intervalCount') } { data.get('interval') }{ data.get('intervalCount') > 1 ? 's' : ''}
 
+              .promo
+                .promo-label
+                  | Coupon
+                .promo-row(class='{ applied: applied, applying: applying, failed: failed }')
+                  promocode.input(placeholder='Coupon')
+                  button(disabled='{ applying }', onclick='{ applyPromoCode }')
+                    span(if='{ !applied && !applying && !failed }') +
+                    span(if='{ applied }' ) &#10003;
+                    span(if='{ failed }' ) &#10005;
+                    span(if='{ applying }') ...
+              .invoice-discount.invoice-line.animated.fadeIn(if="{ data.get('order.discount') > 0 }")
+                .invoice-label
+                  | Discount
+                .invoice-amount
+                  | { renderCurrency(data.get('order.currency'), data.get('order.discount'))} { data.get('order.currency').toUpperCase() }
+              .invoice-line
+                .invoice-label
+                  | Subtotal
+                .invoice-amount
+                  | { renderCurrency(data.get('order.currency'), data.get('order.subtotal'))} { data.get('order.currency').toUpperCase() }
+              .invoice-line
+                .invoice-label
+                  | Shipping
+                .invoice-amount.not-bold
+                  | { data.get('order.shipping') == 0 ? 'FREE' : renderCurrency(data.get('order.currency'), data.get('order.shipping'))}&nbsp;{ data.get('order.shipping') == 0 ? '' : data.get('order.currency').toUpperCase() }
+              .invoice-line
+                .invoice-label
+                  | Tax ({ Math.round(data.get('order.taxRate') * 100 * 1000, 10) / 1000 }%)
+                .invoice-amount
+                  | { renderCurrency(data.get('order.currency'), data.get('order.tax'))} { data.get('order.currency').toUpperCase() }
+              .invoice-line.invoice-total
+                .invoice-label
+                  | Total
+                .invoice-amount
+                  | { renderCurrency(data.get('order.currency'), data.get('order.total'))} { data.get('order.currency').toUpperCase() }
+
+          .col-md-6.col-12.align-self-start(if='{ !upsold && step == 1 }')
+            h2 Limited Time Offers ({ getSeconds() }s Remaining)
+            | Elite Upgrade
+            p
+              | - 5 Coaching calls with Ron and Performance Psychologist
+              br
+              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            button.btn(onclick='{ eliteUpgrade1 }') UPGRADE ME
+            br
+            | Executive Upgrade
+            p
+              | - 5 Coaching calls with Ron and Performance Psychologist
+              br
+              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            button.btn(onclick='{ executiveUpgrade1 }') UPGRADE ME
+            br
+            p.link(if='{ !upsold }' onclick='{ toCheckout }') NO THANKS, I WANT THE BASIC EXPERIENCE
+            button.btn(if='{ upsold }' onclick='{ toCheckout }') CONTINUE
+
+          .col-md-6.col-12.align-self-start(if='{ step == 2 }')
+            h2 Limited Time Offers ({ getSeconds() }s Remaining)
+            | Bring a Friend Half Off
+            p
+              | - 5 Coaching calls with Ron and Performance Psychologist
+              br
+              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            button.btn(onclick='{ eliteUpgrade2 }') ADD TO CART
+            br
+            p.link(onclick='{ toCheckout }') NO THANKS, I WANT THE BASIC EXPERIENCE
+
+          .col-md-6.col-12.align-self-start(if='{ step == 3 }')
+            h2 Limited Time Offers ({ getSeconds() }s Remaining)
+            | Bring a Friend for Half Off
+            p
+              | - 5 Coaching calls with Ron and Performance Psychologist
+              br
+              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            button.btn(onclick='{ executiveUpgrade2 }') ADD TO CART
+            br
+            p.link(onclick='{ toCheckout }') NO THANKS, I WANT THE BASIC EXPERIENCE
+
+          .checkout-form.col-md-6.col-12.align-self-start(if='{ step == 4 }')
+            .contact.checkout-section
+              h2
+                | Contact
+              .fields
+                user-name.input(label='Name')
+                user-email.input(label='Email')
+            .payment.checkout-section
+              h2
+                | Payment
+              span.secured-text
+                | SSL Secure
+                span Checkout
+                img.lock-icon(src='//cdn.jsdelivr.net/gh/hanzo-io/shop.js/img/lock-icon.svg')
+              .fields
+                card-name.input(label='Name on Card')
+                card-number.input(name='number', label='Card Number')
+                  div.cards-accepted
+                    img.card-logo.amex-logo(src='//cdn.jsdelivr.net/gh/hanzo-io/shop.js/img/card-logos/amex.svg')
+                    img.card-logo.visa-logo(src='//cdn.jsdelivr.net/gh/hanzo-io/shop.js/img/card-logos/visa.svg')
+                    img.card-logo.discover-logo(src='//cdn.jsdelivr.net/gh/hanzo-io/shop.js/img/card-logos/discover.svg')
+                    img.card-logo.jcb-logo(src='//cdn.jsdelivr.net/gh/hanzo-io/shop.js/img/card-logos/jcb.svg')
+                    img.card-logo.mastercard-logo(src='//cdn.jsdelivr.net/gh/hanzo-io/shop.js/img/card-logos/mastercard.svg')
+                    a.stripe-link(href='//www.stripe.com', target='_blank')
+                      img.stripe-logo(src='//cdn.jsdelivr.net/gh/hanzo-io/shop.js/img/stripelogo.png')
+                .inline-fields
+                  card-expiry.input(name='expiry', label='MM / YY')
+                  card-cvc.input(name='cvc', label='CVC')
+            .shipping.checkout-section
+              h2
+                | Shipping
+              shippingaddress-name.input(label='Recipient')
+              .inline-fields.line1-line2
+                shippingaddress-line1.input(label='Address')
+                shippingaddress-line2.input(label='Suite')
+              shippingaddress-city.input(label='City')
+              shippingaddress-country.input(label='Country', placeholder='Select a Country')
+              .inline-fields.state-postal-code
+                shippingaddress-state.input(label='State', placeholder='Select a State')
+                shippingaddress-postalcode.input(label='Postal Code')
+              terms.checkbox
+                label(for='{ getId() }')
+                  | I have read and accept the&nbsp;
+                  a(href='terms', target='_blank') terms and conditions
+
+            button.checkout-next(class='{ loading: loading || checkedOut }', disabled='{ loading || checkedOut }', type='submit')
+              | Checkout
+            .error(if='{ errorMessage }')
+              | { errorMessage }
+
+          thankyou.col-md-6.col-12.align-self-start(if='{ step == 5 }')
+            #{ 'yield' }(from='thankyou-body')
+              p
+                | Thank you for your purchase, you will receive an order confirmation email once your payment is processed.
   .lsfooter
     .row
       .text-center.footer-follow-us.col-md-6.col-xs-12
@@ -98,38 +258,6 @@ block content
     br
     |  #[a(href='/privacy-policy' target='blank') Privacy Policy ] |  #[a(href='/privacy-policy#terms-of-service' target='blank') Terms of Service]
 
-  div#content-toggle
-    script.
-      function EpisodeToggle() {
-          var x = document.getElementById("episode-one");
-          var ty = document.getElementById("thank-you");
-          var trailer = document.getElementById("neuromethodtrailer");
-          if (x.style.display = "block") {
-              trailer.style.display = "none"
-              ty.style.display = "none";
-          } else {
-            x.style.display = "none"
-              
-          }
-      }
-    script.
-      function TrailerToggle() {
-          var trailer = document.getElementById("neuromethodtrailer");
-          var ep1 = document.getElementById("episode-one");
-          var ep2 = document.getElementById("episode-two");
-          var ep3 = document.getElementById("episode-three");
-          var ep4 = document.getElementById("episode-four");
-          if (trailer.style.display = "none") {
-              trailer.style.display = "flex"
-              ep1.style.display = "none"
-              ep2.style.display = "none"
-              ep3.style.display = "none"
-              ep4.style.display = "none"
-          } else {
-            trailer.style.display = "none"
-              
-          }
-      }
   div#mousetracker
     script.
       window._mfq = window._mfq || [];
@@ -153,6 +281,6 @@ block content
   div#viral-loops
     script.
       !function(a,b,c,d,t){var e,f=a.getElementsByTagName("head")[0];if(!a.getElementById(c)){if(e=a.createElement(b),e.id=c,e.setAttribute("data-vrlps-ucid",d),e.setAttribute("data-vrlps-version","2"), e.setAttribute("data-vrlps-template", t),e.src="https://app.viral-loops.com/popup_assets/js/vl_load_v2.min.js",window.ub){jQuery=null,$=null;var g=a.createElement(b);g.src="https://code.jquery.com/jquery-2.2.4.min.js",f.appendChild(g)}f.appendChild(e);var h=a.createElement("link");h.rel="stylesheet",h.type="text/css",h.href="https://app.viral-loops.com/static/vl-loader.css",f.appendChild(h);var i=a.createElement("div");i.id="vl-overlay",i.style.display="none";var j=a.createElement("div");j.id="vl-loader",i.appendChild(j),a.addEventListener("DOMContentLoaded",function(b){a.body.appendChild(i);for(var c=a.getElementsByClassName("vrlps-trigger"),d=0;d<c.length;d++)c[d].removeAttribute("href"),c[d].onclick=function(){a.getElementById("vl-overlay").style.display="block"};var e=a.querySelectorAll("[data-vl-widget='popupTrigger']");[].forEach.call(e,function(b){var c=a.createElement("div");c.className="vl-embedded-cta-loader",b.appendChild(c)})})}}(document,"script","vrlps-js","_FUZaZo3McnD1eiLnYdZwty6qJ0","sweepstake");
-      
+
 block header
 block footer
