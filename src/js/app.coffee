@@ -4,6 +4,7 @@ import El from 'el.js/src'
 import ref from 'referential'
 import Hanzo from 'hanzo.js'
 
+import './components/raw'
 import './components/price'
 import './components/gallery'
 import './components/launch-squeeze-form'
@@ -18,7 +19,7 @@ import Shop from 'shop.js/src'
 import objectAssign from 'es-object-assign'
 window.objectAssign = objectAssign
 
-El.mount 'price, gallery'
+El.mount 'price, gallery, raw'
 
 m = Shop.getMediator()
 

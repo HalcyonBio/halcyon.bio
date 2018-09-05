@@ -61,7 +61,7 @@ block content
                   .product-text-container
                     span.product-description
                       span.product-name { data.get('productName') }
-                      p { data.get('description') }
+                      raw(raw-html='{ data.get("description") }')
                   span.product-quantity-container.locked(if="{ data.get('locked') }")
                     | { data.get('quantity') }
                   span.product-quantity-container(if="{ !data.get('locked') }")

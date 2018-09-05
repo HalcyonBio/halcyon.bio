@@ -14,6 +14,9 @@ export class CheckoutFlow extends El.View
   init: ->
     super arguments...
 
+    @on 'mount', ->
+      $(@root).addClass 'ready'
+
     @on 'update', ->
       $(@root).find('cart').addClass 'ready'
 
@@ -39,6 +42,9 @@ export class CheckoutFlow extends El.View
       @update()
       console.log('seconds: ', @seconds)
     , 1000
+
+    Shop.clear()
+    Shop.setItem 'P7c8KkgxUEGRO0', 1
 
   getSeconds: ->
     if @seconds > 0
@@ -79,21 +85,25 @@ export class CheckoutFlow extends El.View
     @scheduleUpdate()
 
   eliteUpgrade1: ->
-    Shop.clear()
     Shop.setItem 'qGcvWn19sxWb1O', 1
+    Shop.setItem 'P7c8KkgxUEGRO0', 0
+    @update()
     @toUpsell1()
 
   eliteUpgrade2: ->
     Shop.setItem 'pocm8A9PfzPwZK', 1, true
+    @update()
     @toCheckout()
 
   executiveUpgrade1: ->
-    Shop.clear()
     Shop.setItem '0Kcx0egPcYqGPA', 1
+    Shop.setItem 'P7c8KkgxUEGRO0', 0
+    @update()
     @toUpsell2()
 
   executiveUpgrade2: ->
     Shop.setItem 'JwcnoBljt4ZK2J', 1, true
+    @update()
     @toCheckout()
 
 CheckoutFlow.register()

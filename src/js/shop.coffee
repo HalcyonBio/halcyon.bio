@@ -27,10 +27,6 @@ data = Shop.getData()
 $('.add-to-cart button').on 'click', (e)->
   m.trigger 'checkout-open'
 
-if window.location.pathname.indexOf('checkout') >= 0
-  Shop.clear()
-  Shop.setItem 'P7c8KkgxUEGRO0', 1
-
 # account page stuff
 if window.location.pathname.indexOf('account') >= 0
 

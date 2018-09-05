@@ -4110,6 +4110,15 @@ footer .footer-bottom > *{
 #checkout checkout-flow{
   width:100vw;
 }
+#checkout checkout-flow:not(.ready) > *{
+  opacity:0 !important;
+}
+#checkout checkout-flow > *{
+  transition:opacity 500ms ease-in;
+}
+#checkout checkout-flow > *{
+  align-items:flex-start;
+}
 #checkout cart{
   width:100%;
 }
