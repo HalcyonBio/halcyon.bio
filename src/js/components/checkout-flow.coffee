@@ -17,6 +17,7 @@ export class CheckoutFlow extends El.View
 
     @on 'update', ->
       $(@root).find('cart').addClass 'ready'
+      $(@root).find('thankyou').addClass 'ready'
 
     m.on 'submit-success', =>
       @step = 5
@@ -89,7 +90,7 @@ export class CheckoutFlow extends El.View
   eliteUpgrade2: ->
     Shop.setItem 'pocm8A9PfzPwZK', 1, true
     @update()
-    @toCheckout()
+    @toThankYou()
 
   executiveUpgrade1: ->
     Shop.setItem '0Kcx0egPcYqGPA', 1
@@ -100,6 +101,6 @@ export class CheckoutFlow extends El.View
     Shop.setItem 'JwcnoBljt4ZK2J', 1, true
     @update()
     @submit()
-    @toCheckout()
+    @toThankYou()
 
 CheckoutFlow.register()

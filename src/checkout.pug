@@ -201,10 +201,17 @@ block content
             br
             p.link(onclick='{ toThankYou }') FINISH CHECKOUT
 
-          thankyou.col-md-6.col-12.align-self-start(if='{ step == 5 }')
-            #{ 'yield' }(from='thankyou-body')
-              p
-                | Thank you for your purchase, you will receive an order confirmation email once your payment is processed.
+          .col-md-6.col-12.align-self-start(if='{ step == 5 }')
+            thankyou(if='{ !checkedOut && !errorMessage}')
+              p Completing checkout, please wait...
+            thankyou(if='{ checkedOut }')
+              .thankyou-title
+                h2 Order { getOrderNumber() }
+              .thankyou-body
+                p
+                  | Thank you for your purchase, you will receive an order confirmation email once your payment is processed.
+            thankyou(if='{ errorMessage }')
+              .error { errorMessage }
   .lsfooter
     .row
       .text-center.footer-follow-us.col-md-6.col-xs-12
