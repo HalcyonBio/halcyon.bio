@@ -111,48 +111,7 @@ block content
                 .invoice-amount
                   | { renderCurrency(data.get('order.currency'), data.get('order.total'))} { data.get('order.currency').toUpperCase() }
 
-          .col-md-6.col-12.align-self-start(if='{ !upsold && step == 1 }')
-            h2 Limited Time Offers ({ getSeconds() }s Remaining)
-            | Elite Upgrade
-            p
-              | - 5 Coaching calls with Ron and Performance Psychologist
-              br
-              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
-            button.btn(onclick='{ eliteUpgrade1 }') UPGRADE ME
-            br
-            | Executive Upgrade
-            p
-              | - 5 Coaching calls with Ron and Performance Psychologist
-              br
-              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
-            button.btn(onclick='{ executiveUpgrade1 }') UPGRADE ME
-            br
-            p.link(if='{ !upsold }' onclick='{ toCheckout }') NO THANKS, I WANT THE BASIC EXPERIENCE
-            button.btn(if='{ upsold }' onclick='{ toCheckout }') CONTINUE
-
-          .col-md-6.col-12.align-self-start(if='{ step == 2 }')
-            h2 Limited Time Offers ({ getSeconds() }s Remaining)
-            | Bring a Friend Half Off
-            p
-              | - 5 Coaching calls with Ron and Performance Psychologist
-              br
-              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
-            button.btn(onclick='{ eliteUpgrade2 }') ADD TO CART
-            br
-            p.link(onclick='{ toCheckout }') NO THANKS, I WANT THE BASIC EXPERIENCE
-
-          .col-md-6.col-12.align-self-start(if='{ step == 3 }')
-            h2 Limited Time Offers ({ getSeconds() }s Remaining)
-            | Bring a Friend for Half Off
-            p
-              | - 5 Coaching calls with Ron and Performance Psychologist
-              br
-              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
-            button.btn(onclick='{ executiveUpgrade2 }') ADD TO CART
-            br
-            p.link(onclick='{ toCheckout }') NO THANKS, I WANT THE BASIC EXPERIENCE
-
-          .checkout-form.col-md-6.col-12.align-self-start(if='{ step == 4 }')
+          .checkout-form.col-md-6.col-12.align-self-start(if='{ step == 1 }')
             .contact.checkout-section
               h2
                 | Contact
@@ -197,10 +156,50 @@ block content
                   | I have read and accept the&nbsp;
                   a(href='terms', target='_blank') terms and conditions
 
-            button.checkout-next(class='{ loading: loading || checkedOut }', disabled='{ loading || checkedOut }', type='submit')
-              | Checkout
+            verifier(on-verified='{ toUpsell1 }')
+              button.checkout-next(class='{ loading: loading || checkedOut }', disabled='{ loading || checkedOut }', onclick='{ verify }')
+                | Checkout
             .error(if='{ errorMessage }')
               | { errorMessage }
+          .col-md-6.col-12.align-self-start(if='{ !upsold && step == 2 }')
+            h2 Limited Time Offers ({ getSeconds() }s Remaining)
+            | Elite Upgrade
+            p
+              | - 5 Coaching calls with Ron and Performance Psychologist
+              br
+              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            button.btn(onclick='{ eliteUpgrade1 }') UPGRADE ME
+            br
+            | Executive Upgrade
+            p
+              | - 5 Coaching calls with Ron and Performance Psychologist
+              br
+              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            button.btn(onclick='{ executiveUpgrade1 }') UPGRADE ME
+            br
+            p.link(onclick='{ toThankYou }') NO THANKS, I WANT THE BASIC EXPERIENCE
+
+          .col-md-6.col-12.align-self-start(if='{ step == 3 }')
+            h2 Limited Time Offers ({ getSeconds() }s Remaining)
+            | Bring a Friend Half Off
+            p
+              | - 5 Coaching calls with Ron and Performance Psychologist
+              br
+              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            button.btn(onclick='{ eliteUpgrade2 }') ADD TO CART
+            br
+            p.link(onclick='{ toThankYou }') FINISH CHECKOUT
+
+          .col-md-6.col-12.align-self-start(if='{ step == 4 }')
+            h2 Limited Time Offers ({ getSeconds() }s Remaining)
+            | Bring a Friend for Half Off
+            p
+              | - 5 Coaching calls with Ron and Performance Psychologist
+              br
+              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            button.btn(onclick='{ executiveUpgrade2 }') ADD TO CART
+            br
+            p.link(onclick='{ toThankYou }') FINISH CHECKOUT
 
           thankyou.col-md-6.col-12.align-self-start(if='{ step == 5 }')
             #{ 'yield' }(from='thankyou-body')

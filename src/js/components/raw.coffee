@@ -8,7 +8,7 @@ export class Raw extends El.View
   init: ->
     super arguments...
 
-    @root.innerHTML = @rawHtml
+    @root.innerHTML = @rawHtml.replace(/\n/g, '<br/>') if @rawHtml
 
 Raw.register()
 

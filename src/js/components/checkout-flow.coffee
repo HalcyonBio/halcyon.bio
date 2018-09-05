@@ -9,8 +9,6 @@ export class CheckoutFlow extends El.View
 
   step: 0
 
-  upsold: false
-
   init: ->
     super arguments...
 
@@ -37,13 +35,14 @@ export class CheckoutFlow extends El.View
       @seconds = Math.floor(distance / 1000)
       # Display the result in the element with id="demo"
       # If the count down is finished, write some text
-      if @seconds <= 0 && @step > 0 && @step <4
-        @toCheckout()
+      if @seconds <= 0 && @step > 1 && @step <4
+        @toThankYou()
       @update()
       console.log('seconds: ', @seconds)
     , 1000
 
-    Shop.clear()
+    try
+      Shop.clear()
     Shop.setItem 'P7c8KkgxUEGRO0', 1
 
   getSeconds: ->
@@ -57,38 +56,35 @@ export class CheckoutFlow extends El.View
 
   toCart: ->
     @step = 1
-    @countDownDate = new Date().getTime() + 60000
-    @seconds = 60
     @update()
 
   toUpsell1: ->
     @step = 2
-    @upsold = true
-    @countDownDate = new Date().getTime() + 30000
-    @seconds =30
+    @countDownDate = new Date().getTime() + 60000
+    @seconds = 60
     @update()
 
   toUpsell2: ->
     @step = 3
-    @upsold = true
     @countDownDate = new Date().getTime() + 30000
     @seconds = 30
     @update()
 
-  toCheckout: ->
+  toUpsell3: ->
     @step = 4
-    @upsold = true
-    @scheduleUpdate()
+    @countDownDate = new Date().getTime() + 30000
+    @seconds = 30
+    @update()
 
   toThankYou: ->
     @step = 5
+    @submit()
     @scheduleUpdate()
 
   eliteUpgrade1: ->
     Shop.setItem 'qGcvWn19sxWb1O', 1
-    Shop.setItem 'P7c8KkgxUEGRO0', 0
     @update()
-    @toUpsell1()
+    @toUpsell2()
 
   eliteUpgrade2: ->
     Shop.setItem 'pocm8A9PfzPwZK', 1, true
@@ -97,13 +93,13 @@ export class CheckoutFlow extends El.View
 
   executiveUpgrade1: ->
     Shop.setItem '0Kcx0egPcYqGPA', 1
-    Shop.setItem 'P7c8KkgxUEGRO0', 0
     @update()
-    @toUpsell2()
+    @toUpsell3()
 
   executiveUpgrade2: ->
     Shop.setItem 'JwcnoBljt4ZK2J', 1, true
     @update()
+    @submit()
     @toCheckout()
 
 CheckoutFlow.register()

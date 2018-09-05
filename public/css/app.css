@@ -4119,8 +4119,14 @@ footer .footer-bottom > *{
 #checkout checkout-flow > *{
   align-items:flex-start;
 }
+#checkout checkout-flow .checkout-form{
+  margin:0;
+}
 #checkout cart{
   width:100%;
+}
+#checkout cart .product-text-container{
+  width:60%;
 }
 #index .hero{
   height:100vh;
