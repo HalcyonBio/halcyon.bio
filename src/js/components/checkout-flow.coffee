@@ -51,22 +51,22 @@ export class CheckoutFlow extends El.View
 
   toCart: ->
     @step = 1
-    @countDownDate = new Date().getTime() + 30000
-    @seconds = 30
+    @countDownDate = new Date().getTime() + 60000
+    @seconds = 60
     @update()
 
   toUpsell1: ->
     @step = 2
     @upsold = true
-    @countDownDate = new Date().getTime() + 15000
-    @seconds = 15
+    @countDownDate = new Date().getTime() + 30000
+    @seconds =30
     @update()
 
   toUpsell2: ->
     @step = 3
     @upsold = true
-    @countDownDate = new Date().getTime() + 15000
-    @seconds = 15
+    @countDownDate = new Date().getTime() + 30000
+    @seconds = 30
     @update()
 
   toCheckout: ->
@@ -93,7 +93,7 @@ export class CheckoutFlow extends El.View
     @toUpsell2()
 
   executiveUpgrade2: ->
-    Shop.setItem '0Kcx0egPcYqGPA', 1, true
+    Shop.setItem 'JwcnoBljt4ZK2J', 1, true
     @toCheckout()
 
 CheckoutFlow.register()
