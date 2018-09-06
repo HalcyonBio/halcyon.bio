@@ -1,0 +1,12 @@
+.accordion
+  cursor: pointer
+  .accordion-body
+    cursor: default
+    max-height: 0
+    transition: all $transitionTime linear
+    display: block
+    overflow: hidden
+
+  &:focus
+    .accordion-body
+      max-height: 200px

@@ -3692,6 +3692,19 @@ a:focus,
   color:#f26621 !important;
   border-color:#f26621 !important;
 }
+.accordion{
+  cursor:pointer;
+}
+.accordion .accordion-body{
+  cursor:default;
+  max-height:0;
+  transition:all 400ms linear;
+  display:block;
+  overflow:hidden;
+}
+.accordion:focus .accordion-body{
+  max-height:200px;
+}
 checkout-card .stripe-logo{
   height:42px;
 }
