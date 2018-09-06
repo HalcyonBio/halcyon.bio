@@ -108,6 +108,13 @@ export class VideoForm extends El.Form
       ep1.css 'display', 'none'
       ep2.css 'display', 'none'
       ep3.css 'display', 'none'
+      for epi in [ep1, ep2, ep3]
+        if ep[0] == epi[0]
+          continue
+        iframe = epi.find('iframe')
+        src = iframe.attr 'src'
+        iframe.attr 'src', ''
+        iframe.attr 'src', src
       # ep4.style.display = 'none'
       ep.css 'display', 'block'
       window.location.hash = target.attr 'href'
