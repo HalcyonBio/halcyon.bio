@@ -17,6 +17,8 @@ export class VideoForm extends El.Form
     opts =
       formId: @formId
       email: @data.get 'email'
+      affiliate: akasha.get 'referrer'
+      source: window.location.href
 
     @client.form.subscribe opts
       .finally =>
