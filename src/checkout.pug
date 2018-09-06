@@ -161,42 +161,42 @@ block content
                 | Checkout
             .error(if='{ errorMessage }')
               | { errorMessage }
-          .col-md-6.col-12.align-self-start(if='{ !upsold && step == 2 }')
+          .col-md-6.col-12.align-self-start(if='{ step == 2 }')
             h2 Limited Time Offers ({ getSeconds() }s Remaining)
-            | Elite Upgrade
-            p
-              | - 5 Coaching calls with Ron and Performance Psychologist
-              br
-              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            .accordion(tabindex='0')
+              | Elite Upgrade
+              .accordion-body
+                p - 5 Coaching calls with Ron and Performance Psychologist
+                p - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
             button.btn(onclick='{ eliteUpgrade1 }') UPGRADE ME
-            br
-            | Executive Upgrade
-            p
-              | - 5 Coaching calls with Ron and Performance Psychologist
-              br
-              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            .accordion(tabindex='0')
+              | Executive Upgrade
+              .accordion-body
+                p - 5 Coaching calls with Ron and Performance Psychologist
+                br
+                p - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
             button.btn(onclick='{ executiveUpgrade1 }') UPGRADE ME
             br
             p.link(onclick='{ toThankYou }') NO THANKS, I WANT THE BASIC EXPERIENCE
 
           .col-md-6.col-12.align-self-start(if='{ step == 3 }')
             h2 Limited Time Offers ({ getSeconds() }s Remaining)
-            | Bring a Friend Half Off
-            p
-              | - 5 Coaching calls with Ron and Performance Psychologist
-              br
-              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            .accordion(tabindex='0')
+              | Bring a Friend Half Off
+              .accordion-body
+                p - 5 Coaching calls with Ron and Performance Psychologist
+                p - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
             button.btn(onclick='{ eliteUpgrade2 }') ADD TO CART
             br
             p.link(onclick='{ toThankYou }') FINISH CHECKOUT
 
           .col-md-6.col-12.align-self-start(if='{ step == 4 }')
             h2 Limited Time Offers ({ getSeconds() }s Remaining)
-            | Bring a Friend for Half Off
-            p
-              | - 5 Coaching calls with Ron and Performance Psychologist
-              br
-              | - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
+            .accordion(tabindex='0')
+              | Bring a Friend for Half Off
+              .accordion-body
+                p - 5 Coaching calls with Ron and Performance Psychologist
+                p - Bonus: Halcyon VIP event - meet with Ron and Halcyon Team and Halcyon Ambassadors at exclusive party in your choice of California or New York
             button.btn(onclick='{ executiveUpgrade2 }') ADD TO CART
             br
             p.link(onclick='{ toThankYou }') FINISH CHECKOUT
