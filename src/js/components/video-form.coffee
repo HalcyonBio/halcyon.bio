@@ -146,6 +146,13 @@ export class VideoForm extends El.Form
       ep2.css 'display', 'none'
       ep3.css 'display', 'none'
       # ep4.style.display = 'none'
-      window.location.hash = '#neuromethodtrailer'
+    window.location.hash = '#neuromethodtrailer'
+
+  closeTrailer: ->
+    trailer = $('#neuromethodtrailer')
+    iframe = trailer.find('iframe')
+    src = iframe.attr 'src'
+    iframe.attr 'src', ''
+    iframe.attr 'src', src
 
 VideoForm.register()
