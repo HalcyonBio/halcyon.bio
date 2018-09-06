@@ -117,6 +117,12 @@ export class VideoForm extends El.Form
         src = iframe.attr 'src'
         iframe.attr 'src', ''
         iframe.attr 'src', src
+
+      iframe = trailer.find('iframe')
+      src = iframe.attr 'src'
+      iframe.attr 'src', ''
+      iframe.attr 'src', src
+
       # ep4.style.display = 'none'
       ep.css 'display', 'block'
       window.location.hash = target.attr 'href'
