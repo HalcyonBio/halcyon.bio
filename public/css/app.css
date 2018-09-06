@@ -4123,6 +4123,10 @@ footer .footer-bottom > *{
 #checkout cart .product-text-container{
   width:60%;
 }
+#checkout .auth-logo{
+  float:right;
+  height:42px;
+}
 #index .hero{
   height:100vh;
 }
@@ -5765,12 +5769,13 @@ a.lightbox img{
   left:0;
 }
 #checkout .product{
-  margin:40px 0;
+  margin:20px 0px 40px 0px;
   color:#000;
   font-family:"Lato", "Helvetica", "Arial", sans-serif;
 }
 #checkout .product-title{
   color:#0f1033;
+  text-align:center;
 }
 #checkout .limit-notice{
   font-style:italic;
@@ -5783,8 +5788,9 @@ a.lightbox img{
   color:#fff;
 }
 #checkout .title-top-container{
-  background-color:rgba(0,0,0,0.8);
+  background-color:rgba(255,255,255,0.9);
   font-family:Palatino;
+  z-index:10;
   padding:5px;
   position:fixed;
   top:0px;
@@ -5803,6 +5809,22 @@ a.lightbox img{
 }
 #checkout .first{
   margin-top:100px;
+}
+#checkout .checkmark{
+  color:#008000;
+}
+#checkout .gift{
+  color:#304191;
+}
+#checkout .package-details{
+  line-height:2rem;
+}
+#checkout .product-img{
+  margin-bottom:20px;
+  text-align:center;
+}
+#checkout .product-img img{
+  max-width:350px;
 }
 @keyframes pulse{
   0%{
