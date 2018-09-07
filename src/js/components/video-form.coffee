@@ -129,7 +129,10 @@ export class VideoForm extends El.Form
       requestAnimationFrame ->
         window.location.hash = target.attr 'href'
         requestAnimationFrame ->
-          window.location.hash = target.attr 'href'
+          ep[0].scrollIntoView()
+          setTimeout ->
+            ep[0].scrollIntoView()
+          , 500
 
     e.preventDefault()
     e.stopPropagation()
