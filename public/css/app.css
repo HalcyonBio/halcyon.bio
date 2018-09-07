@@ -3705,6 +3705,18 @@ a:focus,
 .accordion:focus .accordion-body{
   max-height:200px;
 }
+.accordion:focus .more-arrow{
+  display:none;
+}
+.accordion:focus .less-arrow{
+  display:inline-block;
+}
+.more-arrow{
+  display:inline-block;
+}
+.less-arrow{
+  display:none;
+}
 checkout-card .stripe-logo{
   height:42px;
 }
@@ -4114,6 +4126,9 @@ footer .footer-bottom > *{
   box-shadow:none;
   border:2px solid #304191;
   height:36px;
+}
+#account .more{
+  text-decoration:underline;
 }
 #checkout checkout-flow{
   width:100vw;
@@ -5480,6 +5495,9 @@ iframe.fb_ltr{
 #launch-videos .vlns b{
   color:#666;
 }
+#launch-videos .thank-you-moved{
+  padding-top:20px !important;
+}
 #launch-videos .thank-you{
   padding-top:110px;
   text-align:center;
@@ -5487,6 +5505,9 @@ iframe.fb_ltr{
 }
 #launch-videos .thank-you .clg{
   color:#d3d3d3;
+}
+#launch-videos .thank-you .clg a{
+  text-decoration:underline !important;
 }
 #launch-videos .thank-you .h4line2{
   color:#e6e4e4;
