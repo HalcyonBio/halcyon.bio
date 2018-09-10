@@ -5843,9 +5843,6 @@ a.lightbox img{
 #checkout .limit-notice{
   font-style:italic;
 }
-#checkout .title-top{
-  border-bottom:solid 1px #808080;
-}
 #checkout .btn{
   background-color:#304191;
   color:#fff;
@@ -5904,11 +5901,11 @@ a.lightbox img{
 }
 #checkout .srfa{
   padding-right:5px;
-  font-size:1.7rem;
+  font-size:2rem;
   vertical-align:middle;
 }
 #checkout .phone{
-  font-size:1.4rem;
+  font-size:2rem;
   color:#304191;
 }
 #checkout .info{
@@ -5921,9 +5918,12 @@ a.lightbox img{
 #checkout .ug-offer{
   background-color:#f0efef;
   border-radius:5px;
-  margin-top:40px;
+  margin-bottom:40px;
   padding:5px;
   box-shadow:0px 0px 5px 0px rgba(0,0,0,0.25);
+}
+#checkout .first-row{
+  margin-top:50px;
 }
 #checkout .price{
   color:#f00;
@@ -5948,6 +5948,7 @@ a.lightbox img{
 }
 #checkout .ug-desc{
   font-size:1rem;
+  padding-bottom:10px;
 }
 #checkout .space{
   color:#808080;
@@ -5972,6 +5973,12 @@ a.lightbox img{
 }
 #checkout .product-name{
   width:60%;
+  margin-top:-7px;
+  font-size:1.5rem;
+}
+#checkout .product-price,
+#checkout .product-list-price{
+  font-size:1rem;
 }
 #checkout .decline-ug{
   text-align:center;
@@ -5983,6 +5990,75 @@ a.lightbox img{
 }
 #checkout .product-quantity-container{
   display:none;
+}
+#checkout .top-stick{
+  position:fixed;
+  height:100px;
+  right:0;
+  left:0;
+  top:57px;
+  width:100%;
+  z-index:999;
+  background-color:rgba(255,255,255,0.9);
+}
+#checkout .no-cc-notice{
+  font-style:italic;
+  padding:10px 0px;
+  text-align:center;
+}
+#checkout .cf{
+  font-size:1rem;
+}
+#checkout .b-cont{
+  padding-top:20px;
+}
+.tooltip{
+  display:inline-block;
+  position:relative;
+  border-bottom:1px dotted #666;
+  text-align:left;
+}
+.tooltip .top{
+  min-width:200px;
+  top:-20px;
+  left:50%;
+  transform:translate(-50%, -100%);
+  padding:10px 20px;
+  color:#444;
+  background-color:#eee;
+  font-weight:normal;
+  font-size:13px;
+  border-radius:8px;
+  position:absolute;
+  z-index:99999999;
+  box-sizing:border-box;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
+  visibility:hidden;
+  opacity:0;
+  transition:opacity 0.8s;
+}
+.tooltip:hover .top{
+  visibility:visible;
+  opacity:1;
+}
+.tooltip .top i{
+  position:absolute;
+  top:100%;
+  left:50%;
+  margin-left:-12px;
+  width:24px;
+  height:12px;
+  overflow:hidden;
+}
+.tooltip .top i:after{
+  content:'';
+  position:absolute;
+  width:12px;
+  height:12px;
+  left:50%;
+  transform:translate(-50%, -50%) rotate(45deg);
+  background-color:#eee;
+  box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }
 @keyframes pulse{
   0%{

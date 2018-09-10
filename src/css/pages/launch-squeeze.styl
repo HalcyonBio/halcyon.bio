@@ -925,8 +925,6 @@ display:none
     text-align: center;
   .limit-notice
     font-style: italic;
-  .title-top
-    border-bottom: solid 1px gray
   .btn
     background-color: #304191
     color: white
@@ -972,10 +970,10 @@ display:none
     vertical-align: middle;
   .srfa
     padding-right: 5px
-    font-size: 1.7rem;
+    font-size: 2rem;
     vertical-align: middle;
   .phone
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: #304191
   .info
     font-size: 1.2rem;
@@ -987,11 +985,13 @@ display:none
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    margin-top: 40px
+    margin-bottom: 40px
     padding: 5px
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  .first-row
+    margin-top: 50px
   .price
     color: red
   .value-price
@@ -1009,6 +1009,7 @@ display:none
     font-size: 1.9rem;
   .ug-desc
     font-size: 1rem
+    padding-bottom: 10px;
   .space
     color: gray
     font-style: italic;
@@ -1027,6 +1028,10 @@ display:none
     margin-bottom: 40px
   .product-name
     width: 60%
+    margin-top: -7px;
+    font-size: 1.5rem;
+  .product-price, .product-list-price
+    font-size: 1rem;
   .decline-ug
     text-align: center;
     padding: 10px
@@ -1038,3 +1043,74 @@ display:none
     text-align: center;
   .product-quantity-container
     display: none
+  .top-stick
+    position: fixed;
+    height: 100px;
+    right: 0;
+    left: 0;
+    top: 57px;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.9);
+  .no-cc-notice
+    font-style: italic;
+    padding: 10px 0px;
+    text-align: center;
+  .cf
+    font-size: 1rem
+  .b-cont
+    padding-top: 20px;
+.tooltip
+    display:inline-block;
+    position:relative;
+    border-bottom:1px dotted #666;
+    text-align:left;
+
+
+.tooltip
+  .top
+    min-width:200px;
+    top:-20px;
+    left:50%;
+    transform:translate(-50%, -100%);
+    padding:10px 20px;
+    color:#444444;
+    background-color:#EEEEEE;
+    font-weight:normal;
+    font-size:13px;
+    border-radius:8px;
+    position:absolute;
+    z-index:99999999;
+    box-sizing:border-box;
+    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    visibility:hidden; opacity:0; transition:opacity 0.8s;
+
+.tooltip:hover
+  .top
+    visibility:visible; opacity:1;
+
+
+.tooltip
+  .top
+    i
+      position:absolute;
+      top:100%;
+      left:50%;
+      margin-left:-12px;
+      width:24px;
+      height:12px;
+      overflow:hidden;
+
+
+.tooltip
+  .top
+    i
+      &:after
+        content:'';
+        position:absolute;
+        width:12px;
+        height:12px;
+        left:50%;
+        transform:translate(-50%,-50%) rotate(45deg);
+        background-color:#EEEEEE;
+        box-shadow:0 1px 8px rgba(0,0,0,0.5);
