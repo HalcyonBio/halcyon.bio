@@ -3703,19 +3703,26 @@ a:focus,
   overflow:hidden;
 }
 .accordion:focus .accordion-body{
-  max-height:200px;
+  max-height:300px;
 }
 .accordion:focus .more-arrow{
   display:none;
+  font-size:1rem;
 }
 .accordion:focus .less-arrow{
-  display:inline-block;
+  display:inline-block !important;
+  font-size:1rem;
 }
 .more-arrow{
   display:inline-block;
+  font-size:1rem;
 }
 .less-arrow{
-  display:none;
+  display:none !important;
+  font-size:1rem;
+}
+.ul{
+  text-decoration:underline;
 }
 checkout-card .stripe-logo{
   height:42px;
@@ -4149,7 +4156,7 @@ footer .footer-bottom > *{
   width:100%;
 }
 #checkout cart .product-text-container{
-  width:60%;
+  width:100%;
 }
 #checkout .auth-logo{
   float:right;
@@ -5335,7 +5342,7 @@ iframe.fb_ltr{
   color:#a5a4a4;
 }
 #launch-videos .episodes{
-  margin-bottom:40px;
+  margin-bottom:10px;
 }
 #launch-videos .fb-share{
   text-align:left;
@@ -5669,6 +5676,25 @@ iframe.fb_ltr{
 #partner .center{
   text-align:center;
 }
+.register-container{
+  display:none;
+  width:inherit;
+  max-width:800px;
+  margin:10px auto 0 auto;
+}
+.register-container .register{
+  max-width:100%;
+  min-width:100%;
+  height:60px;
+  margin-bottom:0px;
+  font-weight:2rem;
+  font-size:1.5rem;
+}
+#countdown{
+  display:none;
+  font-size:3rem;
+  text-align:center;
+}
 body,
 html{
   padding:0;
@@ -5844,6 +5870,9 @@ a.lightbox img{
   margin:0 auto;
   max-width:50px;
 }
+#checkout .title-top p{
+  font-size:0.9rem;
+}
 #checkout .first{
   margin-top:100px;
 }
@@ -5853,8 +5882,9 @@ a.lightbox img{
 #checkout .gift{
   color:#304191;
 }
-#checkout .package-details{
-  line-height:2rem;
+#checkout .pdl{
+  margin-top:20px;
+  line-height:1.65rem;
 }
 #checkout .product-img{
   margin-bottom:20px;
@@ -5863,6 +5893,96 @@ a.lightbox img{
 #checkout .product-img img{
   max-width:350px;
   width:100%;
+}
+#checkout .product-name{
+  font-size:1rem;
+}
+#checkout .frfa{
+  padding-right:20px;
+  font-size:1.7rem;
+  vertical-align:middle;
+}
+#checkout .srfa{
+  padding-right:5px;
+  font-size:1.7rem;
+  vertical-align:middle;
+}
+#checkout .phone{
+  font-size:1.4rem;
+  color:#304191;
+}
+#checkout .info{
+  font-size:1.2rem;
+  vertical-align:middle;
+}
+#checkout .fa-capsules{
+  color:#304191;
+}
+#checkout .ug-offer{
+  background-color:#f0efef;
+  border-radius:5px;
+  margin-top:40px;
+  padding:5px;
+  box-shadow:0px 0px 5px 0px rgba(0,0,0,0.25);
+}
+#checkout .price{
+  color:#f00;
+}
+#checkout .value-price{
+  text-decoration:line-through;
+}
+#checkout .value{
+  color:#808080;
+  text-align:center;
+}
+#checkout .cprice{
+  text-align:center;
+  line-height:0.7rem;
+}
+#checkout .ug-title{
+  color:#304191;
+  text-align:center;
+}
+#checkout .ug-title{
+  font-size:1.9rem;
+}
+#checkout .ug-desc{
+  font-size:1rem;
+}
+#checkout .space{
+  color:#808080;
+  font-style:italic;
+  font-size:1rem;
+}
+#checkout .upsell-image{
+  text-align:center;
+  width:100%;
+}
+#checkout .countdown{
+  color:#008000;
+  text-align:center;
+  margin-bottom:40px;
+}
+#checkout .select-indicator{
+  top:25px;
+}
+#checkout .ug-price-row{
+  margin-top:40px;
+  margin-bottom:40px;
+}
+#checkout .product-name{
+  width:60%;
+}
+#checkout .decline-ug{
+  text-align:center;
+  padding:10px;
+  border-radius:5px;
+  background-color:#d3d3d3;
+  color:#fff !important;
+  text-align:center;
+}
+#checkout .product-quantity-container{
+  display:none;
 }
 @keyframes pulse{
   0%{

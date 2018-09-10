@@ -61,26 +61,31 @@ export class CheckoutFlow extends El.View
 
   toUpsell1: ->
     @step = 2
-    @countDownDate = new Date().getTime() + 60000
-    @seconds = 60
+    @countDownDate = new Date().getTime() + 6000000
+    @seconds = 60000
     @update()
 
   toUpsell2: ->
     @step = 3
-    @countDownDate = new Date().getTime() + 30000
-    @seconds = 30
+    @countDownDate = new Date().getTime() + 3000000
+    @seconds = 30000
     @update()
 
   toUpsell3: ->
     @step = 4
-    @countDownDate = new Date().getTime() + 30000
-    @seconds = 30
+    @countDownDate = new Date().getTime() + 3000000
+    @seconds = 30000
     @update()
 
   toThankYou: ->
     @step = 5
     @submit()
     @scheduleUpdate()
+
+  SixMonthUpsell: ->
+    Shop.setItem 'rbcKz75Dt2k9AJ', 1
+    @update()
+    @toThankYou()
 
   eliteUpgrade1: ->
     Shop.setItem 'qGcvWn19sxWb1O', 1
