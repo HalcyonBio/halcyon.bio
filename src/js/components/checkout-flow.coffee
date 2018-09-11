@@ -90,8 +90,8 @@ export class CheckoutFlow extends El.View
     @scheduleUpdate()
     window.removeEventListener 'beforeunload', unloadFn
 
-  sixMonthUpsell: ->
-    Shop.setItem 'rbcKz75Dt2k9AJ', 1
+  SixMonthUpsell: ->
+    Shop.setItem 'rbcKz75Dt2k9AJ', 1, true
     @update()
     @toThankYou()
 
@@ -105,6 +105,16 @@ export class CheckoutFlow extends El.View
     @update()
     @toThankYou()
 
+  eliteUpgrade3: ->
+    Shop.setItem '0Kcx0egPcYqGPA', 1, true
+    @update()
+    @toThankYou()
+
+  oneYearUpsell: ->
+    Shop.setItem 'rbcKzWg1c2k9AJ', 1, true
+    @update()
+    @toThankYou()
+
   executiveUpgrade1: ->
     Shop.setItem '0Kcx0egPcYqGPA', 1
     @update()
@@ -113,6 +123,7 @@ export class CheckoutFlow extends El.View
   executiveUpgrade2: ->
     Shop.setItem 'JwcnoBljt4ZK2J', 1, true
     @update()
+    @submit()
     @toThankYou()
 
 CheckoutFlow.register()

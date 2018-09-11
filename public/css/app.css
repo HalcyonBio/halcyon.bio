@@ -3220,11 +3220,6 @@ cart .product-price-container{
   float:right !important;
   line-height:1.25em;
 }
-cart .product-subscription-interval-container{
-  text-align:right;
-  float:right !important;
-  line-height:1.25em;
-}
 cart .product-list-price{
   color:#e91e63;
   font-size:0.9em;
@@ -5283,7 +5278,7 @@ iframe.fb_ltr{
 #launch-videos .visible-optin .cta{
   max-width:767px;
   text-align:center;
-  padding-top:110px;
+  padding-top:130px;
 }
 #launch-videos .main-optin .cta h4,
 #launch-videos .visible-optin .cta h4{
@@ -5314,8 +5309,9 @@ iframe.fb_ltr{
   width:100%;
 }
 #launch-videos .thumb-popover-optin{
-  padding-top:20px;
-  padding-bottom:20px;
+  padding-top:40px;
+  padding-bottom:40px;
+  background-color:rgba(0,0,0,0.5);
 }
 #launch-videos .opt-in{
   top:53px;
