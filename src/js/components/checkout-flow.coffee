@@ -4,6 +4,9 @@ import $ from 'zepto-modules/_min'
 
 m = Shop.getMediator()
 
+unloadFn = (e)=>
+  return "Your order has not completed yet, are you sure you want to leave?"
+
 export class CheckoutFlow extends El.View
   tag: 'checkout-flow'
 
@@ -33,6 +36,7 @@ export class CheckoutFlow extends El.View
       # Find the distance between now and the count down date
       distance = @countDownDate - now
       # Time calculations for days, hours, minutes and seconds
+      @minutes = Math.floor(distance / 1000 / 60)
       @seconds = Math.floor(distance / 1000)
       # Display the result in the element with id="demo"
       # If the count down is finished, write some text
@@ -61,8 +65,9 @@ export class CheckoutFlow extends El.View
 
   toUpsell1: ->
     @step = 2
-    @countDownDate = new Date().getTime() + 60000
-    @seconds = 60
+    @countDownDate = new Date().getTime() + 6000000
+    @seconds = 60000
+    window.addEventListener 'beforeunload', unloadFn
     @update()
 
   toUpsell2: ->
@@ -81,8 +86,9 @@ export class CheckoutFlow extends El.View
     @step = 5
     @submit()
     @scheduleUpdate()
+    window.removeEventListener 'beforeunload', unloadFn
 
-  SixMonthUpsell: ->
+  sixMonthUpsell: ->
     Shop.setItem 'rbcKz75Dt2k9AJ', 1
     @update()
     @toThankYou()
@@ -105,7 +111,6 @@ export class CheckoutFlow extends El.View
   executiveUpgrade2: ->
     Shop.setItem 'JwcnoBljt4ZK2J', 1, true
     @update()
-    @submit()
     @toThankYou()
 
 CheckoutFlow.register()
