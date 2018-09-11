@@ -5274,18 +5274,22 @@ iframe.fb_ltr{
 #launch-videos .input .invalid{
   margin-bottom:-3px;
 }
-#launch-videos .main-optin .cta{
+#launch-videos .main-optin .cta,
+#launch-videos .visible-optin .cta{
   max-width:767px;
   text-align:center;
   padding-top:110px;
 }
-#launch-videos .main-optin .cta h4{
+#launch-videos .main-optin .cta h4,
+#launch-videos .visible-optin .cta h4{
   text-transform:uppercase;
 }
-#launch-videos .main-optin .cta p{
+#launch-videos .main-optin .cta p,
+#launch-videos .visible-optin .cta p{
   font-size:1rem;
 }
-#launch-videos .main-optin input{
+#launch-videos .main-optin input,
+#launch-videos .visible-optin input{
   background-color:#fff;
   border:2px solid #ddd;
   height:60px;
@@ -5293,9 +5297,20 @@ iframe.fb_ltr{
   min-width:100%;
   color:#000;
 }
-#launch-videos .main-optin .btn-opt-in{
+#launch-videos .main-optin .btn-opt-in,
+#launch-videos .visible-optin .btn-opt-in{
   height:60px;
   font-size:1.5rem;
+}
+#launch-videos .thumb-popover-optin-cont{
+  position:absolute;
+  display:none;
+  padding:120px 0;
+  width:100%;
+}
+#launch-videos .thumb-popover-optin{
+  padding-top:20px;
+  padding-bottom:20px;
 }
 #launch-videos .opt-in{
   top:53px;
@@ -5812,6 +5827,9 @@ a.lightbox img{
 .lightbox-target3{
   max-width:100%;
   margin:0 auto;
+}
+.thumb-popover-optin-cont:target{
+  display:block !important;
 }
 #launch-videos .scrolling-show{
   position:fixed;
@@ -6504,18 +6522,21 @@ a.lightbox img{
   #launch-videos .subtitle2{
     font-size:1.3rem;
   }
-  #launch-videos .main-optin .cta h4{
+  #launch-videos .main-optin .cta h4,
+  #launch-videos .visible-optin .cta h4{
     font-size:1.3rem;
   }
-  #launch-videos .main-optin input{
+  #launch-videos .main-optin input,
+  #launch-videos .visible-optin input{
     font-size:1.3rem;
     margin-bottom:0px;
   }
-  #launch-videos .main-optin .btn-opt-in{
+  #launch-videos .main-optin .btn-opt-in,
+  #launch-videos .visible-optin .btn-opt-in{
     font-size:1.3rem;
   }
   #launch-videos .thumb{
-    padding-top:40px;
+    padding-top:90px;
   }
   #launch-videos .episodes h4{
     font-size:1.3rem;
@@ -6582,7 +6603,8 @@ a.lightbox img{
   #account .title{
     text-align:center;
   }
-  #launch-videos .main-optin .cta{
+  #launch-videos .main-optin .cta,
+  #launch-videos .visible-optin .cta{
     padding-top:80px;
   }
   #launch-videos .col-thumb p{

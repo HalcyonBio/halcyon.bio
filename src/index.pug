@@ -17,8 +17,9 @@ block content
         .col-12.title
           .title-top-container
             .title-top.flex-center
-              a(href="#")
-                img.logoHB(src='/img/neuromethod360-logo.png')
+              a(href="https://neuromethod.halcyon.bio")
+                img.logo-hover-hide.logoHB(src='/img/neuromethod360-logo.png')
+                // img.logo-hover.logoHB(src='/img/nm-360-logo-inverted.png')
               a.btn.btn-share.btn-share1.vrlps-trigger(type='button' target="_blank" href="#") MEET RONNIE
               button.btn.btn-trailer(type='button' onclick='{ trailerToggle }')  TRAILER <i class="fab fa-lg fa-youtube"></i>
 
@@ -38,7 +39,7 @@ block content
             .name Ron White
             .subtitle 2 time USA Memory Champion
 
-            .subtitle2#optincta
+            .subtitle2
               |Teaches
               |
               | Brain Performance
@@ -91,6 +92,12 @@ block content
             h6.vid-desc-wrapper.vid-coming-soon COMING SOON
             p 4
             img(src="/img/vid-4-thumb.jpg")
+        .main-optin.thumb-popover-optin-cont#optincta
+          .col-12.opt-in-fields-main.thumb-popover-optin.flex-center(if='{ !submitted }')
+            text.input(bind='email' id='opt-in-email' placeholder='enter your email')
+              yield(to='123')
+                input(name="email" type="text" autocomplete="on" placeholder="enter your email")
+            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
 
       .row
         .col-12.col-md-8.offset-md-2.title
@@ -124,7 +131,7 @@ block content
     .row
       .col-12
         p
-        .main-optin
+        .visible-optin
                 // (if='{ !submitted }') added to hide if it has been submitted
                 .row.flex-center#thank-you.lightbox-target3.no-gutters
                   .col-12.cta(if='{ !submitted }')
@@ -319,8 +326,8 @@ block content
       !function(a,b,c,d,t){var e,f=a.getElementsByTagName("head")[0];if(!a.getElementById(c)){if(e=a.createElement(b),e.id=c,e.setAttribute("data-vrlps-ucid",d),e.setAttribute("data-vrlps-version","2"), e.setAttribute("data-vrlps-template", t),e.src="https://app.viral-loops.com/popup_assets/js/vl_load_v2.min.js",window.ub){jQuery=null,$=null;var g=a.createElement(b);g.src="https://code.jquery.com/jquery-2.2.4.min.js",f.appendChild(g)}f.appendChild(e);var h=a.createElement("link");h.rel="stylesheet",h.type="text/css",h.href="https://app.viral-loops.com/static/vl-loader.css",f.appendChild(h);var i=a.createElement("div");i.id="vl-overlay",i.style.display="none";var j=a.createElement("div");j.id="vl-loader",i.appendChild(j),a.addEventListener("DOMContentLoaded",function(b){a.body.appendChild(i);for(var c=a.getElementsByClassName("vrlps-trigger"),d=0;d<c.length;d++)c[d].removeAttribute("href"),c[d].onclick=function(){a.getElementById("vl-overlay").style.display="block"};var e=a.querySelectorAll("[data-vl-widget='popupTrigger']");[].forEach.call(e,function(b){var c=a.createElement("div");c.className="vl-embedded-cta-loader",b.appendChild(c)})})}}(document,"script","vrlps-js","_FUZaZo3McnD1eiLnYdZwty6qJ0","sweepstake");
 
   .scrolling-show(if='{ !submitted }')
-    video-form.main-optin.popover-optin
-
+    video-form.popover-optin 
+            // add back in .main-optin - removed as it's :target for popup opt in above 
             .row.flex-center#thank-you.lightbox-target3
               .col-12.cta(if='{ !submitted }')
                 h4 Get access to the masterclass video series taught by one of the world’s greatest minds.

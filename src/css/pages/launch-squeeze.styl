@@ -92,6 +92,8 @@
       display: block;
       text-align: center;
       margin-bottom: 2px
+
+
   .btn-share1
 
     width: 48%
@@ -263,7 +265,7 @@
       margin-bottom: 21px;
 	    .invalid
 		       margin-bottom: -3px;
-  .main-optin
+  .main-optin, .visible-optin
     .cta
       max-width: 767px
       text-align: center;
@@ -292,6 +294,16 @@
       font-size: 1.5rem
       @media screen and (max-width:420px)
         font-size: 1.3rem
+  .thumb-popover-optin-cont
+    position: absolute;
+    display:none;
+    padding: 120px 0;
+    width: 100%;
+  .thumb-popover-optin
+    padding-top: 20px;
+
+    padding-bottom: 20px;
+
   .opt-in
     //top: 50%;
     top: 53px
@@ -320,7 +332,7 @@
   .thumb
     padding-top: 110px;
     @media screen and (max-width:420px)
-      padding-top: 40px
+      padding-top: 90px
     // margin-top:10px oldoptin
     .col-md-3
       @media screen and (min-width:768px)
@@ -893,7 +905,8 @@ display:none
 .lightbox-target3
   max-width: 100%;
   margin: 0 auto;
-
+.thumb-popover-optin-cont:target
+  display:block !important
 #launch-videos
   .scrolling-show
     position: fixed;
