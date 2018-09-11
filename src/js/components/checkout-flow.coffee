@@ -5,7 +5,9 @@ import $ from 'zepto-modules/_min'
 m = Shop.getMediator()
 
 unloadFn = (e)=>
-  return "Your order has not completed yet, are you sure you want to leave?"
+  e.preventDefault()
+  e.returnValue = 'Your order has not completed yet, are you sure you want to leave?'
+  return 'Your order has not completed yet, are you sure you want to leave?'
 
 export class CheckoutFlow extends El.View
   tag: 'checkout-flow'
