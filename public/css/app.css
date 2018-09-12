@@ -5997,11 +5997,15 @@ a.lightbox img{
 #checkout .product-name{
   width:60%;
   margin-top:-7px;
-  font-size:1.5rem;
+  font-size:2rem;
 }
 #checkout .product-price,
 #checkout .product-list-price{
-  font-size:1rem;
+  font-size:1.5rem;
+}
+#checkout .invoice-total .invoice-label,
+#checkout .invoice-total .invoice-amount{
+  font-size:1.5rem;
 }
 #checkout .decline-ug{
   text-align:center;
@@ -6565,6 +6569,7 @@ a.lightbox img{
   #checkout .product-price,
   #checkout .product-list-price{
     display:inline-block;
+    font-size:1.36rem;
   }
   #checkout .product-price-container{
     float:unset !important;
