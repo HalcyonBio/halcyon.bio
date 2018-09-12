@@ -1053,8 +1053,12 @@ display:none
     width: 60%
     margin-top: -7px;
     font-size: 1.5rem;
+    @media screen and (max-width:420px)
+      float: unset !important;
   .product-price, .product-list-price
     font-size: 1rem;
+    @media screen and (max-width:420px)
+      display: inline-block;
   .decline-ug
     text-align: center;
     padding: 10px
@@ -1067,6 +1071,10 @@ display:none
     margin-bottom: 50px;
   .product-quantity-container
     display: none
+  .product-price-container
+    @media screen and (max-width:420px)
+      float: unset !important;
+      text-align: left;
   .top-stick
     position: fixed;
     height: 100px;

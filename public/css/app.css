@@ -6559,6 +6559,17 @@ a.lightbox img{
   #checkout .product{
     margin-top:30px;
   }
+  #checkout .product-name{
+    float:unset !important;
+  }
+  #checkout .product-price,
+  #checkout .product-list-price{
+    display:inline-block;
+  }
+  #checkout .product-price-container{
+    float:unset !important;
+    text-align:left;
+  }
 }
 @media screen and (max-width: 520px){
   .l-vid .desktop{
