@@ -12,7 +12,7 @@ unloadFn = (e)=>
 export class CheckoutFlow extends El.View
   tag: 'checkout-flow'
 
-  step: 0
+  step: 1
 
   init: ->
     super arguments...
@@ -30,32 +30,50 @@ export class CheckoutFlow extends El.View
 
     # Set the date we're counting down to
     @countDownDate = new Date().getTime()
-    @distance = 0
     # Update the count down every 1 second
-    x = setInterval =>
+    x = ()=>
       # Get todays date and time
       now = (new Date).getTime()
       # Find the distance between now and the count down date
       distance = @countDownDate - now
       # Time calculations for days, hours, minutes and seconds
       @minutes = Math.floor(distance / 1000 / 60)
-      @seconds = Math.floor(distance / 1000)
+      @seconds = Math.floor(distance / 1000) % 60
+      @centiseconds = Math.floor(distance / 10) % 100
       # Display the result in the element with id="demo"
       # If the count down is finished, write some text
-      if @seconds <= 0 && @step > 1 && @step <4
+      if distance <= 0 && @step > 1 && @step <4
         @toThankYou()
       @update()
-      console.log('seconds: ', @seconds)
-    , 1000
+      console.log 'distance: ', distance
+      requestAnimationFrame x
+
+    requestAnimationFrame x
 
     try
       Shop.clear()
     Shop.setItem 'P7c8KkgxUEGRO0', 1
 
+  getMinutes: ->
+    if @minutes > 0
+      return @minutes
+    return 0
+
   getSeconds: ->
     if @seconds > 0
+      if @seconds < 10
+        return '0' + @seconds
       return @seconds
-    return 0
+
+    return '00'
+
+  getCentiSeconds: ->
+    if @centiseconds > 0
+      if @centiseconds < 10
+        return '0' + @centiseconds
+      return @centiseconds
+
+    return '00'
 
   toStart: ->
     @step = 0
@@ -68,20 +86,17 @@ export class CheckoutFlow extends El.View
   toUpsell1: ->
     @step = 2
     @countDownDate = new Date().getTime() + 6000000
-    @seconds = 60000
     window.addEventListener 'beforeunload', unloadFn
     @update()
 
   toUpsell2: ->
     @step = 3
     @countDownDate = new Date().getTime() + 30000
-    @seconds = 30
     @update()
 
   toUpsell3: ->
     @step = 4
     @countDownDate = new Date().getTime() + 30000
-    @seconds = 30
     @update()
 
   toThankYou: ->

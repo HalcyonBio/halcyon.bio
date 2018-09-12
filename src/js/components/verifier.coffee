@@ -4,6 +4,8 @@ import Promise from 'broken'
 export class Verifier extends El.View
   tag: 'verifier'
 
+  html: '<yield/>'
+
   init: ->
     super arguments...
 
