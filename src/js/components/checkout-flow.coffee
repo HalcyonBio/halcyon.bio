@@ -85,18 +85,18 @@ export class CheckoutFlow extends El.View
 
   toUpsell1: ->
     @step = 2
-    @countDownDate = new Date().getTime() + 6000000
+    @countDownDate = new Date().getTime() + 300000
     window.addEventListener 'beforeunload', unloadFn
     @update()
 
   toUpsell2: ->
     @step = 3
-    @countDownDate = new Date().getTime() + 30000
+    @countDownDate = new Date().getTime() + 60000
     @update()
 
   toUpsell3: ->
     @step = 4
-    @countDownDate = new Date().getTime() + 30000
+    @countDownDate = new Date().getTime() + 60000
     @update()
 
   toThankYou: ->
