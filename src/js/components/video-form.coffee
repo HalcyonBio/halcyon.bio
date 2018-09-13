@@ -113,12 +113,12 @@ export class VideoForm extends El.Form
       for epi in [ep1, ep2, ep3]
         if ep[0] == epi[0]
           continue
-        iframe = epi.find('iframe')
+        iframe = epi.find 'iframe'
         src = iframe.attr 'src'
         iframe.attr 'src', ''
         iframe.attr 'src', src
 
-      iframe = trailer.find('iframe')
+      iframe = trailer.find 'iframe'
       src = iframe.attr 'src'
       iframe.attr 'src', ''
       iframe.attr 'src', src
@@ -145,6 +145,7 @@ export class VideoForm extends El.Form
     # ep4 = document.getElementById 'episode-four'
     if trailer.css('display') == 'none'
       trailer.css 'display', 'flex'
+
       ep1.css 'display', 'none'
       ep2.css 'display', 'none'
       ep3.css 'display', 'none'

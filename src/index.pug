@@ -30,7 +30,7 @@ block content
           .trailer-container
             .trailer-view
               <iframe src="https://www.youtube.com/embed/71fptRWCwuQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              <a class="lightbox-close lightbox-close-trailer" style="color: gray !important;" href="#" onclick="{ closeTrailer }"></a>
+              <a class="lightbox-close lightbox-close-trailer" style="color: gray !important;" href="#" onmouseup="{ closeTrailer }"></a>
           .vid-container
             a(href='#neuromethodtrailer')
               img.mobile(src="/img/header-ron-mobile-yt.jpg")
@@ -44,7 +44,7 @@ block content
               |<p id="countdown"></p>
               | Brain Performance
 
-    
+
 
 
     .container.thumb#episodes
@@ -160,7 +160,7 @@ block content
                   p.disclaimer.disclaimer-main(if='{ !submitted }')
                     | We will notify you when each masterclass episode is released.
                     br
-                    | Providing your email gives you unlimited free access to all 4 masterclass episodes.      
+                    | Providing your email gives you unlimited free access to all 4 masterclass episodes.
   .flex-container.l-body.flex-center
     .row
       .col-12
@@ -290,7 +290,7 @@ block content
       var countDownDate = new Date("Sept 21, 2018 19:00:00").getTime();
       var x = setInterval(function() {
           // Get todays date and time
-          var now = new Date().getTime();  
+          var now = new Date().getTime();
           // Find the distance between now and the count down date
           var distance = countDownDate - now;
           // Time calculations for days, hours, minutes and seconds
@@ -301,7 +301,7 @@ block content
           // Output the result in an element with id="countdown"
           document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
           + minutes + "m " + seconds + "s ";
-          // If the count down is over, write some text 
+          // If the count down is over, write some text
           if (distance < 0) {
               clearInterval(x);
               document.getElementById("demo").innerHTML = "EXPIRED";
@@ -332,8 +332,8 @@ block content
       !function(a,b,c,d,t){var e,f=a.getElementsByTagName("head")[0];if(!a.getElementById(c)){if(e=a.createElement(b),e.id=c,e.setAttribute("data-vrlps-ucid",d),e.setAttribute("data-vrlps-version","2"), e.setAttribute("data-vrlps-template", t),e.src="https://app.viral-loops.com/popup_assets/js/vl_load_v2.min.js",window.ub){jQuery=null,$=null;var g=a.createElement(b);g.src="https://code.jquery.com/jquery-2.2.4.min.js",f.appendChild(g)}f.appendChild(e);var h=a.createElement("link");h.rel="stylesheet",h.type="text/css",h.href="https://app.viral-loops.com/static/vl-loader.css",f.appendChild(h);var i=a.createElement("div");i.id="vl-overlay",i.style.display="none";var j=a.createElement("div");j.id="vl-loader",i.appendChild(j),a.addEventListener("DOMContentLoaded",function(b){a.body.appendChild(i);for(var c=a.getElementsByClassName("vrlps-trigger"),d=0;d<c.length;d++)c[d].removeAttribute("href"),c[d].onclick=function(){a.getElementById("vl-overlay").style.display="block"};var e=a.querySelectorAll("[data-vl-widget='popupTrigger']");[].forEach.call(e,function(b){var c=a.createElement("div");c.className="vl-embedded-cta-loader",b.appendChild(c)})})}}(document,"script","vrlps-js","_FUZaZo3McnD1eiLnYdZwty6qJ0","sweepstake");
 
   .scrolling-show(if='{ !submitted }')
-    video-form.popover-optin 
-            // add back in .main-optin - removed as it's :target for popup opt in above 
+    video-form.popover-optin
+            // add back in .main-optin - removed as it's :target for popup opt in above
             .row.flex-center#thank-you.lightbox-target3
               .col-12.cta(if='{ !submitted }')
                 h4 Get access to the masterclass video series taught by one of the world’s greatest minds.
