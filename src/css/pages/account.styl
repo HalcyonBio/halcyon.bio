@@ -36,15 +36,17 @@
     margin-bottom: 20px
     margin-top: 20px
   .logout
-    float: right;
     color: #304191;
-    background-color: white
-    box-shadow: none
+    background-color: #fff;
+    box-shadow: none;
     border: 2px solid #304191;
+    font-weight: normal;
     height: 36px;
+    @media screen and (min-width:420px)
+      position: absolute;
+      right: 10px;
     @media screen and (max-width:420px)
       text-decoration: underline;
-      float: none;
       text-align: center;
       margin-top: 5px
       margin-bottom: 5px
@@ -54,4 +56,3 @@
       text-align: center;
   .more
     text-decoration: underline;
-    
