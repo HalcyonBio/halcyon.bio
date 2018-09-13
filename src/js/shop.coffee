@@ -23,6 +23,7 @@ settings =
 
 m = Shop.start settings
 data = Shop.getData()
+Shop.initCart()
 
 $('.add-to-cart button').on 'click', (e)->
   m.trigger 'checkout-open'
