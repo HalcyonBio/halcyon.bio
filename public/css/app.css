@@ -6556,6 +6556,10 @@ a.lightbox img{
   #launch-videos .thumb{
     padding-top:90px;
   }
+  #launch-videos .col-thumb .vid-desc-title{
+    width:90%;
+    margin-bottom:0px;
+  }
   #launch-videos .episodes h4{
     font-size:1.3rem;
   }
