@@ -45,7 +45,6 @@ export class CheckoutFlow extends El.View
       if distance <= 0 && @step > 1 && @step <4
         @toThankYou()
       @update()
-      console.log 'distance: ', distance
       requestAnimationFrame x
 
     requestAnimationFrame x

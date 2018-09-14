@@ -9,6 +9,7 @@ import './components/price'
 import './components/gallery'
 import './components/launch-squeeze-form'
 import './components/video-form'
+import './components/timer'
 import './components/checkout-flow'
 import './components/verifier'
 
@@ -20,7 +21,7 @@ import Shop from 'shop.js/src'
 import objectAssign from 'es-object-assign'
 window.objectAssign = objectAssign
 
-El.mount 'price, gallery'
+El.mount 'price, gallery, timer'
 
 m = Shop.getMediator()
 
