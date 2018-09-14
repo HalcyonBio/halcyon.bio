@@ -107,11 +107,15 @@ export class CheckoutFlow extends El.View
     @update()
 
   toThankYou: ->
-    @step = 6
-    if Shop.getItems().length != 0
+    if @data.get('order.items').length != 0
       @submit()
-    document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @scheduleUpdate()
+      @mediator.one 'submit-success', =>
+        @step = 6
+        @update()
+      document.getElementsByTagName('checkout')[0].scrollIntoView()
+    else
+      @step = 6
+      @update()
 
   toSecondCheckout: ->
     @step = 5
