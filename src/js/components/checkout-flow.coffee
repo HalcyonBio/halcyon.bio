@@ -83,61 +83,82 @@ export class CheckoutFlow extends El.View
     @update()
 
   toUpsell1: ->
-    @step = 2
-    @countDownDate = new Date().getTime() + 300000
-    window.addEventListener 'beforeunload', unloadFn
-    @update()
+    @submit()
+
+    @mediator.one 'submit-success', =>
+      @step = 2
+      Shop.clear()
+
+      @countDownDate = new Date().getTime() + 300000
+      # window.addEventListener 'beforeunload', unloadFn
+      document.getElementsByTagName('checkout')[0].scrollIntoView()
+      @update()
 
   toUpsell2: ->
     @step = 3
     @countDownDate = new Date().getTime() + 60000
+    document.getElementsByTagName('checkout')[0].scrollIntoView()
     @update()
 
   toUpsell3: ->
     @step = 4
     @countDownDate = new Date().getTime() + 60000
+    document.getElementsByTagName('checkout')[0].scrollIntoView()
     @update()
 
   toThankYou: ->
-    @step = 5
-    @submit()
+    @step = 6
+    if Shop.getItems().length != 0
+      @submit()
+    document.getElementsByTagName('checkout')[0].scrollIntoView()
     @scheduleUpdate()
-    window.removeEventListener 'beforeunload', unloadFn
 
-  SixMonthUpsell: ->
+  toSecondCheckout: ->
+    @step = 5
+    @parent.checkedOut = false
+    @update()
+    # window.removeEventListener 'beforeunload', unloadFn
+
+  sixMonthUpsell: ->
     Shop.setItem 'rbcKz75Dt2k9AJ', 1, true
     @update()
-    @toThankYou()
+    document.getElementsByTagName('checkout')[0].scrollIntoView()
+    @toSecondCheckout()
 
   eliteUpgrade1: ->
     Shop.setItem 'qGcvWn19sxWb1O', 1
     @update()
+    document.getElementsByTagName('checkout')[0].scrollIntoView()
     @toUpsell2()
 
   eliteUpgrade2: ->
     Shop.setItem 'pocm8A9PfzPwZK', 1, true
     @update()
-    @toThankYou()
+    document.getElementsByTagName('checkout')[0].scrollIntoView()
+    @toSecondCheckout()
 
   eliteUpgrade3: ->
     Shop.setItem '0Kcx0egPcYqGPA', 1, true
     @update()
-    @toThankYou()
+    document.getElementsByTagName('checkout')[0].scrollIntoView()
+    @toSecondCheckout()
 
   oneYearUpsell: ->
     Shop.setItem 'rbcKzWg1c2k9AJ', 1, true
     @update()
-    @toThankYou()
+    document.getElementsByTagName('checkout')[0].scrollIntoView()
+    @toSecondCheckout()
 
   executiveUpgrade1: ->
     Shop.setItem '0Kcx0egPcYqGPA', 1
     @update()
+    document.getElementsByTagName('checkout')[0].scrollIntoView()
     @toUpsell3()
 
   executiveUpgrade2: ->
     Shop.setItem 'JwcnoBljt4ZK2J', 1, true
     @update()
-    @submit()
-    @toThankYou()
+    document.getElementsByTagName('checkout')[0].scrollIntoView()
+    @toSecondCheckout()
 
 CheckoutFlow.register()
