@@ -4160,6 +4160,9 @@ footer .footer-bottom > *{
   float:right;
   height:42px;
 }
+#checkout button:focus{
+  background-color:#66bb6a;
+}
 #index .hero{
   height:100vh;
 }
