@@ -51,7 +51,8 @@ export class CheckoutFlow extends El.View
 
     try
       Shop.clear()
-    Shop.setItem 'P7c8KkgxUEGRO0', 1
+    Shop.setItem 'P7c8KkgxUEGRO0', 1, true
+    @data.set 'order.metadata.upsell', false
 
   getMinutes: ->
     if @minutes > 0
@@ -84,10 +85,12 @@ export class CheckoutFlow extends El.View
 
   toUpsell1: ->
     @submit()
-
     @mediator.one 'submit-success', =>
       @step = 2
-      Shop.clear()
+
+      # ignore & lock
+      Shop.setItem 'P7c8KkgxUEGRO0', 1, true, true
+      @data.set 'order.metadata.upsell', true
 
       @countDownDate = new Date().getTime() + 300000
       # window.addEventListener 'beforeunload', unloadFn
@@ -107,62 +110,65 @@ export class CheckoutFlow extends El.View
     @update()
 
   toThankYou: ->
-    if @data.get('order.items').length != 0
+    if !Shop.isEmpty()
+      @parent.checkedOut = false
       @submit()
       @mediator.one 'submit-success', =>
-        @step = 6
+        @step = 5
         @update()
       document.getElementsByTagName('checkout')[0].scrollIntoView()
     else
-      @step = 6
+      @step = 5
       @update()
-
-  toSecondCheckout: ->
-    @step = 5
-    @parent.checkedOut = false
-    @update()
-    # window.removeEventListener 'beforeunload', unloadFn
 
   sixMonthUpsell: ->
     Shop.setItem 'rbcKz75Dt2k9AJ', 1, true
     @update()
     document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toSecondCheckout()
+    @toThankYou()
 
   eliteUpgrade1: ->
-    Shop.setItem 'qGcvWn19sxWb1O', 1
+    @parent.checkedOut = false
+    Shop.setItem 'qGcvWn19sxWb1O', 1, true
+    @submit()
     @update()
-    document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toUpsell2()
+    @mediator.one 'submit-success', =>
+      Shop.setItem 'qGcvWn19sxWb1O', 1, true, true
+      document.getElementsByTagName('checkout')[0].scrollIntoView()
+      @toUpsell2()
 
   eliteUpgrade2: ->
     Shop.setItem 'pocm8A9PfzPwZK', 1, true
     @update()
     document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toSecondCheckout()
+    @toThankYou()
 
   eliteUpgrade3: ->
     Shop.setItem '0Kcx0egPcYqGPA', 1, true
     @update()
     document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toSecondCheckout()
+    @toThankYou()
 
   oneYearUpsell: ->
     Shop.setItem 'rbcKzWg1c2k9AJ', 1, true
     @update()
     document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toSecondCheckout()
+    @toThankYou()
 
   executiveUpgrade1: ->
-    Shop.setItem '0Kcx0egPcYqGPA', 1
+    @parent.checkedOut = false
+    Shop.setItem '0Kcx0egPcYqGPA', 1, true
+    @submit()
     @update()
-    document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toUpsell3()
+    @mediator.one 'submit-success', =>
+      Shop.setItem '0Kcx0egPcYqGPA', 1, true, true
+      document.getElementsByTagName('checkout')[0].scrollIntoView()
+      @toUpsell3()
 
   executiveUpgrade2: ->
     Shop.setItem 'JwcnoBljt4ZK2J', 1, true
     @update()
     document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toSecondCheckout()
+    @toThankYou()
 
 CheckoutFlow.register()
