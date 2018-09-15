@@ -5428,8 +5428,8 @@ iframe.fb_ltr{
   color:#fff;
 }
 #launch-videos .l-body2 .vid-desc{
-  padding-left:0px;
-  padding-right:10px;
+  padding-left:5px;
+  padding-right:5px;
   margin-bottom:10px;
 }
 #launch-videos .l-body2 .vid-desc h5,
@@ -6005,7 +6005,7 @@ a.lightbox img{
 }
 #checkout .product-name{
   width:60%;
-  margin-top:-7px;
+  margin-top:-10px;
   font-size:2rem;
 }
 #checkout .product-price,
@@ -6027,6 +6027,9 @@ a.lightbox img{
 }
 #checkout .product-quantity-container{
   display:none;
+}
+#checkout .product-price-container{
+  line-height:1.5rem;
 }
 #checkout .top-stick{
   position:fixed;
@@ -6319,7 +6322,7 @@ a.lightbox img{
   #index #ingredients .ing-row-padding{
     padding-bottom:40px;
   }
-  #launch-videos .thumb .col-md-3{
+  #launch-videos .thumb .col-lg-3{
     max-width:23.5%;
   }
 }
@@ -6583,7 +6586,7 @@ a.lightbox img{
     display:inline-block;
     font-size:1.36rem;
   }
-  #checkout .product-price-container{
+  #checkout{
     float:unset !important;
     text-align:left;
   }
@@ -6614,6 +6617,10 @@ a.lightbox img{
 @media screen and (min-width: 992px){
   .l-body{
     margin-top:40px;
+  }
+  #launch-videos .col-thumb{
+    margin-left:2px;
+    margin-right:2px;
   }
   #launch-squeeze .cta .cta-text1{
     padding-top:210px;
@@ -6721,6 +6728,9 @@ a.lightbox img{
   }
   #index #testimonials .testimonial-card{
     margin-bottom:20px;
+  }
+  #launch-videos .col-thumb{
+    border:1px #000 solid;
   }
   #launch-squeeze .cta{
     background-color:#304191;
@@ -6850,12 +6860,6 @@ a.lightbox img{
 @media screen and (max-width: 576px){
   #launch-videos .opt-in h4{
     font-size:1.2rem;
-  }
-}
-@media screen and (min-width: 767.98px){
-  #launch-videos .col-thumb{
-    margin-left:2px;
-    margin-right:2px;
   }
 }
 @media screen and (max-width: 367px){
