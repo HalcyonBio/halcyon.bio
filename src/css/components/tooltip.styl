@@ -1,0 +1,15 @@
+.h-tooltip
+  cursor: pointer
+
+.h-tooltip-body
+  display: none
+  position: absolute
+  font-size: 1rem
+  z-index: 1
+  background-color: white
+
+.h-tooltip:hover ~ .h-tooltip-body
+.h-tooltip:focus ~ .h-tooltip-body
+.h-tooltip-body:hover
+  display: block
+
