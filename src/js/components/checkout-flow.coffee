@@ -99,13 +99,13 @@ export class CheckoutFlow extends El.View
 
   toUpsell2: ->
     @step = 3
-    @countDownDate = new Date().getTime() + 60000
+    @countDownDate = new Date().getTime() + 300000
     document.getElementsByTagName('checkout')[0].scrollIntoView()
     @update()
 
   toUpsell3: ->
     @step = 4
-    @countDownDate = new Date().getTime() + 60000
+    @countDownDate = new Date().getTime() + 300000
     document.getElementsByTagName('checkout')[0].scrollIntoView()
     @update()
 
