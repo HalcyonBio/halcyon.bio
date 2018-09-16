@@ -4215,6 +4215,7 @@ footer .footer-bottom > *{
 }
 #checkout .limit-notice{
   font-style:italic;
+  padding-top:10px;
 }
 #checkout .btn{
   background-color:#304191;
@@ -4311,6 +4312,20 @@ footer .footer-bottom > *{
   padding:5px;
   box-shadow:0px 0px 5px 0px rgba(0,0,0,0.25);
 }
+#checkout .thankyoubox{
+  padding:10px;
+}
+#checkout .thank-you-sticky{
+  background-color:#f0efef;
+  border-radius:5px;
+  padding:5px;
+  box-shadow:0px 0px 5px 0px rgba(0,0,0,0.25);
+}
+#checkout .one-click-info{
+  font-style:italic;
+  font-size:1rem;
+  text-align:center;
+}
 #checkout .price{
   color:#f00;
 }
@@ -4348,7 +4363,6 @@ footer .footer-bottom > *{
 #checkout .countdown{
   color:#008000;
   text-align:center;
-  margin-bottom:40px;
 }
 #checkout .select-indicator{
   top:25px;
@@ -4393,10 +4407,9 @@ footer .footer-bottom > *{
 }
 #checkout .top-stick{
   position:fixed;
-  height:100px;
   right:0;
   left:0;
-  top:57px;
+  top:0px;
   width:100%;
   z-index:999;
   background-color:rgba(255,255,255,0.9);
@@ -6549,6 +6562,18 @@ a.lightbox img{
   .l-vid{
     margin-top:60px;
   }
+  #checkout .one-click-info{
+    left:25%;
+    position:relative;
+  }
+  #checkout .countdown-title{
+    left:25%;
+    position:relative;
+  }
+  #checkout .countdown{
+    left:25%;
+    position:relative;
+  }
   #index #shop #shop-widget .body{
     max-width:280px;
   }
@@ -6700,14 +6725,6 @@ a.lightbox img{
   }
   #account .title{
     text-align:center;
-  }
-  #checkout .countdown-title{
-    left:25%;
-    position:relative;
-  }
-  #checkout .countdown{
-    left:25%;
-    position:relative;
   }
   #launch-videos .main-optin .cta,
   #launch-videos .visible-optin .cta{

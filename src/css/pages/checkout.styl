@@ -60,6 +60,7 @@
     text-align: center;
   .limit-notice
     font-style: italic;
+    padding-top: 10px
   .btn
     background-color: #304191
     color: white
@@ -138,6 +139,24 @@
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  .thankyoubox
+    padding: 10px;
+  .thank-you-sticky
+    background-color: #f0efef;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  .one-click-info
+    font-style: italic;
+    font-size: 1rem
+    @media screen and (min-width:767px)
+      left: 25%;
+      position: relative;
+    text-align: center;
   .price
     color: red
   .value-price
@@ -164,14 +183,13 @@
     text-align: center;
     width: 100%;
   .countdown-title
-    @media screen and (min-width:420px)
+    @media screen and (min-width:767px)
       left: 25%
       position: relative;
   .countdown
     color: green
     text-align: center;
-    margin-bottom: 40px
-    @media screen and (min-width:420px)
+    @media screen and (min-width:767px)
       left: 25%
       position: relative;
   .select-indicator
@@ -219,10 +237,9 @@
       text-align: left;
   .top-stick
     position: fixed;
-    height: 100px;
     right: 0;
     left: 0;
-    top: 57px;
+    top: 0px;
     width: 100%;
     z-index: 999;
     background-color: rgba(255,255,255,0.9);
