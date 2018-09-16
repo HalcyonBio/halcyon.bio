@@ -4188,8 +4188,12 @@ footer .footer-bottom > *{
   background-color:#66bb6a;
 }
 #checkout .logoHB{
-  height:55px;
-  border-bottom:2px solid #d3d3d3;
+  height:54px;
+  border-bottom:1px solid #d3d3d3;
+  margin-top:-30px;
+  margin-bottom:10px;
+  width:100%;
+  text-align:center;
 }
 #checkout .logoHB img{
   max-width:50px;
@@ -4215,6 +4219,9 @@ footer .footer-bottom > *{
 #checkout .btn{
   background-color:#304191;
   color:#fff;
+}
+#checkout .optimize-space{
+  padding-top:0px;
 }
 #checkout .checkout-next{
   min-width:100%;
@@ -4357,6 +4364,9 @@ footer .footer-bottom > *{
   width:60%;
   margin-top:-7px;
   font-size:2rem;
+}
+#checkout .discount-show-or-hide{
+  display:inline;
 }
 #checkout .product-price,
 #checkout .product-list-price{
