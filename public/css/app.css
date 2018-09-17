@@ -6019,7 +6019,6 @@ iframe.fb_ltr{
   text-align:center;
 }
 .register-container{
-  display:none;
   width:inherit;
   max-width:800px;
   margin:10px auto 0 auto;
@@ -6032,8 +6031,12 @@ iframe.fb_ltr{
   font-weight:2rem;
   font-size:1.5rem;
 }
-#countdown{
-  display:none;
+.after-vid-4{
+  max-width:800px;
+  margin:0 auto;
+}
+#countdown,
+.registration-closes{
   font-size:3rem;
   text-align:center;
 }

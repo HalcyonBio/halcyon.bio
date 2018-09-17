@@ -97,7 +97,7 @@ export class VideoForm extends El.Form
     ep1 = $('#episode-one')
     ep2 = $('#episode-two')
     ep3 = $('#episode-three')
-    ep4 = $('episode-four')
+    ep4 = $('#episode-four')
     ep = null
     switch n
       when 1 then ep = ep1
@@ -114,7 +114,6 @@ export class VideoForm extends El.Form
       ty.css 'display', 'none'
       ep1.css 'display', 'none'
       ep2.css 'display', 'none'
-      ep3.css 'display', 'none'
       ep3.css 'display', 'none'
       ep4.css 'display', 'none'
       for epi in [ep1, ep2, ep3, ep4]
@@ -149,7 +148,7 @@ export class VideoForm extends El.Form
     ep1 = $('#episode-one')
     ep2 = $('#episode-two')
     ep3 = $('#episode-three')
-    ep3 = $('#episode-four')
+    ep4 = $('#episode-four')
     if trailer.css('display') == 'none'
       trailer.css 'display', 'flex'
 
