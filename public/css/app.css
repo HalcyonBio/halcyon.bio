@@ -6177,7 +6177,7 @@ a.lightbox img{
 .lightbox-target:target .name,
 .lightbox-target:target .subtitle,
 .lightbox-target:target .subtitle2,
-lightbox-target:target .vid-container{
+.lightbox-target:target .vid-container{
   display:none;
 }
 .lightbox-target .l-vid{
