@@ -18,9 +18,8 @@ block content
           .title-top-container
             .title-top.flex-center
               img.logoHB(src='/img/neuromethod360-logo.png')
-              a.btn.btn-share.btn-share1.vrlps-trigger(type='button' target="_blank"
-              href="#") MEET RONNIE
-              button.btn.btn-trailer(type='button' onclick='{ trailerToggle }')  TRAILER <i class="fab fa-lg fa-youtube"></i>
+              // a.btn.btn-share.btn-share1.vrlps-trigger(type='button' target="_blank" href="#") MEET RONNIE
+              // button.btn.btn-trailer(type='button' onclick='{ trailerToggle }')  TRAILER <i class="fab fa-lg fa-youtube"></i>
 
     .container-fluid.l-vid
       .row.flex-center
@@ -269,7 +268,33 @@ block content
     | ©2018 Halcyon Biotechnologies
     br
     |  #[a(href='/privacy-policy' target='blank') Privacy Policy ] |  #[a(href='/privacy-policy#terms-of-service' target='blank') Terms of Service]
-
+  div#countdowntimer
+    script.
+      var countDownDate = new Date("Sept 27, 2018 19:00:00").getTime();
+      var x = function() {
+        // Get todays date and time
+        var now = new Date().getTime();
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) % 24;
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) % 60;
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000) % 60;
+        var centiseconds = Math.floor((distance % (1000 * 60)) / 10) % 100;
+        if (centiseconds < 10) {
+          centiseconds = "0" + centiseconds
+        }
+        // Output the result in an element with id="countdown"
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+        requestAnimationFrame(x)
+      }
+      requestAnimationFrame(x)
   div#mousetracker
     script.
       window._mfq = window._mfq || [];

@@ -20,8 +20,8 @@ block content
               a(href="https://neuromethod.halcyon.bio")
                 img.logo-hover-hide.logoHB(src='/img/neuromethod360-logo.png')
                 // img.logo-hover.logoHB(src='/img/nm-360-logo-inverted.png')
-              a.btn.btn-share.btn-share1.vrlps-trigger(type='button' target="_blank" href="#") MEET RONNIE
-              button.btn.btn-trailer(type='button' onclick='{ trailerToggle }')  TRAILER <i class="fab fa-lg fa-youtube"></i>
+              // a.btn.btn-share.btn-share1.vrlps-trigger(type='button' target="_blank" href="#") MEET RONNIE
+              // button.btn.btn-trailer(type='button' onclick='{ trailerToggle }')  TRAILER <i class="fab fa-lg fa-youtube"></i>
 
     .container-fluid.l-vid
       .row.flex-center
@@ -66,23 +66,16 @@ block content
               <iframe src="https://www.youtube.com/embed/9XWgPwQ6Ip4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row
         .col-12.header-img#episode-four.video-four-target.episodes
-          h3.text-center REGISTRATION CLOSES IN...
+          h4.text-center REGISTRATION CLOSES IN...
           <p id="countdown"></p>
           h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/fD4AleG8blQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           .register-container
-<<<<<<< HEAD
-            button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") Register for Neuromethod360
+            button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
           .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video. 
 
-=======
-            button.btn.btn-opt-in.new.register(type='button' onclick="window.open('/checkout')") Register for Neuromethod360
-          .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $370 in bonuses. Registration information will appear in the middle of this video.
-            br
-            | Questions? Email support@halcyon.bio
->>>>>>> 6b8c8cee48eb1ec72dc4816d2852b05060d70305
       .row.flex-center
         .col-6.col-lg-3.col-thumb
           a.ep1-link(href='#optincta' onclick='{ showVideo(1, true) }')
@@ -298,7 +291,7 @@ block content
 
   div#countdowntimer
     script.
-      var countDownDate = new Date("Sept 21, 2018 19:00:00").getTime();
+      var countDownDate = new Date("Sept 27, 2018 19:00:00").getTime();
       var x = function() {
         // Get todays date and time
         var now = new Date().getTime();
@@ -314,7 +307,7 @@ block content
           centiseconds = "0" + centiseconds
         }
         // Output the result in an element with id="countdown"
-        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s " + centiseconds + "cs";
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
         // If the count down is over, write some text
         if (distance < 0) {
           clearInterval(x);
