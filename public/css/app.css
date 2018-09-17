@@ -3932,6 +3932,8 @@ td{
   font-size:1rem;
   z-index:1;
   background-color:#fff;
+  padding:5px;
+  border:2px solid #d5d5d5;
 }
 .h-tooltip:hover ~ .h-tooltip-body,
 .h-tooltip:focus ~ .h-tooltip-body,
