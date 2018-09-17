@@ -4313,9 +4313,13 @@ footer .footer-bottom > *{
   box-shadow:0px 0px 5px 0px rgba(0,0,0,0.25);
 }
 #checkout .thankyoubox{
-  padding:10px;
+  display:block;
+  height:55px;
+  margin-top:-20px;
 }
 #checkout .thank-you-sticky{
+  font-size:1rem;
+  padding:10px;
   background-color:#f0efef;
   border-radius:5px;
   padding:5px;
@@ -4324,6 +4328,7 @@ footer .footer-bottom > *{
 #checkout .one-click-info{
   font-style:italic;
   font-size:1rem;
+  margin-bottom:5px;
   text-align:center;
 }
 #checkout .price{
@@ -4338,7 +4343,7 @@ footer .footer-bottom > *{
 }
 #checkout .cprice{
   text-align:center;
-  line-height:0.7rem;
+  line-height:1.5rem;
 }
 #checkout .ug-title{
   color:#304191;
@@ -4413,6 +4418,7 @@ footer .footer-bottom > *{
   width:100%;
   z-index:999;
   background-color:rgba(255,255,255,0.9);
+  border-bottom:1px solid #d2d9de;
 }
 #checkout .no-cc-notice{
   font-style:italic;
@@ -6561,6 +6567,10 @@ a.lightbox img{
   }
   .l-vid{
     margin-top:60px;
+  }
+  #checkout .thank-you-sticky{
+    width:300px;
+    margin:0 auto;
   }
   #checkout .one-click-info{
     left:25%;

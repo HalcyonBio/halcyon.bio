@@ -32,7 +32,7 @@ export class VideoForm extends El.Form
           # Uncomment and update these are videos come out
 
           when 3 then window.location.hash = '#episode-three'
-          # when 4 then window.location.hash = '#episode-four'
+          when 4 then window.location.hash = '#episode-four'
 
         @scheduleUpdate()
       # .catch (e)->
@@ -57,6 +57,9 @@ export class VideoForm extends El.Form
       if window.location.hash == '#episode-three' && !@submitted
         window.location.hash = '#optincta'
 
+      if window.location.hash == '#episode-four' && !@submitted
+        window.location.hash = '#optincta'
+
       requestAnimationFrame =>
         if window.location.hash == '#optincta'
           el = $(@root).find('.main-optin input[name="email"]')
@@ -77,9 +80,7 @@ export class VideoForm extends El.Form
     $('.ep1-link').attr 'href', '#episode-one'
     $('.ep2-link').attr 'href', '#episode-two'
     $('.ep3-link').attr 'href', '#episode-three'
-
-    # Uncomment and update these are videos come out
-    # $('.ep4-link').attr 'href', '#episode-four'
+    $('.ep4-link').attr 'href', '#episode-four'
     $('.btn-trailer-TURNEDOFF').on 'click', ->
       window.location.hash = ''
       requestAnimationFrame ->
@@ -96,13 +97,13 @@ export class VideoForm extends El.Form
     ep1 = $('#episode-one')
     ep2 = $('#episode-two')
     ep3 = $('#episode-three')
-    # ep4 = $('episode-four')
+    ep4 = $('episode-four')
     ep = null
     switch n
       when 1 then ep = ep1
       when 2 then ep = ep2
       when 3 then ep = ep3
-      # when 4 then ep = ep4
+      when 4 then ep = ep4
 
     target = $(e.currentTarget)
 
@@ -114,7 +115,8 @@ export class VideoForm extends El.Form
       ep1.css 'display', 'none'
       ep2.css 'display', 'none'
       ep3.css 'display', 'none'
-      for epi in [ep1, ep2, ep3]
+      ep3.css 'display', 'none'
+      for epi in [ep1, ep2, ep3, ep4]
         if ep[0] == epi[0]
           continue
         iframe = epi.find 'iframe'
@@ -127,7 +129,7 @@ export class VideoForm extends El.Form
       iframe.attr 'src', ''
       iframe.attr 'src', src
 
-      # ep4.style.display = 'none'
+      # ep4.style.display = 'none' < delete?
       ep.css 'display', 'block'
       window.location.hash = target.attr 'href'
       requestAnimationFrame ->
@@ -146,14 +148,14 @@ export class VideoForm extends El.Form
     ep1 = $('#episode-one')
     ep2 = $('#episode-two')
     ep3 = $('#episode-three')
-    # ep4 = document.getElementById 'episode-four'
+    ep3 = $('#episode-four')
     if trailer.css('display') == 'none'
       trailer.css 'display', 'flex'
 
       ep1.css 'display', 'none'
       ep2.css 'display', 'none'
       ep3.css 'display', 'none'
-      # ep4.style.display = 'none'
+      ep4.css 'display', 'none'
     window.location.hash = '#neuromethodtrailer'
 
   closeTrailer: ->

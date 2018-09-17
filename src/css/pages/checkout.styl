@@ -140,8 +140,16 @@
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
   .thankyoubox
-    padding: 10px;
+    display: block;
+    height: 55px;
+    margin-top: -20px;
+
   .thank-you-sticky
+    font-size: 1rem;
+    @media screen and (min-width:767px)
+      width: 300px;
+      margin: 0 auto;
+    padding: 10px;
     background-color: #f0efef;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -153,6 +161,7 @@
   .one-click-info
     font-style: italic;
     font-size: 1rem
+    margin-bottom: 5px;
     @media screen and (min-width:767px)
       left: 25%;
       position: relative;
@@ -166,7 +175,7 @@
     text-align: center;
   .cprice
     text-align: center;
-    line-height: .7rem;
+    line-height: 1.5rem;
   .ug-title
     color: #304191
     text-align: center;
@@ -245,6 +254,7 @@
     width: 100%;
     z-index: 999;
     background-color: rgba(255,255,255,0.9);
+    border-bottom: 1px solid #d2d9de;
   .no-cc-notice
     font-style: italic;
     padding: 10px 0px;
