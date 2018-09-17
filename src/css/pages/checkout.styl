@@ -215,11 +215,11 @@
     margin-bottom: 40px
   .product-name
     font-family: palatino;
-
+    margin-bottom: 10px;
     letter-spacing: 2px;
 
     color: #304191;
-    width: 60%
+    width: 100%
     margin-top: -7px;
     font-size: 2rem;
     @media screen and (max-width:420px)
@@ -228,9 +228,14 @@
     display: inline;
   .product-price, .product-list-price
     font-size: 1.5rem;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
     @media screen and (max-width:420px)
-      display: inline-block;
-      font-size: 1.36rem;
+      font-size: 1rem;
+    color: gray
+  .strike-list-price
+    text-decoration: line-through;
   .invoice-total
     .invoice-label, .invoice-amount
       font-size: 1.5rem;
@@ -247,10 +252,25 @@
   .product-quantity-container
     display: none
   .product-price-container
+    padding-left: 20px;
     line-height: 2rem
+    float: unset !important;
+    text-align: left;
+    padding-bottom: 20px;
+  .pricing-layout1
+    width: 150px
+    float: left
+    text-align: right
     @media screen and (max-width:420px)
-      float: unset !important;
-      text-align: left;
+      width: 100px
+  .pricing-layout2
+    display: block
+    padding-left: 155px
+    @media screen and (max-width:420px)
+      padding-left: 105px;
+  .red
+    color: red
+
   .top-stick
     position: fixed;
     right: 0;
