@@ -4216,8 +4216,7 @@ footer .footer-bottom > *{
   text-align:center;
 }
 #checkout .limit-notice{
-  font-style:italic;
-  padding-top:10px;
+  padding-top:20px;
 }
 #checkout .btn{
   background-color:#304191;
