@@ -11,7 +11,7 @@ export class VideoForm extends El.Form
 
   submitted:    false
   videoToShow: 0
-  formId: '94uloYDqfDKlbJ'
+  formId: 'ZJu7xDJJHejlW7'
 
   _submit: ->
     opts =
