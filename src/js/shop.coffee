@@ -51,7 +51,7 @@ if window.location.pathname.indexOf('signup') >= 0
   m.on 'register-failed', ->
 
 if window.location.pathname.indexOf('partner') >= 0
-  data.set 'user.formId','79ugEK4juG8m1X'
+  data.set 'user.formId','o6u8934BtDGm65'
   m.on 'register', ->
   m.on 'register-success', ->
     window.location.replace 'account'
