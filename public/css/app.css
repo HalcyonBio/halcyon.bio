@@ -400,8 +400,7 @@ button:not(:disabled):not(.disabled):hover,
 button:not(:disabled):not(.disabled):focus,
 .button:not(:disabled):not(.disabled):focus{
   box-shadow:2px 4px 2px 0.5px rgba(0,0,0,0.4);
-  -webkit-filter:brightness($mHoverBrightness);
-          filter:brightness($mHoverBrightness);
+  filter:brightness($mHoverBrightness);
   top:-2px;
 }
 button:disabled,
@@ -629,12 +628,10 @@ header .menu-link{
   padding:0.5rem 0;
 }
 header .menu-link:hover .menu-link-icon{
-  -webkit-filter:saturate(40%) brightness(105%);
-          filter:saturate(40%) brightness(105%);
+  filter:saturate(40%) brightness(105%);
 }
 header .menu-link:hover .menu-link-text{
-  -webkit-filter:brightness(300%);
-          filter:brightness(300%);
+  filter:brightness(300%);
 }
 header .menu-link a{
   color:#212121;
@@ -1240,22 +1237,6 @@ reset-password .input input:-ms-input-placeholder,
 reset-password-complete .input input:-ms-input-placeholder,
 shippingaddress .input input:-ms-input-placeholder,
 thankyou .input input:-ms-input-placeholder{
-  color:#000;
-}
-cart .input input::-webkit-input-placeholder,
-checkout .input input::-webkit-input-placeholder,
-checkout-card .input input::-webkit-input-placeholder,
-checkout-modal .input input::-webkit-input-placeholder,
-checkout-shippingaddress .input input::-webkit-input-placeholder,
-deposit .input input::-webkit-input-placeholder,
-login .input input::-webkit-input-placeholder,
-orders .input input::-webkit-input-placeholder,
-profile .input input::-webkit-input-placeholder,
-register .input input::-webkit-input-placeholder,
-reset-password .input input::-webkit-input-placeholder,
-reset-password-complete .input input::-webkit-input-placeholder,
-shippingaddress .input input::-webkit-input-placeholder,
-thankyou .input input::-webkit-input-placeholder{
   color:#000;
 }
 cart .input input::-ms-input-placeholder,
@@ -2565,9 +2546,6 @@ view .input input{
   background:transparent;
 }
 view .input input:-ms-input-placeholder{
-  color:#000;
-}
-view .input input::-webkit-input-placeholder{
   color:#000;
 }
 view .input input::-ms-input-placeholder{
@@ -4521,8 +4499,7 @@ footer .footer-bottom > *{
   position:absolute;
   top:0;
   left:0;
-  -webkit-filter:brightness(50%);
-          filter:brightness(50%);
+  filter:brightness(50%);
   max-width:initial;
 }
 #index #shop{
@@ -5039,8 +5016,7 @@ footer .footer-bottom > *{
 }
 #index #thought-leader .gallery-thumbs label.selected img,
 #index #thought-leader .gallery-thumbs label:hover img{
-  -webkit-filter:none;
-          filter:none;
+  filter:none;
 }
 #index #thought-leader .gallery-thumbs label.selected .description,
 #index #thought-leader .gallery-thumbs label:hover .description{
@@ -5048,8 +5024,7 @@ footer .footer-bottom > *{
   pointer-events:none;
 }
 #index #thought-leader .gallery-thumbs label img{
-  -webkit-filter:contrast(50%) brightness(50%);
-          filter:contrast(50%) brightness(50%);
+  filter:contrast(50%) brightness(50%);
 }
 #index #thought-leader .gallery-thumbs label .body{
   position:relative;
@@ -5236,9 +5211,6 @@ footer .footer-bottom > *{
   background:transparent;
 }
 #launch-squeeze launch-squeeze-form .input input:-ms-input-placeholder{
-  color:#000;
-}
-#launch-squeeze launch-squeeze-form .input input::-webkit-input-placeholder{
   color:#000;
 }
 #launch-squeeze launch-squeeze-form .input input::-ms-input-placeholder{
@@ -5580,10 +5552,6 @@ iframe.fb_ltr{
   max-width:318px;
   border:3px solid rgba(255,255,255,0.7);
   margin-bottom:21px;
-}
-#launch-videos .input input:focus,
-#launch-videos .input input::-webkit-input-placeholder{
-  color:#000;
 }
 #launch-videos .input input:focus,
 #launch-videos .input input:-ms-input-placeholder{
