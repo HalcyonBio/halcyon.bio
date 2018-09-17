@@ -4137,6 +4137,9 @@ footer .footer-bottom > *{
 #account .more{
   text-decoration:underline;
 }
+#checkout .error{
+  color:$red;
+}
 #checkout checkout-flow{
   width:100vw;
 }
@@ -4169,7 +4172,7 @@ footer .footer-bottom > *{
   float:right;
   height:42px;
 }
-#checkout button:focus{
+#checkout button.green{
   background-color:#66bb6a;
 }
 #checkout .logoHB{
