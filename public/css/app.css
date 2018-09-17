@@ -4356,6 +4356,9 @@ footer .footer-bottom > *{
   font-size:1rem;
   padding-bottom:10px;
 }
+#checkout .ug-first{
+  margin-top:130px;
+}
 #checkout .space{
   color:#808080;
   font-style:italic;
