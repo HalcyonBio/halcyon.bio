@@ -17,7 +17,9 @@ block content
         .col-12.title
           .title-top-container
             .title-top.flex-center
-              img.logoHB(src='/img/neuromethod360-logo.png')
+              a(href="https://neuromethod.halcyon.bio")
+                img.logo-hover-hide.logoHB(src='/img/neuromethod360-logo.png')
+                // img.logo-hover.logoHB(src='/img/nm-360-logo-inverted.png')
               // a.btn.btn-share.btn-share1.vrlps-trigger(type='button' target="_blank" href="#") MEET RONNIE
               // button.btn.btn-trailer(type='button' onclick='{ trailerToggle }')  TRAILER <i class="fab fa-lg fa-youtube"></i>
 
@@ -30,6 +32,17 @@ block content
               <iframe src="https://www.youtube.com/embed/71fptRWCwuQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               <a class="lightbox-close lightbox-close-trailer" style="color: gray !important;" href="#" onmouseup="{ closeTrailer }"></a>
           .vid-container
+            h4.text-center REGISTRATION CLOSES IN...
+            <p id="countdown"></p>
+            h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
+            .masterclass-container.tc2
+              .masterclass-view
+                a.ep4-link(href='#optincta' onclick='{ showVideo(4, true) }')
+                  img(src='/img/ep4-website.jpg')
+            .register-container
+              button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
+            .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
+          //.vid-container
             a(href='#neuromethodtrailer')
               img.mobile(src="/img/header-ron-mobile-yt.jpg")
             a(href='#neuromethodtrailer')
@@ -37,37 +50,14 @@ block content
             .name Ron White
             .subtitle 2 time USA Memory Champion
 
-            .subtitle2#optincta
+            .subtitle2
               |Teaches
               |
               | Brain Performance
 
-    .main-optin
-            // (if='{ !submitted }') added to hide if it has been submitted
-            .row.flex-center#thank-you.lightbox-target3.no-gutters
-              .col-12.cta(if='{ !submitted }')
-                h4 Get access to the free masterclass video series taught by one of the world’s greatest minds.
-                p.cta-p Enter your email below now to save your spot - space is limited.
-
-
-              .col-12.opt-in-fields-main.flex-center(if='{ !submitted }')
-
-
-                text.input(bind='email' id='opt-in-email' placeholder='enter your email')
-                  yield(to='123')
-                    input(name="email" type="text" autocomplete="on" placeholder="enter your email")
-                button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
-              .thank-you(if='{ submitted }')
-                h4.h4line2 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
-                button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
-                h4.clg You're all set for the masterclass, click a thumbnail below to watch.
-              p.disclaimer.disclaimer-main(if='{ !submitted }')
-                | We will notify you when each masterclass episode is released.
-                br
-                | Providing your email gives you unlimited free access to all 4 masterclass episodes.
-
 
     .container.thumb#episodes
+
       .row
         .col-12.header-img#episode-one.video-one-target.episodes
           h4.text-center MASTERCLASS EPISODE 1: INTERMITTENT FASTING AND THE BRAIN
@@ -76,7 +66,7 @@ block content
               <iframe src="https://www.youtube.com/embed/R9DZF2IXGXk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row
         .col-12.header-img#episode-two.video-two-target.episodes
-          h4.text-center MASTERCLASS EPISODE 2: MENTAL STRATEGIES
+          h4.text-center MASTERCLASS EPISODE 2: TRANSFORMING YOUR MEMORY
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/cbDlwmHFKyE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -86,7 +76,6 @@ block content
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/9XWgPwQ6Ip4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
       .row
         .col-12.header-img#episode-four.video-four-target.episodes
           h4.text-center REGISTRATION CLOSES IN...
@@ -106,31 +95,37 @@ block content
 
             img(src="/img/trailer-thumb.jpg")
       .row.flex-center
-        .col-6.col-md-3.col-thumb
+        .col-6.col-lg-3.col-thumb
           a.ep1-link(href='#optincta' onclick='{ showVideo(1, true) }')
 
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
-            h6.vid-desc-title Lifestyle 
-            p 1
+            h6.vid-desc-title 1. Lifestyle
+            //p 1
             img(src="/img/vid-1-thumb-live.jpg")
-        .col-6.col-md-3.col-thumb
+        .col-6.col-lg-3.col-thumb
           a.ep2-link(href='#optincta' onclick='{ showVideo(2, true) }')
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
-            h6.vid-desc-title Memory
-            p 2
+            h6.vid-desc-title 2. Memory
+            //p 2
             img(src="/img/vid-2-thumb-live.jpg")
-        .col-6.col-md-3.col-thumb
+        .col-6.col-lg-3.col-thumb
           a.ep3-link(href='#optincta' onclick='{ showVideo(3, true) }')
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
-            h6.vid-desc-title NOOTROPICS
-            p 3
+            h6.vid-desc-title 3. NOOTROPICS
+            //p 3
             img(src="/img/vid-3-thumb-live.jpg")
-        .col-6.col-md-3.col-thumb
+        .col-6.col-lg-3.col-thumb
           a.ep4-link(href='#optincta' onclick='{ showVideo(4, true) }')
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
-            h6.vid-desc-wrapper Execution
-            p 4
+            h6.vid-desc-title 4. Execution
+            //p 4
             img(src="/img/vid-4-thumb-live.jpg")
+        .main-optin.thumb-popover-optin-cont#optincta
+          .col-12.opt-in-fields-main.thumb-popover-optin.flex-center(if='{ !submitted }')
+            text.input(bind='email' id='opt-in-email' placeholder='enter your email')
+              yield(to='123')
+                input(name="email" type="text" autocomplete="on" placeholder="enter your email")
+            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
 
       .row
         .col-12.col-md-8.offset-md-2.title
@@ -160,23 +155,47 @@ block content
         .col-12.col-md-3.col-lg-1.flex-center
           img(src='/img/wsj.png')
       #fb
-  // .flex-container.l-body-transition
+    // .flex-container.l-body-transition
     .row
       .col-12
         p
+        .visible-optin
+                // (if='{ !submitted }') added to hide if it has been submitted
+                .row.flex-center#thank-you.lightbox-target3.no-gutters
+                  .col-12.cta(if='{ !submitted }')
+                    h4 Get access to the free masterclass video series taught by one of the world’s greatest minds.
+                    p.cta-p Enter your email below now to save your spot - space is limited.
+
+
+                  .col-12.opt-in-fields-main.flex-center(if='{ !submitted }')
+
+
+                    text.input(bind='email' id='opt-in-email' placeholder='enter your email')
+                      yield(to='123')
+                        input(name="email" type="text" autocomplete="on" placeholder="enter your email")
+                    button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
+                  .thank-you-moved.thank-you(if='{ submitted }')
+
+                    h4.h4line2 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
+                    button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
+                    h4.clg You're all set for the masterclass, <a class="thumb-link" href="#episodes"> click a thumbnail above to watch. </a>
+                  p.disclaimer.disclaimer-main(if='{ !submitted }')
+                    | We will notify you when each masterclass episode is released.
+                    br
+                    | Providing your email gives you unlimited free access to all 4 masterclass episodes.
   .flex-container.l-body.flex-center
     .row
       .col-12
-        h3  Hit the <span class="fblike"> "Like"</span> button and comment below
+        h3.fb-comment-title  Hit the <span class="fblike"> "Like"</span> button and comment below
         h3.loading <i class="fa fa-spinner fa-spin fa-fw"></i> Loading...
         img.arrow(src="img/new-arrow.png" width="70px")
         <div class="fb-like-frame"><div class="fb-like" data-colorscheme="dark" data-href="https://www.facebook.com/HalcyonBiotech/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></div>
         <div class="hm"></div>
-        <div class="fb-comments fb-new" data-colorscheme="dark" data-href="https://neuromethod.halcyon.bio" data-width="100%" data-numposts="50"></div>
-        // <div class="hm2"></div>
-        // <div class="fb-comments fb-old" data-order-by="reverse_time" data-colorscheme="dark" data-href="https://halcyon.bio/master-class-videos" data-width="100%" data-numposts="50"></div>
+        <div class="fb-comments fb-new" data-colorscheme="dark" data-href="https://neuromethod.halcyon.bio" data-width="100%" data-numposts="40"></div>
+        // <div class="hm2"></div> not showing anymore
+        // <div class="fb-comments fb-old" data-order-by="reverse_time" data-colorscheme="dark" data-href="https://halcyon.bio/master-class-videos" data-width="100%" data-numposts="5"></div>
 
-  .flex-container.l-body2
+  video-form.flex-container.l-body2
     .row
       .col-md-7.col-12.l-body2-ron
         img(src='/img/ron-white-dark.jpg')
@@ -184,34 +203,34 @@ block content
 
         .row
 
-          .col-md-8.offset-md-2.col-12.flex-center.vid-desc-trailer
+          .col-lg-8.offset-lg-2.col-12.flex-center.vid-desc-trailer
             a(href='#neuromethodtrailer')
               h5.vid-desc-wrapper-trailer Trailer
 
               img(src="/img/trailer-thumb.jpg")
         .row.ueh3
           h3 UPCOMING EPISODES
-          .col-md-6.col-12.vid-desc.flex-center
+          .col-lg-6.col-12.vid-desc.flex-center
             a.ep1-link(href='#optincta' onclick='{ showVideo(1, true) }')
               h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
-              h6.vid-desc-wrapper Lifestyle
+              h6.vid-desc-wrapper 1. Lifestyle
 
               img(src="/img/vid-1-thumb-live.jpg")
-          .col-md-6.col-12.vid-desc.flex-center
+          .col-lg-6.col-12.vid-desc.flex-center
             a.ep2-link(href='#optincta' onclick='{ showVideo(2, true) }')
               img(src="/img/vid-2-thumb-live.jpg")
-              h6.vid-desc-wrapper Memory
+              h6.vid-desc-wrapper 2. memory
               h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
         .row.4videos
-          .col-md-6.col-12.vid-desc.flex-center
+          .col-lg-6.col-12.vid-desc.flex-center
             a.ep3-link(href='#optincta' onclick='{ showVideo(3, true) }')
               img(src="/img/vid-3-thumb-live.jpg")
-              h6.vid-desc-wrapper Nootropics
+              h6.vid-desc-wrapper 3. Nootropics
               h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
-          .col-md-6.col-12.vid-desc.flex-center
+          .col-lg-6.col-12.vid-desc.flex-center
             a(href='#optincta' onclick='{ showVideo(4, true) }')
               img(src="/img/vid-4-thumb.jpg")
-              h6.vid-desc-wrapper.putting Execution
+              h6.vid-desc-wrapper.putting 4. Execution
               h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
 
       .col-md-1
@@ -287,6 +306,7 @@ block content
     | ©2018 Halcyon Biotechnologies
     br
     |  #[a(href='/privacy-policy' target='blank') Privacy Policy ] |  #[a(href='/privacy-policy#terms-of-service' target='blank') Terms of Service]
+
   div#countdowntimer
     script.
       var countDownDate = new Date("Sept 27, 2018 19:00:00").getTime();
@@ -306,6 +326,7 @@ block content
         }
         // Output the result in an element with id="countdown"
         document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        document.getElementById("countdown2").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
         // If the count down is over, write some text
         if (distance < 0) {
           clearInterval(x);
@@ -339,8 +360,8 @@ block content
       !function(a,b,c,d,t){var e,f=a.getElementsByTagName("head")[0];if(!a.getElementById(c)){if(e=a.createElement(b),e.id=c,e.setAttribute("data-vrlps-ucid",d),e.setAttribute("data-vrlps-version","2"), e.setAttribute("data-vrlps-template", t),e.src="https://app.viral-loops.com/popup_assets/js/vl_load_v2.min.js",window.ub){jQuery=null,$=null;var g=a.createElement(b);g.src="https://code.jquery.com/jquery-2.2.4.min.js",f.appendChild(g)}f.appendChild(e);var h=a.createElement("link");h.rel="stylesheet",h.type="text/css",h.href="https://app.viral-loops.com/static/vl-loader.css",f.appendChild(h);var i=a.createElement("div");i.id="vl-overlay",i.style.display="none";var j=a.createElement("div");j.id="vl-loader",i.appendChild(j),a.addEventListener("DOMContentLoaded",function(b){a.body.appendChild(i);for(var c=a.getElementsByClassName("vrlps-trigger"),d=0;d<c.length;d++)c[d].removeAttribute("href"),c[d].onclick=function(){a.getElementById("vl-overlay").style.display="block"};var e=a.querySelectorAll("[data-vl-widget='popupTrigger']");[].forEach.call(e,function(b){var c=a.createElement("div");c.className="vl-embedded-cta-loader",b.appendChild(c)})})}}(document,"script","vrlps-js","_FUZaZo3McnD1eiLnYdZwty6qJ0","sweepstake");
 
   .scrolling-show(if='{ !submitted }')
-    video-form.main-optin.popover-optin
-
+    video-form.popover-optin
+            // add back in .main-optin - removed as it's :target for popup opt in above
             .row.flex-center#thank-you.lightbox-target3
               .col-12.cta(if='{ !submitted }')
                 h4 Get access to the masterclass video series taught by one of the world’s greatest minds.

@@ -32,6 +32,17 @@ block content
               <iframe src="https://www.youtube.com/embed/71fptRWCwuQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               <a class="lightbox-close lightbox-close-trailer" style="color: gray !important;" href="#" onmouseup="{ closeTrailer }"></a>
           .vid-container
+            h4.text-center REGISTRATION CLOSES IN...
+            <p id="countdown"></p>
+            h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
+            .masterclass-container.tc2
+              .masterclass-view
+                a.ep4-link(href='#optincta' onclick='{ showVideo(4, true) }')
+                  img(src='/img/ep4-website.jpg')
+            .register-container
+              button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
+            .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
+          //.vid-container
             a(href='#neuromethodtrailer')
               img.mobile(src="/img/header-ron-mobile-yt.jpg")
             a(href='#neuromethodtrailer')
@@ -67,8 +78,8 @@ block content
               <iframe src="https://www.youtube.com/embed/9XWgPwQ6Ip4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row
         .col-12.header-img#episode-four.video-four-target.episodes
-          h4.text-center REGISTRATION CLOSES IN...
-          <p id="countdown"></p>
+          h4.text-center REGISTRATION CLOSES IN... 
+          <p id="countdown2"></p>
           h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
           .masterclass-container.tc2
             .masterclass-view
@@ -76,8 +87,8 @@ block content
           .register-container
             button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
           .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
-
       .row.trailer-top-row.flex-center(if='{ !submitted }')
+
         .col-md-4.col-12.flex-center.vid-desc-trailer-top
           a(href='#neuromethodtrailer')
             h5.vid-desc-wrapper-trailer Trailer
@@ -315,6 +326,7 @@ block content
         }
         // Output the result in an element with id="countdown"
         document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        document.getElementById("countdown2").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
         // If the count down is over, write some text
         if (distance < 0) {
           clearInterval(x);
