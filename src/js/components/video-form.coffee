@@ -116,6 +116,7 @@ export class VideoForm extends El.Form
       ep2.css 'display', 'none'
       ep3.css 'display', 'none'
       ep3.css 'display', 'none'
+      ep4.css 'display', 'none'
       for epi in [ep1, ep2, ep3, ep4]
         if ep[0] == epi[0]
           continue
