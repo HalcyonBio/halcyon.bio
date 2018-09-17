@@ -53,6 +53,7 @@ export class CheckoutFlow extends El.View
       Shop.clear()
     Shop.setItem 'P7c8KkgxUEGRO0', 1, true
     @data.set 'order.metadata.upsell', false
+    @data.set 'order.notifications.email.templateId', ''
 
   getMinutes: ->
     if @minutes > 0
@@ -91,6 +92,7 @@ export class CheckoutFlow extends El.View
       # ignore & lock
       Shop.setItem 'P7c8KkgxUEGRO0', 1, true, true
       @data.set 'order.metadata.upsell', true
+      @data.set 'order.notifications.email.templateId', ''
 
       @countDownDate = new Date().getTime() + 300000
       # window.addEventListener 'beforeunload', unloadFn
