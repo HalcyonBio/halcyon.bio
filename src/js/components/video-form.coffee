@@ -60,18 +60,34 @@ export class VideoForm extends El.Form
       if window.location.hash == '#episode-four' && !@submitted
         window.location.hash = '#optincta'
 
+      onOptincta = =>
+        el = $(@root).find('.main-optin input[name="email"]')
+        el.focus()
+        $('#episodes')[0].scrollIntoView()
+
+      onEpisode = =>
+        trailer = $('#neuromethodtrailer')
+        trailer.hide()
+        $(window.location.hash)[0].scrollIntoView()
+        requestAnimationFrame =>
+          $(window.location.hash)[0].scrollIntoView()
+
       requestAnimationFrame =>
-        if window.location.hash == '#optincta'
-          el = $(@root).find('.main-optin input[name="email"]')
-          el.focus()
-          $('#episodes').scrollIntoView()
+        switch window.location.hash
+          when '#optincta' then onOptincta()
+          when '#episode-one' then onEpisode()
+          when '#episode-two' then onEpisode()
+          when '#episode-three' then onEpisode()
+          when '#episode-four' then onEpisode()
 
       window.addEventListener 'hashchange', =>
         requestAnimationFrame =>
-          if window.location.hash == '#optincta'
-            el = $(@root).find('.main-optin input[name="email"]')
-            el.focus()
-            $('#episodes').scrollIntoView()
+          switch window.location.hash
+            when '#optincta' then onOptincta()
+            when '#episode-one' then onEpisode()
+            when '#episode-two' then onEpisode()
+            when '#episode-three' then onEpisode()
+            when '#episode-four' then onEpisode()
 
       $(@root).find('input[name="email"]').on 'keypress', (e) =>
         @submit() if e.keyCode is 13

@@ -5,7 +5,7 @@ block vars
 
 block content
   .left.logos.logo-spelling
-    
+
     <a class="logo-link" href="https://neuromethod.halcyon.bio" itemprop="logos" itemscope="" itemtype="WebsiteLogo"><img class="logo-image" src="/img/logo.svg" alt="HALCYON.BIO" itemprop="image"></a>
     button.logout(onclick='{ logout }') Log Out
   section
@@ -13,15 +13,16 @@ block content
       .row
         .col-md-8.offset-md-2.col-12
           profile
-            h2.title Your Account 
-            p.title Welcome, { data.get('user.name') }.    
+            h2.title Your Account
+            p.title Welcome, { data.get('user.name') }.
             h3 Your Email:
-            p { data.get('user.email') }              
+            p { data.get('user.email') }
             h3 Number of Referrals: { data.get('user.referrals') ? data.get('user.referrals').length : 0  }
             h3(if='{ isAffiliate() }') Commission Earned: { renderCurrency('usd', parseInt((data.get('user.transactions.points.balance') || 0) * (data.get('user.commission.percent') || 0.15)), 10)}
             h3 Your Link:
-            copy.input(text='{ ()=>{return "https://" + window.location.host + "/360#" + data.get("user.referrers.0.id")} }')
+            copy.input(if='{ data.get("user.referrers.0.id") }' text='{ ()=>{return "https://" + window.location.host + "/360#" + data.get("user.referrers.0.id")} }')
               button.input(onclick='{ copy }') { copied ? 'Copied' : 'Copy' }
+            p(if='{ !data.get("user.referrers.0.id") }') Creating...
             div(if='{ isAffiliate() }') Thanks for being a part of the Halcyon Ambassador Team. Assets and details are below - for something specific please reach out to your account manager or email support@halcyon.bio.
               br
               br
@@ -30,7 +31,7 @@ block content
                 br
                 br
                 | Halcyon company video for embedding can be found on YouTube #[a(href="https://www.youtube.com/watch?v=XcD4YJ2HmeU") here].
-                | More info on the launch is below the images, please read it thoroughly. 
+                | More info on the launch is below the images, please read it thoroughly.
               .row
                 .col-12
                   h3 Email/Marketing Copy:
@@ -59,39 +60,39 @@ block content
                     img(src="/img/affiliate-assets/neuromethod-logo-dark.png")
                     img.dark(src="/img/affiliate-assets/neuromethod-logo-light.png")
                     img(src="/img/affiliate-assets/ron-white-teaching.jpg")
-                    
+
                     img(src="/img/affiliate-assets/ron-white-video-hero-no-play-button.jpg")
                     img(src="/img/affiliate-assets/ron-white-video-hero.jpg")
                     img(src="/img/affiliate-assets/bottle-in-hand.jpg")
-                    
+
                     img(src="/img/affiliate-assets/halcyon-3-bottle.jpg")
                     img(src="/img/affiliate-assets/halcyon-hero-image.jpg")
                     img(src="/img/affiliate-assets/pills-in-hand.jpg")
-                    
+
                     img(src="/img/affiliate-assets/ron-celebrating.jpg")
                     img(src="/img/affiliate-assets/ron-dr-oz.jpg")
                     img(src="/img/affiliate-assets/ron-excited.jpg")
-                    
+
                     img(src="/img/affiliate-assets/ron-head-on-sholder.jpg")
                     img(src="/img/affiliate-assets/ron-headshot.jpg")
                     img(src="/img/affiliate-assets/ron-human-phonebook.jpg")
-                    
+
                     img(src="/img/affiliate-assets/ron-oz-2.jpg")
                     img(src="/img/affiliate-assets/ron-talking.jpg")
                     img(src="/img/affiliate-assets/focus1.jpg")
-                    
+
                     img(src="/img/affiliate-assets/ron-head-in-hands.jpg")
                     img(src="/img/affiliate-assets/focus2.jpg")
                     img(src="/img/affiliate-assets/focus3.jpg")
-                    
+
                     img(src="/img/affiliate-assets/focus4.jpg")
                     img(src="/img/affiliate-assets/focus5.jpg")
                     img(src="/img/affiliate-assets/focus6.jpg")
-                    
+
                     img(src="/img/affiliate-assets/focus7.jpg")
                     img(src="/img/affiliate-assets/focus8.jpg")
                     img(src="/img/affiliate-assets/focus9.jpg")
-                    
+
                     img(src="/img/affiliate-assets/focus1.jpg")
               .divider
               p.
@@ -109,6 +110,6 @@ block content
                 br
                 br
                 | In the attached spreadsheet you will find the copy for the posts that Ron White will make throughout the campaign. These posts have dates associated with them that provide the schedule and structure for the campaign. When posting please consider the messaging that Ron White is putting out about the video. You can use copy that is as similar to Ron White as you like. You can post as frequently or often as you like within the schedule. The more often you post with your link the  | more likely your following is to convert. You will notice in the spreadsheet that each time Ron posts he has a new reason to post with new information. This is best practice rather than posting the same message multiple times. You can post your link to any platform you like including Facebook, Twitter, YouTube, and your email list. There is example copy for Facebook in the spreadsheet. Anytime that someone uses your link to go to the website this becomes your lead and your potential commission if this lead converts.
-            div(if='{ !isAffiliate() }') 
+            div(if='{ !isAffiliate() }')
               // Normal Stuff Here
 block header
