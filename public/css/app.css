@@ -4136,6 +4136,9 @@ footer .footer-bottom > *{
 #account .more{
   text-decoration:underline;
 }
+.checkout-container{
+  top:-4000px !important;
+}
 #checkout .error{
   color:$red;
 }
