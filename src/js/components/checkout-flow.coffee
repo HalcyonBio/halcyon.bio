@@ -12,10 +12,15 @@ unloadFn = (e)=>
 export class CheckoutFlow extends El.View
   tag: 'checkout-flow'
 
-  step: 1
+  step: 'startCheckout'
+
+  upsellStatuses: {}
+  upsellEnabled: true
 
   init: ->
     super arguments...
+
+    @upsellStatuses = {}
 
     @on 'mount', ->
       $(@root).addClass 'ready'
@@ -42,7 +47,7 @@ export class CheckoutFlow extends El.View
       @centiseconds = Math.floor(distance / 10) % 100
       # Display the result in the element with id="demo"
       # If the count down is finished, write some text
-      if distance <= 0 && @step > 1 && @step <4
+      if distance <= 0 && @step != 'startCheckout' && @step != 'thankYou'
         @toThankYou()
       @update()
       requestAnimationFrame x
@@ -81,97 +86,140 @@ export class CheckoutFlow extends El.View
     @scheduleUpdate()
 
   toCart: ->
-    @step = 1
+    @step = 'startCheckout'
     @update()
 
   toUpsell1: ->
     @submit()
     @mediator.one 'submit-success', =>
-      @step = 2
+      @step = 'mainUpsells'
 
       # ignore & lock
       Shop.setItem 'P7c8KkgxUEGRO0', 1, true, true
       @data.set 'order.metadata.upsell', true
       @data.set 'order.notifications.email.templateId', 'd-cfe9717a682e47a5b70f16fd794bca45'
 
-
       @countDownDate = new Date().getTime() + 300000
       # window.addEventListener 'beforeunload', unloadFn
       document.getElementsByTagName('checkout')[0].scrollIntoView()
       @update()
 
-  toUpsell2: ->
-    @step = 3
-    @countDownDate = new Date().getTime() + 300000
-    document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @update()
-
-  toUpsell3: ->
-    @step = 4
-    @countDownDate = new Date().getTime() + 300000
-    document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @update()
-
   toThankYou: ->
-    if !Shop.isEmpty()
+    @step = 'thankYou'
+    @update()
+
+  # generic upsell logic
+  isUpsellSelected: (productId)->
+    return @upsellStatuses[productId] && @upsellStatuses[productId].selected
+
+  isUpsellEnabled: ()->
+    return @upsellEnabled
+
+  getUpsell: (productId)->
+    return @upsellStatuses[productId]
+
+  getUpsellError: (productId)->
+    return if @upsellStatuses[productId] then @upsellStatuses[productId].errorMessage else undefined
+
+  upsell: (productId, nextStep)->
+    return =>
       @parent.checkedOut = false
+
+      v.selected = false for k, v of @upsellStatuses
+
+      @upsellStatuses[productId] =
+        selected: true
+        errorMessage: ''
+
+      @upsellEnabled = false
+
+      Shop.setItem productId, 1, true
       @submit()
-      @mediator.one 'submit-success', =>
-        @step = 5
-        @update()
-      document.getElementsByTagName('checkout')[0].scrollIntoView()
-    else
-      @step = 5
       @update()
 
-  sixMonthUpsell: ->
-    Shop.setItem 'rbcKz75Dt2k9AJ', 1, true
-    @update()
-    document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toThankYou()
+      @mediator.one 'submit-success', =>
+        Shop.setItem productId, 1, true, true
+        @step = nextStep
 
-  eliteUpgrade1: ->
-    @parent.checkedOut = false
-    Shop.setItem 'qGcvWn19sxWb1O', 1, true
-    @submit()
-    @update()
-    @mediator.one 'submit-success', =>
-      Shop.setItem 'qGcvWn19sxWb1O', 1, true, true
-      document.getElementsByTagName('checkout')[0].scrollIntoView()
-      @toUpsell2()
+        @upsellStatuses[productId] =
+          selected: false
+          errorMessage: ''
 
-  eliteUpgrade2: ->
-    Shop.setItem 'pocm8A9PfzPwZK', 1, true
-    @update()
-    document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toThankYou()
+        @countDownDate = new Date().getTime() + 300000
+        @upsellEnabled = true
+        @update()
 
-  eliteUpgrade3: ->
-    Shop.setItem '0Kcx0egPcYqGPA', 1, true
-    @update()
-    document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toThankYou()
+        document.getElementsByTagName('checkout')[0].scrollIntoView()
 
-  oneYearUpsell: ->
-    Shop.setItem 'rbcKzWg1c2k9AJ', 1, true
-    @update()
-    document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toThankYou()
+        @mediator.off 'submit-success'
+        @mediator.off 'submit-failed'
 
-  executiveUpgrade1: ->
-    @parent.checkedOut = false
-    Shop.setItem '0Kcx0egPcYqGPA', 1, true
-    @submit()
-    @update()
-    @mediator.one 'submit-success', =>
-      Shop.setItem '0Kcx0egPcYqGPA', 1, true, true
-      document.getElementsByTagName('checkout')[0].scrollIntoView()
-      @toUpsell3()
+      @mediator.one 'submit-failed', (err)=>
+        @upsellStatuses[productId] =
+          selected: true
+          errorMessage: err
 
-  executiveUpgrade2: ->
-    Shop.setItem 'JwcnoBljt4ZK2J', 1, true
-    @update()
-    document.getElementsByTagName('checkout')[0].scrollIntoView()
-    @toThankYou()
+        @upsellEnabled = true
+        @update()
+
+        @mediator.off 'submit-success'
+        @mediator.off 'submit-failed'
+
+  # sixMonthUpsell: ->
+  #   @sixMonthUpsellSelected = true
+  #   Shop.setItem 'rbcKz75Dt2k9AJ', 1, true
+  #   @update()
+  #   document.getElementsByTagName('checkout')[0].scrollIntoView()
+  #   @toThankYou()
+
+  # eliteUpgrade1: ->
+  #   @eliteUpgrade1Selected = true
+  #   @parent.checkedOut = false
+  #   Shop.setItem 'qGcvWn19sxWb1O', 1, true
+  #   @submit()
+  #   @update()
+  #   @mediator.one 'submit-success', =>
+  #     Shop.setItem 'qGcvWn19sxWb1O', 1, true, true
+  #     document.getElementsByTagName('checkout')[0].scrollIntoView()
+  #     @toUpsell2()
+
+  # eliteUpgrade2: ->
+  #   @eliteUpgrade2Selected = true
+  #   Shop.setItem 'pocm8A9PfzPwZK', 1, true
+  #   @update()
+  #   document.getElementsByTagName('checkout')[0].scrollIntoView()
+  #   @toThankYou()
+
+  # eliteUpgrade3: ->
+  #   @eliteUpgrade3Selected = true
+  #   Shop.setItem '0Kcx0egPcYqGPA', 1, true
+  #   @update()
+  #   document.getElementsByTagName('checkout')[0].scrollIntoView()
+  #   @toThankYou()
+
+  # oneYearUpsell: ->
+  #   @oneYearUpsell = true
+  #   Shop.setItem 'rbcKzWg1c2k9AJ', 1, true
+  #   @update()
+  #   document.getElementsByTagName('checkout')[0].scrollIntoView()
+  #   @toThankYou()
+
+  # executiveUpgrade1: ->
+  #   @executiveUpgrade1 = true
+  #   @parent.checkedOut = false
+  #   Shop.setItem '0Kcx0egPcYqGPA', 1, true
+  #   @submit()
+  #   @update()
+  #   @mediator.one 'submit-success', =>
+  #     Shop.setItem '0Kcx0egPcYqGPA', 1, true, true
+  #     document.getElementsByTagName('checkout')[0].scrollIntoView()
+  #     @toUpsell3()
+
+  # executiveUpgrade2: ->
+  #   @executiveUpgrade2 = true
+  #   Shop.setItem 'JwcnoBljt4ZK2J', 1, true
+  #   @update()
+  #   document.getElementsByTagName('checkout')[0].scrollIntoView()
+  #   @toThankYou()
 
 CheckoutFlow.register()
