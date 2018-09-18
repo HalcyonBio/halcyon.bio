@@ -20,8 +20,8 @@ block content
               a(href="https://neuromethod.halcyon.bio")
                 img.logo-hover-hide.logoHB(src='/img/neuromethod360-logo.png')
                 // img.logo-hover.logoHB(src='/img/nm-360-logo-inverted.png')
-              a.btn.btn-share.btn-share1.vrlps-trigger(type='button' target="_blank" href="#") MEET RONNIE
-              button.btn.btn-trailer(type='button' onclick='{ trailerToggle }')  TRAILER <i class="fab fa-lg fa-youtube"></i>
+              // a.btn.btn-share.btn-share1.vrlps-trigger(type='button' target="_blank" href="#") MEET RONNIE
+              // button.btn.btn-trailer(type='button' onclick='{ trailerToggle }')  TRAILER <i class="fab fa-lg fa-youtube"></i>
 
     .container-fluid.l-vid
       .row.flex-center
@@ -32,6 +32,17 @@ block content
               <iframe src="https://www.youtube.com/embed/71fptRWCwuQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               <a class="lightbox-close lightbox-close-trailer" style="color: gray !important;" href="#" onmouseup="{ closeTrailer }"></a>
           .vid-container
+            h4.text-center REGISTRATION CLOSES IN...
+            <p id="countdown"></p>
+            h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
+            .masterclass-container.tc2
+              .masterclass-view
+                a.ep4-link(href='#optincta' onclick='{ showVideo(4, true) }')
+                  img(src='/img/ep4-website.jpg')
+            .register-container
+              button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
+            .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
+          //.vid-container
             a(href='#neuromethodtrailer')
               img.mobile(src="/img/header-ron-mobile-yt.jpg")
             a(href='#neuromethodtrailer')
@@ -46,6 +57,7 @@ block content
 
 
     .container.thumb#episodes
+
       .row
         .col-12.header-img#episode-one.video-one-target.episodes
           h4.text-center MASTERCLASS EPISODE 1: INTERMITTENT FASTING AND THE BRAIN
@@ -66,43 +78,48 @@ block content
               <iframe src="https://www.youtube.com/embed/9XWgPwQ6Ip4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row
         .col-12.header-img#episode-four.video-four-target.episodes
-          h3.text-center REGISTRATION CLOSES IN...
-          <p id="countdown"></p>
+          h4.text-center REGISTRATION CLOSES IN... 
+          <p id="countdown2"></p>
           h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/fD4AleG8blQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           .register-container
-            button.btn.btn-opt-in.new.register(type='button' onclick="window.open('/checkout')") Register for Neuromethod360
-          .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $370 in bonuses. Registration information will appear in the middle of this video.
-            br
-            | Questions? Email support@halcyon.bio
+            button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
+          .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
+      .row.trailer-top-row.flex-center(if='{ !submitted }')
+
+        .col-md-4.col-12.flex-center.vid-desc-trailer-top
+          a(href='#neuromethodtrailer')
+            h5.vid-desc-wrapper-trailer Trailer
+
+            img(src="/img/trailer-thumb.jpg")
       .row.flex-center
         .col-6.col-lg-3.col-thumb
           a.ep1-link(href='#optincta' onclick='{ showVideo(1, true) }')
 
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
-            h6.vid-desc-title 1. Lifestyle Hacks
-            // p 1
+            h6.vid-desc-title 1. Lifestyle
+            //p 1
             img(src="/img/vid-1-thumb-live.jpg")
         .col-6.col-lg-3.col-thumb
           a.ep2-link(href='#optincta' onclick='{ showVideo(2, true) }')
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
-            h6.vid-desc-title 2. Mental Strategies
-            // p 2
+            h6.vid-desc-title 2. Memory
+            //p 2
             img(src="/img/vid-2-thumb-live.jpg")
         .col-6.col-lg-3.col-thumb
           a.ep3-link(href='#optincta' onclick='{ showVideo(3, true) }')
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
-            h6.vid-desc-title 3. Nootropics
-            // p 3
+            h6.vid-desc-title 3. NOOTROPICS
+            //p 3
             img(src="/img/vid-3-thumb-live.jpg")
         .col-6.col-lg-3.col-thumb
-          a.ep4-link(href='#optincta')
-            h6.vid-desc-wrapper.vid-coming-soon COMING SOON
-            h6.vid-desc-title 4. PUTTING IT ALL TOGETHER
-            // p 4
-            img(src="/img/vid-4-thumb.jpg")
+          a.ep4-link(href='#optincta' onclick='{ showVideo(4, true) }')
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
+            h6.vid-desc-title 4. Execution
+            //p 4
+            img(src="/img/vid-4-thumb-live.jpg")
         .main-optin.thumb-popover-optin-cont#optincta
           .col-12.opt-in-fields-main.thumb-popover-optin.flex-center(if='{ !submitted }')
             text.input(bind='email' id='opt-in-email' placeholder='enter your email')
@@ -196,25 +213,25 @@ block content
           .col-lg-6.col-12.vid-desc.flex-center
             a.ep1-link(href='#optincta' onclick='{ showVideo(1, true) }')
               h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
-              h6.vid-desc-wrapper Lifestyle Hacks
+              h6.vid-desc-wrapper 1. Lifestyle
 
               img(src="/img/vid-1-thumb-live.jpg")
           .col-lg-6.col-12.vid-desc.flex-center
             a.ep2-link(href='#optincta' onclick='{ showVideo(2, true) }')
               img(src="/img/vid-2-thumb-live.jpg")
-              h6.vid-desc-wrapper Mental Strategies
+              h6.vid-desc-wrapper 2. memory
               h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
         .row.4videos
           .col-lg-6.col-12.vid-desc.flex-center
             a.ep3-link(href='#optincta' onclick='{ showVideo(3, true) }')
               img(src="/img/vid-3-thumb-live.jpg")
-              h6.vid-desc-wrapper Nootropics
+              h6.vid-desc-wrapper 3. Nootropics
               h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
           .col-lg-6.col-12.vid-desc.flex-center
-            a(href='#optincta')
+            a(href='#optincta' onclick='{ showVideo(4, true) }')
               img(src="/img/vid-4-thumb.jpg")
-              h6.vid-desc-wrapper.putting(style='color: #a5a4a4;') putting it all together
-              h6.vid-desc-wrapper.vid-coming-soon Coming Soon
+              h6.vid-desc-wrapper.putting 4. Execution
+              h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
 
       .col-md-1
 
@@ -292,7 +309,7 @@ block content
 
   div#countdowntimer
     script.
-      var countDownDate = new Date("Sept 21, 2018 19:00:00").getTime();
+      var countDownDate = new Date("Sept 27, 2018 19:00:00").getTime();
       var x = function() {
         // Get todays date and time
         var now = new Date().getTime();
@@ -308,7 +325,8 @@ block content
           centiseconds = "0" + centiseconds
         }
         // Output the result in an element with id="countdown"
-        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s " + centiseconds + "cs";
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        document.getElementById("countdown2").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
         // If the count down is over, write some text
         if (distance < 0) {
           clearInterval(x);

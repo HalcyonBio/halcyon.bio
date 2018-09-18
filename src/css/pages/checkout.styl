@@ -28,6 +28,9 @@
       line-height: inherit;
       width: 100%
       font-size: 1rem !important;
+  .step2-on-left
+    @media screen and (min-width:767px)
+      margin-top: 130px
   .auth-logo
     float: right;
     height: 42px
@@ -100,6 +103,7 @@
     padding-left: 3px;
     font-size: 2.2rem !important;
   .pdl
+    font-weight: bold;
     margin-top: 20px
     line-height: 1.65rem;
     .reg-price
@@ -199,13 +203,13 @@
     width: 100%;
   .countdown-title
     @media screen and (min-width:767px)
-      left: 25%
+      left: 23%
       position: relative;
   .countdown
     color: green
     text-align: center;
     @media screen and (min-width:767px)
-      left: 25%
+      left: 23%
       position: relative;
   .select-indicator
     top: 25px;
@@ -214,11 +218,11 @@
     margin-bottom: 40px
   .product-name
     font-family: palatino;
-
+    margin-bottom: 10px;
     letter-spacing: 2px;
 
     color: #304191;
-    width: 60%
+    width: 100%
     margin-top: -7px;
     font-size: 2rem;
     @media screen and (max-width:420px)
@@ -226,13 +230,24 @@
   .discount-show-or-hide
     display: inline;
   .product-price, .product-list-price
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
     @media screen and (max-width:420px)
-      display: inline-block;
-      font-size: 1.36rem;
+      font-size: .9rem;
+    color: gray
+  .strike-list-price
+    text-decoration: line-through;
   .invoice-total
     .invoice-label, .invoice-amount
       font-size: 1.5rem;
+  .free-shipping
+    color:#00a8e1;
+    font-size: 1rem
+    @media screen and (max-width:420px)
+      font-size:.8rem;
+    font-weight:bold;
   .decline-ug
     text-align: center;
     padding: 10px
@@ -246,10 +261,29 @@
   .product-quantity-container
     display: none
   .product-price-container
+    padding-left: 20px;
     line-height: 2rem
+    float: unset !important;
+    text-align: left;
+    padding-bottom: 20px;
+  .pricing-layout1
+    width: 150px
+    float: left
+    text-align: right
     @media screen and (max-width:420px)
-      float: unset !important;
-      text-align: left;
+      width: 100px
+  .pricing-layout2
+    display: block
+    padding-left: 155px
+    @media screen and (max-width:420px)
+      padding-left: 105px;
+  .lprice
+    font-size: 1.5rem
+    @media screen and (max-width:420px)
+      font-size: 1rem
+  .red
+    color: red
+
   .top-stick
     position: fixed;
     right: 0;
