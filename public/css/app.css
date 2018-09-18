@@ -3987,7 +3987,6 @@ header .mobile-menus .show-mobile-icon{
   max-width:800px;
 }
 .trailer-container .trailer-view{
-  margin-top:40px;
   width:100%;
   height:0;
   padding-bottom:56.25%;
@@ -4137,6 +4136,9 @@ footer .footer-bottom > *{
 #account .more{
   text-decoration:underline;
 }
+#checkout .error{
+  color:$red;
+}
 #checkout checkout-flow{
   width:100vw;
 }
@@ -4169,7 +4171,7 @@ footer .footer-bottom > *{
   float:right;
   height:42px;
 }
-#checkout button:focus{
+#checkout button.green{
   background-color:#66bb6a;
 }
 #checkout .logoHB{
@@ -5545,7 +5547,7 @@ iframe.fb_ltr{
   margin-top:2px;
 }
 #launch-videos .opt-in-fields input{
-  text-align:center;
+  text-align:left;
   min-width:100%;
 }
 #launch-videos .opt-in-fields .input{
@@ -5664,7 +5666,7 @@ iframe.fb_ltr{
   padding-top:1rem;
 }
 #launch-videos .thumb{
-  padding-top:110px;
+  padding-top:20px;
 }
 #launch-videos .col-thumb{
   box-shadow:0px 0px 21px 5px rgba(255,255,255,0.17);
@@ -5754,7 +5756,7 @@ iframe.fb_ltr{
   color:#fff;
 }
 #launch-videos .trailer-top-row{
-  z-index:9999;
+  z-index:999;
   position:relative;
 }
 #launch-videos .l-body2{
@@ -6082,6 +6084,21 @@ iframe.fb_ltr{
   font-size:2rem;
   text-align:center;
 }
+#countdown3{
+  font-size:2rem;
+  text-align:center;
+}
+#countdown4{
+  font-size:2rem;
+  text-align:center;
+}
+#countdown5{
+  font-size:2rem;
+  text-align:center;
+}
+.vid-container{
+  margin-top:45px;
+}
 body,
 html{
   padding:0;
@@ -6143,14 +6160,14 @@ a.lightbox img{
 }
 .lightbox-target .trailer-container{
   display:none;
-  margin-bottom:40px;
+  margin-bottom:80px;
 }
 .video-one-target,
 .video-two-target,
 .video-three-target,
 .video-four-target{
   display:none;
-  padding-top:110px;
+  padding-top:70px;
 }
 .lightbox-target2{
   position:fixed;
@@ -6467,6 +6484,9 @@ a.lightbox img{
   .l-vid img{
     width:100%;
   }
+  .trailer-container .trailer-view{
+    margin-top:-40px;
+  }
   .l-body h3{
     font-size:4.6vw;
   }
@@ -6614,9 +6634,6 @@ a.lightbox img{
   .l-header{
     padding-bottom:20px;
   }
-  .l-vid{
-    margin-top:60px;
-  }
   #checkout .step2-on-left{
     margin-top:130px;
   }
@@ -6671,8 +6688,8 @@ a.lightbox img{
   .l-vid{
     margin-bottom:-70px;
   }
-  .l-vid .header-img{
-    margin-top:60px;
+  .trailer-container .trailer-view{
+    margin-top:-20px;
   }
   #account .logout{
     text-decoration:underline;
@@ -6734,9 +6751,6 @@ a.lightbox img{
   }
   #launch-videos .thank-you h4{
     font-size:1.3rem;
-  }
-  .lightbox-target .trailer-container{
-    margin-bottom:80px;
   }
 }
 @media screen and (max-width: 520px){
