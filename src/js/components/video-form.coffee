@@ -68,6 +68,9 @@ export class VideoForm extends El.Form
       onEpisode = =>
         trailer = $('#neuromethodtrailer')
         trailer.hide()
+        $(window.location.hash)[0].scrollIntoView()
+        requestAnimationFrame =>
+          $(window.location.hash)[0].scrollIntoView()
 
       requestAnimationFrame =>
         switch window.location.hash
