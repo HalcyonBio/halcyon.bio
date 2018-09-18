@@ -60,24 +60,18 @@ block content
 
       .row
         .col-12.header-img#episode-one.video-one-target.episodes
-          h4.text-center REGISTRATION CLOSES IN...
-          <p id="countdown2"></p>
           h4.text-center MASTERCLASS EPISODE 1: INTERMITTENT FASTING AND THE BRAIN
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/R9DZF2IXGXk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row
         .col-12.header-img#episode-two.video-two-target.episodes
-          h4.text-center REGISTRATION CLOSES IN...
-          <p id="countdown3"></p>
           h4.text-center MASTERCLASS EPISODE 2: TRANSFORMING YOUR MEMORY
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/cbDlwmHFKyE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       .row
         .col-12.header-img#episode-three.video-three-target.episodes
-          h4.text-center REGISTRATION CLOSES IN...
-          <p id="countdown4"></p>
           h4.text-center MASTERCLASS EPISODE 3: THE BEST SUPPLEMENTS FOR A STRONGER BRAIN
           .masterclass-container.tc2
             .masterclass-view
@@ -85,7 +79,7 @@ block content
       .row
         .col-12.header-img#episode-four.video-four-target.episodes
           h4.text-center REGISTRATION CLOSES IN... 
-          <p id="countdown5"></p>
+          <p id="countdown2"></p>
           h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
           .masterclass-container.tc2
             .masterclass-view
@@ -128,14 +122,14 @@ block content
             img(src="/img/vid-4-thumb-live.jpg")
         .main-optin.thumb-popover-optin-cont#optincta
           .col-12.opt-in-fields-main.thumb-popover-optin.flex-center(if='{ !submitted }')
-            text.input(bind='email' id='opt-in-email' placeholder='jane@spacex.com')
+            text.input(bind='email' id='opt-in-email' placeholder='enter your email')
               yield(to='123')
                 input(name="email" type="text" autocomplete="on" placeholder="enter your email")
             button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
 
       .row
         .col-12.col-md-8.offset-md-2.title
-          h2 NOW AVAILABLE
+          h2 UPCOMING EPISODES
           p
             |Free online masterclass taught by one of the
             |world’s greatest minds. Ron White is a 2X USA Memory
@@ -176,14 +170,14 @@ block content
                   .col-12.opt-in-fields-main.flex-center(if='{ !submitted }')
 
 
-                    text.input(bind='email' id='opt-in-email' placeholder='jane@spacex.com')
+                    text.input(bind='email' id='opt-in-email' placeholder='enter your email')
                       yield(to='123')
                         input(name="email" type="text" autocomplete="on" placeholder="enter your email")
                     button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
                   .thank-you-moved.thank-you(if='{ submitted }')
 
-                    // hideforopencart h4.h4line2 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
-                    // hideforopencart button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
+                    h4.h4line2 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
+                    button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
                     h4.clg You're all set for the masterclass, <a class="thumb-link" href="#episodes"> click a thumbnail above to watch. </a>
                   p.disclaimer.disclaimer-main(if='{ !submitted }')
                     | We will notify you when each masterclass episode is released.
@@ -197,7 +191,7 @@ block content
         img.arrow(src="img/new-arrow.png" width="70px")
         <div class="fb-like-frame"><div class="fb-like" data-colorscheme="dark" data-href="https://www.facebook.com/HalcyonBiotech/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></div>
         <div class="hm"></div>
-        <div class="fb-comments fb-new" data-colorscheme="dark" data-href="https://neuromethod.halcyon.bio" data-width="100%" data-numposts="10"></div>
+        <div class="fb-comments fb-new" data-colorscheme="dark" data-href="https://neuromethod.halcyon.bio" data-width="100%" data-numposts="40"></div>
         // <div class="hm2"></div> not showing anymore
         // <div class="fb-comments fb-old" data-order-by="reverse_time" data-colorscheme="dark" data-href="https://halcyon.bio/master-class-videos" data-width="100%" data-numposts="5"></div>
 
@@ -252,7 +246,7 @@ block content
                 href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fab fa-facebook-square"></i> Share
 
             .col-12.opt-in-fields.flex-center
-              text.input(bind='email' id='opt-in-email' placeholder='jane@spacex.com')
+              text.input(bind='email' id='opt-in-email' placeholder='Enter Your Email')
                 yield(to='123')
                   input(name="email" type="text" autocomplete="on" placeholder="Enter Your Email")
               button.btn.btn-opt-in(type='button' id="email-submit" onclick='{ submit }') <i class="fab fa-lg fa-youtube"></i>
@@ -333,9 +327,6 @@ block content
         // Output the result in an element with id="countdown"
         document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
         document.getElementById("countdown2").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-        document.getElementById("countdown3").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-        document.getElementById("countdown4").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-        document.getElementById("countdown5").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
         // If the count down is over, write some text
         if (distance < 0) {
           clearInterval(x);
@@ -380,7 +371,7 @@ block content
               .col-12.opt-in-fields-main.flex-center(if='{ !submitted }')
 
 
-                text.input(bind='email' id='opt-in-email' placeholder='jane@spacex.com')
+                text.input(bind='email' id='opt-in-email' placeholder='enter your email')
                   yield(to='123')
                     input(name="email" type="text" autocomplete="on" placeholder="enter your email")
                 button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
