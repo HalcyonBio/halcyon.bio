@@ -20,7 +20,7 @@ export class CheckoutFlow extends El.View
   init: ->
     super arguments...
 
-    @upsellStatus = {}
+    @upsellStatuses = {}
 
     @on 'mount', ->
       $(@root).addClass 'ready'
@@ -47,7 +47,7 @@ export class CheckoutFlow extends El.View
       @centiseconds = Math.floor(distance / 10) % 100
       # Display the result in the element with id="demo"
       # If the count down is finished, write some text
-      if distance <= 0 && @step > 1 && @step <4
+      if distance <= 0 && @step != 'startCheckout' && @step != 'thankYou'
         @toThankYou()
       @update()
       requestAnimationFrame x
@@ -116,10 +116,10 @@ export class CheckoutFlow extends El.View
     return @upsellEnabled
 
   getUpsell: (productId)->
-    return if @upsellStatus[productId]
+    return @upsellStatuses[productId]
 
   getUpsellError: (productId)->
-    return if @upsellStatus[productId] then @upsellStatus[productId].errorMessage else undefined
+    return if @upsellStatuses[productId] then @upsellStatuses[productId].errorMessage else undefined
 
   upsell: (productId, nextStep)->
     return =>
