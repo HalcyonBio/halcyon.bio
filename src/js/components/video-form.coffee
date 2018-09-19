@@ -23,7 +23,7 @@ export class VideoForm extends El.Form
     @client.form.subscribe opts
       .finally =>
         @submitted = true
-        akasha.set 'submitted', true
+        akasha.set '_submitted', true
         @setupRedirects()
         switch @videoToShow
           when 0 then window.location.hash = '#thank-you'
@@ -40,7 +40,7 @@ export class VideoForm extends El.Form
 
   init: ->
     super arguments...
-    @submitted = !!(akasha.get 'submitted')
+    @submitted = !!(akasha.get '_submitted')
 
     @on 'mount', =>
       $(@root).addClass 'ready'
