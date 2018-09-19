@@ -4378,6 +4378,9 @@ footer .footer-bottom > *{
   margin-top:-7px;
   font-size:2rem;
 }
+#checkout .product-name-after-checkout{
+  font-size:1.2rem;
+}
 #checkout .discount-show-or-hide{
   display:inline;
 }
