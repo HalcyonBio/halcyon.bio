@@ -5593,15 +5593,15 @@ iframe.fb_ltr{
 }
 #launch-videos .input input:focus,
 #launch-videos .input input:-ms-input-placeholder{
-  color:#000;
+  color:#d3d3d3;
 }
 #launch-videos .input input:focus,
 #launch-videos .input input::-ms-input-placeholder{
-  color:#000;
+  color:#d3d3d3;
 }
 #launch-videos .input input:focus,
 #launch-videos .input input::placeholder{
-  color:#000;
+  color:#d3d3d3;
 }
 #launch-videos .input .invalid{
   margin-bottom:-3px;
@@ -5627,7 +5627,8 @@ iframe.fb_ltr{
   height:60px;
   font-size:1.5rem;
   min-width:100%;
-  color:#000;
+  color:#d3d3d3;
+  text-align:left;
 }
 #launch-videos .main-optin .btn-opt-in,
 #launch-videos .visible-optin .btn-opt-in{
