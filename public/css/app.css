@@ -5606,6 +5606,10 @@ iframe.fb_ltr{
 #launch-videos .input .invalid{
   margin-bottom:-3px;
 }
+#launch-videos .main-optin,
+#launch-videos .visible-optin{
+  caret-color:#000;
+}
 #launch-videos .main-optin .cta,
 #launch-videos .visible-optin .cta{
   max-width:767px;
@@ -5629,6 +5633,7 @@ iframe.fb_ltr{
   min-width:100%;
   color:#d3d3d3;
   text-align:left;
+  padding-left:6px;
 }
 #launch-videos .main-optin .btn-opt-in,
 #launch-videos .visible-optin .btn-opt-in{
