@@ -178,7 +178,7 @@ block content
 
                     text.input(bind='email' id='opt-in-email' onfocus="this.placeholder=''" placeholder='Enter Your Email')
                       yield(to='123')
-                        input(name="email" onfocus="this.placeholder=''" type="text" autocomplete="on" placeholder="enter your email")
+                        input.ic(name="email" onfocus="this.placeholder=''" type="text" autocomplete="on" placeholder="enter your email")
                     button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
                   .thank-you-moved.thank-you(if='{ submitted }')
 

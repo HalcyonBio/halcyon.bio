@@ -5610,6 +5610,10 @@ iframe.fb_ltr{
 #launch-videos .visible-optin{
   caret-color:#000;
 }
+#launch-videos .main-optin .ic,
+#launch-videos .visible-optin .ic{
+  color:#000;
+}
 #launch-videos .main-optin .cta,
 #launch-videos .visible-optin .cta{
   max-width:767px;
