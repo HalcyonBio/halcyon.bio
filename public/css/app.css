@@ -5594,20 +5594,25 @@ iframe.fb_ltr{
   border:3px solid rgba(255,255,255,0.7);
   margin-bottom:21px;
 }
-#launch-videos .input input:focus,
 #launch-videos .input input:-ms-input-placeholder{
-  color:#000;
+  color:#d3d3d3;
 }
-#launch-videos .input input:focus,
 #launch-videos .input input::-ms-input-placeholder{
-  color:#000;
+  color:#d3d3d3;
 }
-#launch-videos .input input:focus,
 #launch-videos .input input::placeholder{
-  color:#000;
+  color:#d3d3d3;
 }
 #launch-videos .input .invalid{
   margin-bottom:-3px;
+}
+#launch-videos .main-optin,
+#launch-videos .visible-optin{
+  caret-color:#000;
+}
+#launch-videos .main-optin .ic,
+#launch-videos .visible-optin .ic{
+  color:#000;
 }
 #launch-videos .main-optin .cta,
 #launch-videos .visible-optin .cta{
@@ -5631,6 +5636,8 @@ iframe.fb_ltr{
   font-size:1.5rem;
   min-width:100%;
   color:#000;
+  text-align:left;
+  padding-left:6px;
 }
 #launch-videos .main-optin .btn-opt-in,
 #launch-videos .visible-optin .btn-opt-in{

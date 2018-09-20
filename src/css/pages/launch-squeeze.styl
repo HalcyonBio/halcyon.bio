@@ -260,13 +260,15 @@
       max-width: 318px;
       border: 3px solid rgba(255, 255, 255, 0.7);
 
-      &:focus
+      
       &::placeholder
-          color: black
+          color: lightgray
       margin-bottom: 21px;
 	    .invalid
 		       margin-bottom: -3px;
   .main-optin, .visible-optin
+    .ic
+      color: black;
     .cta
       max-width: 767px
       text-align: center;
@@ -287,9 +289,13 @@
       font-size: 1.5rem
       min-width: 100%
       color: black
+      text-align: left;
+      padding-left: 6px;
       @media screen and (max-width:420px)
         font-size: 1.3rem
         margin-bottom:0px
+
+    caret-color: black
     .btn-opt-in
       height: 60px
       font-size: 1.5rem
