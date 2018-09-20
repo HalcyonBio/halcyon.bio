@@ -90,7 +90,9 @@ export class VideoForm extends El.Form
             when '#episode-four' then onEpisode()
 
       $(@root).find('input[name="email"]').on 'keypress', (e) =>
-        @submit() if e.keyCode is 13
+        if e.keyCode is 13
+          @data.set 'email', $(e.currentTarget).val()
+          @submit()
 
   setupRedirects: ->
     $('.ep1-link').attr 'href', '#episode-one'
