@@ -128,9 +128,10 @@ block content
             img(src="/img/vid-4-thumb-live.jpg")
         .main-optin.thumb-popover-optin-cont#optincta
           .col-12.opt-in-fields-main.thumb-popover-optin.flex-center(if='{ !submitted }')
-            text.input(bind='email' id='opt-in-email' placeholder='enter your email')
-              yield(to='123')
-                input(type="text" autocomplete="on" placeholder="enter your email")
+            form
+              text.input(bind='email' id='opt-in-email' placeholder='enter your email')
+                yield(to='123')
+                  input(type="text" placeholder="enter your email")
             button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
 
       .row
@@ -252,9 +253,10 @@ block content
                 href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fab fa-facebook-square"></i> Share
 
             .col-12.opt-in-fields.flex-center
-              text.input(bind='email' id='opt-in-email' placeholder='enter your email')
-                yield(to='123')
-                  input(name="email" type="text" autocomplete="on" placeholder="enter your email")
+              form
+                text.input(bind='email' id='opt-in-email' placeholder='enter your email')
+                  yield(to='123')
+                  input(name="email" type="text" placeholder="enter your email")
               button.btn.btn-opt-in(type='button' id="email-submit" onclick='{ submit }') <i class="fab fa-lg fa-youtube"></i>
 
             p.disclaimer We will notify you when each masterclass episode is released. Providing your email gives you unlimited free access to all 4 masterclass episodes.
