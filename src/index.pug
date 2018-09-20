@@ -130,7 +130,7 @@ block content
           .col-12.opt-in-fields-main.thumb-popover-optin.flex-center(if='{ !submitted }')
             text.input(bind='email' id='opt-in-email' placeholder='jane@spacex.com')
               yield(to='123')
-                input(name="email" type="text" autocomplete="on" placeholder="enter your email")
+                input(type="text" autocomplete="on" placeholder="enter your email")
             button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
 
       .row

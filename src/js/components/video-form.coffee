@@ -108,6 +108,7 @@ export class VideoForm extends El.Form
       @videoToShow = n
       if @submitted && collapse
         @episodeToggle e, n
+      return true
 
   episodeToggle: (e, n)->
     ep1 = $('#episode-one')
@@ -156,8 +157,8 @@ export class VideoForm extends El.Form
             ep[0].scrollIntoView()
           , 500
 
-    e.preventDefault()
-    e.stopPropagation()
+    # e.preventDefault()
+    # e.stopPropagation()
 
   trailerToggle: ->
     trailer = $('#neuromethodtrailer')
