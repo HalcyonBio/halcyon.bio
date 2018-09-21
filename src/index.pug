@@ -317,7 +317,7 @@ block content
 
   div#countdowntimer
     script.
-      var countDownDate = new Date("Sept 27, 2018 19:00:00").getTime();
+      var countDownDate = new Date("Sept 27, 2018 23:59:59").getTime();
       var x = function() {
         // Get todays date and time
         var now = new Date().getTime();
@@ -341,7 +341,11 @@ block content
         // If the count down is over, write some text
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("demo").innerHTML = "EXPIRED";
+          document.getElementById("countdown").innerHTML = "REGISTRATION CLOSED";
+          document.getElementById("countdown2").innerHTML = "REGISTRATION CLOSED";
+          document.getElementById("countdown3").innerHTML = "REGISTRATION CLOSED";
+          document.getElementById("countdown4").innerHTML = "REGISTRATION CLOSED";
+          document.getElementById("countdown5").innerHTML = "REGISTRATION CLOSED";
         }
         requestAnimationFrame(x)
       }
