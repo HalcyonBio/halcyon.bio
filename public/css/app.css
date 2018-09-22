@@ -6880,6 +6880,9 @@ a.lightbox img{
   #checkout .ug-title{
     font-size:1.8rem;
   }
+  #launch-videos .thumb-popover-optin-cont{
+    top:12.5%;
+  }
 }
 @media screen and (max-width: 575px){
   #index .hero .logo{
@@ -7044,6 +7047,14 @@ a.lightbox img{
 @media screen and (min-width: 521px){
   #launch-videos .new{
     max-width:300px;
+  }
+}
+@media screen and (max-width: 376px){
+  #launch-videos .thumb-popover-optin-cont{
+    top:13%;
+  }
+  #launch-videos .thumb-popover-optin-cont{
+    top:14%;
   }
 }
 @media screen and (max-width: 576px){
