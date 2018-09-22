@@ -63,7 +63,7 @@ export class VideoForm extends El.Form
       onOptincta = =>
         el = $(@root).find('.main-optin input[name="email"]')
         el.focus()
-        $('#episodes')[0].scrollIntoView()
+        $('#')[0].scrollIntoView()
 
       onEpisode = =>
         trailer = $('#neuromethodtrailer')

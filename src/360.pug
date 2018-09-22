@@ -11,7 +11,7 @@ block meta
   meta(property="og:image" content="https://neuromethod.halcyon.bio/img/fb-share-preview.jpg")
 
 block content
-  video-form(form-id='O2ugZoDxsyoxwE').l-header
+  video-form.l-header(form-id='O2ugZoDxsyoxwE')
     .container
       .row
         .col-12.title
@@ -32,16 +32,24 @@ block content
               <iframe src="https://www.youtube.com/embed/71fptRWCwuQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               <a class="lightbox-close lightbox-close-trailer" style="color: gray !important;" href="#" onmouseup="{ closeTrailer }"></a>
           .vid-container
-            h4.text-center REGISTRATION CLOSES IN...
-            <p id="countdown"></p>
+            
             h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
             .masterclass-container.tc2
               .masterclass-view
                 a.ep4-link(href='#optincta' onclick='{ showVideo(4, true) }')
                   img(src='/img/ep4-website.jpg')
+            .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
+            h4.text-center REGISTRATION CLOSES IN...
+            <p id="countdown"></p>
             .register-container
               button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
-            .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
+        .main-optin.thumb-popover-optin-cont#optincta
+          .col-12.opt-in-fields-main.thumb-popover-optin.flex-center(if='{ !submitted }')
+            form
+              text.input(bind='email' id='opt-in-email' placeholder='enter your email')
+                yield(to='123')
+                  input(type="text" placeholder="enter your email")
+            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>    
           //.vid-container
             a(href='#neuromethodtrailer')
               img.mobile(src="/img/header-ron-mobile-yt.jpg")
@@ -60,39 +68,50 @@ block content
 
       .row
         .col-12.header-img#episode-one.video-one-target.episodes
-          h4.text-center REGISTRATION CLOSES IN...
-          <p id="countdown2"></p>
+          
           h4.text-center MASTERCLASS EPISODE 1: INTERMITTENT FASTING AND THE BRAIN
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/R9DZF2IXGXk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          h4.text-center REGISTRATION CLOSES IN...
+          <p id="countdown2"></p>
+          .register-container
+            button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
       .row
         .col-12.header-img#episode-two.video-two-target.episodes
-          h4.text-center REGISTRATION CLOSES IN...
-          <p id="countdown3"></p>
+          
           h4.text-center MASTERCLASS EPISODE 2: TRANSFORMING YOUR MEMORY
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/cbDlwmHFKyE?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          h4.text-center REGISTRATION CLOSES IN...
+          <p id="countdown3"></p>
+          .register-container
+            button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
       .row
         .col-12.header-img#episode-three.video-three-target.episodes
-          h4.text-center REGISTRATION CLOSES IN...
-          <p id="countdown4"></p>
+          
           h4.text-center MASTERCLASS EPISODE 3: THE BEST SUPPLEMENTS FOR A STRONGER BRAIN
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/9XWgPwQ6Ip4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          h4.text-center REGISTRATION CLOSES IN...
+          <p id="countdown4"></p>  
+          .register-container
+            button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360  
       .row
         .col-12.header-img#episode-four.video-four-target.episodes
-          h4.text-center REGISTRATION CLOSES IN... 
-          <p id="countdown5"></p>
+          
           h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/fD4AleG8blQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
+          h4.text-center REGISTRATION CLOSES IN...
+          <p id="countdown5"></p>
           .register-container
             button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
-          .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
+          
       .row.trailer-top-row.flex-center(if='{ !submitted }')
 
         .col-md-4.col-12.flex-center.vid-desc-trailer-top
@@ -100,7 +119,7 @@ block content
             h5.vid-desc-wrapper-trailer Trailer
 
             img(src="/img/trailer-thumb.jpg")
-      .row.flex-center
+      .row.flex-center(if='{ submitted }')
         .col-6.col-lg-3.col-thumb
           a.ep1-link(href='#optincta' onclick='{ showVideo(1, true) }')
 
@@ -117,7 +136,7 @@ block content
         .col-6.col-lg-3.col-thumb
           a.ep3-link(href='#optincta' onclick='{ showVideo(3, true) }')
             h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
-            h6.vid-desc-title 3. NOOTROPICS
+            h6.vid-desc-title 3. SMART DRUGS
             //p 3
             img(src="/img/vid-3-thumb-live.jpg")
         .col-6.col-lg-3.col-thumb
@@ -126,12 +145,7 @@ block content
             h6.vid-desc-title 4. Execution
             //p 4
             img(src="/img/vid-4-thumb-live.jpg")
-        .main-optin.thumb-popover-optin-cont#optincta
-          .col-12.opt-in-fields-main.thumb-popover-optin.flex-center(if='{ !submitted }')
-            text.input(bind='email' id='opt-in-email' placeholder='Enter York Email')
-              yield(to='123')
-                input(name="email" type="text" autocomplete="on" placeholder="enter your email")
-            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
+        
 
       .row
         .col-12.col-md-8.offset-md-2.title
@@ -162,11 +176,11 @@ block content
           img(src='/img/wsj.png')
       #fb
     // .flex-container.l-body-transition
-    .row
+    // .row
       .col-12
         p
         .visible-optin
-                // (if='{ !submitted }') added to hide if it has been submitted
+                /hide/ (if='{ !submitted }') added to hide if it has been submitted
                 .row.flex-center#thank-you.lightbox-target3.no-gutters
                   .col-12.cta(if='{ !submitted }')
                     h4 Get access to the free masterclass video series taught by one of the world’s greatest minds.
@@ -176,14 +190,14 @@ block content
                   .col-12.opt-in-fields-main.flex-center(if='{ !submitted }')
 
 
-                    text.input(bind='email' id='opt-in-email' placeholder='enter your email')
+                    text.ic.input(bind='email' id='opt-in-email' onfocus="this.placeholder=''" placeholder='enter your email')
                       yield(to='123')
-                        input(name="email" type="text" autocomplete="on" placeholder="enter your email")
+                        input.ic(name="email" onfocus="this.placeholder=''" type="text" autocomplete="on" placeholder="enter your email")
                     button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
                   .thank-you-moved.thank-you(if='{ submitted }')
 
-                    // hideforopencart h4.h4line2 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
-                    // hideforopencart button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
+                    /hide/ hideforopencart h4.h4line2 Help spread the word and get entered to win a free 1-on-1 training session with Ronnie - click below.
+                    /hide/ hideforopencart button.btn.btn-opt-in.new.vrlps-trigger(type='button' id="email-submit" onclick='#') MEET RONNIE
                     h4.clg You're all set for the masterclass, <a class="thumb-link" href="#episodes"> click a thumbnail above to watch. </a>
                   p.disclaimer.disclaimer-main(if='{ !submitted }')
                     | We will notify you when each masterclass episode is released.
@@ -201,7 +215,7 @@ block content
         // <div class="hm2"></div> not showing anymore
         // <div class="fb-comments fb-old" data-order-by="reverse_time" data-colorscheme="dark" data-href="https://halcyon.bio/master-class-videos" data-width="100%" data-numposts="5"></div>
 
-  video-form.flex-container.l-body2
+  //video-form.flex-container.l-body2
     .row
       .col-md-7.col-12.l-body2-ron
         img(src='/img/ron-white-dark.jpg')
@@ -241,9 +255,9 @@ block content
 
       .col-md-1
 
-  video-form.lightbox-target2#neuromethodtrailer.overlay-opt-in(if='{ !submitted }')
+  //video-form.lightbox-target2#neuromethodtrailer.overlay-opt-in(if='{ !submitted }')
         .opt-in
-          // h4 Enter your email address to watch the trailer
+          /hide/ h4 Enter your email address to watch the trailer
           .row.flex-center
             .col-12.opt-in-fields.flex-center
 
@@ -252,9 +266,10 @@ block content
                 href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/HalcyonBiotech/videos/570885656642848/") <i class="fab fa-facebook-square"></i> Share
 
             .col-12.opt-in-fields.flex-center
-              text.input(bind='email' id='opt-in-email' placeholder='enter your email')
-                yield(to='123')
-                  input(name="email" type="text" autocomplete="on" placeholder="enter your email")
+              form
+                text.input(bind='email' id='opt-in-email' placeholder='enter your email')
+                  yield(to='123')
+                  input(name="email" type="text" placeholder="enter your email")
               button.btn.btn-opt-in(type='button' id="email-submit" onclick='{ submit }') <i class="fab fa-lg fa-youtube"></i>
 
             p.disclaimer We will notify you when each masterclass episode is released. Providing your email gives you unlimited free access to all 4 masterclass episodes.
