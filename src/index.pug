@@ -43,8 +43,8 @@ block content
             <p id="countdown"></p>
             .register-container
               button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
-        .main-optin.thumb-popover-optin-cont#optincta
-          .col-12.opt-in-fields-main.thumb-popover-optin.flex-center(if='{ !submitted }')
+        .main-optin.thumb-popover-optin-cont#optincta(if='{ !submitted }')
+          .col-12.opt-in-fields-main.thumb-popover-optin.flex-center
             form
               text.input(bind='email' id='opt-in-email' placeholder='enter your email')
                 yield(to='123')
@@ -330,7 +330,7 @@ block content
 
   div#countdowntimer
     script.
-      var countDownDate = new Date("Sept 27, 2018 23:59:59").getTime();
+      var countDownDate = new Date("October 1, 2018 23:59:59").getTime();
       var x = function() {
         // Get todays date and time
         var now = new Date().getTime();
