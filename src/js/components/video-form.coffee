@@ -26,7 +26,7 @@ export class VideoForm extends El.Form
         akasha.set '_submitted', true
         @setupRedirects()
         switch @videoToShow
-          when 0 then window.location.hash = '#thank-you'
+          when 0 then window.location.hash = '#episode-four'
           when 1 then window.location.hash = '#episode-one'
           when 2 then window.location.hash = '#episode-two'
           # Uncomment and update these are videos come out
