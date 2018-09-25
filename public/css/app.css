@@ -5652,6 +5652,10 @@ iframe.fb_ltr{
   width:100%;
   z-index:10;
 }
+#launch-videos .thumb-popover-optin-go{
+  padding-top:40px;
+  padding-bottom:40px;
+}
 #launch-videos .opt-in{
   top:53px;
   position:relative;

@@ -17,7 +17,7 @@ block content
         .col-12.title
           .title-top-container
             .title-top.flex-center
-              a(href="https://neuromethod.halcyon.bio")
+              a(href="https://neuromethod.halcyon.bio/go")
                 img.logo-hover-hide.logoHB(src='/img/neuromethod360-logo.png')
                 // img.logo-hover.logoHB(src='/img/nm-360-logo-inverted.png')
               // a.btn.btn-share.btn-share1.vrlps-trigger(type='button' target="_blank" href="#") MEET RONNIE
@@ -30,7 +30,7 @@ block content
           .trailer-container(if='{ !submitted }')
             .trailer-view
               <iframe src="https://www.youtube.com/embed/71fptRWCwuQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              <a class="lightbox-close lightbox-close-trailer" style="color: gray !important;" href="#" onmouseup="{ closeTrailer }"></a>
+              //<a class="lightbox-close lightbox-close-trailer" style="color: gray !important;" href="#" onmouseup="{ closeTrailer }"></a>
           .vid-container(if='{ submitted }')
             
             h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
@@ -43,13 +43,7 @@ block content
             <p id="countdown"></p>
             .register-container
               button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
-        .main-optin.thumb-popover-optin-cont#optincta(if='{ !submitted }')
-          .col-12.opt-in-fields-main.thumb-popover-optin.flex-center
-            form
-              text.input(bind='email' id='opt-in-email' placeholder='enter your email')
-                yield(to='123')
-                  input(type="text" placeholder="enter your email")
-            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>    
+        
           //.vid-container
             a(href='#neuromethodtrailer')
               img.mobile(src="/img/header-ron-mobile-yt.jpg")
@@ -65,7 +59,16 @@ block content
 
 
     .container.thumb#episodes
-
+      .main-optin#optincta(if='{ !submitted }')
+          .col-12.cta
+            h4 Get access to the free masterclass video series taught by one of the world’s greatest minds.
+            p.cta-p Enter your email below now to save your spot - space is limited.
+          .col-12.opt-in-fields-main.thumb-popover-optin.flex-center
+            form
+              text.input(bind='email' id='opt-in-email' placeholder='enter your email')
+                yield(to='123')
+                  input(type="text" placeholder="enter your email")
+            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>    
       .row
         .col-12.header-img#episode-one.video-one-target.episodes
           
@@ -112,13 +115,7 @@ block content
           .register-container
             button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
           
-      .row.trailer-top-row.flex-center(if='{ !submitted }')
-
-        .col-md-4.col-12.flex-center.vid-desc-trailer-top
-          a(href='#neuromethodtrailer')
-            h5.vid-desc-wrapper-trailer Trailer
-
-            img(src="/img/trailer-thumb.jpg")
+      
       .row.flex-center(if='{ submitted }')
         .col-6.col-lg-3.col-thumb
           a.ep1-link(href='#optincta' onclick='{ showVideo(1, true) }')
@@ -330,7 +327,7 @@ block content
 
   div#countdowntimer
     script.
-      var countDownDate = new Date("Sept 27, 2018 23:59:59").getTime();
+      var countDownDate = new Date("October 1, 2018 23:59:59").getTime();
       var x = function() {
         // Get todays date and time
         var now = new Date().getTime();
@@ -411,7 +408,7 @@ block content
                 | We will notify you when each masterclass episode is released.
                 br
                 | Providing your email gives you unlimited free access to all 4 masterclass episodes.
-              <a class="lightbox-close lightbox-close1 close-scrolling-show" style="color: gray !important;" href="#"></a>
+              //<a class="lightbox-close lightbox-close1 close-scrolling-show" style="color: gray !important;" href="#"></a>
 
 block header
 block footer
