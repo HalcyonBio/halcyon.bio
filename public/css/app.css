@@ -6010,6 +6010,9 @@ iframe.fb_ltr{
   max-width:255px;
   margin-top:20px;
 }
+#launch-squeeze .cta .go{
+  margin:0 auto;
+}
 #launch-squeeze .disclaimer{
   font-size:10pt;
   color:rgba(255,255,255,0.8);
