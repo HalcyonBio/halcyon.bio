@@ -47,7 +47,7 @@ block content
               button.btn.btn-opt-in.new.new-closed.register(type='button' style="background-color: gray") REGISTRATION CLOSED 
               // onclick="window.location.href='/checkout'"
     .container.thumb#episodes
-      .main-optin#optincta(if='{ !submitted }')
+      .main-optin#optincta
           .col-12.closed-center(style="text-align: center;")
             h4 Get notified when we reopen registration:
             
@@ -56,7 +56,8 @@ block content
               text.input(bind='email' id='opt-in-email' placeholder='enter your email')
                 yield(to='123')
                   input(type="text" placeholder="enter your email")
-            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') NOTIFY ME <i class="fa fa-lg fa-envelope-open-o"></i>                               
+            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') NOTIFY ME <i class="fa fa-envelope-open"></i>                               
+      h4.text-center(style="padding-top:40px;padding-bottom:40px") Interested in purchasing Halcyon? Go #[a(href='https://halcyon.bio/#cmp_4d225e97-d4d9-4ae0-9589-d9e7a86e5005' style='text-decoration:underline;') here ]    
           //.main-optin.thumb-popover-optin-cont#optincta(if='{ !submitted }') MOVED ONE TAB TO THE RIGHT
             .col-12.opt-in-fields-main.thumb-popover-optin.flex-center
               form
@@ -78,7 +79,7 @@ block content
                 | Brain Performance
 
 
-    .container.thumb#episodes
+    .container#episodes(style='padding-left:0px;padding-right:0px;')
 
       .row
         .col-12.header-img#episode-one.video-one-target.episodes
