@@ -5528,6 +5528,12 @@ iframe.fb_ltr{
 #launch-videos .new .fa{
   color:#d7d7d7;
 }
+#launch-videos .new-closed{
+  background-color:#808080;
+}
+#launch-videos .closed-center{
+  margin:0 auto;
+}
 #launch-videos .t360{
   color:#f26621;
 }

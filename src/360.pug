@@ -25,43 +25,57 @@ block content
 
     .container-fluid.l-vid
       .row.flex-center
-        .col-12.flex-center.header-img.lightbox-target#neuromethodtrailer
+        .col-12.header-img#neuromethodtrailer
 
-          .trailer-container
+          .trailer-container.closed-center(style="margin: 0 auto;")
             .trailer-view
               <iframe src="https://www.youtube.com/embed/71fptRWCwuQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              <a class="lightbox-close lightbox-close-trailer" style="color: gray !important;" href="#" onmouseup="{ closeTrailer }"></a>
+    
+      
+              //<a class="lightbox-close lightbox-close-trailer" style="color: gray !important;" href="#" onmouseup="{ closeTrailer }"></a>
           .vid-container
             
-            h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
-            .masterclass-container.tc2
+            //h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
+            //.masterclass-container.tc2
               .masterclass-view
                 a.ep4-link(href='#optincta' onclick='{ showVideo(4, true) }')
                   img(src='/img/ep4-website.jpg')
-            .text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
-            h4.text-center REGISTRATION CLOSES IN...
-            <p id="countdown"></p>
-            .register-container
-              button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
-        .main-optin.thumb-popover-optin-cont#optincta
-          .col-12.opt-in-fields-main.thumb-popover-optin.flex-center(if='{ !submitted }')
+            //.text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
+            //h4.text-center REGISTRATION CLOSES IN...
+            //<p id="countdown"></p>
+            .register-container(style="margin-top: 120px;")
+              button.btn.btn-opt-in.new.new-closed.register(type='button' style="background-color: gray") REGISTRATION CLOSED 
+              // onclick="window.location.href='/checkout'"
+    .container.thumb#episodes
+      .main-optin#optincta(if='{ !submitted }')
+          .col-12.closed-center(style="text-align: center;")
+            h4 Get notified when we reopen registration:
+            
+          .col-12.opt-in-fields-main.thumb-popover-optin.flex-center
             form
               text.input(bind='email' id='opt-in-email' placeholder='enter your email')
                 yield(to='123')
                   input(type="text" placeholder="enter your email")
-            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>    
-          //.vid-container
-            a(href='#neuromethodtrailer')
-              img.mobile(src="/img/header-ron-mobile-yt.jpg")
-            a(href='#neuromethodtrailer')
-              img.desktop(src="/img/header-ron-desktop-yt.jpg")
-            .name Ron White
-            .subtitle 2 time USA Memory Champion
+            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') NOTIFY ME <i class="fa fa-lg fa-envelope-open-o"></i>                  
+          //.main-optin.thumb-popover-optin-cont#optincta(if='{ !submitted }') MOVED ONE TAB TO THE RIGHT
+            .col-12.opt-in-fields-main.thumb-popover-optin.flex-center
+              form
+                text.input(bind='email' id='opt-in-email' placeholder='enter your email')
+                  yield(to='123')
+                    input(type="text" placeholder="enter your email")
+              button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>    
+            /hide/.vid-container
+              a(href='#neuromethodtrailer')
+                img.mobile(src="/img/header-ron-mobile-yt.jpg")
+              a(href='#neuromethodtrailer')
+                img.desktop(src="/img/header-ron-desktop-yt.jpg")
+              .name Ron White
+              .subtitle 2 time USA Memory Champion
 
-            .subtitle2
-              |Teaches
-              |
-              | Brain Performance
+              .subtitle2
+                |Teaches
+                |
+                | Brain Performance
 
 
     .container.thumb#episodes
@@ -112,44 +126,45 @@ block content
           .register-container
             button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
           
-      .row.trailer-top-row.flex-center(if='{ !submitted }')
+      .row.trailer-top-row.flex-center
 
-        .col-md-4.col-12.flex-center.vid-desc-trailer-top
+        //.col-md-4.col-12.flex-center.vid-desc-trailer-top
           a(href='#neuromethodtrailer')
             h5.vid-desc-wrapper-trailer Trailer
 
             img(src="/img/trailer-thumb.jpg")
-      .row.flex-center(if='{ submitted }')
+      .row.flex-center
         .col-6.col-lg-3.col-thumb
-          a.ep1-link(href='#optincta' onclick='{ showVideo(1, true) }')
+          .ep1-link
 
-            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') 
             h6.vid-desc-title 1. Lifestyle
-            //p 1
-            img(src="/img/vid-1-thumb-live.jpg")
+            
+            img(src="/img/vid-1-thumb.jpg")
         .col-6.col-lg-3.col-thumb
-          a.ep2-link(href='#optincta' onclick='{ showVideo(2, true) }')
-            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
+          .ep2-link
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') 
             h6.vid-desc-title 2. Memory
-            //p 2
-            img(src="/img/vid-2-thumb-live.jpg")
+            
+            img(src="/img/vid-2-thumb.jpg")
         .col-6.col-lg-3.col-thumb
-          a.ep3-link(href='#optincta' onclick='{ showVideo(3, true) }')
-            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
+          .ep3-link
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') 
             h6.vid-desc-title 3. SMART DRUGS
-            //p 3
-            img(src="/img/vid-3-thumb-live.jpg")
+            
+            img(src="/img/vid-3-thumb.jpg")
         .col-6.col-lg-3.col-thumb
-          a.ep4-link(href='#optincta' onclick='{ showVideo(4, true) }')
-            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
+          .ep4-link
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') 
             h6.vid-desc-title 4. Execution
-            //p 4
-            img(src="/img/vid-4-thumb-live.jpg")
+            
+            img(src="/img/vid-4-thumb.jpg")
         
 
       .row
         .col-12.col-md-8.offset-md-2.title
-          h2 NOW AVAILABLE
+          h2 CLASS OVERVIEW
+          //h2 NOW AVAILABLE
           p
             |Free online masterclass taught by one of the
             |world’s greatest minds. Ron White is a 2X USA Memory
@@ -216,10 +231,10 @@ block content
         // <div class="fb-comments fb-old" data-order-by="reverse_time" data-colorscheme="dark" data-href="https://halcyon.bio/master-class-videos" data-width="100%" data-numposts="5"></div>
 
   //video-form.flex-container.l-body2
-    .row
-      .col-md-7.col-12.l-body2-ron
-        img(src='/img/ron-white-dark.jpg')
-      .col-md-4.col-12.vid-title.text-center
+        .row
+          .col-md-7.col-12.l-body2-ron
+            img(src='/img/ron-white-dark.jpg')
+          .col-md-4.col-12.vid-title.text-center
 
         .row
 
@@ -253,7 +268,7 @@ block content
               h6.vid-desc-wrapper.putting 4. Execution
               h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
 
-      .col-md-1
+      
 
   //video-form.lightbox-target2#neuromethodtrailer.overlay-opt-in(if='{ !submitted }')
         .opt-in
