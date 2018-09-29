@@ -30,11 +30,11 @@ block content
           .trailer-container.closed-center(style="margin: 0 auto;")
             .trailer-view
               <iframe src="https://www.youtube.com/embed/71fptRWCwuQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    
-      
+
+
               //<a class="lightbox-close lightbox-close-trailer" style="color: gray !important;" href="#" onmouseup="{ closeTrailer }"></a>
           .vid-container
-            
+
             //h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
             //.masterclass-container.tc2
               .masterclass-view
@@ -42,29 +42,29 @@ block content
                   img(src='/img/ep4-website.jpg')
             //.text-center.after-vid-4 #[strong IMPORTANT!] Watch this ENTIRE VIDEO now for registration information and to learn about the extra $570 in bonuses. Registration information will appear in the middle of this video.
             //h4.text-center REGISTRATION CLOSES IN...
-            //<p id="countdown"></p>
+            <p id="countdown" style="display:none"></p>
             .register-container(style="margin-top: 120px;")
-              button.btn.btn-opt-in.new.new-closed.register(type='button' style="background-color: gray") REGISTRATION CLOSED 
+              button.btn.btn-opt-in.new.new-closed.register(type='button' style="background-color: gray") REGISTRATION CLOSED
               // onclick="window.location.href='/checkout'"
     .container.thumb#episodes
       .main-optin#optincta
           .col-12.closed-center(style="text-align: center;")
             h4 Get notified when we reopen registration:
-            
+
           .col-12.opt-in-fields-main.thumb-popover-optin.flex-center
             form
               text.input(bind='email' id='opt-in-email' placeholder='enter your email')
                 yield(to='123')
                   input(type="text" placeholder="enter your email")
-            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') NOTIFY ME <i class="fa fa-envelope-open"></i>                               
-      h4.text-center(style="padding-top:40px;padding-bottom:40px") Interested in purchasing Halcyon? Go #[a(href='https://halcyon.bio/#cmp_4d225e97-d4d9-4ae0-9589-d9e7a86e5005' style='text-decoration:underline;') here ]    
+            button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') NOTIFY ME <i class="fa fa-envelope-open"></i>
+      h4.text-center(style="padding-top:40px;padding-bottom:40px") Interested in purchasing Halcyon? Go #[a(href='https://halcyon.bio/#cmp_4d225e97-d4d9-4ae0-9589-d9e7a86e5005' style='text-decoration:underline;') here ]
           //.main-optin.thumb-popover-optin-cont#optincta(if='{ !submitted }') MOVED ONE TAB TO THE RIGHT
             .col-12.opt-in-fields-main.thumb-popover-optin.flex-center
               form
                 text.input(bind='email' id='opt-in-email' placeholder='enter your email')
                   yield(to='123')
                     input(type="text" placeholder="enter your email")
-              button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>    
+              button.btn.btn-opt-in.new(type='button' id="email-submit" onclick='{ submit }') WATCH FREE <i class="fab fa-lg fa-youtube"></i>
             /hide/.vid-container
               a(href='#neuromethodtrailer')
                 img.mobile(src="/img/header-ron-mobile-yt.jpg")
@@ -83,7 +83,7 @@ block content
 
       .row
         .col-12.header-img#episode-one.video-one-target.episodes
-          
+
           h4.text-center MASTERCLASS EPISODE 1: INTERMITTENT FASTING AND THE BRAIN
           .masterclass-container.tc2
             .masterclass-view
@@ -94,7 +94,7 @@ block content
             button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
       .row
         .col-12.header-img#episode-two.video-two-target.episodes
-          
+
           h4.text-center MASTERCLASS EPISODE 2: TRANSFORMING YOUR MEMORY
           .masterclass-container.tc2
             .masterclass-view
@@ -105,18 +105,18 @@ block content
             button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
       .row
         .col-12.header-img#episode-three.video-three-target.episodes
-          
+
           h4.text-center MASTERCLASS EPISODE 3: THE BEST SUPPLEMENTS FOR A STRONGER BRAIN
           .masterclass-container.tc2
             .masterclass-view
               <iframe src="https://www.youtube.com/embed/9XWgPwQ6Ip4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           h4.text-center REGISTRATION CLOSES IN...
-          <p id="countdown4"></p>  
+          <p id="countdown4"></p>
           .register-container
-            button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360  
+            button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
       .row
         .col-12.header-img#episode-four.video-four-target.episodes
-          
+
           h4.text-center MASTERCLASS EPISODE 4: BETTER BRAIN FOR A BETTER LIFE
           .masterclass-container.tc2
             .masterclass-view
@@ -126,7 +126,7 @@ block content
           <p id="countdown5"></p>
           .register-container
             button.btn.btn-opt-in.new.register(type='button' onclick="window.location.href='/checkout'") REGISTER FOR NEUROMETHOD360
-          
+
       .row.trailer-top-row.flex-center
 
         //.col-md-4.col-12.flex-center.vid-desc-trailer-top
@@ -138,29 +138,29 @@ block content
         .col-6.col-lg-3.col-thumb
           .ep1-link
 
-            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') 
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;')
             h6.vid-desc-title 1. Lifestyle
-            
+
             img(src="/img/vid-1-thumb.jpg")
         .col-6.col-lg-3.col-thumb
           .ep2-link
-            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') 
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;')
             h6.vid-desc-title 2. Memory
-            
+
             img(src="/img/vid-2-thumb.jpg")
         .col-6.col-lg-3.col-thumb
           .ep3-link
-            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') 
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;')
             h6.vid-desc-title 3. SMART DRUGS
-            
+
             img(src="/img/vid-3-thumb.jpg")
         .col-6.col-lg-3.col-thumb
           .ep4-link
-            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') 
+            h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;')
             h6.vid-desc-title 4. Execution
-            
+
             img(src="/img/vid-4-thumb.jpg")
-        
+
 
       .row
         .col-12.col-md-8.offset-md-2.title
@@ -269,7 +269,7 @@ block content
               h6.vid-desc-wrapper.putting 4. Execution
               h6.vid-desc-wrapper.vid-coming-soon(style='color: #dedede;') WATCH NOW
 
-      
+
 
   //video-form.lightbox-target2#neuromethodtrailer.overlay-opt-in(if='{ !submitted }')
         .opt-in

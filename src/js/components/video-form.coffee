@@ -25,18 +25,22 @@ export class VideoForm extends El.Form
         @submitted = true
         akasha.set '_submitted', true
         @setupRedirects()
-        switch @videoToShow
-          when 0 then window.location.hash = '#episode-four'
-          when 1 then window.location.hash = '#episode-one'
-          when 2 then window.location.hash = '#episode-two'
-          # Uncomment and update these are videos come out
+        # switch @videoToShow
+        #   when 0 then window.location.hash = '#episode-four'
+        #   when 1 then window.location.hash = '#episode-one'
+        #   when 2 then window.location.hash = '#episode-two'
+        #   # Uncomment and update these are videos come out
 
-          when 3 then window.location.hash = '#episode-three'
-          when 4 then window.location.hash = '#episode-four'
+        #   when 3 then window.location.hash = '#episode-three'
+        #   when 4 then window.location.hash = '#episode-four'
 
         @scheduleUpdate()
+
+        window.location.href = 'https://halcyon.bio/#cmp_4d225e97-d4d9-4ae0-9589-d9e7a86e5005'
       # .catch (e)->
       #   console.log 'Submit Failed', e
+      #
+    return false
 
   init: ->
     super arguments...
