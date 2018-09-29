@@ -39,6 +39,8 @@ El.mount 'launch-squeeze-form, video-form',
   mediator: m
   data: ref {}
 
+El.update()
+
 window.addToCart = (productId, number)->
   Shop.setItem productId, number
   m.trigger 'checkout-open'
