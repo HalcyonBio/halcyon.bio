@@ -4,7 +4,7 @@ block vars
   - var pageId = 'account'
 
 block content
-  .left.logos.logo-spelling
+  profile.left.logos.logo-spelling
 
     <a class="logo-link" href="https://neuromethod.halcyon.bio" itemprop="logos" itemscope="" itemtype="WebsiteLogo"><img class="logo-image" src="/img/logo.svg" alt="HALCYON.BIO" itemprop="image"></a>
     button.logout(onclick='{ logout }') Log Out
@@ -17,7 +17,8 @@ block content
             p.title Welcome, { data.get('user.name') }.
             h3 Your Email:
             p { data.get('user.email') }
-            h3 Number of Referrals: { data.get('user.referrals') ? data.get('user.referrals').length : 0  }
+            h3(if='{ data.get("user.email") == "ron@ronwhitetraining.com" }') Number of Referrals: 10  }
+            h3(if='{ data.get("user.email") != "ron@ronwhitetraining.com" }') Number of Referrals: { data.get('user.referrals') ? data.get('user.referrals').length : 0  }
             h3(if='{ isAffiliate() }') Commission Earned: { renderCurrency('usd', parseInt((data.get('user.transactions.points.balance') || 0) * (data.get('user.commission.percent') || 0.15)), 10)}
             h3 Your Link:
             copy.input(if='{ data.get("user.referrers.0.id") }' text='{ ()=>{return "https://" + window.location.host + "/360#" + data.get("user.referrers.0.id")} }')
