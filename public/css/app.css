@@ -5531,7 +5531,8 @@ iframe.fb_ltr{
 #launch-videos .new-closed{
   background-color:#808080;
 }
-#launch-videos .closed-center{
+#launch-videos .closed-center,
+#launch-videos .auto-center{
   margin:0 auto;
 }
 #launch-videos .t360{
@@ -6489,6 +6490,9 @@ a.lightbox img{
     padding-bottom:40px;
   }
   #launch-videos .thumb .col-lg-3{
+    max-width:23.5%;
+  }
+  #launch-videos .thumb-closed .col-lg-3{
     max-width:23.5%;
   }
 }
